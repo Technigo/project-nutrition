@@ -8,7 +8,7 @@ export const Header = () => {
     return (
         <div className="headerContainer">
             {/* <!--Creating a hamburger menu with lines, made by div's--> */}
-            <div class="hamburger">
+            <div className="hamburger">
                 <div></div>
                 <div></div>
                 <div></div>
