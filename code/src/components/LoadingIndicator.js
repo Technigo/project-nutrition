@@ -8,7 +8,8 @@ export const LoadingIndicator = () => {
 
   return (
     <>
-      {isLoading && <div>!! Loading !!</div>}
+      {isLoading &&
+        <h1>!! Loading !!</h1>}
     </>
   )
 }
