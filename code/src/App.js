@@ -1,9 +1,10 @@
 import React from 'react'
+import { ScanBarcode } from './components/ScanBarcode'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <main>
+      <ScanBarcode />
+    </main>
   )
 }
