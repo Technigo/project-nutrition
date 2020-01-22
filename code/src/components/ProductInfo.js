@@ -12,11 +12,12 @@ export const ProductInfo = () => {
             <h1>Products</h1>
 
             <ul>
-                {barcodes.map((item) => (
-                    <li key={item.id}>
-                        {item.id}
+                <img src={barcodes.items && barcodes.items.image_nutrition_url} />
+                {/* {barcodes.map((item) => (
+                    <li key={item.code} item={item}>
+                        {item.product.generic_name_sv}
                     </li>
-                ))}
+                ))} */}
             </ul>
         </div>
     )
