@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Btn = styled.div`
   display: flex;
   flex-direction: row;
-  width: 500px;
+  // width: 500px;
   justify-content: center;
 `
 

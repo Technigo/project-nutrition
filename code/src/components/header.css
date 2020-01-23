@@ -1,7 +1,4 @@
-body {
-  height: 100%;
-  margin: 0;
-}
+
 
 h1 {
   display: inline-block;
@@ -58,6 +55,7 @@ h1 {
 }
 
 .headerNavigation {
+  color: white;
   justify-content: space-between;
   display: inline-block;
   text-decoration: none;

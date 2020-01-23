@@ -9,14 +9,14 @@ const Container = styled.div`
   width: 100%;
   height: 80px;
   margin: 0;
-`;
+`
 
 const BtnContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 500px;
+//   width: 500px;
   justify-content: center;
-`;
+`
 
 const Icon = styled.button`
   flex-direction: column;
@@ -33,7 +33,7 @@ const Icon = styled.button`
   ${BtnContainer}:hover & {
     opacity: 1;
   }
-`;
+`
 
 const Emoji = styled.p`
   font-size: 15px;
@@ -42,11 +42,11 @@ const Emoji = styled.p`
   height: auto;
   color: transparent;
   text-shadow: 0 0 0 white;
-`;
+`
 const Label = styled.p`
   font-size: 12px;
   color: white;
-`;
+`
 
 export const Footer = () => {
   return (
@@ -86,5 +86,5 @@ export const Footer = () => {
         </Icon>
       </BtnContainer>
     </Container>
-  );
-};
+  )
+}

@@ -5,7 +5,7 @@ import styled from "styled-components";
 const ProductHeading = styled.div`
   display: flex;
   flex-direction: row;
-  width: 500px;
+  
   justify-content: center;
 `
 
