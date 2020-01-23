@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { ui } from './reducers/ui';
-import { barcode } from './reducers/barcode';
+import { barcodes } from './reducers/barcodes';
 
 import { LoadingIndicator } from 'components/LoadingIndicator';
 import { ScanBarcode } from './components/ScanBarcode';
@@ -12,7 +12,7 @@ import { Product } from 'components/Product';
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  barcode: barcode.reducer
+  barcodes: barcodes.reducer
 });
 
 export const store = configureStore({

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BarcodeScanner } from 'components/BarcodeScanner';
-import { fetchBarcode } from 'reducers/barcode';
+import { fetchBarcode } from 'reducers/barcodes';
 import { useDispatch } from 'react-redux';
 
 export const ScanBarcode = () => {
