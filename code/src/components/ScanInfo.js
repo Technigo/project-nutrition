@@ -12,6 +12,7 @@ const StyledScanInfo = styled.div`
 
 const Heading = styled.h1`
   color: green;
+  text-align: center;
 `;
 
 const Message = styled.p`

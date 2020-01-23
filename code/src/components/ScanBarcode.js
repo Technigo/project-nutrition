@@ -21,7 +21,7 @@ export const ScanBarcode = () => {
     <StyledScanBarcode>
       {!showScanner && (
         <Button type="button" onClick={() => setShowScanner(true)}>
-          Show scanner
+          Scan product
         </Button>
       )}
 
