@@ -3,9 +3,9 @@ import Quagga from 'quagga';
 import styled from 'styled-components';
 
 const Camera = styled.div`
-  width: 100%;
-  /* height: 250px;
-  max-width: 600px; */
+  /* width: 100%; */
+  height: 250px;
+  width: 400px;
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
   border-radius: 10px;
   padding: 0 1rem;
