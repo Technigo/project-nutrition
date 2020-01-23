@@ -8,7 +8,7 @@ const StyledFooter = styled.div`
   justify-content: center;
   align-items: center;
   background: green;
-  height: 70px;
+  height: 80px;
   width: 100%;
   color: white;
   bottom: 0;
