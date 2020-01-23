@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #76a06124;
+  background-color: #83de9526;
 }
 
 h2 {
@@ -31,12 +31,9 @@ main {
   max-width: 60%;
 }
 
-header {
-}
-
 header img {
   width: 100%;
-  background-color: #76a061;
+  background-color: #83de95;
   padding: 1em;
   box-sizing: border-box;
 }
@@ -46,6 +43,11 @@ header img {
 }
 
 .scanning-button {
+  padding: 0.5em 0.7em;
+  background-color: #1c2924;
+  color: white;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  font-size: 1.1em;
 }
 
 .product-image {
