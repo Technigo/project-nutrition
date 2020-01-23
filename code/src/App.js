@@ -7,6 +7,7 @@ import { ui } from 'reducers/ui';
 import { ScanBarcode } from 'components/ScanBarcode';
 import { ScanInfo } from 'components/ScanInfo';
 import { ShowInfo } from 'components/ShowInfo';
+import { Footer } from 'components/Footer';
 import { GlobalStyle } from 'components/GlobalStyle';
 
 const reducer = combineReducers({
@@ -20,8 +21,8 @@ const store = configureStore({
 
 const AppWrapper = styled.div`
   width: 100%;
-  max-width: 768px;
-  border: 1px solid blue;
+  max-width: 600px;
+  /* border: 1px solid blue; */
   padding: 2rem;
 `;
 
@@ -33,6 +34,7 @@ export const App = () => {
         <ScanInfo />
         <ScanBarcode />
         <ShowInfo />
+        <Footer />
       </AppWrapper>
     </Provider>
   );

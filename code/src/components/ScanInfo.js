@@ -7,7 +7,7 @@ const StyledScanInfo = styled.div`
   justify-content: center;
   align-items: center;
   /* padding: 2rem; */
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
 `;
 
 const Heading = styled.h1`

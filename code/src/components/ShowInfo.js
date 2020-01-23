@@ -4,11 +4,7 @@ import { useSelector } from 'react-redux';
 // import { NutritionContent } from 'components/NutrionContent';
 
 const StyledShowInfo = styled.div`
-  border: 1px solid red;
-`;
-
-const Heading = styled.h3`
-  text-align: left;
+  /* border: 1px solid red; */
 `;
 
 const ProductWrapper = styled.div`

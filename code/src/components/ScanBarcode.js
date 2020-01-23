@@ -11,7 +11,7 @@ const StyledScanBarcode = styled.div`
   justify-content: center;
   align-items: center;
   /* padding: 2rem; */
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   margin: 1rem;
 `;
 
