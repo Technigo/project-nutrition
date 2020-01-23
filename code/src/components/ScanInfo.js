@@ -6,8 +6,8 @@ const StyledScanInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  /* border: 1px solid red; */
+  /* padding: 2rem; */
+  border: 1px solid yellow;
 `;
 
 const Heading = styled.h1`
@@ -23,7 +23,7 @@ const Message = styled.p`
 export const ScanInfo = () => {
   return (
     <StyledScanInfo>
-      <Heading>Find your fist product</Heading>
+      <Heading>Find your product</Heading>
       <Message>
         Scan the barcode of any product with your phone to find detailed
         information.

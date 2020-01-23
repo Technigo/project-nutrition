@@ -6,10 +6,7 @@ const Camera = styled.div`
   width: 100%;
   height: 350px;
   max-width: 600px;
-  /* border: 1px solid red; */
-  /* border-radius: 8px; */
   box-shadow: 0 3px 5px 0 rgba(14, 30, 37, 0.4);
-  /* border: 2px solid rgba(14, 30, 37, 0.8); */
   overflow: hidden;
 `;
 
@@ -34,7 +31,8 @@ export const BarcodeScanner = ({ className, onDetected }) => {
           }
         },
         decoder: {
-          readers: ['ean_reader']
+          readers: ['ean_reader'],
+          multiple: false
         }
       },
       err => {
