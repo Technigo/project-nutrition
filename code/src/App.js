@@ -15,6 +15,17 @@ import { Header } from './components/Header'
 // Use resusable Card component for thw products I scan
 // A tab bar to wstich between display-stuff: Nutrition, 
 // Reducers for ui (loading) and products (fetching product from api)
+// TabBar should be renderd in Product.js when a product is found
+// Different routes for clicking the tabs when a product is found?
+// Start page = all black heading + button/scan
+// When product is found render rpute to prouctpage with tabs
+
+// STYLED COMPONENTS
+const Container = styled.section`
+  background: #f1f1f1;
+  min-height: 100vh;
+  text-align: center;
+`
 
 // COMBINING REDUCERS
 const reducer = combineReducers({
@@ -25,22 +36,16 @@ const reducer = combineReducers({
 // THE STORE
 export const store = configureStore({ reducer })
 
-// APP
+// APP COMPONENT
 export const App = () => {
   return (
     <Provider store={store}>
       <Container>
         <Header />
         <LoadingIndicator />
-        <ScanBarcode />
         <Product />
+        <ScanBarcode />
       </Container>
     </Provider>
   )
 }
-
-const Container = styled.main`
-  background: #2A2B2A;
-  height: 100vh;
-  text-align: center;
-`

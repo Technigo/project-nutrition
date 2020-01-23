@@ -1,12 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import Loader from 'react-loader-spinner'
 
 export const LoadingIndicator = () => {
   const isLoading = useSelector(state => state.ui.isLoading)
 
   return (
     <>
-      {isLoading && <h3>Loading...</h3>}
+      {isLoading && <Loader type="ThreeDots" color="#333" height={80} width={80} />}
     </>
   )
 }

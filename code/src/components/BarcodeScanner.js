@@ -1,8 +1,19 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import styled from 'styled-components/macro'
 import Quagga from 'quagga'
+import Loader from 'react-loader-spinner'
 
-// BarcodeScanner is set up by Technigo
+//STYLED COMPONENTS
+// const ScanWrapper = styled.div`
+// `
+const Scan = styled.div`
+  height: 250px;
+  width: 400px;
+  border-radius: 6px;
+  overflow: hidden;
+`
+
+// COMPONENT BARCODESCANNER (SET UP BY TECHNIGO TEAM)
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
@@ -13,8 +24,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   })
 
   useLayoutEffect(() => {
-    const camWidth = window.innerWidth / 2
-    const camHeight = window.innerHeight / 1.7
 
     Quagga.init({
       inputStream: {
@@ -22,8 +31,8 @@ export const BarcodeScanner = ({ className, onDetected }) => {
         type: 'LiveStream',
         target: cameraDivRef.current,
         constraints: {
-          width: camWidth,
-          height: camHeight,
+          width: 400,
+          height: 250,
           facingMode: 'user'
         }
       },
@@ -45,21 +54,9 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   }, [])
 
   return (
-    <ScanWrapper>
-      {initializing && <LoadText>Starting camera...</LoadText>}
+    <>
+      {initializing && <Loader type="ThreeDots" color="#333" height={80} width={80} />}
       <Scan ref={cameraDivRef} className={className} />
-    </ScanWrapper>
+    </>
   )
 }
-const ScanWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-`
-const LoadText = styled.p`
-  font-size: 16px;
-  color: #fff;
-`
-const Scan = styled.div`
-
-`
