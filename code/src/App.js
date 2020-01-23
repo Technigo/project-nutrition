@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { food } from 'reducers/food';
 import { ui } from 'reducers/ui';
+import { scanner } from 'reducers/scanner';
 import { ScanBarcode } from 'components/ScanBarcode';
 import { ScanInfo } from 'components/ScanInfo';
 import { ShowInfo } from 'components/ShowInfo';
@@ -12,7 +13,8 @@ import { GlobalStyle } from 'components/GlobalStyle';
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  food: food.reducer
+  food: food.reducer,
+  scanner: scanner.reducer
 });
 
 const store = configureStore({

@@ -18,6 +18,7 @@ const Heading = styled.h1`
 const Message = styled.p`
   /* border: 1px solid blue; */
   text-align: center;
+  font-style: italic;
 `;
 
 export const ScanInfo = () => {

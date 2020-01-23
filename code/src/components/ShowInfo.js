@@ -41,16 +41,14 @@ export const ShowInfo = () => {
       <ProductWrapper>
         <ProductSummary>
           <h3>Product summary</h3>
-          {data && data.brands && <p>Brand: {data.brands}</p>}
-          {data && data.product_name && (
-            <p>Product name: {data.product_name}</p>
-          )}
+          {data && data.brands && <p>{data.brands}</p>}
+          {data && data.product_name && <p>{data.product_name}</p>}
         </ProductSummary>
-        <ProductImage>
+        {/* <ProductImage>
           {data && data.image_small_url && (
             <img src={data.image_small_url} alt="small" />
           )}
-        </ProductImage>
+        </ProductImage> */}
       </ProductWrapper>
     </StyledShowInfo>
   );
