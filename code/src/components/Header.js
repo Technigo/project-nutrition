@@ -1,3 +1,4 @@
+
 import React from 'react'
 import 'components/header.css'
 
@@ -19,8 +20,13 @@ export const Header = () => {
             </div>
             <div className="headerInfo">
                 <h1>Nutrition info</h1>
-    
             </div>
+
+            <nav className="headerNavigation">
+            <p href="#">Home</p>
+            <p href="#">Subscribe</p>
+            <p href="#">Search</p>
+        </nav>
 
         </div>
     )

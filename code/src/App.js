@@ -7,6 +7,9 @@ import { ScanBarcode } from './components/ScanBarcode'
 import { Header } from './components/Header'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from './components/Product'
+import { Footer } from './components/lib/Footer'
+
+
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -21,8 +24,11 @@ export const App = () => {
     <Provider store={store}>
       <Header />
       <LoadingIndicator />
-      <ScanBarcode />
+      <div className="barcodeButton">
+        <ScanBarcode />
+      </div>
       <Product />
+      <Footer />
     </Provider>
   )
 }
