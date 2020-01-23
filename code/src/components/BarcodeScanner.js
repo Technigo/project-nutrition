@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const Camera = styled.div`
   width: 100%;
-  height: 470px;
+  height: 350px;
   max-width: 600px;
   /* border: 1px solid red; */
   border-radius: 8px;
