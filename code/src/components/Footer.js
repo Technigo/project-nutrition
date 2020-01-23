@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { Button } from 'semantic-ui-react';
 
 const StyledFooter = styled.div`
-  position: absolute;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
