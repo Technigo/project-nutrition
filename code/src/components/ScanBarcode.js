@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchBarcodes } from 'reducers/products'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { useDispatch } from 'react-redux'
 // import { barcodes } from 'reducers/barcodes'
 
@@ -28,11 +28,20 @@ width: 60px;
 height: 60px;
 border-radius: 50%;
 position: relative;
-top: 40%;
-left: 40%
+top: 75%;
+left: 40%;
+font-size: 10px;
+text-align: center;
+text-transform: uppercase;
 /* align-self: center;
 justify-self: center; */
 `
+const Icon = styled.img`
+width: 30px;
+height: auto;
+font-weight: 700;
+`
+
 
 export const ScanBarcode = () => {
     const [showScanner, setShowScanner] = useState(false)
@@ -45,8 +54,8 @@ export const ScanBarcode = () => {
             <Scanner>
                 {!showScanner && (
                     <ShowScannerBtn type="button" onClick={() => setShowScanner(true)}>
-                        Show scanner
-                </ShowScannerBtn>
+                        <Icon src="assets/shapes-and-symbols.svg" alt="scan-icon" ></Icon>
+                    </ShowScannerBtn>
                 )}
 
                 {showScanner && (

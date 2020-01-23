@@ -20,8 +20,11 @@ export const ProductInfo = () => {
         <Section>
             <h1>Product info:</h1>
             <img src={product.product && product.product.image_nutrition_url} />
-            {/* <img src={product.product && product.product.image[1].sizes[100]} /> */}
+            <img src={product.product && product.product.images[1]} />
+            <img src={product.product && product.product.images[1].sizes[100]} />
+            <img src={product.product && product.product.images[1].sizes[400]} />
             <p>{product.product && product.product._keywords[1]}</p>
+            <p>{product.product && product.product.ingredients_original_tags}</p>
 
             <p>{product.product && product.product.product_name}</p>
         </Section>
