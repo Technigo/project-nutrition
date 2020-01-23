@@ -1,5 +1,5 @@
-import React from 'react'
 import { createSlice } from '@reduxjs/toolkit'
+import { ui } from 'reducers/ui'
 
 export const products = createSlice({
     name: 'products',
@@ -8,7 +8,7 @@ export const products = createSlice({
     },
     reducers: {
         setProduct: (state, action) => {
-            state.setProduct = action.payload
+            state.product = action.payload
         }
     }
 })
@@ -21,6 +21,7 @@ export const fetchProduct = (barcode) => {
             .then(json => {
                 dispatch(products.actions.setProduct(json))
                 dispatch(ui.actions.setLoading(false))
+                // console.log(products)
             })
     }
 }

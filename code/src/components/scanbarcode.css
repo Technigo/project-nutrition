@@ -1,0 +1,20 @@
+button {
+    background: white;
+    background-image: url(barcode.png); 
+    background-size: cover; 
+    background-position: center; 
+    display: inline-block; 
+    border: none; 
+    padding: 20px; 
+    /* width: 70px; 
+    height: 70px;  */
+    margin:10px;
+    transition: all 0.5s; 
+    cursor: pointer;
+
+}
+
+button:hover { 
+    width: 75px; 
+    height: 75px;
+}
