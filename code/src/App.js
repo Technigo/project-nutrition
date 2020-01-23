@@ -5,11 +5,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { food } from 'reducers/food';
 import { ui } from 'reducers/ui';
 import { scanner } from 'reducers/scanner';
-import { ScanBarcode } from 'components/ScanBarcode';
-import { ScanInfo } from 'components/ScanInfo';
-import { ShowInfo } from 'components/ShowInfo';
-import { Footer } from 'components/Footer';
-import { GlobalStyle } from 'components/GlobalStyle';
+import { ScanApp } from 'components/ScanApp';
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -32,11 +28,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <AppWrapper>
-        <GlobalStyle />
-        <ScanInfo />
-        <ScanBarcode />
-        <ShowInfo />
-        <Footer />
+        <ScanApp />
       </AppWrapper>
     </Provider>
   );

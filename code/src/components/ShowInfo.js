@@ -4,26 +4,20 @@ import { useSelector } from 'react-redux';
 // import { NutritionContent } from 'components/NutrionContent';
 
 const StyledShowInfo = styled.div`
+  padding: 1rem 5rem;
   /* border: 1px solid red; */
 `;
 
-const ProductWrapper = styled.div`
+const Item = styled.li`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
 
-const ProductImage = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-
-  img {
-    border-radius: 6px;
-  }
+const ItemTitle = styled.span`
+  text-align: left;
 `;
-
-const ProductSummary = styled.div`
-  padding: 1rem;
+const ItemDetails = styled.span`
+  text-align: right;
 `;
 
 export const ShowInfo = () => {
@@ -38,18 +32,33 @@ export const ShowInfo = () => {
 
   return (
     <StyledShowInfo>
-      <ProductWrapper>
-        <ProductSummary>
-          <h3>Product summary</h3>
-          {data && data.brands && <p>{data.brands}</p>}
-          {data && data.product_name && <p>{data.product_name}</p>}
-        </ProductSummary>
-        {/* <ProductImage>
-          {data && data.image_small_url && (
-            <img src={data.image_small_url} alt="small" />
+      <h3>Product summary</h3>
+      <ul>
+        <Item>
+          <ItemTitle>Bar code</ItemTitle>
+          {data && data.id ? (
+            <ItemDetails>{data.id}</ItemDetails>
+          ) : (
+            <ItemDetails>-</ItemDetails>
           )}
-        </ProductImage> */}
-      </ProductWrapper>
+        </Item>
+        <Item>
+          <ItemTitle>Brand</ItemTitle>
+          {data && data.brands ? (
+            <ItemDetails>{data.brands}</ItemDetails>
+          ) : (
+            <ItemDetails>-</ItemDetails>
+          )}
+        </Item>
+        <Item>
+          <ItemTitle>Product</ItemTitle>
+          {data && data.product_name ? (
+            <ItemDetails>{data.product_name}</ItemDetails>
+          ) : (
+            <ItemDetails>-</ItemDetails>
+          )}
+        </Item>
+      </ul>
     </StyledShowInfo>
   );
 };

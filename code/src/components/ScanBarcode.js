@@ -13,7 +13,7 @@ const StyledScanBarcode = styled.div`
   align-items: center;
   /* padding: 2rem; */
   /* border: 1px solid orange; */
-  margin: 1rem;
+  margin-top: 3rem;
 `;
 
 export const ScanBarcode = () => {

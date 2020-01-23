@@ -3,12 +3,11 @@ import Quagga from 'quagga';
 import styled from 'styled-components';
 
 const Camera = styled.div`
-  /* width: 100%; */
-  height: 250px;
-  width: 400px;
+  width: 80%;
+  height: 300px;
+  max-width: 600px;
   box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
   border-radius: 10px;
-  padding: 0 1rem;
   overflow: hidden;
 `;
 
@@ -28,8 +27,8 @@ export const BarcodeScanner = ({ className, onDetected }) => {
           type: 'LiveStream',
           target: cameraDivRef.current,
           constraints: {
-            width: 450,
-            height: 300
+            width: 640,
+            height: 480
           }
         },
         decoder: {
