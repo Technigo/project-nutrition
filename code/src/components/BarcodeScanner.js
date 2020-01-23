@@ -9,24 +9,28 @@ export const BarcodeScanner = ({ className, onDetected }) => {
     onDetected(data.codeResult.code)
   })
 
+  //går det att spegelvända kameran?
   useLayoutEffect(() => {
-    Quagga.init({
-      inputStream: {
-        name: 'Live',
-        type: 'LiveStream',
-        target: cameraDivRef.current
+    Quagga.init(
+      {
+        inputStream: {
+          name: 'Live',
+          type: 'LiveStream',
+          target: cameraDivRef.current
+        },
+        decoder: {
+          readers: ['ean_reader']
+        }
       },
-      decoder: {
-        readers: ['ean_reader']
+      (err) => {
+        if (err) {
+          console.error('Failed to initialize reader', err)
+          return
+        }
+        Quagga.start()
+        setInitializing(false)
       }
-    }, (err) => {
-      if (err) {
-        console.error('Failed to initialize reader', err)
-        return
-      }
-      Quagga.start()
-      setInitializing(false)
-    })
+    )
 
     return () => {
       Quagga.stop()
