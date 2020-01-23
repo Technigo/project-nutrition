@@ -6,10 +6,10 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { products } from './reducers/products'
 import { ui } from './reducers/ui'
 
+import { LandingPage } from './components/LandingPage'
 import { LoadingIndicator } from './components/LoadingIndicator'
 import { ScanBarcode } from './components/ScanBarcode'
 import { Product } from './components/Product'
-
 
 
 const reducer = combineReducers({
@@ -24,6 +24,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <main>
+        <LandingPage />
         <LoadingIndicator />
         <ScanBarcode />
         <Product />

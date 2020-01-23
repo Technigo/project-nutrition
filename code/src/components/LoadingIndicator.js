@@ -1,5 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import Loader from 'react-loader-spinner'
 
 
 
@@ -8,8 +9,14 @@ export const LoadingIndicator = () => {
 
   return (
     <>
-      {isLoading &&
-        <h1>!! Loading !!</h1>}
+      {isLoading &&(
+          <Loader
+          type="Puff"
+          color="#00BFFF"
+          height={100}
+          width={100}
+       />
+      )}
     </>
   )
 }

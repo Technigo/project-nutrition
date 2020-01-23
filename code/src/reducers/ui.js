@@ -8,7 +8,7 @@ export const ui = createSlice({
 
   reducers: {
     setLoading: (state, action) => {
-      state.inLoading = action.payload
+      state.isLoading = action.payload
     }
   }
 

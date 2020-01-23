@@ -1,0 +1,1045 @@
+{
+  "product": {
+    "completeness": 0.9,
+    "nutriscore_grade": "e",
+    "last_editor": "moon-rabbit",
+    "last_edit_dates_tags": [
+      "2020-01-07",
+      "2020-01",
+      "2020"
+    ],
+    "pnns_groups_2": "Biscuits and cakes",
+    "purchase_places_tags": [
+      "sweden",
+      "finland"
+    ],
+    "countries": "Finland,Sweden",
+    "quantity": "50 g",
+    "origins": "",
+    "debug_param_sorted_langs": [
+      "fi",
+      "sv"
+    ],
+    "nutrition_data_per": "100g",
+    "languages_hierarchy": [
+      "en:finnish",
+      "en:swedish"
+    ],
+    "link": "",
+    "additives_tags": [
+      "en:e476",
+      "en:e500",
+      "en:e500ii",
+      "en:e503",
+      "en:e503ii"
+    ],
+    "correctors_tags": [
+      "openfoodfacts-contributors",
+      "olofolleola4",
+      "jumati",
+      "moon-rabbit"
+    ],
+    "manufacturing_places": "",
+    "categories_tags": [
+      "en:snacks",
+      "en:sweet-snacks",
+      "en:confectioneries",
+      "en:chocolate-candies",
+      "en:bars",
+      "en:chocolate-bars",
+      "en:chocolate-biscuity-bars"
+    ],
+    "nova_groups": "4",
+    "amino_acids_tags": [],
+    "expiration_date": "2020-06-24",
+    "additives_old_tags": [
+      "en:e476"
+    ],
+    "nova_group_tags": [
+      "not-applicable"
+    ],
+    "ingredients_from_palm_oil_n": 0,
+    "nutrition_score_warning_no_fruits_vegetables_nuts": 1,
+    "brands": "Marabou,Mondelez",
+    "rev": 21,
+    "labels_lc": "en",
+    "stores_tags": [
+      "willys",
+      "k-market"
+    ],
+    "max_imgid": "8",
+    "allergens": "en:gluten,en:milk,en:nuts,en:soybeans,fi:Voiöljy",
+    "scans_n": 7,
+    "obsolete": "",
+    "ingredients_from_palm_oil_tags": [],
+    "ingredients_text_fi": "Sokeri, _vehnäjauho_, palmuöljy, herajauhe (_maito_), kaakaovoi, rasvaton _maitojauhe_, kaakaomassa, vähärasvainen kaakao, _voiöljy_, perunatärkkelys, rapsiöljy, emulgointiaineet (_soijalesitiini_, E476), suola, nostatusaineet (natriumvetykarbonaatti, ammoniumvetykarbonaatti), aromi (sisältää hasselpähkinää), aromi.",
+    "ingredients_that_may_be_from_palm_oil_tags": [],
+    "minerals_tags": [],
+    "brands_tags": [
+      "marabou",
+      "mondelez"
+    ],
+    "codes_tags": [
+      "code-13",
+      "7622210807xxx",
+      "762221080xxxx",
+      "76222108xxxxx",
+      "7622210xxxxxx",
+      "762221xxxxxxx",
+      "76222xxxxxxxx",
+      "7622xxxxxxxxx",
+      "762xxxxxxxxxx",
+      "76xxxxxxxxxxx",
+      "7xxxxxxxxxxxx"
+    ],
+    "emb_codes_tags": [],
+    "popularity_tags": [
+      "top-country-se-scans-2019"
+    ],
+    "allergens_hierarchy": [
+      "en:gluten",
+      "en:milk",
+      "en:nuts",
+      "en:soybeans",
+      "fi:Voiöljy",
+      "fi:voiöljy"
+    ],
+    "image_front_thumb_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.100.jpg",
+    "unique_scans_n": 2,
+    "nutrient_levels": {
+      "fat": "high",
+      "sugars": "high",
+      "saturated-fat": "high",
+      "salt": "moderate"
+    },
+    "allergens_from_ingredients": "vehnäjauho, maito, maitojauhe, voiöljy, soijalesitiini, herajauhe, hasselpähkinää",
+    "other_nutritional_substances_tags": [],
+    "interface_version_modified": "20190830",
+    "completed_t": 1578415142,
+    "ingredients_that_may_be_from_palm_oil_n": 0,
+    "data_quality_tags": [
+      "en:nutriscore-computations-same-score",
+      "en:nutriscore-computations-same-grade"
+    ],
+    "languages_tags": [
+      "en:finnish",
+      "en:swedish",
+      "en:2",
+      "en:multilingual"
+    ],
+    "code": "7622210807274",
+    "lc": "fi",
+    "ingredients_n": 22,
+    "labels_tags": [
+      "en:cocoa-life",
+      "en:green-dot"
+    ],
+    "entry_dates_tags": [
+      "2018-12-18",
+      "2018-12",
+      "2018"
+    ],
+    "checkers_tags": [],
+    "data_quality_info_tags": [
+      "en:nutriscore-computations-same-score",
+      "en:nutriscore-computations-same-grade"
+    ],
+    "minerals_prev_tags": [],
+    "languages_codes": {
+      "sv": 2,
+      "fi": 6
+    },
+    "editors_tags": [
+      "olofolleola4",
+      "moon-rabbit",
+      "openfoodfacts-contributors",
+      "jumati"
+    ],
+    "no_nutrition_data": "",
+    "labels_hierarchy": [
+      "en:cocoa-life",
+      "en:green-dot"
+    ],
+    "nova_group": 4,
+    "unknown_ingredients_n": 2,
+    "ingredients": [
+      {
+        "vegetarian": "yes",
+        "id": "en:sugar",
+        "rank": 1,
+        "text": "Sokeri",
+        "vegan": "yes"
+      },
+      {
+        "vegetarian": "yes",
+        "id": "en:wheat-flour",
+        "rank": 2,
+        "vegan": "yes",
+        "text": "_vehnäjauho_"
+      },
+      {
+        "rank": 3,
+        "vegan": "yes",
+        "text": "palmuöljy",
+        "vegetarian": "yes",
+        "id": "en:palm-oil",
+        "from_palm_oil": "yes"
+      },
+      {
+        "vegetarian": "maybe",
+        "has_sub_ingredients": "yes",
+        "id": "en:whey-powder",
+        "text": "herajauhe",
+        "vegan": "no",
+        "rank": 4
+      },
+      {
+        "text": "_maito_",
+        "vegan": "no",
+        "rank": 5,
+        "vegetarian": "yes",
+        "id": "en:milk"
+      },
+      {
+        "rank": 6,
+        "vegan": "yes",
+        "text": "kaakaovoi",
+        "vegetarian": "yes",
+        "id": "en:cocoa-butter"
+      },
+      {
+        "vegetarian": "yes",
+        "id": "en:skimmed-milk-powder",
+        "text": "rasvaton _maitojauhe_",
+        "vegan": "no",
+        "rank": 7
+      },
+      {
+        "vegetarian": "yes",
+        "id": "en:cocoa-paste",
+        "vegan": "yes",
+        "text": "kaakaomassa",
+        "rank": 8
+      },
+      {
+        "vegetarian": "yes",
+        "id": "da:fedtfattig-kakao",
+        "text": "vähärasvainen kaakao",
+        "vegan": "yes",
+        "rank": 9
+      },
+      {
+        "id": "fi:_voiöljy_",
+        "rank": 10,
+        "text": "_voiöljy_"
+      },
+      {
+        "id": "en:potato-starch",
+        "vegetarian": "yes",
+        "rank": 11,
+        "text": "perunatärkkelys",
+        "vegan": "yes"
+      },
+      {
+        "id": "en:rapeseed-oil",
+        "from_palm_oil": "no",
+        "vegetarian": "yes",
+        "text": "rapsiöljy",
+        "vegan": "yes",
+        "rank": 12
+      },
+      {
+        "id": "en:emulsifier",
+        "has_sub_ingredients": "yes",
+        "text": "emulgointiaineet",
+        "rank": 13
+      },
+      {
+        "id": "en:salt",
+        "vegetarian": "yes",
+        "rank": 14,
+        "text": "suola",
+        "vegan": "yes"
+      },
+      {
+        "has_sub_ingredients": "yes",
+        "id": "en:raising-agent",
+        "text": "nostatusaineet",
+        "rank": 15
+      },
+      {
+        "vegan": "maybe",
+        "text": "aromi",
+        "rank": 16,
+        "vegetarian": "maybe",
+        "has_sub_ingredients": "yes",
+        "id": "en:flavouring"
+      },
+      {
+        "text": "sisältää hasselpähkinää",
+        "rank": 17,
+        "id": "fi:sisältää hasselpähkinää"
+      },
+      {
+        "rank": 18,
+        "text": "aromi",
+        "vegan": "maybe",
+        "vegetarian": "maybe",
+        "id": "en:flavouring"
+      },
+      {
+        "vegetarian": "yes",
+        "id": "en:soya-lecithin",
+        "text": "_soijalesitiini_",
+        "vegan": "yes"
+      },
+      {
+        "vegetarian": "yes",
+        "id": "en:e476",
+        "text": "e476",
+        "vegan": "yes"
+      },
+      {
+        "vegan": "yes",
+        "text": "natriumvetykarbonaatti",
+        "id": "en:e500ii",
+        "vegetarian": "yes"
+      },
+      {
+        "vegan": "yes",
+        "text": "ammoniumvetykarbonaatti",
+        "id": "en:e503ii",
+        "vegetarian": "yes"
+      }
+    ],
+    "last_image_t": 1578412721,
+    "languages": {
+      "en:finnish": 6,
+      "en:swedish": 2
+    },
+    "states_tags": [
+      "en:to-be-checked",
+      "en:complete",
+      "en:nutrition-facts-completed",
+      "en:ingredients-completed",
+      "en:expiration-date-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-completed",
+      "en:categories-completed",
+      "en:brands-completed",
+      "en:packaging-completed",
+      "en:quantity-completed",
+      "en:product-name-completed",
+      "en:photos-validated",
+      "en:photos-uploaded"
+    ],
+    "categories_hierarchy": [
+      "en:snacks",
+      "en:sweet-snacks",
+      "en:confectioneries",
+      "en:chocolate-candies",
+      "en:bars",
+      "en:chocolate-bars",
+      "en:chocolate-biscuity-bars"
+    ],
+    "pnns_groups_1_tags": [
+      "sugary-snacks",
+      "known"
+    ],
+    "ingredients_tags": [
+      "en:sugar",
+      "en:wheat-flour",
+      "en:cereal",
+      "en:flour",
+      "en:wheat",
+      "en:cereal-flour",
+      "en:palm-oil",
+      "en:oil-and-fat",
+      "en:vegetable-oil-and-fat",
+      "en:palm-oil-and-fat",
+      "en:whey-powder",
+      "en:dairy",
+      "en:whey",
+      "en:milk",
+      "en:cocoa-butter",
+      "en:cocoa",
+      "en:skimmed-milk-powder",
+      "en:milk-powder",
+      "en:cocoa-paste",
+      "da:fedtfattig-kakao",
+      "fi:voiöljy",
+      "en:potato-starch",
+      "en:starch",
+      "en:rapeseed-oil",
+      "en:emulsifier",
+      "en:salt",
+      "en:raising-agent",
+      "en:flavouring",
+      "fi:sisältää-hasselpähkinää",
+      "en:soya-lecithin",
+      "en:e322",
+      "en:e476",
+      "en:e500ii",
+      "en:e500",
+      "en:e503ii",
+      "en:e503"
+    ],
+    "image_nutrition_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.400.jpg",
+    "additives_old_n": 1,
+    "nutrition_data_prepared": "",
+    "generic_name_sv": "",
+    "categories": "Naposteltavat, Makeat naposteltavat, Sokerileipomotuotteet, Suklaamakeiset, Patukat, Suklaapatukat, Chocolate biscuity bars",
+    "pnns_groups_1": "Sugary snacks",
+    "product_name": "Kex",
+    "countries_lc": "en",
+    "states": "en:to-be-checked, en:complete, en:nutrition-facts-completed, en:ingredients-completed, en:expiration-date-completed, en:packaging-code-to-be-completed, en:characteristics-completed, en:categories-completed, en:brands-completed, en:packaging-completed, en:quantity-completed, en:product-name-completed, en:photos-validated, en:photos-uploaded",
+    "creator": "olofolleola4",
+    "ingredients_n_tags": [
+      "22",
+      "21-30"
+    ],
+    "nutriscore_score": 24,
+    "image_front_small_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.200.jpg",
+    "last_modified_by": "moon-rabbit",
+    "countries_tags": [
+      "en:finland",
+      "en:sweden"
+    ],
+    "traces_from_user": "(en)",
+    "packaging": "05 PP,Green dot",
+    "pnns_groups_2_tags": [
+      "biscuits-and-cakes",
+      "known"
+    ],
+    "traces_tags": [],
+    "product_quantity": "50",
+    "additives_original_tags": [
+      "en:e476",
+      "en:e500ii",
+      "en:e503ii"
+    ],
+    "additives_debug_tags": [],
+    "compared_to_category": "en:chocolate-biscuity-bars",
+    "_id": "7622210807274",
+    "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.200.jpg",
+    "ingredients_text_with_allergens_sv": "",
+    "ingredients_original_tags": [
+      "en:sugar",
+      "en:wheat-flour",
+      "en:palm-oil",
+      "en:whey-powder",
+      "en:milk",
+      "en:cocoa-butter",
+      "en:skimmed-milk-powder",
+      "en:cocoa-paste",
+      "da:fedtfattig-kakao",
+      "fi:_voiöljy_",
+      "en:potato-starch",
+      "en:rapeseed-oil",
+      "en:emulsifier",
+      "en:salt",
+      "en:raising-agent",
+      "en:flavouring",
+      "fi:sisältää hasselpähkinää",
+      "en:flavouring",
+      "en:soya-lecithin",
+      "en:e476",
+      "en:e500ii",
+      "en:e503ii"
+    ],
+    "traces": "",
+    "sortkey": 301578419871,
+    "data_quality_bugs_tags": [],
+    "ingredients_ids_debug": [],
+    "images": {
+      "7": {
+        "uploaded_t": 1578412688,
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 18
+          },
+          "400": {
+            "w": 400,
+            "h": 72
+          },
+          "full": {
+            "h": 824,
+            "w": 4608
+          }
+        },
+        "uploader": "jumati"
+      },
+      "front_sv": {
+        "geometry": "0x0-0-0",
+        "imgid": "1",
+        "white_magic": null,
+        "x2": null,
+        "normalize": null,
+        "rev": "4",
+        "y1": null,
+        "angle": null,
+        "y2": null,
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 32
+          },
+          "400": {
+            "w": 400,
+            "h": 128
+          },
+          "200": {
+            "w": 200,
+            "h": 64
+          },
+          "full": {
+            "h": 1252,
+            "w": 3918
+          }
+        },
+        "x1": null
+      },
+      "8": {
+        "sizes": {
+          "100": {
+            "h": 94,
+            "w": 100
+          },
+          "full": {
+            "w": 877,
+            "h": 823
+          },
+          "400": {
+            "w": 400,
+            "h": 375
+          }
+        },
+        "uploader": "jumati",
+        "uploaded_t": 1578412721
+      },
+      "6": {
+        "uploaded_t": 1578412635,
+        "uploader": "jumati",
+        "sizes": {
+          "100": {
+            "h": 65,
+            "w": 100
+          },
+          "full": {
+            "w": 2663,
+            "h": 1719
+          },
+          "400": {
+            "h": 258,
+            "w": 400
+          }
+        }
+      },
+      "1": {
+        "uploaded_t": 1545164953,
+        "sizes": {
+          "full": {
+            "w": 3918,
+            "h": 1252
+          },
+          "400": {
+            "h": 128,
+            "w": 400
+          },
+          "100": {
+            "w": 100,
+            "h": 32
+          }
+        },
+        "uploader": "olofolleola4"
+      },
+      "3": {
+        "sizes": {
+          "400": {
+            "w": 400,
+            "h": 128
+          },
+          "full": {
+            "w": 3856,
+            "h": 1238
+          },
+          "100": {
+            "h": 32,
+            "w": 100
+          }
+        },
+        "uploader": "olofolleola4",
+        "uploaded_t": 1545165128
+      },
+      "4": {
+        "uploaded_t": 1578412508,
+        "uploader": "jumati",
+        "sizes": {
+          "100": {
+            "h": 32,
+            "w": 100
+          },
+          "full": {
+            "w": 4608,
+            "h": 1482
+          },
+          "400": {
+            "w": 400,
+            "h": 129
+          }
+        }
+      },
+      "nutrition_fi": {
+        "angle": "0",
+        "y1": "4.713134765625",
+        "y2": "65.82424926757812",
+        "sizes": {
+          "full": {
+            "h": 700,
+            "w": 4465
+          },
+          "200": {
+            "w": 200,
+            "h": 31
+          },
+          "400": {
+            "w": 400,
+            "h": 63
+          },
+          "100": {
+            "w": 100,
+            "h": 16
+          }
+        },
+        "x1": "9.722198486328125",
+        "geometry": "4465x700-111-53",
+        "imgid": "7",
+        "normalize": "false",
+        "white_magic": "false",
+        "x2": "397.22222900390625",
+        "rev": "17"
+      },
+      "ingredients_fi": {
+        "y2": "149.4218978881836",
+        "y1": "82.75524139404297",
+        "angle": "0",
+        "sizes": {
+          "400": {
+            "h": 69,
+            "w": 400
+          },
+          "200": {
+            "w": 200,
+            "h": 34
+          },
+          "full": {
+            "w": 3780,
+            "h": 650
+          },
+          "100": {
+            "h": 17,
+            "w": 100
+          }
+        },
+        "x1": "5.5555419921875",
+        "geometry": "3780x650-54-805",
+        "imgid": "5",
+        "normalize": "false",
+        "white_magic": "false",
+        "x2": "394.4443359375",
+        "rev": "16"
+      },
+      "5": {
+        "uploader": "jumati",
+        "sizes": {
+          "100": {
+            "h": 41,
+            "w": 100
+          },
+          "400": {
+            "w": 400,
+            "h": 164
+          },
+          "full": {
+            "w": 3889,
+            "h": 1597
+          }
+        },
+        "uploaded_t": 1578412588
+      },
+      "front_fi": {
+        "x1": "0",
+        "y1": "0",
+        "y2": "0",
+        "angle": "0",
+        "sizes": {
+          "100": {
+            "w": 100,
+            "h": 32
+          },
+          "400": {
+            "w": 400,
+            "h": 129
+          },
+          "200": {
+            "h": 64,
+            "w": 200
+          },
+          "full": {
+            "h": 1482,
+            "w": 4608
+          }
+        },
+        "normalize": "true",
+        "x2": "0",
+        "white_magic": "true",
+        "rev": "15",
+        "geometry": "0x0-0-0",
+        "imgid": "4"
+      },
+      "2": {
+        "uploaded_t": 1545165041,
+        "sizes": {
+          "full": {
+            "w": 3936,
+            "h": 1271
+          },
+          "400": {
+            "h": 129,
+            "w": 400
+          },
+          "100": {
+            "h": 32,
+            "w": 100
+          }
+        },
+        "uploader": "olofolleola4"
+      }
+    },
+    "vitamins_tags": [],
+    "generic_name_fi": "Vohveli (19%), jossa hasselpähkinänmakuinen täyte (49%) päällystetty maitosuklaalla (30%)",
+    "ingredients_debug": [],
+    "ingredients_text_sv": "",
+    "nutrition_score_debug": " -- energy 6 + sat-fat 10 + fr-sat-fat-for-fats 8 + sugars 8 + sodium 2 - fruits 0% 0 - fiber 2 - proteins 4 -- fsa 24 -- fr 24",
+    "amino_acids_prev_tags": [],
+    "nova_group_debug": " -- ingredients/en:sugar : 3 -- ingredients/en:flavouring : 4",
+    "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.100.jpg",
+    "data_quality_errors_tags": [],
+    "misc_tags": [
+      "en:nutrition-no-fruits-vegetables-nuts",
+      "en:nutrition-no-fiber-or-fruits-vegetables-nuts",
+      "en:nutriscore-computed"
+    ],
+    "manufacturing_places_tags": [],
+    "ingredients_text": "Sokeri, _vehnäjauho_, palmuöljy, herajauhe (_maito_), kaakaovoi, rasvaton _maitojauhe_, kaakaomassa, vähärasvainen kaakao, _voiöljy_, perunatärkkelys, rapsiöljy, emulgointiaineet (_soijalesitiini_, E476), suola, nostatusaineet (natriumvetykarbonaatti, ammoniumvetykarbonaatti), aromi (sisältää hasselpähkinää), aromi.",
+    "cities_tags": [],
+    "ingredients_text_debug": null,
+    "product_name_fi": "Kex",
+    "labels": "Cocoa Life,Green Dot",
+    "id": "7622210807274",
+    "vitamins_prev_tags": [],
+    "_keywords": [
+      "cocoa",
+      "tayte",
+      "chocolatee",
+      "kex",
+      "paallystetty",
+      "mondelez",
+      "19",
+      "hasselpahkinanmakuinen",
+      "jossa",
+      "49",
+      "marabou",
+      "dot",
+      "maitosuklaalla",
+      "30",
+      "barre",
+      "vohveli",
+      "life",
+      "biscuitee",
+      "green"
+    ],
+    "allergens_lc": "en",
+    "ingredients_text_with_allergens_fi": "Sokeri, <span class=\"allergen\">vehnäjauho</span>, palmuöljy, <span class=\"allergen\">herajauhe</span> (<span class=\"allergen\">maito</span>), kaakaovoi, rasvaton <span class=\"allergen\">maitojauhe</span>, kaakaomassa, vähärasvainen kaakao, <span class=\"allergen\">voiöljy</span>, perunatärkkelys, rapsiöljy, emulgointiaineet (<span class=\"allergen\">soijalesitiini</span>, E476), suola, nostatusaineet (natriumvetykarbonaatti, ammoniumvetykarbonaatti), aromi (sisältää <span class=\"allergen\">hasselpähkinää</span>), aromi.",
+    "nutrition_grades": "e",
+    "nutrient_levels_tags": [
+      "en:fat-in-high-quantity",
+      "en:saturated-fat-in-high-quantity",
+      "en:sugars-in-high-quantity",
+      "en:salt-in-moderate-quantity"
+    ],
+    "emb_codes": "",
+    "ingredients_analysis_tags": [
+      "en:palm-oil",
+      "en:non-vegan",
+      "en:vegetarian-status-unknown"
+    ],
+    "states_hierarchy": [
+      "en:to-be-checked",
+      "en:complete",
+      "en:nutrition-facts-completed",
+      "en:ingredients-completed",
+      "en:expiration-date-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-completed",
+      "en:categories-completed",
+      "en:brands-completed",
+      "en:packaging-completed",
+      "en:quantity-completed",
+      "en:product-name-completed",
+      "en:photos-validated",
+      "en:photos-uploaded"
+    ],
+    "countries_hierarchy": [
+      "en:finland",
+      "en:sweden"
+    ],
+    "nutriments": {
+      "salt_100g": 0.48,
+      "energy-kcal_serving": 1100,
+      "energy_serving": 1100,
+      "carbohydrates_value": 60,
+      "saturated-fat_serving": 7.5,
+      "fiber_100g": 2.5,
+      "fat_serving": 14,
+      "sodium": 0.192,
+      "proteins_value": 6.5,
+      "salt_value": 0.48,
+      "energy_100g": 2199,
+      "nova-group_100g": 4,
+      "carbohydrates_serving": 30,
+      "proteins_100g": 6.5,
+      "sugars_serving": 20,
+      "proteins_serving": 3.25,
+      "salt_serving": 0.24,
+      "energy-kcal_value": 526,
+      "energy": 2199,
+      "carbohydrates_100g": 60,
+      "energy_value": 2199,
+      "fiber_value": 2.5,
+      "nutrition-score-uk": 24,
+      "energy-kj_100g": 2199,
+      "proteins": 6.5,
+      "saturated-fat_unit": "g",
+      "sodium_unit": "g",
+      "nutrition-score-uk_100g": 24,
+      "fat_100g": 28,
+      "energy-kcal_100g": 2201,
+      "carbohydrates_unit": "g",
+      "salt": 0.48,
+      "fiber_serving": 1.25,
+      "fat": 28,
+      "nutrition-score-fr_100g": 24,
+      "sodium_100g": 0.192,
+      "saturated-fat": 15,
+      "sugars_value": 40,
+      "energy-kcal_unit": "kcal",
+      "saturated-fat_value": 15,
+      "nutrition-score-fr": 24,
+      "sodium_serving": 0.096,
+      "carbohydrates": 60,
+      "sugars_unit": "g",
+      "energy_unit": "kJ",
+      "sodium_value": 0.192,
+      "saturated-fat_100g": 15,
+      "energy-kj_value": 2199,
+      "energy-kj_serving": 1100,
+      "energy-kj": 2199,
+      "sugars": 40,
+      "proteins_unit": "g",
+      "salt_unit": "g",
+      "fiber": 2.5,
+      "fat_unit": "g",
+      "fiber_unit": "g",
+      "nova-group_serving": 4,
+      "sugars_100g": 40,
+      "nova-group": 4,
+      "energy-kcal": 2201,
+      "energy-kj_unit": "kJ",
+      "fat_value": 28
+    },
+    "image_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.400.jpg",
+    "nutrition_data_prepared_per": "100g",
+    "data_quality_warnings_tags": [],
+    "nucleotides_tags": [],
+    "lang": "fi",
+    "informers_tags": [
+      "olofolleola4",
+      "jumati"
+    ],
+    "purchase_places": "Sweden,Finland",
+    "traces_lc": "en",
+    "interface_version_created": "20120622",
+    "last_modified_t": 1578419871,
+    "traces_hierarchy": [],
+    "image_nutrition_small_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.200.jpg",
+    "photographers_tags": [
+      "olofolleola4",
+      "jumati"
+    ],
+    "created_t": 1545164953,
+    "ingredients_hierarchy": [
+      "en:sugar",
+      "en:wheat-flour",
+      "en:cereal",
+      "en:flour",
+      "en:wheat",
+      "en:cereal-flour",
+      "en:palm-oil",
+      "en:oil-and-fat",
+      "en:vegetable-oil-and-fat",
+      "en:palm-oil-and-fat",
+      "en:whey-powder",
+      "en:dairy",
+      "en:whey",
+      "en:milk",
+      "en:cocoa-butter",
+      "en:cocoa",
+      "en:skimmed-milk-powder",
+      "en:milk-powder",
+      "en:cocoa-paste",
+      "da:fedtfattig-kakao",
+      "fi:_voiöljy_",
+      "en:potato-starch",
+      "en:starch",
+      "en:rapeseed-oil",
+      "en:emulsifier",
+      "en:salt",
+      "en:raising-agent",
+      "en:flavouring",
+      "fi:sisältää hasselpähkinää",
+      "en:soya-lecithin",
+      "en:e322",
+      "en:e476",
+      "en:e500ii",
+      "en:e500",
+      "en:e503ii",
+      "en:e503"
+    ],
+    "nutrition_grades_tags": [
+      "e"
+    ],
+    "image_front_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.400.jpg",
+    "nutrition_grade_fr": "e",
+    "nutrition_data": "on",
+    "additives_prev_original_tags": [],
+    "ingredients_from_or_that_may_be_from_palm_oil_n": 0,
+    "allergens_from_user": "(en)Gluten,Milk,Nuts,Soybeans,fi:Voiöljy",
+    "serving_quantity": "50",
+    "image_nutrition_thumb_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.100.jpg",
+    "last_image_dates_tags": [
+      "2020-01-07",
+      "2020-01",
+      "2020"
+    ],
+    "selected_images": {
+      "nutrition": {
+        "display": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.400.jpg"
+        },
+        "small": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.200.jpg"
+        },
+        "thumb": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/nutrition_fi.17.100.jpg"
+        }
+      },
+      "ingredients": {
+        "display": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.400.jpg"
+        },
+        "small": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.200.jpg"
+        },
+        "thumb": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.100.jpg"
+        }
+      },
+      "front": {
+        "thumb": {
+          "sv": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_sv.4.100.jpg",
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.100.jpg"
+        },
+        "small": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.200.jpg",
+          "sv": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_sv.4.200.jpg"
+        },
+        "display": {
+          "fi": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.400.jpg",
+          "sv": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_sv.4.400.jpg"
+        }
+      }
+    },
+    "nucleotides_prev_tags": [],
+    "nutrition_score_beverage": 0,
+    "unknown_nutrients_tags": [],
+    "nutriscore_data": {
+      "fiber": 2.5,
+      "energy_points": 6,
+      "saturated_fat": 15,
+      "sugars": 40,
+      "is_beverage": 0,
+      "positive_points": 2,
+      "grade": "e",
+      "saturated_fat_value": 15,
+      "saturated_fat_ratio_points": 8,
+      "saturated_fat_ratio": 53.5714285714286,
+      "sugars_value": 40,
+      "sodium_value": 192,
+      "sugars_points": 8,
+      "score": 24,
+      "negative_points": 26,
+      "fiber_value": 2.5,
+      "energy_value": 2199,
+      "fruits_vegetables_nuts_colza_walnut_olive_oils_points": 0,
+      "fiber_points": 2,
+      "is_fat": 0,
+      "saturated_fat_points": 10,
+      "energy": 2199,
+      "sodium_points": 2,
+      "fruits_vegetables_nuts_colza_walnut_olive_oils_value": 0,
+      "fruits_vegetables_nuts_colza_walnut_olive_oils": 0,
+      "proteins": 6.5,
+      "is_cheese": 0,
+      "is_water": 0,
+      "proteins_points": 4,
+      "saturated_fat_ratio_value": 53.6,
+      "sodium": 192,
+      "proteins_value": 6.5
+    },
+    "image_ingredients_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/ingredients_fi.16.400.jpg",
+    "additives_n": 3,
+    "image_small_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.200.jpg",
+    "allergens_tags": [
+      "en:gluten",
+      "en:milk",
+      "en:nuts",
+      "en:soybeans",
+      "fi:voiöljy",
+      "fi:voiöljy"
+    ],
+    "categories_lc": "fi",
+    "image_thumb_url": "https://static.openfoodfacts.org/images/products/762/221/080/7274/front_fi.15.100.jpg",
+    "ingredients_text_with_allergens": "Sokeri, <span class=\"allergen\">vehnäjauho</span>, palmuöljy, <span class=\"allergen\">herajauhe</span> (<span class=\"allergen\">maito</span>), kaakaovoi, rasvaton <span class=\"allergen\">maitojauhe</span>, kaakaomassa, vähärasvainen kaakao, <span class=\"allergen\">voiöljy</span>, perunatärkkelys, rapsiöljy, emulgointiaineet (<span class=\"allergen\">soijalesitiini</span>, E476), suola, nostatusaineet (natriumvetykarbonaatti, ammoniumvetykarbonaatti), aromi (sisältää <span class=\"allergen\">hasselpähkinää</span>), aromi.",
+    "traces_from_ingredients": "",
+    "complete": 1,
+    "origins_tags": [],
+    "packaging_tags": [
+      "05-pp",
+      "green-dot"
+    ],
+    "product_name_sv": "Marabou Kex med nougatsmak",
+    "update_key": "update_categories_taxonomy",
+    "generic_name": "Vohveli (19%), jossa hasselpähkinänmakuinen täyte (49%) päällystetty maitosuklaalla (30%)",
+    "nova_groups_tags": [
+      "en:4-ultra-processed-food-and-drink-products"
+    ],
+    "stores": "Willys,K-market",
+    "serving_size": "50g",
+    "obsolete_since_date": ""
+  },
+  "status_verbose": "product found",
+  "code": "7622210807274",
+  "status": 1
+}

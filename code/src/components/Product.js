@@ -2,21 +2,29 @@ import React from "react"
 import { useSelector } from "react-redux"
 
 
-
 export const Product = () => {
-  const product = useSelector((state) => state.products.product)
 
-  if (!product) return null
-  console.log("product", product)
+  const item = useSelector((state) => state.products)
+  if (!item) return null
 
+
+  let x = true
   return (
     <>
       <h3>
         Product:
       </h3>
-      <p>The product name: {product.product && product.product.generic_name_en}
-        {product.product && product.product.product_name}</p>
-      <p> Category: {product.product && product.product.categories_tags}</p>
+      
+      <img src={item.product.image_url} height="300" width="300"/>
+      <img src={item.product.image_front_small_url}/>
+      <p>The product name:  {item.product.product_name}</p>
+      <p> Carbohydrates per 100g: {item.product.nutriments.carbohydrates_100g}</p>
+      
+      <p> Protein per 100g: {item.product.nutriments.proteins_100g}</p>
+      <p> Energy kcal per 100g: {item.product.nutriments['energy-kcal_100g']}</p>
+      <div height="500px" width="500px">
+        <div height={item.product.nutriments.fat_100g}> Fat per 100g: </div>
+      </div>
     </>
   )
 }
