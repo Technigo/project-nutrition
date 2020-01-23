@@ -1,0 +1,73 @@
+header{
+    background: #5c0f47;
+    color: #FFF;
+    display: flex;
+    align-items: end;
+    padding: 20px 12px 12px 12px;
+    justify-content: flex-start;
+    height: 80px;
+
+}
+
+header h1{
+    margin-left: 12px;
+    color: #ffd7d6;
+}
+
+.hamburger-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger{
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.hamburger div{
+    border: 2px solid #ffd7d6;
+    margin: 2px;
+    width: 40px;
+    height: 2px;
+}
+
+.menu-container{
+    width: 40px;
+}
+
+.menu{
+    display: none;
+    /* background: #f1f1f1; */
+    position: relative;
+    top: 0;
+    z-index: 5;
+    color: #5c0f47;
+    border-radius: 2px;
+    /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12); */
+    width: 200px;
+    background: #ffd7d6;
+    padding: 0 2px 2px 0;
+}
+
+.menu-container:hover .menu{
+    display: inline-block;
+}
+
+/* .menu-container:active .menu{
+        display: inline-block;
+} */
+
+.menu p{
+    padding: 7px 7px 2px 7px;
+    border-bottom: 1px dotted #5c0f47;
+    margin: 5px 5px 5px 2px;
+}
+
+.menu p:hover{
+    background-color: #FFF;
+    padding: 0;
+}
