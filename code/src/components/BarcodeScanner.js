@@ -7,9 +7,9 @@ const Camera = styled.div`
   height: 350px;
   max-width: 600px;
   /* border: 1px solid red; */
-  border-radius: 8px;
+  /* border-radius: 8px; */
   box-shadow: 0 3px 5px 0 rgba(14, 30, 37, 0.4);
-  border: 2px solid rgba(14, 30, 37, 0.8);
+  /* border: 2px solid rgba(14, 30, 37, 0.8); */
   overflow: hidden;
 `;
 
