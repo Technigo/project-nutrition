@@ -1,17 +1,16 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-// import { BarcodeScanner } from './components/BarcodeScanner'
-import { ScanBarcode } from './components/ScanBarcode'
-// import { ProductList } from 'components/ProductList'
-import { Header } from 'components/header.js'
 import { ui } from './reducers/ui'
-import { productFetch } from './reducers/productFetch'
+import { products } from './reducers/products'
+import { ScanBarcode } from './components/ScanBarcode'
+import { Header } from './components/header'
 import { LoadingIndicator } from './components/LoadingIndicator'
+import { Product } from './components/Product'
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  productFetch: productFetch.reducer
+  products: products.reducer
 })
 
 export const store = configureStore({ reducer })
@@ -19,10 +18,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Header />
-      <ScanBarcode />
       <LoadingIndicator />
-      Find me in src/app.js!
-      {/* <ProductList /> */}
+      <ScanBarcode />
+      <Product />
     </Provider>
   )
 }
