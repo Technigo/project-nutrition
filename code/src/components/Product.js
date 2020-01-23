@@ -1,12 +1,22 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import styled from "styled-components";
+import styled from "styled-components"
 
 const ProductHeading = styled.div`
   display: flex;
   flex-direction: row;
-  
   justify-content: center;
+`
+const ProductInfo = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+`
+
+const ProductPic = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 `
 
 //this component Product, whill show the product when we fetched it
@@ -24,9 +34,18 @@ export const Product = () => {
             <ProductHeading>
                 <h1>Product</h1>
             </ProductHeading>
+           
+            <ProductInfo>
+                <div> {product.product && product.product.ingredients_en}
+              </div>
+                
+                <h5>{product.product && product.ingredients_analysis_tags}</h5>
+            </ProductInfo>
+
+           {/* <ProductPic>*/}
                 {/* first checking that we get the product in the fetch && then show the picture of the product */}
                 <img src={product.product && product.product.image_url} alt= "" />
-           
+           {/* </ProductPic>*/}
         </>
     )
 }

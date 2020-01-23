@@ -10,6 +10,12 @@ const Btn = styled.div`
   // width: 500px;
   justify-content: center;
 `
+const Scanner = styled.div`
+  // display: flex;
+  // flex-direction: row;
+  // width: 500px;
+  justify-content: center;
+`
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -24,18 +30,19 @@ export const ScanBarcode = () => {
           </button>
      
       )}
-
-      {showScanner && (
-        <BarcodeScanner 
-        // Damien had parenthesis around code down below
-          onDetected={code => {
-            console.log('Got barcode', code)
-              setShowScanner(false)
-              //fetching the barcode from the reducer:products
-              dispatch(fetchProduct(code))
-        }} />
-      )}
-       </Btn>
+      </Btn>
+      <Scanner>
+        {showScanner && (
+          <BarcodeScanner 
+          // Damien had parenthesis around code down below
+            onDetected={code => {
+              console.log('Got barcode', code)
+                setShowScanner(false)
+                //fetching the barcode from the reducer:products
+                dispatch(fetchProduct(code))
+          }} />
+        )}
+      </Scanner> 
     </>
   )
 }
