@@ -5,20 +5,32 @@ import { useSelector } from 'react-redux'
 
 export const ProductInfo = () => {
 
-    const barcodes = useSelector((state) => state.barcodes.items)
+    const product = useSelector((state) => state.products.product)
+
+    if (!product) return null
+
+    console.log('product', product)
 
     return (
-        <div>
-            <h1>Products</h1>
-
-            <ul>
-                <img src={barcodes.items && barcodes.items.image_nutrition_url} />
-                {/* {barcodes.map((item) => (
-                    <li key={item.code} item={item}>
-                        {item.product.generic_name_sv}
-                    </li>
-                ))} */}
-            </ul>
-        </div>
+        <>
+            <h1>Product info:</h1>
+            <img src={product.product && product.product.image_nutrition_url} />
+            <p>{product.product && product.product._keywords[1]}</p>
+            <li>{product.product && product.product.product_name}</li>
+            <p>{product.product && product.product.product_name}</p>
+        </>
     )
 }
+
+
+// <ul>
+//                 <p>{product.product && product.product._keywords[1]}</p>
+//                 <p>{product.product && product.product._keywords[1]}</p>
+//                 <li>{product.product && product.product.product_name}</li>
+//                 <li>{product.product && product.product.product_name}</li>
+//                 {/* {barcodes.map((item) => (
+//                     <li key={item.code} item={item}>
+//                         {item.product.generic_name_sv}
+//                     </li>
+//                 ))} */}
+//             </ul>

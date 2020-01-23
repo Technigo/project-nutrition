@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
-import { barcodes, fetchBarcodes } from 'reducers/barcodes'
+import { fetchBarcodes } from 'reducers/products'
 import styled from 'styled-components'
 import { useDispatch } from 'react-redux'
 // import { barcodes } from 'reducers/barcodes'
@@ -11,9 +11,10 @@ background-color: white;
 `
 
 export const ScanBarcode = () => {
+    const [showScanner, setShowScanner] = useState(false)
     const dispatch = useDispatch()
 
-    const [showScanner, setShowScanner] = useState(false)
+
 
     return (
         <>

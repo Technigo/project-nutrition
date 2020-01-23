@@ -5,15 +5,15 @@ import { ScanBarcode } from 'components/ScanBarcode'
 import { ProductInfo } from 'components/ProductInfo'
 import { Header } from 'components/Header'
 
-import { FetchBarcodesBtn } from 'components/FetchBarcodesBtn'
+// import { FetchBarcodesBtn } from 'components/FetchBarcodesBtn'
 
-import { barcodes } from 'reducers/barcodes'
+import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
 
 
 const reducer = combineReducers({
   ui: ui.reducer,
-  barcodes: barcodes.reducer,
+  products: products.reducer,
 
 })
 
@@ -28,7 +28,7 @@ export const App = () => {
         <ProductInfo />
         Barcode scanner
         <ScanBarcode />
-        <FetchBarcodesBtn />
+        {/* <FetchBarcodesBtn /> */}
       </Provider>
     </div>
   )

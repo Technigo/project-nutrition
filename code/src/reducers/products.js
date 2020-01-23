@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
-import { ScanBarcode } from 'components/ScanBarcode'
-// import { BarcodeScanner } from 'components/BarcodeScanner'
 
 
 
 
-export const barcodes = createSlice({
-    name: 'barcodes',
+
+export const products = createSlice({
+    name: 'products',
     initialState: {
-        items: []
+        product: []
     },
 
     //***** here is the Actions *****/
@@ -24,17 +23,16 @@ export const barcodes = createSlice({
     }
 })
 /******* The Thunk **********/
-// In the export const fetchBarcodes = ( ****here the barcode id should be I think****) =>
-export const fetchBarcodes = (code) => {
+export const fetchBarcodes = (barcode) => {
     return (dispatch) => {
-        dispatch(ui.actions.setloading(true))
-        // fetch(`https://world.openfoodfacts.org/api/v0/product/[barcode].json`)
-        fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
+        dispatch(ui.actions.setLoading(true))
+
+        fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
 
             .then((res) => res.json())
             .then((json) => {
                 console.log(json)
-                dispatch(barcodes.actions.setBarcodes(json))
+                dispatch(products.actions.setBarcodes(json))
                 dispatch(ui.actions.setLoading(false))
             })
 
