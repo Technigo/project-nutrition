@@ -25,10 +25,9 @@ export const App = () => {
     <div>
       <Provider store={store}>
         <Header />
-        <ProductInfo />
-        Barcode scanner
+
         <ScanBarcode />
-        {/* <FetchBarcodesBtn /> */}
+        <ProductInfo />
       </Provider>
     </div>
   )

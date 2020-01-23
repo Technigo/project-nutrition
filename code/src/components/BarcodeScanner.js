@@ -1,5 +1,25 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
+import styled from 'styled-components/macro'
+
+const Section = styled.div`
+display: flex;
+align-content: center;
+justify-content: center;
+width: 50px;
+height: 50px;
+margin: 15px;
+`
+
+const Camera = styled.div`
+display: flex;
+position: relative;
+top: 35px;
+right: 60px;
+width: 300px;
+height: 200px;
+
+`
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
@@ -34,9 +54,9 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   }, [])
 
   return (
-    <>
+    <Section>
       {initializing && <div>Starting camera...</div>}
-      <div ref={cameraDivRef} className={className} />
-    </>
+      <Camera ref={cameraDivRef} className={className} > </Camera>
+    </Section>
   )
 }

@@ -16,7 +16,7 @@ export const products = createSlice({
         setBarcodes: (state, action) => {
             console.log(state)
             console.log(action)
-            state.items = action.payload
+            state.product = action.payload
             // state.items.push({ id: state.code, text: action.payload })
         }
 
