@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { fetchBarcode } from 'reducers/barcode';
+import { fetchBarcode } from 'reducers/barcodes';
 
 export const FetchBarcodeButton = () => {
   const dispatch = useDispatch();
