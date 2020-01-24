@@ -4,14 +4,33 @@ import styled from 'styled-components/macro'
 import { TabBar } from '../lib/TabBar'
 
 // STYLED COMPONENTS
+const ProductWrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 const TextNotFound = styled.h3`
   color: #333;
   text-align: center;
+`
+const List = styled.ul`
+  list-style: none;
+  margin: 0;
+`
+const ListItems = styled.li`
+  margin: 0;
 `
 // PRODUCT COMPONENT
 export const Product = () => {
 
   const product = useSelector(state => state.products.product)
+
+  const formattedCategories =
+    product.product &&
+    product.product.categories_tags.map(category =>
+      category.replace(/\w+:/, '').replace(/-/gi, ' ')
+    )
 
   console.log('Product:', product)
   console.log('Status:', product.status)
@@ -20,28 +39,39 @@ export const Product = () => {
 
   // Only show tabs when product is found later
   return (
-    <>
-      {product &&
+    <ProductWrapper>
+      {product && product.status === 0 &&
+        <>
+          <TextNotFound>Product not found in database!</TextNotFound>
+          <TextNotFound>Feel free to contribute with your product by visiting <a href='https://world.openfoodfacts.org/'>OpenFoodFacts site >></a></TextNotFound>
+        </>
+      }
+
+      {product.product &&
         <TabBar
           tabs={[
-            { title: "Info", render: () => <h2>Tabs will just show when a product is found. Route to /info?</h2> },
+            { title: "General", render: () => <h2>Route to /info?</h2> },
             { title: "Allergenes", render: () => <h2>Route to /allergenes?</h2> },
             { title: "Other", render: () => <h2>Route to /other?</h2> }
           ]}
-        />}
-      {product && product.status === 0 &&
-        <TextNotFound>Product not found in database. Feel free to contribute with your product: https://world.openfoodfacts.org/</TextNotFound>}
-      {
-        product.product &&
+        />
+      }
+
+      {product.product &&
         <>
-          <h2>Product: {product.product.product_name}</h2>
-          <h3>Brand: {product.product.brands}</h3>
-          <h3>Vegan? {product.product.ingredients.vegan}</h3>
-          <h3>Vegetarian? {product.product.ingredients.vegetarian}</h3>
-          <h3>Ingredients: {product.product.ingredients_hierarchy}</h3>
+          <p>Product: {product.product.product_name}</p>
+          <p>Brand: {product.product.brands}</p>
+          <p>Vegan? {product.product.ingredients.vegan}</p>
+          <p>Vegetarian? {product.product.ingredients.vegetarian}</p>
+          <List>Ingredients: {product.product.ingredients_hierarchy.map((ingredient, index) => (
+            <ListItems key={index}>{ingredient}</ListItems>
+          ))}</List>
+          <List>Categories: {formattedCategories.map((category, index) => (
+            <ListItems key={index}>{category}</ListItems>
+          ))}</List>
         </>
       }
-    </>
+    </ProductWrapper>
   )
 
 }

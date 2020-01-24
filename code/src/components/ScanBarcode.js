@@ -10,9 +10,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
-  /* border: 1px solid orange; */
-  margin: 1rem;
+  height: 50vh;
 `
 const Button = styled.button`
   font-family: 'Roboto', sans-serif;
@@ -35,10 +33,12 @@ export const ScanBarcode = () => {
 
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
+  const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
 
   // To start the web cam
   const handleShowScan = () => {
-    setShowScanner(true)
+    // setShowScanner(true)
+    dispatch(fetchProduct(OATLY_CODE))
   }
 
   // To fetch the product you scan

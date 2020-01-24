@@ -3,12 +3,17 @@ import styled from 'styled-components/macro'
 
 // STYLED COMPONENTS
 const Wrapper = styled.section`
-  text-align: center;
-  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1a1a1a;
   width: 100vw;
-  padding: 50px;
+  height: 30vh;
+  padding: 40px;
 `
 const PrimaryText = styled.h1`
+  letter-spacing: 1.5px;
   font-size: 26px;
   color: #f1f1f1;
   text-transform: uppercase;

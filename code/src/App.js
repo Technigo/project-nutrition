@@ -23,8 +23,9 @@ import { Header } from './components/Header'
 // STYLED COMPONENTS
 const Container = styled.section`
   background: #f1f1f1;
-  min-height: 100vh;
-  text-align: center;
+  min-height: 70vh;
+  margin: 0;
+  padding-bottom: 50px;
 `
 
 // COMBINING REDUCERS
@@ -40,8 +41,8 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
+      <Header />
       <Container>
-        <Header />
         <LoadingIndicator />
         <Product />
         <ScanBarcode />
