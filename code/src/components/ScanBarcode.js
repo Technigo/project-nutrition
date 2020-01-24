@@ -6,17 +6,20 @@ import { useDispatch } from 'react-redux'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 // import { barcodes } from 'reducers/barcodes'
 // import Loader from 'react-loader-spinner'
+// import { Link } from 'react-router-dom';
+import { Header } from 'components/Header'
+import { BottomBar } from 'components/BottomBar'
 
 
-
+const BarcodeKey = 5218020031149
 
 const Section = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    border-bottom: 1px solid black;
-    padding: 150px 0 50px;
+    /* border-bottom: 1px solid black; */
+    padding: 130px 0 50px;
 `
 
 const Scanner = styled.div`
@@ -24,15 +27,15 @@ const Scanner = styled.div`
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 300px;
     height: 300px;
     /* align-content: center;
     justify-content: center; */
 `
 const BarcodeIcon = styled.img`
-width: 300px;
-height: auto;
+    width: 300px;
+    height: auto;
 `
 
 const ShowScannerBtn = styled.button`
@@ -42,7 +45,7 @@ const ShowScannerBtn = styled.button`
     align-items: center;
     background-color: red;
     color: white;
-    width: 140px;
+    width: 170px;
     height: 50px;
     border-radius: 25px;
     /* padding: 7px; */
@@ -63,14 +66,17 @@ const Icon = styled.img`
 `
 
 
-export const ScanBarcode = () => {
+export const ScanBarcode = (product) => {
     const [showScanner, setShowScanner] = useState(false)
+    // const [products, setProducts] = useState()
     const dispatch = useDispatch()
 
 
 
     return (
-        <Section>
+        <Section >
+            <Header />
+            {/* <Link to="/productinfo" ></Link> */}
 
             <LoadingIndicator />
             <Scanner>
@@ -92,7 +98,7 @@ export const ScanBarcode = () => {
                     </ShowScannerBtn>
             )}
 
-
+            <BottomBar />
 
         </Section>
 

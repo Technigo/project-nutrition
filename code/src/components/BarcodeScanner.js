@@ -20,21 +20,28 @@ const Camera = styled.div`
   right: 0px;
   width: 300px;
   height: 200px;
-
 `
 // do some styling on this or a loadingspinner
-const LoadingText = styled.div`
-  display: flex;
-  text-align: center;
-  font-size: 20px;
-`
+// const LoadingText = styled.div`
+//   display: flex;
+//   text-align: center;
+//   font-size: 20px;
+// `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
+  const hasResult = useRef(false)
 
   Quagga.onDetected((data) => {
-    onDetected(data.codeResult.code)
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code)
+    }
+    hasResult.current = true
+
+    setTimeout(() => {
+      hasResult.current = false
+    }, 500)
   })
 
   useLayoutEffect(() => {

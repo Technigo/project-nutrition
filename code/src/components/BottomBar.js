@@ -51,6 +51,7 @@ const Emoji = styled.p`
 const Label = styled.p`
   font-size: 12px;
   color: red;
+  font-weight: 700;
 `;
 
 const ScanImg = styled.img`
@@ -67,11 +68,10 @@ export const BottomBar = () => {
             <BtnContainer>
                 <Icon>
                     <Emoji>
-                        <span role="img" aria-label="star">
-                            💫
-                        </span>
+                        <ScanImg src="/assets/red-arrow.svg" ></ScanImg>
+
                     </Emoji>
-                    <Label>Adventure</Label>
+                    <Label>Back</Label>
                 </Icon>
                 <Icon>
                     <Emoji>
@@ -81,11 +81,10 @@ export const BottomBar = () => {
                 </Icon>
                 <Icon>
                     <Emoji>
-                        <span role="img" aria-label="sun">
-                            ☀️
-            </span>
+                        <ScanImg src="/assets/red-user-icon.svg" ></ScanImg>
+
                     </Emoji>
-                    <Label>Sun</Label>
+                    <Label>Profile</Label>
                 </Icon>
 
             </BtnContainer>
