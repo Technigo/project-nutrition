@@ -19,20 +19,5 @@ article{
     align-items: center;
 }
 
-.scan-placeholder{
-    border: 2px solid #5c0f47;
-    border-radius: 6px;
-    height: 200px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;;
-}
 
 
-/* lottie-player{
-    width: 120px;
-    height: 120px;
-} */
