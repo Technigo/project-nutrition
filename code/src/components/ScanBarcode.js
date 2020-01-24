@@ -2,7 +2,23 @@ import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchProduct } from 'reducers/products'
 import { useDispatch } from 'react-redux'
-import './scanbarcode.css'
+import styled from 'styled-components/macro'
+import img from 'components/barcode.png';
+
+const Button = styled.button`
+    background: blue;
+    // background-image: url(${img});
+    background-size: cover;
+    background-position: center; 
+    display: inline-block; 
+    border: none; 
+    padding: 20px; 
+    width: 70px; 
+    height: 70px;
+    margin:10px;
+    transition: all 0.5s; 
+    cursor: grab;
+`
 
 export const ScanBarcode = () => {
     const [showScanner, setShowScanner] = useState(false)
@@ -11,10 +27,10 @@ export const ScanBarcode = () => {
     return (
         <>
             {!showScanner && (
-                <button type="button"
+                <Button type="button"
                     onClick={() => setShowScanner(true)}>
                     {/* Show scanner */}
-                </button>
+                </Button>
             )}
 
             {showScanner && (
