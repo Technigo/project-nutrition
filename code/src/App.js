@@ -29,7 +29,7 @@ export const App = () => {
     <div className="scan-container">
 
       <div className="scan-placeholder">
-      <lottie-player src="https://assets4.lottiefiles.com/temporary_files/0j9ST4.json" background="transparent"  speed="1" loop autoplay ></lottie-player>
+      {/* <lottie-player src="https://assets4.lottiefiles.com/temporary_files/0j9ST4.json" background="transparent"  speed="1" loop autoplay ></lottie-player> */}
       <h3>Scan barcode here!</h3>
       </div>
     <ScanBarcode />

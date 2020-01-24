@@ -4,18 +4,13 @@ import { useSelector } from 'react-redux'
 export const Product = () => {
   const isLoading = useSelector(state => state.ui.isLoading)
   const product = useSelector(state => state.products.product) 
-  // const showNoProduct = useSelector(state => state.products)
+
   
   if (!product) return null
   
   return (
-    <>
-    <h1>Product</h1>
-    
-    {/* {product.product && product.status === '0' &&
-    <h1>Try again!</h1>} */}
-    {product.status === 0 && <p>Try to scan again</p>
-    }
+    <>  
+    {product.status === 0 && <p>Try to scan again</p>}
 
     <img src={product.product && product.product.image_small_url} />
     {product.product && !product.product.image_small_url && <span>No picture available</span>}
