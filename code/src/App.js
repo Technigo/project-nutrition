@@ -5,6 +5,8 @@ import { ScanBarcode } from './components/ScanBarcode'
 import { products } from './reducers/products'
 import { ui } from './reducers/ui'
 import { Product } from './components/Product'
+import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 // Combine reducers
 const reducer = combineReducers({
@@ -18,11 +20,12 @@ const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
+      <Header siteTitle='Can I eat this?' />
       <main>
-        <h1> Can i eat this?</h1>
         <Product />
         <ScanBarcode />
       </main>
+      <Footer />
     </Provider>
   )
 }
