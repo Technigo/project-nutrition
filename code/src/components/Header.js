@@ -7,6 +7,7 @@ const Wrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background: #1a1a1a;
   width: 100vw;
   height: 30vh;
@@ -18,11 +19,20 @@ const PrimaryText = styled.h1`
   color: #f1f1f1;
   text-transform: uppercase;
   margin: 0;
+  @media (max-width: 449px) {
+    font-size: 20px;
+  }
+  @media (min-width: 450px) and (max-width: 750px) {
+    font-size: 24px;
+  }
 `
 const SecondaryText = styled.h2`
   font-size: 16px;
   color: #f1f1f1;
   margin: 10px 0 0 0;
+  @media (max-width: 449px) {
+    font-size: 14px;
+  }
 `
 
 // COMPONENT HEADER

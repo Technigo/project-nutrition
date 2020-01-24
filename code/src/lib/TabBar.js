@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 // STYLED COMPONENTS
 const TabContainer = styled.section`
@@ -35,6 +35,12 @@ const Title = styled.span`
   font-family: 'Roboto', sans-serif;
   color: ${props => (props.active ? "#721817" : "#333")};
   transition: 0.6s;
+  @media (max-width: 449px) {
+    font-size: 16px;
+  }
+  @media (min-width: 450px) and (max-width: 750px) {
+    font-size: 20px;
+  }
 `
 const Indicator = styled.span`
   position: absolute;
