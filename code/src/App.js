@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { ScanBarcode } from "components/ScanBarcode";
 import { ui } from "reducers/ui";
-import { products } from "reducers/products";
+import { products } from "reducers/product";
 import { LoadingIndicator } from "components/LoadingIndicator";
 import { Product } from "components/Product";
 

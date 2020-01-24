@@ -1,0 +1,35 @@
+.barcode-icon {
+  width: 230px;
+  height: 230px;
+}
+
+.barcode-icon:hover {
+  opacity: 0.8;
+}
+
+.scanner-container {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 4px solid rgb(251, 121, 167);
+  border-radius: 5%;
+  width: 500px;
+  height: 600px;
+  background-color: #fff;
+  color: rgb(74, 69, 57);
+}
+
+.scanner-text {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.scanner-title {
+  margin-bottom: 60px;
+}
