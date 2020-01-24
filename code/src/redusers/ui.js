@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const ui = createSlice({
-  name: 'products',
+  name: 'ui',
   initialState: {
-    product: []
+    isLoading: false
   },
   reducers: {
     setProduct: (state, action) => {
