@@ -24,7 +24,7 @@ export const ScanBarcode = () => {
           setShowScanner(false)
           dispatch(fetchProduct(code))
         }} />
-        <button type="button" onClick={() => setShowScanner(false)}>close</button>
+        <button type="button" onClick={() => setShowScanner(false)}>Cancel</button>
         
         {/* <h1>{products.product.product_name_sv}</h1> */}
         </>

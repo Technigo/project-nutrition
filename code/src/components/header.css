@@ -6,6 +6,7 @@ header{
     padding: 20px 12px 12px 12px;
     justify-content: flex-start;
     height: 80px;
+    box-shadow: -1px 3px 5px -2px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
 
 }
 
@@ -22,9 +23,11 @@ header button{
 }
 
 header h1{
-    margin-left: 50px;
+    margin-left: 55px;
     color: #a3538d;
     position: absolute;
+    font-family: 'Alata', sans-serif;
+    font-size: 40px;
 }
 
 .hamburger-container{
@@ -63,7 +66,7 @@ header button:focus{
     z-index: 5;
     color: #5c0f47;
     border-radius: 2px;
-    /* box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12); */
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
     width: 200px;
     background: #ffd7d6;
     /* padding: 0 2px 2px 0; */

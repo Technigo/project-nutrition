@@ -25,18 +25,14 @@ export const App = () => {
   <Provider store={store}>
     <Header />
     <article>
-    <LoadingIndicator />
     <div className="scan-container">
-
       <div className="scan-placeholder">
-      <lottie-player
-    src="https://assets3.lottiefiles.com/packages/lf20_9FZkDo.json"  background="transparent"  speed="0.5"  loop autoplay >
-</lottie-player>
-      {/* <lottie-player src="https://assets4.lottiefiles.com/temporary_files/0j9ST4.json" background="transparent"  speed="1" loop autoplay ></lottie-player> */}
-      <h3>Scan barcode here!</h3>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_9FZkDo.json"  background="transparent"  speed="0.5"  loop autoplay >
+      < /lottie-player>
       </div>
     <ScanBarcode />
     </div>
+    <LoadingIndicator />
     {/* {if pruduct in api, && <Product>} */}
     <Product />
 {/* {if no product in api && <NotFound />} */}
