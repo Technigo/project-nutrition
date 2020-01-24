@@ -9,6 +9,7 @@ const TabContainer = styled.section`
   height: 60px;
 `
 const TabButton = styled.button`
+  cursor: pointer;
   width: 100%;
   height: 100%;
   padding: 10px;
@@ -43,7 +44,7 @@ const Indicator = styled.span`
   height: 100%;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: ${props => (props.active ? "#721817" : "#f1f1f1")};
+  border-bottom-color: ${props => (props.active ? "#721817" : "#d9d9d9")};
   transition: 0.6s;
 `
 // TABBAR COMPONENT

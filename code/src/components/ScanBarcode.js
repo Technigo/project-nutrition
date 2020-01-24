@@ -16,14 +16,15 @@ const Wrapper = styled.div`
 `
 const Button = styled.button`
   font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #721817;
+  cursor: pointer;
   margin-top: 20px;
   padding: 20px 15px;
   background: #f1f1f1;
   border: 3px solid #721817;
   border-radius: 6px;
-  color: #721817;
-  text-transform: uppercase;
-  cursor: pointer;
   transition: 0.4s;
   &:hover {
     background: #D8C0BF;

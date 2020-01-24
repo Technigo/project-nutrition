@@ -4,11 +4,9 @@ import Quagga from 'quagga'
 import Loader from 'react-loader-spinner'
 
 //STYLED COMPONENTS
-// const ScanWrapper = styled.div`
-// `
 const Scan = styled.div`
-  height: 250px;
-  width: 400px;
+  height: 200px;
+  width: 300px;
   border-radius: 6px;
   overflow: hidden;
 `
@@ -17,12 +15,23 @@ const Scan = styled.div`
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
+  const hasResult = useRef(false)
 
-
+  // Function to not scan product twice
   Quagga.onDetected((data) => {
-    onDetected(data.codeResult.code)
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code)
+    }
+
+    hasResult.current = true
+
+    // Debounce function to not scan more than once in 500ms
+    setTimeout(() => {
+      hasResult.current = false
+    }, 500)
   })
 
+  // Added constarints to set size on cam view
   useLayoutEffect(() => {
 
     Quagga.init({
@@ -31,8 +40,8 @@ export const BarcodeScanner = ({ className, onDetected }) => {
         type: 'LiveStream',
         target: cameraDivRef.current,
         constraints: {
-          width: 400,
-          height: 250,
+          width: 300,
+          height: 200,
           facingMode: 'user'
         }
       },

@@ -24,16 +24,18 @@ export const Product = () => {
       {product &&
         <TabBar
           tabs={[
-            { title: "Info", render: () => <h2>Route to /info?</h2> },
+            { title: "Info", render: () => <h2>Tabs will just show when a product is found. Route to /info?</h2> },
             { title: "Allergenes", render: () => <h2>Route to /allergenes?</h2> },
             { title: "Other", render: () => <h2>Route to /other?</h2> }
           ]}
         />}
-      {product && product.status === 0 && <TextNotFound>Product not found in database. Feel free to contribute to the database with your product: https://world.openfoodfacts.org/</TextNotFound>}
+      {product && product.status === 0 &&
+        <TextNotFound>Product not found in database. Feel free to contribute with your product: https://world.openfoodfacts.org/</TextNotFound>}
       {
         product.product &&
         <>
           <h2>Product: {product.product.product_name}</h2>
+          <h3>Brand: {product.product.brands}</h3>
           <h3>Vegan? {product.product.ingredients.vegan}</h3>
           <h3>Vegetarian? {product.product.ingredients.vegetarian}</h3>
           <h3>Ingredients: {product.product.ingredients_hierarchy}</h3>

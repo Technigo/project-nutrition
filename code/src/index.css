@@ -14,6 +14,7 @@ code {
     monospace;
 }
 
+/* To hide the empty div below viedo/scanner */
 .drawingBuffer {
   display: none;
 }
