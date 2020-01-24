@@ -86,7 +86,8 @@ header button:focus{
 
 .menu p:hover{
     background-color: #FFF;
-    padding: 7px 4px 2px 4px;
+    /* padding: 7px 4px 2px 4px; */
+    padding: 7px 4px 7px 4px;
     /* margin: 5px 0 5px 0; */
 }
 
@@ -94,6 +95,8 @@ header button:focus{
     color: #5c0f47;
     background: none;
     font-size: 18px;
-    padding: 7px 4px 7px 4px;
+    padding: 7px 4px 7px 0;
     margin: 0 0 0 4px;
+    width: 50px;
+    
 }

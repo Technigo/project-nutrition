@@ -6,28 +6,18 @@ import './header.css'
 export const Header = () => {
 const [showMenu, setShowMenu] = useState(false);
 
-// const dispatch = useDispatch()
-
-// {showMen}
     return (
     <>
     <header>
-    <div className="menu-container">
-        {/* <button type="button" onClick={setShowMenu()}>   */}
-            {/* Meny */}
-            {/* {setShowMenu &&<p>menyn säger hej</p>} */}
-        {/* </button> */}
-    {/* <div className="hamburger"> */}
-    <button onClick={() => setShowMenu(true)}>
-      <div></div>
-      <div></div>
-      <div></div>
-    </button>   
-     </div>
+        <div className="menu-container">
+            <button onClick={() => setShowMenu(true)}>
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>   
+        </div>
 
-{showMenu &&
-
-
+    {showMenu &&
  <div className="menu">
  <p>Why not palm oil?</p>
  <p>How to use the scanner</p>
@@ -36,7 +26,6 @@ const [showMenu, setShowMenu] = useState(false);
 </div>
 }
    
-{/* </div> */}
 <h1>Palm oil finder</h1>
 
     
