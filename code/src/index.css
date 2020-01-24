@@ -53,3 +53,7 @@ header img {
 .product-image {
   max-height: 220px;
 }
+
+video {
+  transform: scaleX(-1);
+}

@@ -5,7 +5,6 @@ import { ui } from 'reducers/ui'
 import { products } from 'reducers/products'
 import { Header } from 'components/Header'
 import { Intro } from 'components/Intro'
-import { Card } from 'components/Card'
 import { ScanBarcode } from 'components/ScanBarcode'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
@@ -22,11 +21,10 @@ export const App = () => {
     <Provider store={store}>
       <Header />
       <main>
-        <Intro />
-        <Card />
         <LoadingIndicator />
-        <ScanBarcode />
         <Product />
+        <Intro />
+        <ScanBarcode />
       </main>
     </Provider>
   )

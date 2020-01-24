@@ -9,7 +9,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
     onDetected(data.codeResult.code)
   })
 
-  //går det att spegelvända kameran?
   useLayoutEffect(() => {
     Quagga.init(
       {
