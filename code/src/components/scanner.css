@@ -6,3 +6,11 @@
 video{
     height: 100px;
 }
+
+
+.scan-placeholder{
+    border: 2px solid #5c0f47;
+    border-radius: 6px;
+    height: 150px;
+    width: 100px;
+}
