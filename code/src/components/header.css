@@ -21,8 +21,7 @@ h1 {
   justify-content: space-between;
   object-position: left;
   margin-right: 104px;
-  margin-left: 20px
-  
+  margin-left: 20px;  
 }
 /* lines for the hamburger menu, same width as the container, but thinner */
 .hamburger div {
@@ -31,6 +30,17 @@ h1 {
   background: white;
   border-radius: 5px;
 }
+
+ .hamburger div:hover {
+    filter: brightness(70%);
+    background: palevioletred;
+    
+ }
+ .headerNavigation:hover {
+    filter: brightness(70%);
+    color: palevioletred;
+ }
+
 .headerInfo {
   color: white;
   align-content: center;

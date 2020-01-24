@@ -58,7 +58,7 @@ export const Footer = () => {
         <Icon>
           <Emoji>
             <span role="img" aria-label="snowflake">
-              ❄️
+              ⭐️x
             </span>
           </Emoji>
           <Label>Snow</Label>
@@ -74,7 +74,7 @@ export const Footer = () => {
         <Icon>
           <Emoji>
             <span role="img" aria-label="sun">
-              ☀️
+              🦋
             </span>
           </Emoji>
           <Label>Favourites</Label>

@@ -13,13 +13,13 @@ const ProductInfo = styled.div`
     display: flex;
     flex-direction: row;
     // width: 500px;
-    justify-content: center;
+    justify-content: center;   
 `
 const ProductStore = styled.div`
     display: flex;
     flex-direction: row;
     // width: 500px;
-    justify-content: center;
+    justify-content: center; 
 `
 const ProductImg = styled.div`
     display: flex;
@@ -50,6 +50,7 @@ export const Product = () => {
             <ProductInfo>
                 <h4>Ingredients:</h4>
                 <h4>{product.product && product.product.ingredients_tags}</h4>
+                <h4>{product.product && product.product._keywords}</h4>
             </ProductInfo>
 
             <ProductStore>
@@ -58,7 +59,7 @@ export const Product = () => {
             <ProductImg>
                 {/* first checking that we get the product in the fetch && then show the picture of the product */}
                 <img src={product.product && product.product.image_url} alt="" />
-                <img src={product.product && product.product.image_nutrition_url} alt="" />
+                {/* <img src={product.product && product.product.image_nutrition_url} alt="" /> */}
             </ProductImg>
 
         </>
