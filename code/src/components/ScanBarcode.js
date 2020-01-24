@@ -8,9 +8,9 @@ export const ScanBarcode = () => {
   const dispatch = useDispatch()
 
   return (
-    <>
+    <div className="scan-btn-container">
       {!showScanner && (
-        <button type="button" onClick={() => setShowScanner(true)}>
+        <button className="scan-btn" type="button" onClick={() => setShowScanner(true)}>
           Show scanner
         </button>
       )}
@@ -22,6 +22,6 @@ export const ScanBarcode = () => {
           dispatch(fetchProduct(code))
         }} />
       )}
-    </>
+    </div>
   )
 }

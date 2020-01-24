@@ -27,3 +27,45 @@ code {
   font-family: 'Roboto', sans-serif;
 
 }
+
+
+.hamburger {
+  display: flex;
+  width: 25px;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-around;
+  object-position: left;
+  margin-right: 30px;
+  margin-top: 30px;
+  margin-left: 20px
+}
+
+/* lines for the hamburger menu, same width as the container, but thinner */
+
+
+
+.hamburger div {
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+}
+
+.scan-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.scan-btn{
+  color: white;
+  background-color: lightgrey;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}

@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
+import { insulinCounter } from 'reducers/insulinCounter'
 
 export const products = createSlice({
     name: 'products',
@@ -20,6 +21,7 @@ export const fetchProduct = (barcode) => {
         .then(res => res.json())
         .then(json => {
             dispatch(products.actions.setProduct(json))
+            dispatch(insulinCounter.actions.setDose())
             dispatch(ui.actions.setLoading(false))
         })
     }
