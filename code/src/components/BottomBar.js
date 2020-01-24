@@ -5,6 +5,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  background-color: white;
   width: 100%;
   height: 80px;
   margin: 0;

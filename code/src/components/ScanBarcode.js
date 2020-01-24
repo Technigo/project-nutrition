@@ -82,6 +82,7 @@ export const ScanBarcode = () => {
                 )}
 
             </Scanner>
+            <h5>Scan your barcode to see information about your product</h5>
             {!showScanner && (
                 <ShowScannerBtn type="button" onClick={() => setShowScanner(true)}>
                     <Icon src="assets/white-scan-icon.svg" alt="scan-icon" ></Icon>
