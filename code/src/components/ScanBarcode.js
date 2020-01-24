@@ -46,11 +46,9 @@ const ShowScannerBtn = styled.button`
     height: 50px;
     border-radius: 25px;
     /* padding: 7px; */
-    position: relative;
-    top: 75%;
-    left: 40%;
+    /* position: relative; */
     font-size: 10px;
-    text-align: center;
+    /* text-align: center; */
     text-transform: uppercase;
     /* align-self: center;
     justify-self: center; */

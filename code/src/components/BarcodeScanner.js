@@ -4,21 +4,22 @@ import styled from 'styled-components/macro'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 
 const Section = styled.div`
-display: flex;
-align-content: center;
-justify-content: center;
-width: 50px;
-height: 50px;
-margin: 15px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 15px;
 `
 
 const Camera = styled.div`
-display: flex;
-position: relative;
-bottom: 265px;
-right: 170px;
-width: 300px;
-height: 200px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 408px;
+  right: 0px;
+  width: 300px;
+  height: 200px;
 
 `
 // do some styling on this or a loadingspinner
