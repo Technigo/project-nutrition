@@ -1,5 +1,5 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, Selector, useSelector } from 'react-redux';
 import { scanner } from 'reducers/scanner';
 import styled from 'styled-components';
 import { Button } from 'semantic-ui-react';
@@ -9,8 +9,10 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: green;
-  height: 80px;
+  /* background: green; */
+  /* height: 80px; */
+  /* border: 1px solid red; */
+  padding: 2rem;
   width: 100%;
   color: white;
   bottom: 0;
@@ -19,15 +21,19 @@ const StyledFooter = styled.div`
 
 export const Footer = () => {
   const dispatch = useDispatch();
+  const showScanner = useSelector(state => state.scanner.showScanner);
 
   return (
     <StyledFooter>
-      <Button
-        type="button"
-        onClick={() => dispatch(scanner.actions.setShowScanner(true))}
-      >
-        Scan product
-      </Button>
+      {!showScanner && (
+        <Button
+          type="button"
+          onClick={() => dispatch(scanner.actions.setShowScanner(true))}
+          color="yellow"
+        >
+          Scan product
+        </Button>
+      )}
     </StyledFooter>
   );
 };

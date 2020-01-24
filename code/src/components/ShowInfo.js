@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useSelector } from 'react-redux';
-// import { NutritionContent } from 'components/NutrionContent';
 
 const StyledShowInfo = styled.div`
   padding: 1rem 5rem;
