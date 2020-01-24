@@ -3,11 +3,14 @@ import React from 'react'
 export const MoreInfo = () => {
   return (
     <div className='more-info-container'>
-      <div className='find-recycling'>
+      <div className='more-info-box'>
         <div className='picture'></div>
         <div className='text-box'>
           <h3>Where to go?</h3>
-          <p>There is a lot of places jadfkladfklasdkfj</p>
+          <p>
+            There is a lot of places where you can recycle metal, carton, news
+            paper and glass!
+          </p>
           <button
             className='more-info-button'
             type='button'
@@ -19,9 +22,11 @@ export const MoreInfo = () => {
           </button>
         </div>
       </div>
-      <div className='stats'></div>
+      <div className='more-info-box'>
+        <div className='stats'></div>
+      </div>
     </div>
   )
 }
 
-//kolla varför
+//kolla varför "void" bråkar, och att sidan funkar ändå

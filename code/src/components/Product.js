@@ -2,12 +2,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 
 export const Product = () => {
-  const product = useSelector((state) => state.products.product)
+  const scan = useSelector((state) => state.products.product)
   const isScanning = useSelector((state) => state.ui.isScanning)
 
   return (
     <div>
-      {!isScanning && product.status === 0 && (
+      {!isScanning && scan.status === 0 && (
         <div className='not-found'>
           <p>Oh no, I couldn't find this product.</p>
           <p>
@@ -17,13 +17,13 @@ export const Product = () => {
         </div>
       )}
 
-      {!isScanning && product.status === 1 && (
-        <div>
-          <h2>{product.product.product_name}</h2>
-          <h3>
-            Please sort this as{''} {product.product.packaging.toLowerCase()}
-          </h3>
-          <img className='product-image' src={product.product.image_url} />
+      {!isScanning && scan.status === 1 && (
+        <div className='product-info'>
+          <h3>{scan.product.product_name}</h3>
+          <h2>
+            Please sort this as{''} {scan.product.packaging.toLowerCase()}
+          </h2>
+          <img className='product-image' src={scan.product.image_url} />
         </div>
       )}
       {<></>}
