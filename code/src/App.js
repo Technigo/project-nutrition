@@ -19,8 +19,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <main>
-        <ScanBarcode />
+        <h1> Can i eat this?</h1>
         <Product />
+        <ScanBarcode />
       </main>
     </Provider>
   )
