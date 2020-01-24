@@ -9,6 +9,26 @@ const ProductHeading = styled.div`
     // width: 500px;
     justify-content: center;
 `
+const ProductInfo = styled.div`
+    display: flex;
+    flex-direction: row;
+    // width: 500px;
+    justify-content: center;
+`
+const ProductStore = styled.div`
+    display: flex;
+    flex-direction: row;
+    // width: 500px;
+    justify-content: center;
+`
+const ProductImg = styled.div`
+    display: flex;
+    flex-direction: row;
+    // width: 500px;
+    justify-content: center;
+`
+
+
 //this component Product, whill show the product when we fetched it
 export const Product = () => {
     const product = useSelector(state => state.products.product)
@@ -22,11 +42,24 @@ export const Product = () => {
     return (
         <>
             <ProductHeading>
-                <h1>Product</h1>
+                <img src={product.product && product.product.image_thumb_url} alt="" />
+                <h1>{product.product && product.product.product_name}</h1>
+                {/* <h4>Ingredients:{product.product && product.product.ingredients_tags}</h4> */}
             </ProductHeading>
 
-            {/* first checking that we get the product in the fetch && then show the picture of the product */}
-            <img src={product.product && product.product.image_url} alt="" />
+            <ProductInfo>
+                <h4>Ingredients:</h4>
+                <h4>{product.product && product.product.ingredients_tags}</h4>
+            </ProductInfo>
+
+            <ProductStore>
+                <h5 className="Stores">Stores:{product.product && product.product.stores}</h5>
+            </ProductStore>
+            <ProductImg>
+                {/* first checking that we get the product in the fetch && then show the picture of the product */}
+                <img src={product.product && product.product.image_url} alt="" />
+                <img src={product.product && product.product.image_nutrition_url} alt="" />
+            </ProductImg>
 
         </>
     )

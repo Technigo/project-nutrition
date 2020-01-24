@@ -3,6 +3,7 @@ import { BarcodeScanner } from 'components/BarcodeScanner'
 import { useDispatch } from 'react-redux'
 import { fetchProduct } from '../reducers/products'
 import styled from 'styled-components'
+import { ToggleSwitch } from 'components/ToggleSwitch'
 
 const Btn = styled.div`
 display: flex;
@@ -13,13 +14,14 @@ justify-content: center;
 export const ScanBarcode = () => {
     const [showScanner, setShowScanner] = useState(false)
     const dispatch = useDispatch()
+
     return (
         <>
             <Btn>
                 {!showScanner && (
-                    <button type='button' onClick={() => setShowScanner(true)}>
+                    <toggleswitch type='button' onClick={() => setShowScanner(true)}>
                         Show scanner
-        </button>
+        </toggleswitch>
                 )}
                 {showScanner && (
                     <BarcodeScanner
