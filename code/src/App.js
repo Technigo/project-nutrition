@@ -16,11 +16,13 @@ export const store = configureStore({ reducer })
 
 export const App = () => {
   return (
-    <Provider store={store}>
-      <LoadingIndicator />
-      <h1>Welcome to eat healthy food!</h1>
-      <ScanBarcode />
-      <Product />
-    </Provider>
+    <div className="app">
+      <Provider store={store}>
+        <LoadingIndicator />
+        <h1>Banana banana banana</h1>
+        <ScanBarcode />
+        <Product />
+      </Provider>
+    </div>
   )
 }
