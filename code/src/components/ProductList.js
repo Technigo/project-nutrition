@@ -1,21 +1,28 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Card } from 'lib/Card'
+
 
 export const ProductList = () => {
-  const products = useSelector((state) => state.products.all)
+  const scan = useSelector((state) => state.products.product)
+
+  if (!scan) return "No scanned products"
+
+  console.log('SCAN', scan)
 
   return (
     <div>
-      <h1>Products:</h1>
+      <Card
+        thumbNailUrl="https://static.openfoodfacts.org/images/products/500/018/432/1064/front_en.11.100.jpg"
+        title="Your scanned product"
+        coverImage={scan.image_url}>
+        <h1>Product: {scan.product_name}</h1>
+        <p>{scan.expiration_date}</p>
+        <h3>Brand: {scan.brands}</h3>
 
-      <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <input type="checkbox" checked={product.completed} />
-            {product.title}
-          </li>
-        ))}
-      </ul>
+      </Card>
     </div>
   )
 }
+
+// { product.image_small_url }

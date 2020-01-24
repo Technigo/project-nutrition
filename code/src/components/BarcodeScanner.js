@@ -1,12 +1,23 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
+import styled from 'styled-components/macro'
+import { AiOutlineBarcode } from "react-icons/ai";
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
+  const hasResult = useRef(false)
 
   Quagga.onDetected((data) => {
-    onDetected(data.codeResult.code)
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code)
+    }
+
+    hasResult.current = true
+
+    setTimeout(() => {
+      hasResult.current = false
+    }, 500)
   })
 
   useLayoutEffect(() => {
@@ -14,7 +25,12 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       inputStream: {
         name: 'Live',
         type: 'LiveStream',
-        target: cameraDivRef.current
+        target: cameraDivRef.current,
+        constraints: {
+          width: 400,
+          height: 300,
+          facingMode: 'environment'
+        }
       },
       decoder: {
         readers: ['ean_reader']
@@ -34,9 +50,27 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   }, [])
 
   return (
-    <>
-      {initializing && <div>Starting camera...</div>}
+    <Scanner>
+      {initializing &&
+        <LoadingIcon>
+          <AiOutlineBarcode
+            size={100}
+          />
+        </LoadingIcon>}
       <div ref={cameraDivRef} className={className} />
-    </>
+    </Scanner>
   )
 }
+
+const Scanner = styled.div`
+width: 400px;
+height: 300px;
+margin-top: 30px;
+`
+const LoadingIcon = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 50px;
+`
+

@@ -5,7 +5,7 @@ import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
 import { LoadingIndicator } from 'components/Loading'
 import { ProductList } from 'components/ProductList'
-import { FetchButton } from 'components/FetchButton'
+// import { FetchButton } from 'components/FetchButton'
 import { ScanBarcode } from 'components/ScanBarcode'
 
 const reducer = combineReducers({
@@ -19,10 +19,10 @@ export const App = () => {
   return (
     <Provider store={store}>
       <LoadingIndicator />
-      <ProductList />
       <ScanBarcode />
-      <FetchButton />
+      <ProductList />
     </Provider>
-
   )
 }
+
+
