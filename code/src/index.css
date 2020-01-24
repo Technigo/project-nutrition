@@ -11,8 +11,29 @@ code {
     monospace;
 }
 
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  position: absolute;
+    /* bottom: 100px; */
+    top: 600px;
+    left: 140px;
+}
 
+img{
+  width: 50px;
+}
 
+p{
+  font-size: 22px;
+  color: #5c0f47;
+  text-align: center;
+}
 
-
-
+h3{
+  color: #5c0f47;
+  font-family: 'Alata', sans-serif;
+  font-size: 28px;
+}

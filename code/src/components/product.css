@@ -11,3 +11,27 @@
     top: 114px;
     border-radius: 25px; */
 }
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-img{
+    width: 80px;
+}
+
+.cancel-button{
+    background: #5c0f47;
+    border: 0;
+    padding: 12px;
+    color: #a3538d;
+    font-size: 32px;
+    font-family: 'Karla', sans-serif;
+    margin: 12px;
+    border-radius: 6px;
+    position: relative;
+    top: 200px;
+}

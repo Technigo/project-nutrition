@@ -58,8 +58,6 @@ header button:focus{
 }
 
 .menu{
-    /* display: none; */
-    /* background: #f1f1f1; */
     position: relative;
     top: 100px;
     left: -35px;
@@ -69,29 +67,22 @@ header button:focus{
     box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
     width: 200px;
     background: #ffd7d6;
-    /* padding: 0 2px 2px 0; */
 }
 
 .menu-container:hover .menu{
     display: inline-block;
 }
 
-/* .menu-container:active .menu{
-        display: inline-block;
-} */
 
 .menu p{
     padding: 7px 4px 7px 4px;
     font-size: 18px;
-    /* border-bottom: 1px solid #5c0f47; */
-    /* margin: 5px 0 5px 0; */
+    text-align: start;
 }
 
 .menu p:hover{
     background-color: #FFF;
-    /* padding: 7px 4px 2px 4px; */
     padding: 7px 4px 7px 4px;
-    /* margin: 5px 0 5px 0; */
 }
 
 .menu-button{

@@ -8,6 +8,8 @@ import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
 import { NotFound } from 'components/NotFound'
 import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
+
 
 import './app.css'
 
@@ -22,13 +24,13 @@ export const store = configureStore({ reducer })
 
 export const App = () => {
   return (
+    <>
   <Provider store={store}>
     <Header />
     <article>
     <div className="scan-container">
       <div className="scan-placeholder">
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_9FZkDo.json"  background="transparent"  speed="0.5"  loop autoplay >
-      < /lottie-player>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_9FZkDo.json"  background="transparent"  speed="0.5"  loop autoplay ></lottie-player>
       </div>
     <ScanBarcode />
     </div>
@@ -38,6 +40,11 @@ export const App = () => {
 {/* {if no product in api && <NotFound />} */}
     {/* <NotFound /> */}
     </article>
+    
+    
   </Provider>
+
+  </>
+  
   )
 }
