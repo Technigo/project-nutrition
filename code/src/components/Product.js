@@ -9,15 +9,16 @@ const ProductHeading = styled.div`
 `
 const ProductInfo = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    justify-content: space-between;
 `
 
-const ProductPic = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-`
+// const ProductPic = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+// `
 
 //this component Product, whill show the product when we fetched it
 export const Product = () => {
@@ -32,20 +33,26 @@ export const Product = () => {
     return (
         <>
             <ProductHeading>
-                <h1>Product</h1>
+                <img src={product.product && product.product.image_thumb_url} alt= "" />  
+                <h1>{product.product && product.product.product_name} </h1>
             </ProductHeading>
            
             <ProductInfo>
-                <div> {product.product && product.product.ingredients_en}
-              </div>
-                
-                <h5>{product.product && product.ingredients_analysis_tags}</h5>
+                <h4>
+                    {product.product && product.product.ingredients_tags}
+                </h4>
+                <h5>
+                    {product.product && product.product.stores}
+                </h5>
             </ProductInfo>
 
-           {/* <ProductPic>*/}
+           {/* <ProductPic> */}
                 {/* first checking that we get the product in the fetch && then show the picture of the product */}
                 <img src={product.product && product.product.image_url} alt= "" />
-           {/* </ProductPic>*/}
+                <img src={product.product && product.product.image_ingredients_url} alt= "" />
+                <img src={product.product && product.product.image_nutrition_url} alt= "" />
+                
+           {/* </ProductPic> */}
         </>
     )
 }

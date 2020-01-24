@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { useDispatch } from 'react-redux'
 import { fetchProduct } from ' reducers/products'
+// import { ToggleSwitch } from 'components/ToggleSwitch'
 import styled from "styled-components";
+
+
 
 const Btn = styled.div`
   display: flex;
@@ -17,14 +20,20 @@ const Scanner = styled.div`
   justify-content: center;
 `
 
+
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
+
+// const callback = isOn => {
+//     console.log("State changed", isOn);
+//   }
 
   return (
     <>
       <Btn>
         {!showScanner && (
+          // <ToggleSwitch isOn={false} onChange={callback} />
           <button type='button' onClick={() => setShowScanner(true)}>
             Show scanner
           </button>

@@ -8,6 +8,7 @@ import { Header } from './components/Header'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from './components/Product'
 import { Footer } from './components/lib/Footer'
+// import { ToggleSwitch } from 'components/ToggleSwitch'
 
 
 
@@ -25,6 +26,9 @@ export const App = () => {
       <Header />
       <LoadingIndicator />
       <div className="barcodeButton">
+      
+        {/* <ToggleSwitch /> */}
+       
         <ScanBarcode />
       </div>
       <Product />
