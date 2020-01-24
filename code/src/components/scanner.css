@@ -1,12 +1,26 @@
 .scanner{
     width: 100px;
     height: 100px;
+    
 }
 
 video{
-    height: 100px;
+    height: 220px;
+    width: 340px;
+    border: 2px solid;
+    border-radius: 15px;
+    /* padding: 12px; */
+    /* position: relative; */
+    background: black;
+    position: absolute;
+    top: 100px;
+    left: 15px;
 }
 
+.drawingBuffer{
+    width: 0;
+    height: 0;
+}
 
 /* .scan-placeholder{
     border: 2px solid #5c0f47;

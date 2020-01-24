@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchProduct, products } from 'reducers/products'
 import { useDispatch } from 'react-redux'
+import './scanner.css'
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
