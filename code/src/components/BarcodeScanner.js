@@ -42,7 +42,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
         constraints: {
           width: 300,
           height: 200,
-          facingMode: 'user'
+          facingMode: 'environment'
         }
       },
       decoder: {
