@@ -1,25 +1,28 @@
 import React from 'react'
-import { LoadingIndicator } from 'components/LoadingIndicator'
+
 import styled from 'styled-components/macro'
 
 const Section = styled.div`
-border-bottom: 1px solid black;
-background-color: grey;
+/* border-bottom: 1px solid black; */
+background-color: red;
 text-align: center;
-padding: 10px;
-margin: 0;
+/* margin: 0; */
+position: fixed;
+top: 0;
+width: 100%;
 `
-const Spinner = styled.p`
-color: darkgreen;
-font-size: 25px;
+const Text = styled.h1`
+padding-top: 25px;
+color: white; 
+font-size: 18px;
 `
+
 
 export const Header = () => {
     return (
         <Section>
-            <h1>My Barcode scanner</h1>
-            <Spinner>Loadingindicator</Spinner>
-            <LoadingIndicator />
+            <Text>Barcode scanner</Text>
+
         </Section>
     )
 }

@@ -3,7 +3,10 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 
 const Section = styled.div`
-border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
 `
 
 /**** To show the product info  ****/
@@ -19,6 +22,8 @@ export const ProductInfo = () => {
     return (
         <Section>
             <h1>Product info:</h1>
+            <p>{product.product && product.product.product_name}</p>
+            <img src={product.product && product.product.image_url} />
             <img src={product.product && product.product.image_nutrition_url} />
             <img src={product.product && product.product.images[1]} />
             <img src={product.product && product.product.images[1].sizes[100]} />
@@ -26,7 +31,7 @@ export const ProductInfo = () => {
             <p>{product.product && product.product._keywords[1]}</p>
             <p>{product.product && product.product.ingredients_original_tags}</p>
 
-            <p>{product.product && product.product.product_name}</p>
+
         </Section>
     )
 }
