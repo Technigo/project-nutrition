@@ -33,12 +33,13 @@ export const ScanBarcode = () => {
 
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
-  const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
+  // const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
+  const OTHER_CODE = 7318690013402 // If the scanning doesn't work, call fetchProduct with this instead
 
   // To start the web cam
   const handleShowScan = () => {
     // setShowScanner(true)
-    dispatch(fetchProduct(OATLY_CODE))
+    dispatch(fetchProduct(OTHER_CODE))
   }
 
   // To fetch the product you scan

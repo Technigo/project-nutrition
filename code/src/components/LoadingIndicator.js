@@ -7,6 +7,7 @@ const LoadingWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 20vh;
 `
 
 export const LoadingIndicator = () => {
