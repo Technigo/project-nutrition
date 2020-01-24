@@ -5,31 +5,34 @@ import styled from 'styled-components/macro'
 import { useDispatch } from 'react-redux'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 // import { barcodes } from 'reducers/barcodes'
+// import Loader from 'react-loader-spinner'
 
-const Spinner = styled.p`
-padding: 15px;
-color: darkgreen;
-font-size: 25px;
-`
+
+
 
 const Section = styled.div`
     display: flex;
     flex-direction: column;
-   
     width: 100%;
     align-items: center;
     border-bottom: 1px solid black;
-    padding: 40px 0;
+    padding: 150px 0 50px;
 `
 
 const Scanner = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
     /* justify-content: center; */
     border: 1px solid black;
     width: 300px;
     height: 300px;
     /* align-content: center;
     justify-content: center; */
+`
+const BarcodeIcon = styled.img`
+width: 300px;
+height: auto;
 `
 
 const ShowScannerBtn = styled.button`
@@ -70,9 +73,10 @@ export const ScanBarcode = () => {
 
     return (
         <Section>
-            <Spinner>Loadingindicator</Spinner>
+
             <LoadingIndicator />
             <Scanner>
+                <BarcodeIcon src="/assets/barcode-icon.svg"></BarcodeIcon>
                 {showScanner && (
                     <BarcodeScanner onDetected={(code) => {
                         console.log('Got barcode', code)

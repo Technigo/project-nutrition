@@ -1,6 +1,7 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
 import styled from 'styled-components/macro'
+import { LoadingIndicator } from 'components/LoadingIndicator'
 
 const Section = styled.div`
 display: flex;
@@ -14,11 +15,17 @@ margin: 15px;
 const Camera = styled.div`
 display: flex;
 position: relative;
-top: 35px;
-right: 60px;
+bottom: 265px;
+right: 170px;
 width: 300px;
 height: 200px;
 
+`
+// do some styling on this or a loadingspinner
+const LoadingText = styled.div`
+  display: flex;
+  text-align: center;
+  font-size: 20px;
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
@@ -55,7 +62,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <Section>
-      {initializing && <div>Starting camera...</div>}
+      {initializing && <LoadingIndicator />}
       <Camera ref={cameraDivRef} className={className} > </Camera>
     </Section>
   )
