@@ -11,8 +11,6 @@ export const ScanBarcode = () => {
     dispatch(fetchProducts(3045140105502))
   }
 
-  const testCode = 3045140105502
-
   return (
     <>
       {!showScanner && (

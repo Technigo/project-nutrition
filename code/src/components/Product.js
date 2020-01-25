@@ -17,8 +17,10 @@ export const Product = () => {
                   <p>Nutrition grade:{scan.product.nutrition_grades}</p>
                   <p>No of ingredients:{scan.product.ingredients_n}</p>
                   <p>Quantity:{scan.product.quantity}</p>
-                  <p>Ingredients from palmoil:{scan.product.ingredients_from_or_that_may_be_from_palm_oil_n}</p>
-                  
+                  <p>Ingredients from palmoil:
+                   {scan.product.ingredients_from_or_that_may_be_from_palm_oil_n}
+                  </p>
+
         </section>
      )}
      {scan.status === 0 && <h2>{scan.status.status_verbose}</h2>}
