@@ -9,8 +9,9 @@ const Wrapper = styled.section`
   align-items: center;
   text-align: center;
   background: #1a1a1a;
+  background-image: url('https://www.tokkoro.com/picsup/2907303-digital-art-dark-lines___mixed-wallpapers.jpg');
   width: 100vw;
-  height: 30vh;
+  height: 25vh;
   padding: 40px;
 `
 const PrimaryText = styled.h1`

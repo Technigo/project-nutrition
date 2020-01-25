@@ -11,19 +11,14 @@ import { Header } from './components/Header'
 
 // Start scanner with a button onclick function
 // Fetch the product from the API
-// What do I want to display about the product?
-// Use resusable Card component for thw products I scan
-// A tab bar to wstich between display-stuff: Nutrition, 
 // Reducers for ui (loading) and products (fetching product from api)
-// TabBar should be renderd in Product.js when a product is found
-// Different routes for clicking the tabs when a product is found?
-// Start page = all black heading + button/scan
-// When product is found render rpute to prouctpage with tabs
+// When product is found show TabBar
+// When scanning a new product, set products array to 0 to display just scanner?
 
 // STYLED COMPONENTS
-const Container = styled.section`
+const InnerContainer = styled.section`
   background: #f1f1f1;
-  min-height: 70vh;
+  height: 100%;
   margin: 0;
   padding-bottom: 50px;
 `
@@ -42,11 +37,11 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Header />
-      <Container>
-        <LoadingIndicator />
+      <InnerContainer>
         <Product />
+        <LoadingIndicator />
         <ScanBarcode />
-      </Container>
+      </InnerContainer>
     </Provider>
   )
 }

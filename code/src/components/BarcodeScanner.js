@@ -6,10 +6,13 @@ import Loader from 'react-loader-spinner'
 //STYLED COMPONENTS
 const Scan = styled.div`
   width: 400px;
-  height: 250px;
+  height: 220px;
   border-radius: 6px;
   overflow: hidden;
-
+  @media (max-width: 449px) {
+    width: 90vw;
+    height: 220px;
+  }
 `
 
 // COMPONENT BARCODESCANNER (SET UP BY TECHNIGO TEAM)
@@ -18,6 +21,7 @@ export const BarcodeScanner = ({ onDetected }) => {
   const cameraDivRef = useRef()
   const hasResult = useRef(false)
 
+  // To prevent from scanning same product more than once within 500ms
   Quagga.onDetected(data => {
     if (!hasResult.current) {
       onDetected(data.codeResult.code)
@@ -29,10 +33,6 @@ export const BarcodeScanner = ({ onDetected }) => {
       hasResult.current = false
     }, 500)
   })
-
-  // Quagga.onDetected((data) => {
-  //   onDetected(data.codeResult.code)
-  // })
 
   // Added constarints to set size on cam view
   useLayoutEffect(() => {
@@ -64,7 +64,6 @@ export const BarcodeScanner = ({ onDetected }) => {
     <>
       {initializing && <Loader type="ThreeDots" color="#333" height={80} width={80} />}
       <Scan ref={cameraDivRef} />
-      {/* <Scan ref={cameraDivRef} className={className} /> */}
     </>
   )
 }

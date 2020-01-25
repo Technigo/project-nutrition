@@ -2,6 +2,9 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 
+const ContentWrapper = styled.div`
+  padding: 20px;
+`
 const List = styled.ul`
   list-style: none;
   margin: 0;
@@ -21,10 +24,10 @@ export const ProductOther = () => {
     )
 
   return (
-    <>
+    <ContentWrapper>
       <List>Categories: {formattedCategories.map((category, index) => (
         <ListItems key={index}>{category}</ListItems>
       ))}</List>
-    </>
+    </ContentWrapper>
   )
 }

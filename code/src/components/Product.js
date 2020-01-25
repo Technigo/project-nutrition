@@ -15,6 +15,7 @@ const ProductWrapper = styled.section`
   height: 30vh;
 `
 const TextNotFound = styled.h3`
+  padding: 20px;
   color: #333;
   text-align: center;
 `
@@ -31,15 +32,7 @@ export const Product = () => {
   // Only show tabs when product is found
   return (
     <>
-
-      {product && product.status === 0 &&
-        <ProductWrapper>
-          <TextNotFound>Product not found in database!</TextNotFound>
-          <TextNotFound>Feel free to contribute with your product by visiting <a href='https://world.openfoodfacts.org/'>OpenFoodFacts site >></a></TextNotFound>
-        </ProductWrapper>
-      }
-
-      {product.product &&
+      {product.product && product.status === 1 && (
         <ProductWrapper>
           <TabBar
             tabs={[
@@ -49,8 +42,14 @@ export const Product = () => {
             ]}
           />
         </ProductWrapper>
-      }
+      )}
 
+      {product.status === 0 && (
+        <ProductWrapper>
+          <TextNotFound>Product not found in database!</TextNotFound>
+          <TextNotFound>Feel free to contribute with your product by visiting <a href='https://world.openfoodfacts.org/'>OpenFoodFacts site >></a></TextNotFound>
+        </ProductWrapper>
+      )}
     </>
   )
 
