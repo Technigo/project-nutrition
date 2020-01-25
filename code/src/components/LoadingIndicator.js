@@ -7,9 +7,7 @@ export const LoadingIndicator = () => {
 
   return (
     <>
-      {isLoading && (
-        <Loader type="ThreeDots" color="#black" height={80} width={80} />
-      )}
+      {isLoading && <Loader type="ThreeDots" color="" height={80} width={80} />}
     </>
   );
 };
