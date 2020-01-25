@@ -19,7 +19,7 @@ const Section = styled.div`
     width: 100%;
     align-items: center;
     /* border-bottom: 1px solid black; */
-    padding: 130px 0 50px;
+    padding: 100px 0 50px;
 `
 
 const Scanner = styled.div`
@@ -55,6 +55,7 @@ const ShowScannerBtn = styled.button`
     text-transform: uppercase;
     /* align-self: center;
     justify-self: center; */
+    border: none;
 `
 const Icon = styled.img`
     width: 25px;
@@ -85,6 +86,7 @@ export const ScanBarcode = (product) => {
                     <BarcodeScanner onDetected={(code) => {
                         console.log('Got barcode', code)
                         dispatch(fetchBarcodes(code))
+                        // dispatch(fetchBarcodes(7394376616037))
                         setShowScanner(false)
                     }} />
                 )}

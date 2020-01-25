@@ -73,7 +73,7 @@ export const BottomBar = () => {
                     </Emoji>
                     <Label>Back</Label>
                 </Icon>
-                <Icon>
+                <Icon as="a" href="/">
                     <Emoji>
                         <ScanImg src="/assets/red-scan-icon.svg" ></ScanImg>
                     </Emoji>
