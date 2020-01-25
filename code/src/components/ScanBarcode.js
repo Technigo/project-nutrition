@@ -35,18 +35,18 @@ export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
   // const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
-  // const OTHER_CODE = 7318690013402 // If the scanning doesn't work, call fetchProduct with this instead
+  const OTHER_CODE = 7318690013402 // If the scanning doesn't work, call fetchProduct with this instead
 
   // To start the web cam
-  const handleShowScan = () => {
-    dispatch(products.actions.resetProduct())
-    setShowScanner(true)
-  }
+  // const handleShowScan = () => {
+  //   dispatch(products.actions.resetProduct())
+  //   setShowScanner(true)
+  // }
 
   // To use hardcoded product
-  // const handleShowScan = () => {
-  //   dispatch(fetchProduct(OTHER_CODE))
-  // }
+  const handleShowScan = () => {
+    dispatch(fetchProduct(OTHER_CODE))
+  }
 
   // To fetch the product you scan
   const handleScan = (code) => {

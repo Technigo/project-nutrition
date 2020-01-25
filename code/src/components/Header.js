@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
+import img from 'assets/image-dark.webp'
 
 // STYLED COMPONENTS
 const Wrapper = styled.section`
@@ -9,10 +10,10 @@ const Wrapper = styled.section`
   align-items: center;
   text-align: center;
   background: #1a1a1a;
-  background-image: url('https://www.tokkoro.com/picsup/2907303-digital-art-dark-lines___mixed-wallpapers.jpg');
+  background-image: url(${img});  
   width: 100vw;
-  height: 25vh;
-  padding: 40px;
+  height: 30vh;
+  padding: 30px;
 `
 const PrimaryText = styled.h1`
   letter-spacing: 1.5px;
@@ -23,7 +24,7 @@ const PrimaryText = styled.h1`
   @media (max-width: 449px) {
     font-size: 20px;
   }
-  @media (min-width: 450px) and (max-width: 750px) {
+  @media (min-width: 450px) and (max-width: 800px) {
     font-size: 24px;
   }
 `

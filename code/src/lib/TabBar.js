@@ -38,7 +38,7 @@ const Title = styled.span`
   @media (max-width: 449px) {
     font-size: 16px;
   }
-  @media (min-width: 450px) and (max-width: 750px) {
+  @media (min-width: 450px) and (max-width: 800px) {
     font-size: 20px;
   }
 `

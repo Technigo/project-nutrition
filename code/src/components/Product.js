@@ -12,10 +12,10 @@ const ProductWrapper = styled.section`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 30vh;
 `
 const TextNotFound = styled.h3`
   padding: 20px;
+  margin: 0;
   color: #333;
   text-align: center;
 `
@@ -38,7 +38,7 @@ export const Product = () => {
             tabs={[
               { title: "General", render: () => <ProductGeneral /> },
               { title: "Ingredients", render: () => <ProductIngredients /> },
-              { title: "Other", render: () => <ProductOther /> }
+              { title: "Category", render: () => <ProductOther /> }
             ]}
           />
         </ProductWrapper>
