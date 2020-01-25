@@ -4,8 +4,10 @@ import styled from 'styled-components'
 
 export const Product = () => {
   const scannedProduct = useSelector(state => state.products.product.product)
+  const scannedProductCode = useSelector(state => state.products.product.code)
 
   if (!scannedProduct) return null
+  if (!scannedProductCode) return null
 
   // Removing prefixes and splitting strings into arrays
   const formatData = (data) => {
@@ -14,9 +16,6 @@ export const Product = () => {
   const brandsList = scannedProduct.brands && formatData(scannedProduct.brands)
   const tracesList = scannedProduct.traces && formatData(scannedProduct.traces)
   const allergensList = scannedProduct.allergens && formatData(scannedProduct.allergens)
-  console.log("List", allergensList)
-
-
 
   return (
     <>
@@ -40,7 +39,7 @@ export const Product = () => {
           </ProductDetails>
         )}
         {!allergensList && (
-          <ProductDetailsMissing>There's no reported data for allergens, check the product's ingredients list.</ProductDetailsMissing>
+          <ProductText><Bold>Caution:</Bold> There's no reported data for allergens.</ProductText>
         )}
 
         <ProductDetailsHeading>Traces of allergens</ProductDetailsHeading>
@@ -52,8 +51,14 @@ export const Product = () => {
           </ProductDetails>
         )}
         {!tracesList && (
-          <ProductDetailsMissing>There's no reported data for allergens, check the product's ingredients list.</ProductDetailsMissing>
+          <ProductText><Bold>Caution:</Bold> There's no reported data for traces of allergens.</ProductText>
         )}
+
+        <ProductDetailsHeading>More details about this product</ProductDetailsHeading>
+        <ProductText>
+          See all available details and update product information on Open Food Facts website. <br />
+          <ProductLink href={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</ProductLink>
+        </ProductText>
 
       </ProductArticle>
     </>
@@ -87,6 +92,7 @@ const ProductDetails = styled.ul`
 `
 
 const ProductDetail = styled.li`
+  line-height: 1.5;
   text-transform: capitalize;
 `
 
@@ -103,7 +109,14 @@ const ProductBrand = styled(ProductDetail)`
   }
 `
 
-const ProductDetailsMissing = styled.p`
-  background-color: pink;
-  border-radius: 2px;
+const ProductText = styled.p`
+  line-height: 1.5;
+`
+
+const Bold = styled.span`
+  font-weight: 900;
+`
+
+const ProductLink = styled.a`
+  color: #499091;
 `
