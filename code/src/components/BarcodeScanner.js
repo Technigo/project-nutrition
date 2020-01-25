@@ -1,6 +1,7 @@
 import React, { useRef, useState, useLayoutEffect } from 'react';
 import Quagga from 'quagga'; //Access to webcam
 import styled from 'styled-components';
+import './barcodeScanner.css';
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,13 +14,24 @@ const ScannerContainer = styled.div`
   width: 100%;
 `;
 
+const Scanner = styled.div`
+  background-image: url('../assets/scan-icon.png');
+`;
+
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
   const cameraDivRef = useRef();
+  const hasResult = useRef(false);
 
   Quagga.onDetected(data => {
-    onDetected(data.codeResult.code);
+    if (!hasResult.current) onDetected(data.codeResult.code);
   });
+
+  hasResult.current = true;
+
+  setTimeout(() => {
+    hasResult.current = false;
+  }, 500);
 
   useLayoutEffect(() => {
     Quagga.init(
@@ -57,7 +69,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
           </Wrapper>
         )}
 
-        <div ref={cameraDivRef} className={className} />
+        <Scanner ref={cameraDivRef} className={className}></Scanner>
       </ScannerContainer>
     </>
   );

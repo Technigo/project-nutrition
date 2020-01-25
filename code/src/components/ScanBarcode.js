@@ -10,23 +10,23 @@ const ButtonWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: pink;
-  height: 100px;
+  height: 500px;
 `;
 
 const FloatingButton = styled.button`
-  width: 20%;
-  height: 40px;
-  border-radius: 18px;
-  background-color: rebeccapurple;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #4195fc;
   color: white;
-  box-shadow: 3px 3px 4px gray;
+  box-shadow: 4px 4px 30px 4px #0ff;
   border: none;
   font-size: 18px;
 
   ${ButtonWrapper}:hover & {
     background-color: purple;
     color: black;
-    box-shadow: 6px 6px 6px 4px gray;
+    box-shadow: 4px 4px 4px 4px gray;
   }
 
   ${ButtonWrapper}:active & {
@@ -36,7 +36,17 @@ const FloatingButton = styled.button`
 
   ${ButtonWrapper}:focus & {
     box-shadow: 4px 4px 5px gray;
+    outline: none;
+    border: 1px solid #4195fc;
+    /* create a BIG glow */
+    box-shadow: 0px 0px 4px #4195fc;
+    -moz-box-shadow: 0px 0px 4px #4195fc;
+    -webkit-box-shadow: 0px 0px 4px #4195fc;
   }
+`;
+
+const BarcodeImage = styled.img`
+  color: black;
 `;
 
 export const ScanBarcode = () => {
@@ -47,14 +57,16 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <ButtonWrapper>
+          <BarcodeImage src="./assets/scan.svg"></BarcodeImage>
           <FloatingButton type="button" onClick={() => setShowScanner(true)}>
-            Scan a product
+            Scan Product
           </FloatingButton>
         </ButtonWrapper>
       )}
 
       {showScanner && (
         <BarcodeScanner
+          className="scanner"
           onDetected={code => {
             console.log('Got barcode', code);
             setShowScanner(false);

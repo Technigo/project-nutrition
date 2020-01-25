@@ -78,38 +78,65 @@ const Nutrient = styled.p`
 `;
 
 export const Product = () => {
-  const product = useSelector(state => state.barcodes.product);
+  const scan = useSelector(state => state.barcodes.product);
 
-  if (!product) return null;
+  if (!scan) return null;
 
-  console.log('product', product);
+  console.log('product', scan);
+
+  const categories =
+    scan.product &&
+    scan.product.categories_tags.map(cat => cat.replace('en', ''));
+
   return (
     <>
-      <Wrapper>
-        <Container>
-          <Brand>
-            <Title>Brand</Title>
-            {product.product && product.product.brands}
-          </Brand>
+      {scan.product && (
+        <Wrapper>
+          <Container>
+            <Brand>
+              <Title>Brand</Title>
+              {scan.product && scan.product.brands}
+            </Brand>
 
-          <ProductImage>
-            <Title>Product image</Title>
-            <Image
-              src={product.product && product.product.image_front_small_url}
-            ></Image>
-          </ProductImage>
+            <ProductImage>
+              <Title>Product image</Title>
+              <Image
+                src={scan.product && scan.product.image_front_small_url}
+              ></Image>
+            </ProductImage>
 
-          <Packaging>
-            <Title>Packaging</Title>
-            {product.product && product.product.packaging}
-          </Packaging>
-          <Nutrient>
-            <Title>Nutrient</Title>
-            {product.product &&
-              product.product.ingredients_text_with_allergens_en}
-          </Nutrient>
-        </Container>
-      </Wrapper>
+            <Packaging>
+              <Title>Packaging</Title>
+              {scan.product && scan.product.packaging}
+            </Packaging>
+            <Nutrient>
+              <Title>Nutrient</Title>
+              <ul>
+                {categories.map((nutrient, index) => (
+                  <li key={index}>{nutrient}</li>
+                ))}
+              </ul>
+            </Nutrient>
+          </Container>
+        </Wrapper>
+      )}
+      {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
     </>
   );
 };
+
+/*
+
+const nutrients =
+    product.product &&
+    product.product.nutrient_levels.map(nut => nut.replace('en', ''));
+    
+<Nutrient>
+              <Title>Nutrient</Title>
+              <ul>
+                {nutrients.map((nutr, index) => (
+                  <li key={index}>{nutr}</li>
+                ))}
+              </ul>
+            </Nutrient>
+*/
