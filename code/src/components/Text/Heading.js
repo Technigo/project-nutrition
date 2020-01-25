@@ -8,21 +8,19 @@ export const Heading = ({ level, text, className, ...props }) => {
 }
 
 const HeadingOne = styled.h1`
-  font-family: 'Montserrat', serif;
   &:first-letter {
     text-transform: capitalize;
   }
 `
 
 const HeadingTwo = styled.h2`
-  font-family: 'Montserrat', serif;
+  margin-bottom: 0.5rem;
   &:first-letter {
     text-transform: capitalize;
   }
 `
 
 const HeadingThree = styled.h3`
-  font-family: 'Montserrat', serif;
   margin-bottom: 0.25rem;
   margin-top: 1rem;
 

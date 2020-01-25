@@ -15,9 +15,9 @@ export const Error = () => {
         <ErrorMessage>
           <Heading level="h2">Product not found</Heading>
           <Paragraph>Try scanning the barcode again. If the product still doesn't show the product might be missing from the database.
-        You can also check Open Food Facts website.<br />
-            <Link url="https://world.openfoodfacts.org/">Open Food Facts</Link>
+        You can also check Open Food Facts website.
           </Paragraph>
+          <Link url="https://world.openfoodfacts.org/">Open Food Facts</Link>
         </ErrorMessage>
       )}
     </>

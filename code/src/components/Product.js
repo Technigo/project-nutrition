@@ -71,12 +71,11 @@ export const Product = () => {
 
           <Heading level="h3">More details about this product</Heading>
           <Paragraph>
-            See all available details and update product information on Open Food Facts website. <br />
-            {scannedProductCode && (
-              <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
-            )}
-
+            See all available details and update product information on Open Food Facts website.
           </Paragraph>
+          {scannedProductCode && (
+            <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
+          )}
 
         </ProductArticle>
       )}
