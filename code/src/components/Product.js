@@ -2,6 +2,12 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
+import { Heading } from './Text/Heading'
+import { List } from './Text/List'
+import { ListItem } from './Text/ListItem'
+import { Paragraph } from './Text/Paragraph'
+import { Link } from './Text/Link'
+
 export const Product = () => {
   const scannedProduct = useSelector(state => state.products.product.product)
   const scannedProductCode = useSelector(state => state.products.product.code)
@@ -20,45 +26,45 @@ export const Product = () => {
   return (
     <>
       <ProductArticle>
-        <ProductName>{scannedProduct.product_name}</ProductName>
+        <Heading level="h2">{scannedProduct.product_name}</Heading>
 
         {brandsList && (
-          <ProductBrands>
+          <BrandsList>
             {brandsList.map((brand, index) => (
-              <ProductBrand key={index}>{brand}</ProductBrand>
+              <Brand key={index}>{brand}</Brand>
             ))}
-          </ProductBrands>
+          </BrandsList>
         )}
 
-        <ProductDetailsHeading>Allergens</ProductDetailsHeading>
+        <Heading level="h3">Allergens</Heading>
         {allergensList && (
-          <ProductDetails>
+          <List>
             {allergensList.map((allergen, index) => (
-              <ProductDetail key={index}>{allergen}</ProductDetail>
+              <ListItem key={index}>{allergen}</ListItem>
             ))}
-          </ProductDetails>
+          </List>
         )}
         {!allergensList && (
-          <ProductText><Bold>Caution:</Bold> There's no reported data for allergens.</ProductText>
+          <Paragraph><Bold>Caution:</Bold> There's no reported data for allergens.</Paragraph>
         )}
 
-        <ProductDetailsHeading>Traces of allergens</ProductDetailsHeading>
+        <Heading level="h3">Traces of allergens</Heading>
         {tracesList && (
-          <ProductDetails>
+          <List>
             {tracesList.map((trace, index) => (
-              <ProductDetail key={index}>{trace}</ProductDetail>
+              <ListItem key={index}>{trace}</ListItem>
             ))}
-          </ProductDetails>
+          </List>
         )}
         {!tracesList && (
-          <ProductText><Bold>Caution:</Bold> There's no reported data for traces of allergens.</ProductText>
+          <Paragraph><Bold>Caution:</Bold> There's no reported data for traces of allergens.</Paragraph>
         )}
 
-        <ProductDetailsHeading>More details about this product</ProductDetailsHeading>
-        <ProductText>
+        <Heading level="h3">More details about this product</Heading>
+        <Paragraph>
           See all available details and update product information on Open Food Facts website. <br />
-          <ProductLink href={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</ProductLink>
-        </ProductText>
+          <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
+        </Paragraph>
 
       </ProductArticle>
     </>
@@ -79,29 +85,11 @@ const ProductArticle = styled.article`
   }
 `
 
-const ProductName = styled.h2`
-  font-family: 'Montserrat', serif;
-  text-transform: capitalize;
-`
-
-const ProductDetailsHeading = styled.h3`
-  margin-bottom: 0.25rem;
-  margin-top: 1rem;
-`
-const ProductDetails = styled.ul`
-  margin: 0 1rem;
-`
-
-const ProductDetail = styled.li`
-  line-height: 1.5;
-  text-transform: capitalize;
-`
-
-const ProductBrands = styled(ProductDetails)`
+const BrandsList = styled(List)`
   list-style: none;
   margin-left: 0;
 `
-const ProductBrand = styled(ProductDetail)`
+const Brand = styled(ListItem)`
   font-family: 'Montserrat', serif;
   display: inline;
 
@@ -110,14 +98,6 @@ const ProductBrand = styled(ProductDetail)`
   }
 `
 
-const ProductText = styled.p`
-  line-height: 1.5;
-`
-
 const Bold = styled.span`
   font-weight: 900;
-`
-
-const ProductLink = styled.a`
-  color: #499091;
 `
