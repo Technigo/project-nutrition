@@ -16,7 +16,7 @@ export const ScanBarcode = () => {
   const handleScan = (code) => {
     console.log('Got barcode:', code)
     setShowScanner(false)
-    dispatch(fetchProduct(testCode))
+    dispatch(fetchProduct(code))
   }
 
   return (
