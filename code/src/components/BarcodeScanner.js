@@ -57,20 +57,24 @@ export const BarcodeScanner = ({ className, onDetected }) => {
             size={100}
           />
         </LoadingIcon>}
-      <div ref={cameraDivRef} className={className} />
+      <Video ref={cameraDivRef} />
     </Scanner>
   )
 }
 
 const Scanner = styled.div`
-width: 400px;
-height: 300px;
-margin-top: 30px;
 `
+const Video = styled.div`
+  width: 400px;
+  height: 250px;
+  border-radius: 6px;
+  overflow: hidden;
+  `
+
 const LoadingIcon = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 50px;
+padding: 40px;
 `
 

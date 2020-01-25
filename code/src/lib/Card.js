@@ -14,11 +14,9 @@ export const Card = ({ title, secondaryText, thumbNailUrl, coverImage, className
             {title && <Title>{title}</Title>}
             {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
           </div>
-          {coverImage && <CoverImage src={coverImage} />}
-
         </TitleBar>
-
         {children && <ChildrenContent>{children}</ChildrenContent>}
+        {coverImage && <CoverImage src={coverImage} />}
       </Content>
     </Container>
 
