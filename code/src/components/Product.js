@@ -8,12 +8,15 @@ import { ListItem } from './Text/ListItem'
 import { Paragraph } from './Text/Paragraph'
 import { Link } from './Text/Link'
 
+import { Error } from './Error'
+
 export const Product = () => {
   const scannedProduct = useSelector(state => state.products.product.product)
+  const scanStatus = useSelector(state => state.products.product.status)
   const scannedProductCode = useSelector(state => state.products.product.code)
 
+  if (scanStatus === 0) return <Error />
   if (!scannedProduct) return null
-  if (!scannedProductCode) return null
 
   // Removing prefixes and splitting strings into arrays
   const formatData = (data) => {
@@ -26,7 +29,11 @@ export const Product = () => {
   return (
     <>
       <ProductArticle>
-        <Heading level="h2">{scannedProduct.product_name}</Heading>
+        {scannedProduct.product_name && (
+          <Heading level="h2">{scannedProduct.product_name}</Heading>
+
+        )}
+
 
         {brandsList && (
           <BrandsList>
@@ -63,7 +70,10 @@ export const Product = () => {
         <Heading level="h3">More details about this product</Heading>
         <Paragraph>
           See all available details and update product information on Open Food Facts website. <br />
-          <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
+          {scannedProductCode && (
+            <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
+          )}
+
         </Paragraph>
 
       </ProductArticle>
@@ -80,6 +90,7 @@ const ProductArticle = styled.article`
   width: 90%;
 
   @media screen and (min-width: 668px) {
+    padding: 2rem;
     max-width: 600px;
     width: 100%;
   }
