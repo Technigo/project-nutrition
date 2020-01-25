@@ -40,3 +40,18 @@ export const BarcodeScanner = ({ className, onDetected }) => {
     </>
   )
 }
+
+
+// const hasResult = useRef(false)
+
+// Quagga.onDetected((data) => {
+//   if (!hasResult.current) {
+//     onDetected(data.codeResult.code)
+//   }
+
+//   hasResult.current = true
+
+//   setTimeout(() => {
+//     hasResult.current = false 
+//   }, 500)
+// })

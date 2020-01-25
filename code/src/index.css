@@ -1,14 +1,11 @@
 body {
-  /* background: palegoldenrod; */
   background-image: url("unsplash_sweets.jpg");
-  background-position: top;
+  background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
   color: #DC143C;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,36 +15,94 @@ code {
     monospace;
 }
 
-button {
-  background-color: #DC143C;
-  border: none;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
-  margin: 8px 0;
-  margin-bottom: 12vh;
-  margin-top: 4vh;
-  padding: 12px 18px;
-  width: 12vw;
-}
-
+/* App.js ************************/
 .main-container {
-  font-weight: bold;
   margin-left: 5vw;
   margin-top: 8vh;
 }
 
+/* Product component *************/
+.thinner-card {
+  background: lightgoldenrodyellow;
+  border: 0.5px dotted;
+  border-radius: 6px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14) 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  width: 80vw;
+}
+
+img {
+  width: 100%;
+}
+
 .product-info-container {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-  color: white;
-  width: 50%;
+  color: black;
 }
 
 .product-info {
   margin-bottom: 2vh;
 }
 
+ul {
+  line-height: 1.5em;
+  list-style-type: none;
+  padding-right: 8vw;
+}
+
+.li a {
+  font-weight: normal;
+  text-decoration: none;
+}
+
 .highlight {
   font-weight: bold;
+}
+
+/* ScanBarcode component ********/
+button {
+  background-color: #DC143C;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 8px 0;
+  margin-bottom: 12vh;
+  margin-top: 4vh;
+  padding: 12px 18px;
+  width: 30vw;
+}
+
+.scanner {
+  align-items: center;
+  display: flex;
+  height: 600px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.scanner video {
+  border-radius: 10px;
+  width: 60%;
+}
+
+.scanner canvas {
+  height: 0;
+}
+
+/* Media queries ***************/
+@media(min-width: 768px) {
+body {
+  background-position: top;
+}
+
+.thinner-card {
+  width: 40vw;
+}
+  
+button {
+  font-size: 18px;
+  width: 12vw;
+}
 }
