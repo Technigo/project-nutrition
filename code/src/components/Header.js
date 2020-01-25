@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components/macro'
 
+import { Heading } from './Text/Heading'
+
 export const Header = ({ siteTitle }) => {
   return (
     <SiteHeader>
@@ -15,9 +17,8 @@ const SiteHeader = styled.header`
   width: 100%;
 `
 
-const SiteTitle = styled.h1`
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+const SiteTitle = styled(Heading)`
+  font-size: 1.5rem;
+  font-weight: 900;
   color: #fff;
 `
