@@ -5,7 +5,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: aquamarine;
+  background-image: url("/assets/food.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
   box-sizing: border-box;
 }
 
@@ -13,9 +18,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-/* main {
+#root {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 700px;
+}
+
+main {
+  background-color: #edf7fa;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: brown;
-} */
+  margin-top: 100px;
+  width: 600px;
+}

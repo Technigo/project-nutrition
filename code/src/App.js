@@ -7,7 +7,6 @@ import { products } from './reducers/products'
 import { ui } from './reducers/ui'
 
 import { LandingPage } from './components/LandingPage'
-import { LoadingIndicator } from './components/LoadingIndicator'
 import { ScanBarcode } from './components/ScanBarcode'
 import { Product } from './components/Product'
 
@@ -19,14 +18,17 @@ const reducer = combineReducers({
 })
 
 const store = configureStore({ reducer })
-
 export const App = () => {
+
+
   return (
     <Provider store={store}>
       <main>
-        <LandingPage />
-        <LoadingIndicator />
+  
+        <LandingPage /> 
+    
         <ScanBarcode />
+    
         <Product />
       </main>
     </Provider>
