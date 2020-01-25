@@ -8,31 +8,19 @@ export const products = createSlice({
   name: "products",
   initialState: {
     product: [],
-    // savedProducts: [
-    //   {
-    //     id: 1,
-    //     name: "En produkt"
-    //   },
-    //   {
-    //     id: 2,
-    //     name: "En annan produkt"
-    //   },
-    //   {
-    //     id: 3,
-    //     name: "En tredje produkt"
-    //   }]
+    savedProducts: []
   },
   reducers: {
     setProduct: (state, action) => {
       state.product = action.payload
     },
-    // saveProduct: (state, action) => {
-    //   // state.savedProducts.push(action.payload)
-    //   state.savedProducts.push({ id: Date.now(), name: action.payload })
-    // }
+    saveProduct: (state, action) => {
+      // state.savedProducts.push(action.payload)
+      state.savedProducts.push({ id: Date.now(), name: action.payload })
+    }
   }
 })
-
+const testCode = 5701073062265
 export const fetchProduct = (barcode) => {
   return dispatch => {
     dispatch(ui.actions.setLoading(true))

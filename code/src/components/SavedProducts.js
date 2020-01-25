@@ -1,32 +1,40 @@
 import React from "react"
 import { useSelector } from "react-redux"
+import styled from "styled-components/macro"
+
 
 export const SavedProducts = () => {
-  const products = useSelector(state => state.products.savedProducts)
+  const savedProducts = useSelector(state => state.products.savedProducts)
 
-  if (!products)
+  if (!savedProducts)
     return null
 
-  console.log(products)
+  console.log(savedProducts)
 
 
   return (
     <>
 
-      {products &&
-        <>
-          <h1>Saved products:</h1>
+      {savedProducts[0] &&
+        <SavedList>
+          <h1>Saved products 📝</h1>
           <ul>
-            {products.map((product) => (
+            {savedProducts.map((product) => (
               <li key={product.id}>{product.name}</li>
             ))}
           </ul>
           {/* <p>weight: {product.product && product.product.quantity}</p>
       <img src={product.product && product.product.image_url} /> */}
-        </>
+        </SavedList>
       }
 
     </>
   )
 
 }
+
+const SavedList = styled.div`
+background: rgba(255, 255, 255, 0.8);
+padding: 10px;
+margin: 20px;
+`

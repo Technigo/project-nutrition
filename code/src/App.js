@@ -8,6 +8,7 @@ import { Product } from "components/Product"
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { SavedProducts } from 'components/SavedProducts'
 import styled from "styled-components/macro"
+import foodimage from "./media/hero-image.jpeg"
 
 
 const reducer = combineReducers({
@@ -25,7 +26,7 @@ export const App = () => {
         <LoadingIndicator />
         <ScanBarcode />
         <Product />
-        {/* <SavedProducts /> */}
+        <SavedProducts />
       </Container>
     </Provider>
   )
@@ -35,5 +36,9 @@ const Container = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-background-color: wheat;
+background-image: url(${foodimage});
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+min-height: 600px;
 `

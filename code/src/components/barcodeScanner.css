@@ -1,5 +1,5 @@
 .scanner {
-  background: gray;
+  background: transparent;
   width: 80%;
   margin: 0 auto;
   height: 450px;
@@ -11,7 +11,7 @@
 
 .scanner video {
   width: 80%;
-  border: 2px solid white;
+  border: 5px solid black;
 }
 
 .scanner canvas {

@@ -23,7 +23,7 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <ShowScannerButton type="button" onClick={() => setShowScanner(true)}>
-          Show scanner!
+          Show scanner !
         </ShowScannerButton>
       )}
 
@@ -37,10 +37,12 @@ export const ScanBarcode = () => {
 }
 
 const ShowScannerButton = styled.button`
-background-color: hotpink;
+background-color: white;
 color: black;
-font-size: 16px;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-size: 26px;
 border: 1px solid black;
 border-radius: 10px;
 margin: 10px;
+padding: 10px 18px;
 `

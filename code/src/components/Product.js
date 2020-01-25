@@ -4,46 +4,63 @@ import { useDispatch } from "react-redux"
 import { products } from "reducers/products"
 import styled from "styled-components/macro"
 
+import { SaveButton } from "./SaveButton"
 import { SavedProducts } from "./SavedProducts"
 
 
 export const Product = () => {
   const product = useSelector(state => state.products.product)
-  const dispatch = useDispatch()
 
-  // const handleSave = () => {
-  //   // dispatch(products.actions.saveProduct(product))
-  //   dispatch(products.actions.saveProduct(product.product.product_name))
-  // }
 
   if (!product)
     return null
 
   console.log(product)
 
-
   return (
     <>
       {product.product && product.status === 1 && (
-        <section><h1>Product:</h1>
-          <h3>{product.product.product_name}</h3>
-          <p>weight: {product.product.quantity}</p>
-          <img src={product.product.image_url} />
+        <ProductContainer>
+          <ProductName>Found: {product.product.product_name}</ProductName>
+          <ProductInfo>Weight: {product.product.quantity}</ProductInfo>
+          <ProductImage src={product.product.image_url} />
+          <Ingredients>Ingredients: {product.product.ingredients_text}</Ingredients>
 
-          {/* <SaveButton type="button" onClick={handleSave()}>Save this product to list</SaveButton> */}
-        </section>
+          {/* <ul>
+            {product.product.ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul> */}
+          <SaveButton />
+        </ProductContainer>
       )}
-      {product.status === 0 && <h1>{product.status_verbose}</h1>}
+      {product.status === 0 && <h3>Sorry, {product.status_verbose}.</h3>}
     </>
   )
 
 }
 
-const SaveButton = styled.button`
-background-color: hotpink;
-color: black;
-font-size: 16px;
-border: 1px solid black;
-border-radius: 10px;
-margin: 10px;
+const ProductContainer = styled.div`
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 `
+
+const ProductName = styled.h1`
+margin: 0;
+`
+
+const ProductInfo = styled.p`
+margin: 5px;
+`
+
+const Ingredients = styled.p`
+margin: 5px;
+width: 400px;
+`
+
+const ProductImage = styled.img`
+max-height:
+`
+

@@ -48,6 +48,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       Quagga.start()
       setInitializing(false)
       Quagga.onDetected(handler)
+
     })
 
     return () => {
@@ -58,7 +59,11 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       Quagga.stop()
       Quagga.offDetected(handler)
     }
+
   }, [])
+
+
+  // onDetected(5701073062265)
 
   return (
     <>
