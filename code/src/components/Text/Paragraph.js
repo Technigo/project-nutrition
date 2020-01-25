@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Paragraph = (props) => {
-  return <Text>{props.children}</Text>
+export const Paragraph = ({ className, ...props }) => {
+  return <Text className={className}>{props.children}</Text>
 }
 
 const Text = styled.p`

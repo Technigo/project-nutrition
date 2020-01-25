@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Heading = ({ level, text, ...props }) => {
-  if (level === "h2") return <HeadingTwo>{props.children}</HeadingTwo>
-  if (level === "h3") return <HeadingThree>{props.children}</HeadingThree>
-  return <HeadingOne>{props.children}</HeadingOne>
+export const Heading = ({ level, text, className, ...props }) => {
+  if (level === "h2") return <HeadingTwo className={className}>{props.children}</HeadingTwo>
+  if (level === "h3") return <HeadingThree className={className}>{props.children}</HeadingThree>
+  return <HeadingOne className={className}>{props.children}</HeadingOne>
 }
 
 const HeadingOne = styled.h1`
