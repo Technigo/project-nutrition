@@ -39,7 +39,7 @@ export const ScanBarcode = () => {
   // onClick={() => setShowScanner(true)
 
   const test = () => {
-    dispatch(fetchProduct(3045140105502));
+    dispatch(fetchProduct(3045));
   };
 
   return (

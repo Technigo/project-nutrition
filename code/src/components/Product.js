@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Card } from "./Card";
 import { ProductHeader } from "./ProductHeader";
+import { NotFound } from "./NotFound";
 
 import styled from "styled-components";
 
@@ -13,6 +14,13 @@ const Section = styled.section`
 const Keywords = styled.div`
   display: flex;
   flex-wrap: wrap;
+`;
+
+const List = styled.ul`
+  list-style-type: circle;
+  list-style-position: outside;
+  list-style-image: none;
+  margin-left: 2rem;
 `;
 
 const Paragraph = styled.p`
@@ -68,31 +76,31 @@ export const Product = () => {
             }
           >
             {" "}
-            <h3>INGREDIENTS:</h3>
-            <ul>
+            {formattedIngredients.length === 0 ? null : <h3>INGREDIENTS:</h3>}
+            <List>
               {formattedIngredients.length === 0
                 ? null
                 : formattedIngredients.map((ing, index) => (
                     <li key={index}>{ing}</li>
                   ))}
-            </ul>
-            <h3>ALLERGENS:</h3>
-            <ul>
+            </List>
+            {formattedAllergens.length === 0 ? null : <h3>ALLERGENS:</h3>}
+            <List>
               {formattedAllergens.length === 0
                 ? null
                 : formattedAllergens.map((all, index) => (
                     <li key={index}>{all}</li>
                   ))}
-            </ul>
-            <h3>CATEGORIES:</h3>
-            <ul>
+            </List>
+            {formattedCategories.length === 0 ? null : <h3>CATEGORIES:</h3>}
+            <List>
               {formattedCategories.length === 0
                 ? null
                 : formattedCategories.map((cat, index) => (
                     <li key={index}>{cat}</li>
                   ))}
-            </ul>
-            <h3>KEYWORDS:</h3>
+            </List>
+            {scan.product._keywords.length === 0 ? null : <h3>KEYWORDS:</h3>}
             <Keywords>
               {scan.product._keywords.length === 0
                 ? null
@@ -103,7 +111,7 @@ export const Product = () => {
           </Card>
         </Section>
       )}
-      {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+      {scan.status === 0 && <NotFound />}
     </>
   );
 };

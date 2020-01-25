@@ -9,6 +9,7 @@ const Main = styled.div`
   width: 100%;
   text-align: center;
   margin-bottom: 2rem;
+  padding: 1rem 0;
 `;
 
 export const ProductHeader = () => {
