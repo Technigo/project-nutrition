@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 
@@ -9,7 +15,7 @@ import { ui } from './reducers/ui'
 import { LandingPage } from './components/LandingPage'
 import { ScanBarcode } from './components/ScanBarcode'
 import { Product } from './components/Product'
-
+import { Navbar } from './components/Navbar'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -23,14 +29,25 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <main>
-  
-        <LandingPage /> 
-    
-        <ScanBarcode />
-    
-        <Product />
-      </main>
+      <Router>
+        <Switch>
+          <main>
+            <Route path="/" exact>
+              <LandingPage /> 
+            </Route>
+            
+            <Route path="/scan">
+              <ScanBarcode />
+              <Navbar/>
+            </Route>
+            <Route path="/product">
+              <Product />
+              <Navbar/>
+            </Route>
+            
+          </main>
+        </Switch>
+      </Router>
     </Provider>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 
 
 import { fetchProduct } from 'reducers/products'
@@ -12,28 +12,26 @@ import "./scanbarcode.css"
 
 export const ScanBarcode = () => {
   const dispatch = useDispatch()
-  const [showScanner, setShowScanner] = useState(false)
+  const showScanner = useSelector((state) => state.ui.showScanner)
 
   return (
-    <div className="scanbarcode-container">
-      {!showScanner && (
-        <button className="showscanner-btn" type="button" onClick={() => setShowScanner(true)}>
-          Show Scanner
-        </button>
-      )}
+    <div>
+      {showScanner &&
+        <div className="scanbarcode-container">
 
-      {showScanner && (
-        <BarcodeScanner
-          className="scanner"
-          onDetected={(code) => {
-            console.log('Got barcode', code)
-            setShowScanner(false)
-            dispatch(fetchProduct(code))
-          }} />
+          <BarcodeScanner
+            className="scanner"
+            onDetected={(code) => {
+              console.log('Got barcode', code)
+              // setShowScanner(false)
+              dispatch(fetchProduct(code))
+            }}
+          />
 
-      )}
-      <LoadingIndicator />
+          <LoadingIndicator />
 
+        </div>
+      }
     </div>
   )
 }
