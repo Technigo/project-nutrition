@@ -10,7 +10,7 @@ export const Footer = () => {
 }
 
 const SiteFooter = styled.footer`
-  background-color: #499091;
+  background-color: #333333;
   bottom: 0;
   padding: 1rem 1rem 1rem 2rem;
   position: fixed;
@@ -18,8 +18,7 @@ const SiteFooter = styled.footer`
 `
 
 const FooterText = styled.p`
-  font-family: 'Roboto slab', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
   color: #fff;
 `

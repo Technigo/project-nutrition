@@ -1,9 +1,10 @@
 .scanner-section {
+  align-items: center;
   background-color: #ededed;
   display: flex;
   flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
 .scanner-message {
@@ -14,18 +15,31 @@
 
 .scanner {
   align-items: center;
-  background-color: teal;
   display: flex;
   justify-content: center;
   padding: 0;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
 }
 
 .scanner video {
+  border-radius: 0.2rem;
   margin: 0 auto;
+  width: 100%;
 }
 
 .scanner canvas {
   height: 0;
+}
+
+@media screen and (min-width: 668px) {
+  .scanner {
+    max-width: 570px;
+    width: 100%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+  
 }
