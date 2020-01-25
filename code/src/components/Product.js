@@ -10,6 +10,7 @@ export const Product = () => {
     return(
         <>
         <h1>Product:</h1>
+        <img src={product.product && product.product.image_nutrition_url} alt="" />
         </>
     )
 }
