@@ -14,8 +14,12 @@ export const Product = () => {
   const scannedProduct = useSelector(state => state.products.product.product)
   const scanStatus = useSelector(state => state.products.product.status)
   const scannedProductCode = useSelector(state => state.products.product.code)
+  const cameraOn = useSelector(state => state.ui.isCameraOn)
 
-  if (scanStatus === 0) return <Error />
+  if (scanStatus === 0) return (
+
+    <Error />
+  )
   if (!scannedProduct) return null
 
   // Removing prefixes and splitting strings into arrays
@@ -28,55 +32,57 @@ export const Product = () => {
 
   return (
     <>
-      <ProductArticle>
-        {scannedProduct.product_name && (
-          <Heading level="h2">{scannedProduct.product_name}</Heading>
+      {!cameraOn && (
+        <ProductArticle>
+          {scannedProduct.product_name && (
+            <Heading level="h2">{scannedProduct.product_name}</Heading>
 
-        )}
-
-
-        {brandsList && (
-          <BrandsList>
-            {brandsList.map((brand, index) => (
-              <Brand key={index}>{brand}</Brand>
-            ))}
-          </BrandsList>
-        )}
-
-        <Heading level="h3">Allergens</Heading>
-        {allergensList && (
-          <List>
-            {allergensList.map((allergen, index) => (
-              <ListItem key={index}>{allergen}</ListItem>
-            ))}
-          </List>
-        )}
-        {!allergensList && (
-          <Paragraph><Bold>Caution:</Bold> There's no reported data for allergens.</Paragraph>
-        )}
-
-        <Heading level="h3">Traces of allergens</Heading>
-        {tracesList && (
-          <List>
-            {tracesList.map((trace, index) => (
-              <ListItem key={index}>{trace}</ListItem>
-            ))}
-          </List>
-        )}
-        {!tracesList && (
-          <Paragraph><Bold>Caution:</Bold> There's no reported data for traces of allergens.</Paragraph>
-        )}
-
-        <Heading level="h3">More details about this product</Heading>
-        <Paragraph>
-          See all available details and update product information on Open Food Facts website. <br />
-          {scannedProductCode && (
-            <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
           )}
 
-        </Paragraph>
 
-      </ProductArticle>
+          {brandsList && (
+            <BrandsList>
+              {brandsList.map((brand, index) => (
+                <Brand key={index}>{brand}</Brand>
+              ))}
+            </BrandsList>
+          )}
+
+          <Heading level="h3">Allergens</Heading>
+          {allergensList && (
+            <List>
+              {allergensList.map((allergen, index) => (
+                <ListItem key={index}>{allergen}</ListItem>
+              ))}
+            </List>
+          )}
+          {!allergensList && (
+            <Paragraph><Bold>Caution:</Bold> There's no reported data for allergens.</Paragraph>
+          )}
+
+          <Heading level="h3">Traces of allergens</Heading>
+          {tracesList && (
+            <List>
+              {tracesList.map((trace, index) => (
+                <ListItem key={index}>{trace}</ListItem>
+              ))}
+            </List>
+          )}
+          {!tracesList && (
+            <Paragraph><Bold>Caution:</Bold> There's no reported data for traces of allergens.</Paragraph>
+          )}
+
+          <Heading level="h3">More details about this product</Heading>
+          <Paragraph>
+            See all available details and update product information on Open Food Facts website. <br />
+            {scannedProductCode && (
+              <Link url={`https://world.openfoodfacts.org/product/${scannedProductCode}/`}>{scannedProduct.product_name} on Open Food Facts</Link>
+            )}
+
+          </Paragraph>
+
+        </ProductArticle>
+      )}
     </>
   )
 }
