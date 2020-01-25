@@ -3,9 +3,8 @@ import { Provider } from "react-redux";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { ui } from "./reducers/ui";
 import { products } from "./reducers/products";
-import { ScanBarcode } from "./components/ScanBarcode";
-import { LoadingIndicator } from "components/LoadingIndicator";
-import { Product } from "components/Product";
+import { Content } from "./components/Content";
+import { Container, ColorOverlay, ContentWrapper } from "styles";
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -17,9 +16,12 @@ const store = configureStore({ reducer });
 export const App = () => {
   return (
     <Provider store={store}>
-      <LoadingIndicator />
-      <ScanBarcode />
-      <Product />
+      <Container>
+        <ContentWrapper>
+          <Content />
+        </ContentWrapper>
+        <ColorOverlay />
+      </Container>
     </Provider>
   );
 };
