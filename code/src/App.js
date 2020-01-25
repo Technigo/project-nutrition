@@ -17,9 +17,9 @@ export const store = configureStore({ reducer})
 export const App = () => {
   return (
   <Provider store={store}>
+    <ScanBarcode />
     <LoadingIndicator />
     <Product />
-    <ScanBarcode />
     
     </Provider>
   )

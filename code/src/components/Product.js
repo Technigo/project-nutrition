@@ -6,12 +6,20 @@ export const Product = () => {
 
     if (!product) return null
 
-    console.log('produkt', product)
+    console.log('product', product)
 
     return (
         <>
-        <h1>Product:</h1>
-        <img src={product.product && product.product.image_small_url} />
+        {product.product && product.status === 1 && (
+            <section>
+                <h1>{product.product.product_name}</h1>
+                <img src={product.product.image_small_url} />
+            </section>
+        )}
+        {product.status === 0 && <h3>{product.status_verbose}</h3>}
+    
         </> 
     )
 }
+
+// {product.status === 0 && <Error msg={product.status_verbose} />}
