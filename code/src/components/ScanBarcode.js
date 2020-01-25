@@ -22,6 +22,7 @@ const FloatingButton = styled.button`
   box-shadow: 4px 4px 30px 4px #0ff;
   border: none;
   font-size: 18px;
+  position: relative;
 
   ${ButtonWrapper}:hover & {
     background-color: purple;
@@ -45,8 +46,17 @@ const FloatingButton = styled.button`
   }
 `;
 
-const BarcodeImage = styled.img`
-  color: black;
+const Scan = styled.p`
+  padding: 1em;
+  position: absolute;
+`;
+
+const Icon = styled.i`
+  font-size: 130px;
+  position: absolute;
+  color: white;
+  z-index: 2;
+  bottom: 25px;
 `;
 
 export const ScanBarcode = () => {
@@ -57,8 +67,15 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <ButtonWrapper>
-          <BarcodeImage src="./assets/scan.svg"></BarcodeImage>
-          <FloatingButton type="button" onClick={() => setShowScanner(true)}>
+          <FloatingButton
+            className="button"
+            type="button"
+            onClick={() => setShowScanner(true)}
+          >
+            {' '}
+            <Icon>
+              <i class="fas fa-expand"></i>
+            </Icon>
             Scan Product
           </FloatingButton>
         </ButtonWrapper>
@@ -77,3 +94,34 @@ export const ScanBarcode = () => {
     </>
   );
 };
+
+/*
+
+  &::before,
+  &::after {
+    contents: '';
+    display: blocks;
+    position: absolute;
+    background: #fff;
+  }
+
+  &::before {
+    top: -0.3em;
+    bottom: -0.3em;
+    left: 1em;
+    right: 1em;
+
+    &::after {
+      left: 0.3em;
+      right: -0.3em;
+      top: 1em;
+      bottom: 1em;
+    }
+
+    ${FloatingButton} & {
+      position: relative;
+      z-index: 1;
+    }
+  }
+`;
+*/
