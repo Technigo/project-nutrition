@@ -1,0 +1,20 @@
+.scanner {
+  background: gray;
+  width: 80%;
+  margin: 0 auto;
+  height: 450px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner video {
+  width: 80%;
+  border: 2px solid white;
+}
+
+.scanner canvas {
+  /* border: 2px solid black; */
+  height: 0;
+}
