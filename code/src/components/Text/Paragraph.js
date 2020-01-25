@@ -7,4 +7,5 @@ export const Paragraph = ({ className, ...props }) => {
 
 const Text = styled.p`
   line-height: 1.5;
+  margin-bottom: 1.2rem;
 `

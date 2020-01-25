@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { BarcodeScanner } from './BarcodeScanner'
+
 import { fetchProduct } from '../reducers/products'
 import { ui } from '../reducers/ui'
+
+import { BarcodeScanner } from './BarcodeScanner'
+import { Heading } from './Text/Heading'
+import { Paragraph } from './Text/Paragraph'
 import { Button } from './Button'
 import './scanbarcode.css'
 
@@ -13,13 +17,15 @@ export const ScanBarcode = () => {
   return (
     <>
       <section className="scanner-section">
+        <Heading level="h2">Check a product for allergens and traces</Heading>
+        <Paragraph>Are you wondering if a product contains allergens or traces? Check if it does by scanning its barcode.</Paragraph>
         {!showScanner && (
           <Button
             onClick={() => {
               setShowScanner(true)
               dispatch(ui.actions.setCamera(true))
             }}
-            text="Show scanner" />
+            text="Scan product" />
         )}
         {showScanner && (
           <BarcodeScanner className="scanner" onDetected={(code) => {

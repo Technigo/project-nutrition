@@ -8,8 +8,10 @@ export const Button = ({ text, onClick }) => {
 }
 
 const CustomButton = styled.button`
+  background-color: #499091;
   border: none;
   border-radius: 0.2rem;
+  color: #fff;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   padding: 1rem;
@@ -17,6 +19,5 @@ const CustomButton = styled.button`
 
     &:hover {
     background-color: #F17300;
-    color: #fff;
   }
 `

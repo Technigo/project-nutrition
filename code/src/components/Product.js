@@ -16,16 +16,14 @@ export const Product = () => {
   const scannedProductCode = useSelector(state => state.products.product.code)
   const cameraOn = useSelector(state => state.ui.isCameraOn)
 
-  if (scanStatus === 0) return (
-
-    <Error />
-  )
+  if (scanStatus === 0) return <Error />
   if (!scannedProduct) return null
 
   // Removing prefixes and splitting strings into arrays
   const formatData = (data) => {
     return data.replace(/([A-z])\w+:/gi, '').split(',')
   }
+
   const brandsList = scannedProduct.brands && formatData(scannedProduct.brands)
   const tracesList = scannedProduct.traces && formatData(scannedProduct.traces)
   const allergensList = scannedProduct.allergens && formatData(scannedProduct.allergens)
@@ -36,7 +34,6 @@ export const Product = () => {
         <ProductArticle>
           {scannedProduct.product_name && (
             <Heading level="h2">{scannedProduct.product_name}</Heading>
-
           )}
 
 
@@ -91,7 +88,7 @@ const ProductArticle = styled.article`
   background-color: rgba(244, 244, 244, 1);
   border-radius: 5px;
   box-shadow: 1px 2px 3px 1px #dad8d8;
-  margin: 2rem auto;
+  margin: 2rem auto 0.5rem auto;
   padding: 1rem;
   width: 90%;
 
