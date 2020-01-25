@@ -68,6 +68,7 @@ export const Product = () => {
 const ProductArticle = styled.article`
   background-color: rgba(244, 244, 244, 1);
   border-radius: 5px;
+  box-shadow: 1px 2px 3px 1px #dad8d8;
   margin: 2rem auto;
   padding: 1rem;
   width: 90%;
