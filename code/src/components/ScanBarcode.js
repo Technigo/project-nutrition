@@ -7,10 +7,16 @@ export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
 
+  const test = () => {
+    dispatch(fetchProducts(3045140105502))
+  }
+
+  const testCode = 3045140105502
+
   return (
     <>
       {!showScanner && (
-        <button type="button" onClick={() => setShowScanner(true)}>
+        <button type="button" onClick={() => test()}>
                     Show scanner
         </button>
       )}
@@ -19,7 +25,7 @@ export const ScanBarcode = () => {
         <BarcodeScanner onDetected={(code) => {
           console.log('Got barcode', code)
           setShowScanner(false)
-          dispatch(fetchProducts(code))
+          dispatch(fetchProducts(3045140105502))
         }} />
       )}
     </>

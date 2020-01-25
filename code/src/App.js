@@ -12,14 +12,16 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
-export const store = configureStore({reducer})
+export const store = configureStore({ reducer })
 
 export const App = () => {
   return (
-    <Provider store={store}>
-      <LoadingIndicator />
-      <ScanBarcode />
-      <Product />
-    </Provider>
+    <div className="wrapper">
+      <Provider store={store}>
+        <LoadingIndicator />
+        <ScanBarcode />
+        <Product />
+      </Provider>
+    </div>
   )
 }
