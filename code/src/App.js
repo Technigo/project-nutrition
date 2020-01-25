@@ -7,6 +7,7 @@ import { LoadingIndicator } from 'components/Loading'
 import { ProductList } from 'components/ProductList'
 import { ScanBarcode } from 'components/ScanBarcode'
 import { Header } from './components/Header'
+import styled from 'styled-components'
 
 
 const reducer = combineReducers({
@@ -20,11 +21,19 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Header />
-      <LoadingIndicator />
-      <ScanBarcode />
-      <ProductList />
+      <Main>
+        <LoadingIndicator />
+        <ScanBarcode />
+        <ProductList />
+      </Main>
     </Provider>
+
   )
 }
 
 
+const Main = styled.main`
+display: flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;`

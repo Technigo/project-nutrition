@@ -11,7 +11,7 @@ export const LoadingIndicator = () => {
       {isLoading && (
         <Loader
           type="BallTriangle"
-          color="#00BFFF"
+          color="#f2acad"
           height={150}
           width={150}
         />)}
@@ -23,5 +23,5 @@ const LoadingIcon = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-padding: 30px;
+padding: 1em;
 `

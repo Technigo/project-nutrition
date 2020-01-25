@@ -8,17 +8,22 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   const cameraDivRef = useRef()
   const hasResult = useRef(false)
 
-  Quagga.onDetected((data) => {
+  // Quagga.onDetected((data) => {
+  //   if (!hasResult.current) {
+  //     onDetected(data.codeResult.code)
+  //   }
+
+  const handler = data => {
+    console.log("found")
     if (!hasResult.current) {
       onDetected(data.codeResult.code)
     }
-
     hasResult.current = true
 
     setTimeout(() => {
       hasResult.current = false
     }, 500)
-  })
+  }
 
   useLayoutEffect(() => {
     Quagga.init({
@@ -42,12 +47,18 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       }
       Quagga.start()
       setInitializing(false)
+      Quagga.onDetected(handler)
+
     })
 
     return () => {
       Quagga.stop()
+      Quagga.offDetected(handler)
+
     }
   }, [])
+  // onDetected(5701073062265)
+  // If I want to hard-code when styling the "result" card
 
   return (
     <Scanner>

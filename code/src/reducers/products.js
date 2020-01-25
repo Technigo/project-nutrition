@@ -13,9 +13,10 @@ export const products = createSlice({
   }
 })
 
-const barcode = "5701073062265"
+// const barcode = "5701073062265" 
+//If I want to hard-code a product
 
-export const fetchProduct = () => {
+export const fetchProduct = (barcode) => {
   return (dispatch) => {
     dispatch(ui.actions.setLoading(true))
     fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
