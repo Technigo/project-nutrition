@@ -3,12 +3,10 @@ import { useSelector } from 'react-redux'
 import { Card } from 'lib/Card'
 import { Error } from 'components/Error'
 
-
-
 export const ProductList = () => {
   const scan = useSelector((state) => state.products.product)
 
-  if (!scan) return "Try again"
+  if (!scan) return null
 
   console.log('SCAN', scan)
 
@@ -22,6 +20,7 @@ export const ProductList = () => {
           <h1>Product: {scan.product.product_name}</h1>
           <p>Expiration date: {scan.product.expiration_date}</p>
           <h3>Brand: {scan.product.brands}</h3>
+          
         </Card>
       )}
       {scan.status === 0 && <Error msg={scan.status_verbose} />}

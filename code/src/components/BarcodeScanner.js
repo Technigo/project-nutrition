@@ -69,6 +69,14 @@ const Video = styled.div`
   height: 250px;
   border-radius: 6px;
   overflow: hidden;
+    @media (max-width: 449px) {
+    width: 350px;
+  height: 250px;
+  }
+  @media (min-width: 450px) and (max-width: 750px) {
+    width: 350px;
+  height: 250px;
+  }
   `
 
 const LoadingIcon = styled.div`

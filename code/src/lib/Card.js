@@ -8,6 +8,8 @@ export const Card = ({ title, secondaryText, thumbNailUrl, coverImage, className
   return (
     <Container className={className}>
       <Content>
+        {coverImage && <CoverImage src={coverImage} />}
+
         <TitleBar>
           {thumbNailUrl && <Thumbnail url={thumbNailUrl} />}
           <div>
@@ -16,7 +18,6 @@ export const Card = ({ title, secondaryText, thumbNailUrl, coverImage, className
           </div>
         </TitleBar>
         {children && <ChildrenContent>{children}</ChildrenContent>}
-        {coverImage && <CoverImage src={coverImage} />}
       </Content>
     </Container>
 
@@ -33,7 +34,7 @@ const Container = styled.div`
 const CoverImage = styled.img`
   width: 300px;
   height: 300px;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 6px;
 `
 const ChildrenContent = styled.div`
 background: #f1f1f1;
