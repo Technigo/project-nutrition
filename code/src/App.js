@@ -4,6 +4,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { ui } from "reducers/ui";
 import { products } from "reducers/products";
 import { ScanBarcode } from "components/ScanBarcode";
+import { Product } from "components/Product";
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -16,6 +17,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <ScanBarcode />
+      <Product />
     </Provider>
   );
 };
