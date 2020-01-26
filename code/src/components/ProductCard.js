@@ -6,7 +6,11 @@ const ProductInfo = styled.article`
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background: lightgray;
+  background: #fafafa;
+
+  @media (min-width: 768px) {
+    height: 130vh;
+  }
 `
 
 const Card = styled.section`
@@ -20,6 +24,10 @@ const Card = styled.section`
   width: 90vw;
   margin: 20px 0px;
   background: #fff;
+
+  @media (min-width: 768px) {
+      width: 50vw;
+  }
 `
 
 const ProductImage = styled.img`

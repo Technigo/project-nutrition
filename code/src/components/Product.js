@@ -26,7 +26,7 @@ const Message = styled.p`
 export const Product = () => {
   const scan = useSelector(state => state.products.product);
   const showScanner = useSelector(state => state.ui.showScanner);
-  const isLoading = useSelector(state => state.ui.isLoading)
+  const isLoading = useSelector(state => state.ui.isLoading);
 
   if (!scan) return null;
 

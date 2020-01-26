@@ -36,6 +36,7 @@ const Search = styled.input`
     outline: none;
     color: #fff;
     background: blue;
+    line-height: 24px;
 
     &::placeholder {
         color: #fff;

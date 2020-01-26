@@ -20,10 +20,12 @@ const Intro = styled.span`
 
 export const StartPage = () => {
     const showScanner = useSelector(state => state.ui.showScanner);
+    const product = useSelector(state => state.products.product);
+    const isLoading = useSelector(state => state.ui.isLoading);
 
     return (
         <>
-            {!showScanner && (
+            {!showScanner && !product.product && !isLoading && (
                 <Start>
                     <StartTitle>Welcome to Open Food Data!</StartTitle>
 
