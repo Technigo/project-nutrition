@@ -10,12 +10,12 @@ console.log('SCAN', scan)
 
   return (
     <>
-      <h1>Product:</h1>
+  
       {scan.product && (
         <div>
           <img src={scan.product.image_small_url} />
           {!scan.product.image_small_url && <span>No picture.</span>}
-          <h3>{scan.product_name}</h3>
+          <h3>{scan.product.product_name}</h3>
           {scan.product.ingredients_from_palm_oil_tags[0] && <p>There is palm oil in this product</p>}
           {!scan.product.ingredients_from_palm_oil_tags[0] && <p>There is palm oil in this product</p>}
         </div>

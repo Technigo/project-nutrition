@@ -3,6 +3,11 @@ import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchProduct } from 'reducers/products'
 import { useDispatch } from 'react-redux'
 
+import './button.css' 
+
+
+
+
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
@@ -10,9 +15,11 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-        <button type="button" onClick={() => setShowScanner(true)}>
+        <div className="button-container">
+          <button className="button-style" type="button" onClick={() => setShowScanner(true)}>
           Show scanner
-        </button>
+          </button>
+        </div>
       )}
 
       {showScanner && (
