@@ -1,18 +1,21 @@
 h1 {
   display: inline-block;
-  padding: 10px;
+  padding: 100px;
+  color: darkslategray;
 }
+
 .headerContainer {
   justify-content: center;
   display: flex;
   flex-direction: row;
   width: auto;
   height: 100px;
-  background-color: #bce9ef;
-  margin-bottom: 20px;
+  background-color: #bceaef;
   align-items: center;
   justify-content: space-between;
+  place-content: center;
   }
+
 .hamburger {
   display: flex;
   width: 25px;
@@ -20,27 +23,19 @@ h1 {
   flex-direction: column;
   justify-content: space-between;
   object-position: left;
-  margin-right: 104px;
-  margin-left: 20px;  
+  /* margin-right: 104px; */
+  margin-top: 0px;
+  /* margin-left: 20px */
+  
 }
 /* lines for the hamburger menu, same width as the container, but thinner */
 .hamburger div {
   width: 30px;
   height: 3px;
-  background: white;
+  /* background: white; */
+  background-color: darkslategray;
   border-radius: 5px;
 }
-
- .hamburger div:hover {
-    filter: brightness(70%);
-    background: palevioletred;
-    
- }
- .headerNavigation:hover {
-    filter: brightness(70%);
-    color: palevioletred;
- }
-
 .headerInfo {
   color: white;
   align-content: center;
@@ -52,16 +47,17 @@ h1 {
   height: 80px; */
   display: flex;
   flex-direction: row;
- 
-  padding: 0px 10px;
+  font-weight: bold;
+  /* padding: 0px 10px; */
 }
 .headerNavigation {
-  justify-content: space-between;
+  /* color: white; */
+  color: darkslategray;
+  justify-content: space-evenly;
   display: inline-block;
   text-decoration: none;
-  padding: 10px;
-  margin-right: 10px;
+  /* padding: 10px; */
+  /* margin-right: 10px; */
   flex-direction: row;
-  color: white;
-  font-weight: bold;
+  font-weight: bolder;
 }

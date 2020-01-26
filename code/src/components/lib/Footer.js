@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +15,7 @@ const BtnContainer = styled.div`
   flex-direction: row;
   // width: 500px;
   justify-content: center;
+  
 `
 const Icon = styled.button`
   flex-direction: column;
@@ -25,7 +26,7 @@ const Icon = styled.button`
   align-items: center;
   background-color: inherit;
   border: none;
-  margin: 10px 5px;
+  margin: 10px 35px;
   opacity: 0.5;
   ${BtnContainer}:hover & {
     opacity: 1;
@@ -37,11 +38,14 @@ const Emoji = styled.p`
   margin: 0;
   height: auto;
   color: transparent;
-  text-shadow: 0 0 0 white;
+  // text-shadow: 0 0 0 white;
+  text-shadow: 0 0 0 grey;
 `
 const Label = styled.p`
   font-size: 12px;
-  color: white;
+  color: darkslategrey;
+  font-weight: bold;
+  // color: darkslategrey;
 `
 export const Footer = () => {
   return (
@@ -58,7 +62,7 @@ export const Footer = () => {
         <Icon>
           <Emoji>
             <span role="img" aria-label="snowflake">
-              ⭐️x
+              ⭐️
             </span>
           </Emoji>
           <Label>Snow</Label>
@@ -74,7 +78,7 @@ export const Footer = () => {
         <Icon>
           <Emoji>
             <span role="img" aria-label="sun">
-              🦋
+              🌴
             </span>
           </Emoji>
           <Label>Favourites</Label>
