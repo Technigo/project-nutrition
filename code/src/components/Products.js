@@ -14,17 +14,14 @@ const Title = styled.h1`
     font-size:40px;
 
     @media (max-width: 768px) {
-        font-size:33px;
+        font-size:30px;
     }
 `
 
 const Wrap = styled.div`
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    display:block;
     margin-top: 5%;
-    padding:50px 0;
+    padding:50px;
     border-radius:8px;
     background-color:white;
    
@@ -36,10 +33,10 @@ const Wrap = styled.div`
 
 const TitleDiv = styled.div`
     display:flex;
-    margin:50px;
+    margin-bottom:40px;
 
     @media (max-width: 768px) {
-        margin:30px;
+        margin-bottom:30px;
     }
 `
 
@@ -75,12 +72,10 @@ export const Products = () => {
                         <Title>Search results </Title>
                         <Icon alt="glass" src={mglass} />
                     </TitleDiv>
-
                     <Name><strong>Name of product: </strong>{product && product.product_name}</Name>
-                    <Image alt="product" src={product && product.image_url} />
-                    <TextInfo><strong>Ingredients:</strong></TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
-                    <TextInfo><strong>Brand:</strong> {product && product.brands}</TextInfo>
-                    <TextInfo><strong>Country of origin:</strong> {product && product.countries}</TextInfo>
+                    <TextInfo><strong>Brand: </strong> {product && product.brands}</TextInfo>
+                    <TextInfo><strong>Country of origin: </strong> {product && product.countries}</TextInfo>
+                    <TextInfo><strong>Ingredients: </strong></TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
                 </>)}
             {status === 0 && <h1>Product not found</h1>}
         </Wrap>
