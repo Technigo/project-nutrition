@@ -5,10 +5,19 @@ import { Scan } from "styles";
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
   const cameraDivRef = useRef();
+  const hasResult = useRef(false);
 
   Quagga.onDetected(data => {
-    onDetected(data.codeResult.code);
-    Quagga.offDetected();
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code);
+      Quagga.offDetected();
+    }
+
+    hasResult.current = true;
+
+    setTimeout(() => {
+      hasResult.current = false;
+    }, 500);
   });
 
   useLayoutEffect(() => {
@@ -40,7 +49,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
+      {initializing && <h2>Starting camera...</h2>}
       <Scan ref={cameraDivRef} className={className} />
     </>
   );

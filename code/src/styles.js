@@ -25,6 +25,8 @@ export const ContentWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 70%;
+  text-align: center;
+  padding: 10px;
 `;
 
 export const Button = styled.button`
