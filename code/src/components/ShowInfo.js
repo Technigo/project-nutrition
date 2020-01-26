@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 const StyledShowInfo = styled.div`
@@ -27,8 +27,6 @@ export const ShowInfo = () => {
   const showScanner = useSelector(state => state.scanner.showScanner);
   const productFound = useSelector(state => state.food);
 
-  // console.log(productFound);
-
   return (
     <StyledShowInfo>
       {!showScanner && productFound.status && data && (
@@ -36,7 +34,7 @@ export const ShowInfo = () => {
           <h3>Product summary</h3>
           <ul>
             <Item>
-              <ItemTitle>Bar code</ItemTitle>
+              <ItemTitle>Barcode</ItemTitle>
               {data && data.id ? (
                 <ItemDetails>{data.id}</ItemDetails>
               ) : (
