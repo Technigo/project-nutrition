@@ -8,6 +8,7 @@ export const products = createSlice({
   },
   reducers: {
     setProduct: (state, action) => {
+      console.log("set product");
       state.product = action.payload;
     },
     removeProduct: (state, action) => {
