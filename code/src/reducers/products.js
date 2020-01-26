@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
+import { InsulinCounter } from 'components/InsulinCounter'
 /*import { insulinCounter } from 'reducers/insulinCounter'*/
 
 export const products = createSlice({

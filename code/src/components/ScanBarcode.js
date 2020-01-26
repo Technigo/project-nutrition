@@ -6,15 +6,15 @@ import styled from "styled-components/macro";
 
 const Button = styled.button`
   color: white;
-  background-color: lightpink;
+  background-color: grey;
   font-size: 1rem;
   padding: 15px;
-  border-radius: 25px;
+  border-radius: 20px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 1rem;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 380px;
   border: none;
 `
 
@@ -28,7 +28,7 @@ export const ScanBarcode = () => {
   return (
     <div className="scan-btn-container">
       {/* The line below will fetch a static product (Blueberry Cake) at startup (for testing) */}
-      {dispatch(fetchProduct('7340001803020'))}
+      {dispatch(fetchProduct('code'))}
 
       {!showScanner && (
         <Button type="button" onClick={() => setShowScanner(true) }>

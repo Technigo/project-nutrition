@@ -22,20 +22,17 @@ const reducer = combineReducers({
 
 export const store = configureStore ({reducer})
 
-
 export const App = () => {
   return (
     <Provider store={store}>
-    <div className="Container">
-     
-      <Header/>
-      <LoadingIndicator/>
-      <Product/>
-      <InsulinCounter/>
-      <ScanBarcode />
-      <Error/>
-      <Footer/>
-    </div>
+      <div className="Container">
+        <Header/>
+        <LoadingIndicator/>
+        <Product/>
+        <ScanBarcode />
+        <Error/>
+        <Footer/>
+      </div>
     </Provider>
   )
 }

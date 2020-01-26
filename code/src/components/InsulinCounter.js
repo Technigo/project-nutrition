@@ -10,8 +10,7 @@ console.log(insulinDose)
 
 return (
     <>
-    My insulindose: 
-    {insulinDose.toFixed(1)}
+    My insulindose: {insulinDose.toFixed(1)}
     </>
 )
 }
