@@ -1,20 +1,23 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { createSlice } from '@reduxjs/toolkit'
+
+
 import { ui } from "./ui"
 
-
-import jsondata from './jsondata.json' // for testing
+import chocolate from './chocolate.json' // for testing
+import gum from './gum.json' // for testing
 
 export const products = createSlice({
   name: "products",
-  initialState: jsondata, // for testing
+  initialState: {
+    item: gum
+  },
 
   reducers: {
     setProducts: (state, action) => {
-      state.products = action.payload
+      state.item = action.payload
     }
   }
 })
-
 
 export const fetchProduct = (barcode) => {
 
@@ -26,6 +29,7 @@ export const fetchProduct = (barcode) => {
         console.log("json", json)
         dispatch(products.actions.setProducts(json))
         dispatch(ui.actions.setLoading(false))
+        dispatch(ui.actions.setShowProduct(true))
       })
   }
 }

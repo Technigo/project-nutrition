@@ -17,6 +17,8 @@ export const ui = createSlice({
     },
     setShowScanner: (state, action) => {
       state.showScanner = action.payload
+
+      // enable and disable buttons
       if (action.payload) {
         state.disableScanBtn = true
         state.disableCancelBtn = false
@@ -25,22 +27,19 @@ export const ui = createSlice({
         state.disableScanBtn = false
         state.disableCancelBtn = true
       }
-
     },
+
     setShowProduct: (state, action) => {
       state.showProduct = action.payload
+
+      // enable and disable buttons
       if (action.payload) {
         state.disableScanBtn = false
         state.disableCancelBtn = true
         state.disableSaveBtn = false
       }
-      else {
-        state.disableScanBtn = false
-        state.disableCancelBtn = true
-        state.disableSaveBtn = true
-      }
-
     }
+
   }
 
 

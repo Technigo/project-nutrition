@@ -1,0 +1,299 @@
+{
+  "status_verbose": "product found",
+  "product": {
+    "photographers_tags": [
+      "kiliweb"
+    ],
+    "allergens_from_ingredients": "",
+    "lang": "fr",
+    "vitamins_tags": [],
+    "data_quality_bugs_tags": [],
+    "last_modified_by": null,
+    "nutrient_levels": {},
+    "editors_tags": [
+      "kiliweb",
+      "openfoodfacts-contributors",
+      "yuka.Ukk1ZUZLZ2tvNlFVaWM4dnhCL28vOVZieG9MeUJrYVpMcnRCSUE9PQ"
+    ],
+    "data_quality_errors_tags": [],
+    "data_quality_warnings_tags": [],
+    "max_imgid": "1",
+    "misc_tags": [
+      "en:nutriscore-not-computed"
+    ],
+    "traces_from_ingredients": "",
+    "pnns_groups_2": "unknown",
+    "created_t": 1551721726,
+    "nucleotides_prev_tags": [],
+    "no_nutrition_data": "",
+    "_keywords": [
+      "spearmint",
+      "pase",
+      "white",
+      "extra",
+      "tuggummi"
+    ],
+    "nutrition_grades_tags": [
+      "not-applicable"
+    ],
+    "images": {
+      "1": {
+        "uploader": "kiliweb",
+        "uploaded_t": 1551721727,
+        "sizes": {
+          "full": {
+            "w": 1841,
+            "h": 1121
+          },
+          "400": {
+            "w": 400,
+            "h": 244
+          },
+          "100": {
+            "h": 61,
+            "w": 100
+          }
+        }
+      },
+      "ingredients_fr": {
+        "x1": null,
+        "white_magic": "0",
+        "normalize": "0",
+        "x2": null,
+        "sizes": {
+          "full": {
+            "w": 1841,
+            "h": 1121
+          },
+          "400": {
+            "w": 400,
+            "h": 244
+          },
+          "200": {
+            "w": 200,
+            "h": 122
+          },
+          "100": {
+            "h": 61,
+            "w": 100
+          }
+        },
+        "y2": null,
+        "ocr": 1,
+        "imgid": "1",
+        "y1": null,
+        "rev": "4",
+        "orientation": "0",
+        "angle": null,
+        "geometry": "0x0-0-0"
+      }
+    },
+    "additives_debug_tags": [],
+    "creator": "kiliweb",
+    "other_nutritional_substances_tags": [],
+    "countries_tags": [
+      "en:france"
+    ],
+    "pnns_groups_1": "unknown",
+    "id": "4009900399432",
+    "interface_version_modified": "20150316.jqm2",
+    "image_ingredients_small_url": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.200.jpg",
+    "additives_tags": [],
+    "last_editor": null,
+    "complete": 0,
+    "minerals_tags": [],
+    "nova_group_debug": "no nova group when the product does not have ingredients",
+    "languages_hierarchy": [
+      "en:french"
+    ],
+    "data_quality_info_tags": [],
+    "unknown_nutrients_tags": [],
+    "checkers_tags": [],
+    "languages_codes": {
+      "fr": 2
+    },
+    "countries_hierarchy": [
+      "en:france"
+    ],
+    "allergens_tags": [],
+    "last_edit_dates_tags": [
+      "2019-03-04",
+      "2019-03",
+      "2019"
+    ],
+    "product_name": "Tuggummi Extra White Spearmint Påse",
+    "data_sources": "App - yuka, Apps",
+    "nova_group_tags": [
+      "not-applicable"
+    ],
+    "languages": {
+      "en:french": 2
+    },
+    "selected_images": {
+      "ingredients": {
+        "thumb": {
+          "fr": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.100.jpg"
+        },
+        "small": {
+          "fr": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.200.jpg"
+        },
+        "display": {
+          "fr": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.400.jpg"
+        }
+      }
+    },
+    "code": "4009900399432",
+    "image_ingredients_url": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.400.jpg",
+    "nutrition_data_per": "100g",
+    "states": "en:to-be-completed, en:nutrition-facts-completed, en:ingredients-to-be-completed, en:expiration-date-to-be-completed, en:packaging-code-to-be-completed, en:characteristics-to-be-completed, en:categories-to-be-completed, en:brands-to-be-completed, en:packaging-to-be-completed, en:quantity-to-be-completed, en:product-name-completed, en:photos-to-be-validated, en:photos-uploaded",
+    "lc": "fr",
+    "states_tags": [
+      "en:to-be-completed",
+      "en:nutrition-facts-completed",
+      "en:ingredients-to-be-completed",
+      "en:expiration-date-to-be-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-to-be-completed",
+      "en:categories-to-be-completed",
+      "en:brands-to-be-completed",
+      "en:packaging-to-be-completed",
+      "en:quantity-to-be-completed",
+      "en:product-name-completed",
+      "en:photos-to-be-validated",
+      "en:photos-uploaded"
+    ],
+    "last_modified_t": 1551721728,
+    "vitamins_prev_tags": [],
+    "states_hierarchy": [
+      "en:to-be-completed",
+      "en:nutrition-facts-completed",
+      "en:ingredients-to-be-completed",
+      "en:expiration-date-to-be-completed",
+      "en:packaging-code-to-be-completed",
+      "en:characteristics-to-be-completed",
+      "en:categories-to-be-completed",
+      "en:brands-to-be-completed",
+      "en:packaging-to-be-completed",
+      "en:quantity-to-be-completed",
+      "en:product-name-completed",
+      "en:photos-to-be-validated",
+      "en:photos-uploaded"
+    ],
+    "ingredients_ids_debug": [],
+    "amino_acids_prev_tags": [],
+    "informers_tags": [
+      "yuka.Ukk1ZUZLZ2tvNlFVaWM4dnhCL28vOVZieG9MeUJrYVpMcnRCSUE9PQ",
+      "kiliweb"
+    ],
+    "_id": "4009900399432",
+    "amino_acids_tags": [],
+    "last_image_dates_tags": [
+      "2019-03-04",
+      "2019-03",
+      "2019"
+    ],
+    "ingredients_that_may_be_from_palm_oil_tags": [],
+    "additives_prev_original_tags": [],
+    "interface_version_created": "20150316.jqm2",
+    "nutriments": {
+      "energy-kcal_unit": "kcal",
+      "sodium_100g": 0.02,
+      "sodium_unit": "g",
+      "sugars": 59.4,
+      "carbohydrates_value": 59.4,
+      "sugars_100g": 59.4,
+      "carbohydrates": 59.4,
+      "fat_100g": 0,
+      "energy_value": 143,
+      "sodium_value": 0.02,
+      "proteins_value": 0,
+      "proteins_unit": "",
+      "salt_100g": 0.05,
+      "sugars_value": 59.4,
+      "fat_value": 0,
+      "fat": 0,
+      "saturated-fat_value": 0,
+      "sugars_unit": "",
+      "fat_unit": "",
+      "carbohydrates_100g": 59.4,
+      "energy_unit": "kcal",
+      "energy-kcal_value": 143,
+      "energy": 598,
+      "salt_value": 0.05,
+      "energy-kcal": 598,
+      "saturated-fat_unit": "",
+      "energy-kcal_100g": 598,
+      "proteins": 0,
+      "carbohydrates_unit": "",
+      "saturated-fat": 0,
+      "sodium": 0.02,
+      "saturated-fat_100g": 0,
+      "proteins_100g": 0,
+      "salt": 0.05,
+      "energy_100g": 598,
+      "salt_unit": ""
+    },
+    "minerals_prev_tags": [],
+    "nutrient_levels_tags": [],
+    "pnns_groups_2_tags": [
+      "unknown",
+      "missing-category"
+    ],
+    "nutrition_score_debug": "no score when the product does not have a category",
+    "ingredients_text_debug": null,
+    "rev": 4,
+    "correctors_tags": [
+      "openfoodfacts-contributors"
+    ],
+    "completeness": 0.266666666666667,
+    "additives_old_tags": [],
+    "additives_original_tags": [],
+    "allergens_hierarchy": [],
+    "traces_tags": [],
+    "countries_lc": "fr",
+    "update_key": "update_categories_taxonomy",
+    "product_name_fr": "Tuggummi Extra White Spearmint Påse",
+    "languages_tags": [
+      "en:french",
+      "en:1"
+    ],
+    "nucleotides_tags": [],
+    "data_sources_tags": [
+      "app-yuka",
+      "apps"
+    ],
+    "data_quality_tags": [],
+    "entry_dates_tags": [
+      "2019-03-04",
+      "2019-03",
+      "2019"
+    ],
+    "sortkey": 201551721728,
+    "traces_hierarchy": [],
+    "ingredients_debug": [],
+    "last_image_t": 1551721727,
+    "codes_tags": [
+      "code-13",
+      "4009900399xxx",
+      "400990039xxxx",
+      "40099003xxxxx",
+      "4009900xxxxxx",
+      "400990xxxxxxx",
+      "40099xxxxxxxx",
+      "4009xxxxxxxxx",
+      "400xxxxxxxxxx",
+      "40xxxxxxxxxxx",
+      "4xxxxxxxxxxxx"
+    ],
+    "countries": "en:france",
+    "ingredients_from_palm_oil_tags": [],
+    "pnns_groups_1_tags": [
+      "unknown",
+      "missing-category"
+    ],
+    "nutrition_data_prepared_per": "100g",
+    "image_ingredients_thumb_url": "https://static.openfoodfacts.org/images/products/400/990/039/9432/ingredients_fr.4.100.jpg"
+  },
+  "code": "4009900399432",
+  "status": 1
+}

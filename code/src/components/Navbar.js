@@ -1,14 +1,17 @@
-import React, { useState } from "react"
-import { useSelector, useDispatch } from "react-redux"
+import React, { useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 
 import { ui } from '../reducers/ui'
 
 export const Navbar = () => {
   const dispatch = useDispatch()
-  // const [showScanner, setShowScanner] = useState(false)
+
+  // Buttons disbled or enabled
   const disableScanBtn = useSelector((state) => state.ui.disableScanBtn)
   const disableCancelBtn = useSelector((state) => state.ui.disableCancelBtn)
   const disableSaveBtn = useSelector((state) => state.ui.disableSaveBtn)
+
+
 
   return (
 

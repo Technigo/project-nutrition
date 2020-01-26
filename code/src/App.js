@@ -29,9 +29,10 @@ export const App = () => {
 
   return (
     <Provider store={store}>
+       <main>
       <Router>
         <Switch>
-          <main>
+         
             <Route path="/" exact>
               <LandingPage /> 
             </Route>
@@ -44,10 +45,9 @@ export const App = () => {
               <Product />
               <Navbar/>
             </Route>
-            
-          </main>
         </Switch>
       </Router>
+      </main>
     </Provider>
   )
 }
