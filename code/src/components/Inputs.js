@@ -4,13 +4,12 @@ import styled from 'styled-components/macro'
 
 export const Inputs = () => {
   const [code, setCode] = useState('')
-  // const dispatch = useDispatch()
+  //const dispatch = useDispatch()
 
   //Enter Barcode-number to start the fetch in Products.js
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    //dispatch(products.actions.fetchProduct(code))
     setCode('')
   }
 
@@ -20,7 +19,7 @@ export const Inputs = () => {
         <Button
           className="button"
           type="submit"
-        > <span>search</span>
+        > <span>🔎</span>
         </Button>
 
         <Input
