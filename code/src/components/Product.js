@@ -19,11 +19,13 @@ export const Product = () => {
 
       {!isScanning && scan.status === 1 && (
         <div className='product-info'>
-          <h3>{scan.product.product_name}</h3>
-          <h2>
-            Please sort this as{''} {scan.product.packaging.toLowerCase()}
-          </h2>
           <img className='product-image' src={scan.product.image_url} />
+          <div className='product-text'>
+            <h3>{scan.product.product_name}</h3>
+            <h2>
+              Please sort this as{''} {scan.product.packaging.toLowerCase()}
+            </h2>
+          </div>
         </div>
       )}
       {<></>}

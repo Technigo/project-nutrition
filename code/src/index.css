@@ -54,15 +54,19 @@ header img {
   text-align: center;
 }
 
+.product-info {
+  display: flex;
+}
+
 .product-info h2,
 .product-info h3 {
   margin-bottom: 1em;
   margin-block-start: 0;
-  text-align: center;
 }
 
 .product-image {
-  max-height: 220px;
+  max-height: 150px;
+  margin-right: 1em;
 }
 
 video {
@@ -70,8 +74,6 @@ video {
 }
 
 .more-info-container {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin-top: 6em;
   border-block-start: 2px solid #83de95;
@@ -87,11 +89,14 @@ video {
 }
 
 .more-info-box {
+  display: flex;
   background-color: white;
-  max-width: 45%;
-  padding: 0.7em 0.7em 1em;
+  width: 100%;
+  padding: 0.7em;
   justify-content: center;
   box-shadow: 4px 4px #5b5c5b50;
+  box-sizing: border-box;
+  margin-bottom: 3em;
 }
 
 .picture {
@@ -100,7 +105,8 @@ video {
   background-size: cover;
   background-position-x: center;
   background-position-y: center;
-  height: 10em;
+  width: 70%;
+  margin-right: 1em;
 }
 
 .text-box {
@@ -111,9 +117,16 @@ video {
 
 .stats {
   background-color: white;
-  width: 45%;
+  width: 100%;
+  display: flex;
 }
 
+.stats-material,
+.stats-before-2020,
+.stats-after-2020,
+.stats-2018 {
+  margin: 0 2em 1em;
+}
 .more-info-button {
   padding: 0.5em 0.7em;
   background-color: #83de95;

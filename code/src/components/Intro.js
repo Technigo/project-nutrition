@@ -16,8 +16,7 @@ export const Intro = () => {
           </p>
           <p>
             Scan your product and see what packaging material is used, and it
-            will be easier for you to recycle it correctly. Together we can
-            reach the 2020 goal and make the world a better place!
+            will be easier for you to recycle it correctly.
           </p>
         </div>
       )}
