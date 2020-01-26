@@ -3,13 +3,14 @@ import { createSlice } from '@reduxjs/toolkit'
 
 import { ui } from "./ui"
 
-import chocolate from './chocolate.json' // for testing
-import gum from './gum.json' // for testing
+// import chocolate from './chocolate.json' // for testing
+// import gum from './gum.json' // for testing
+import oboy from './oboy.json' // for testing
 
 export const products = createSlice({
   name: "products",
   initialState: {
-    item: gum,
+    item: oboy,
     savedProducts: []
   },
 
