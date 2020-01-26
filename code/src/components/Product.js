@@ -20,6 +20,7 @@ export const Product = () => {
                   <p>Ingredients from palmoil:
                    {scan.product.ingredients_from_or_that_may_be_from_palm_oil_n}
                   </p>
+                  <span className="black">Read more why palmoil is <a href="https://www.orangutans-sos.org/rainforesthome/?gclid=EAIaIQobChMIqOCQ8qqh5wIVQkQYCh35VQhYEAAYASAAEgKX1PD_BwEb" target="new">bad here</a></span>
 
         </section>
      )}

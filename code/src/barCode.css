@@ -1,0 +1,16 @@
+.scanner {
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    vertical-align: center;
+}
+
+.scanner video {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px dotted green;
+}
+
+canvas {
+    height: 0;
+}
