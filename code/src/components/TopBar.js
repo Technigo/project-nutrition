@@ -58,9 +58,14 @@ export const TopBar = () => {
             {!showSearch && (
                 <GroupMenu right>
                     <SearchButton>
-                        <IoIosSearch size="24px" onClick={() => setShowSearch(true)} />
+                        <IoIosSearch size="24px" onClick={() => {
+                            dispatch(ui.actions.setShowScanner(false))
+                            setShowSearch(true)
+                        }} />
                     </SearchButton>
-                    <IoMdBarcode size="24px" onClick={() => dispatch(ui.actions.setShowScanner(true))} />
+                    <IoMdBarcode size="24px" onClick={() => {
+                        dispatch(ui.actions.setShowScanner(true))
+                    }} />
                 </GroupMenu>
             )}
             {showSearch && (

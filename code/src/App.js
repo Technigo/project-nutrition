@@ -6,6 +6,7 @@ import { products } from "reducers/products";
 import { TopBar } from "components/TopBar"
 import { ScanBarcode } from "components/ScanBarcode";
 import { Product } from "components/Product";
+import { StartPage } from "components/StartPage";
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -18,6 +19,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <TopBar />
+      <StartPage />
       <ScanBarcode />
       <Product />
     </Provider>

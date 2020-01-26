@@ -1,71 +1,32 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import styled from 'styled-components/macro'
+import { ProductCard } from "components/ProductCard"
+import { LoadingIndicator } from "./LoadingIndicator";
 
-const ProductInfo = styled.article`
+const NotFound = styled.div`
+  height: 90vh;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 100vh;
-  background: lightgray;
+  margin-top: 20px;
 `
 
-const ProductCard = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  aling-items: center;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 1px 3px 0px rgba(0,0,0,.12);
-  box-sizing: border-box;
-  border-radius: 4px;
-  width: 344px;
-  margin: 20px 0px;
-  background: #fff;
+const NotFoundImg = styled.img`
+  width: 50%;
+  border-radius: 6px;
 `
 
-const ProductImage = styled.img`
-  border-top-left-radius: inherit;
-  border-top-right-radius: inherit;
-`
-
-const Content = styled.div`
-  padding: 16px 16px 0px 16px;
-`
-
-const ProductTitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 2rem;
-  font-weight: 500;
-`
-
-const SecondaryText = styled.div`
-  font-size: .875rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-  opacity: 0.6;
-`
-
-const SupportingText = styled.div`
-  font-size: .875rem;
-  line-height: 1.25rem;
-  font-weight: 400;
-  letter-spacing: .0178571429em;
-  opacity: .6;
-  padding: 16px;
-`
-
-const SupportingTextTitle = styled.p`
-  font-weight: 500;
-  margin: 0;
-`
-
-const IngredientsList = styled.p`
-  margin: 0px 0px 10px 0px;
+const Message = styled.p`
+  padding: 0px 32px;
+  text-align: justify;
 `
 
 export const Product = () => {
   const scan = useSelector(state => state.products.product);
   const showScanner = useSelector(state => state.ui.showScanner);
+  const isLoading = useSelector(state => state.ui.isLoading)
 
   if (!scan) return null;
 
@@ -74,36 +35,23 @@ export const Product = () => {
   return (
 
     <>
-      {!showScanner && (scan.product && scan.status) === 1 && (
-        <ProductInfo>
-          <ProductCard>
-            <ProductImage src={scan.product.image_url} alt={scan.product.product_name} />
-            <Content>
-              <ProductTitle>{scan.product.product_name} {scan.product.product_name && scan.product.brands ? `- ${scan.product.brands}` : `${scan.product.brands}`}</ProductTitle>
-              <SecondaryText>Barcode: {scan.code}</SecondaryText>
-            </Content>
-            {(scan.product.ingredients_text || scan.product.allergens || scan.product.nova_groups || scan.product.nutrition_grades) && (
-              <SupportingText>
-                {scan.product.ingredients_text && (
-                  <>
-                    <SupportingTextTitle>Ingredients list:</SupportingTextTitle>
-                    <IngredientsList>{scan.product.ingredients_text.replace(/([\[]+|[\]]+|(\_)+)/gi, '')}</IngredientsList>
-                  </>
-                )}
-                {scan.product.allergens && (
-                  <>
-                    <SupportingTextTitle>Allergens:</SupportingTextTitle>
-                    <IngredientsList>{scan.product.allergens.replace(/en:/gi, ' ')}</IngredientsList>
-                  </>
-                )}
-                {scan.product.nova_groups && (<img src={`https://static.openfoodfacts.org/images/misc/nova-group-${scan.product.nova_groups}.svg`} />)}
-                {scan.product.nutrition_grades && (<img src={`https://static.openfoodfacts.org/images/misc/nutriscore-${scan.product.nutrition_grades}.svg`} />)}
-              </SupportingText>
-            )}
-          </ProductCard>
-        </ProductInfo>
+      {!isLoading && !showScanner && (scan.product && scan.status) === 1 && scan.code !== null && (
+        <ProductCard product={scan.product} code={scan.code} />
       )}
-      {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+      {!isLoading && !showScanner && (scan.status === 0 || scan.code === "" || scan.code === null) && (
+        <NotFound>
+          <h1>Product not found</h1>
+          <NotFoundImg src="./assets/not_found.jpg" alt="Product not found" />
+          <Message>
+            Oh no! Sometimes this happens because our scanner didn't pick up the correct code or it might
+            be that the product isn't at Open Food Facts database yet.
+          </Message>
+          <Message>
+            Either way, give it another try! You can insert the code manually or you can scan another product.
+          </Message>
+        </NotFound>
+      )}
+      {isLoading && <LoadingIndicator />}
     </>
   );
 };
