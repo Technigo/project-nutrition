@@ -11,15 +11,25 @@ export const Product = () => {
         <div className='not-found'>
           <p>Oh no, I couldn't find this product.</p>
           <p>
-            If you have the time, please visit world.openfoodfacts.org and add
-            the product for others to find!
+            If you have the time, please visit{' '}
+            <a
+              href='https://world.openfoodfacts.org/'
+              target='_blank'
+              rel='noopener noreferrer'>
+              Open Food Facts
+            </a>{' '}
+            and add the product for others to find!
           </p>
         </div>
       )}
 
       {!isScanning && scan.status === 1 && (
         <div className='product-info'>
-          <img className='product-image' src={scan.product.image_url} />
+          <img
+            className='product-image'
+            src={scan.product.image_url}
+            alt='product'
+          />
           <div className='product-text'>
             <h3>{scan.product.product_name}</h3>
             <h2>

@@ -9,6 +9,7 @@ import { ScanBarcode } from 'components/ScanBarcode'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
 import { MoreInfo } from 'components/MoreInfo'
+import { Stats } from 'components/Stats'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -27,6 +28,7 @@ export const App = () => {
         <Intro />
         <ScanBarcode />
         <MoreInfo />
+        <Stats />
       </main>
     </Provider>
   )
