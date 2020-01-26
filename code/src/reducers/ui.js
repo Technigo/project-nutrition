@@ -5,7 +5,7 @@ export const ui = createSlice({
   initialState: {
     isLoading: false,
     showScanner: false,
-    showProduct: true,
+    showProduct: false,
     disableScanBtn: false,
     disableCancelBtn: false,
     disableSaveBtn: true

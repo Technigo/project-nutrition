@@ -1,0 +1,32 @@
+.scan-container {
+  height: calc(100vw * 0.75);
+  max-height: 450px;
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scanbarcode-container {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scanner {
+  width: 100%;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner video {
+  width: 100%;
+}
+
+.scanner canvas {
+  height: 0;
+}

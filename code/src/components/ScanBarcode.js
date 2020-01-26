@@ -7,7 +7,7 @@ import { fetchProduct } from 'reducers/products'
 
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { LoadingIndicator } from './LoadingIndicator'
-import './scanbarcode.css'
+import './css/scanbarcode.css'
 
 
 export const ScanBarcode = () => {
@@ -16,7 +16,7 @@ export const ScanBarcode = () => {
   let history = useHistory()
 
   return (
-    <div>
+    <div className="scan-container">
       {showScanner &&
         <div className="scanbarcode-container">
 

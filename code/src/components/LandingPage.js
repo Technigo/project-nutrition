@@ -12,6 +12,7 @@ export const LandingPage = () => {
       <h2>Are you excited to see some facts about food</h2>
       <Link className="next-btn" to="/scan">
         <button> Get started </button>
+
       </Link>
     </div>
   )

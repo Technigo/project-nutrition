@@ -1,0 +1,17 @@
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: black;
+  padding: 10px;
+  height: auto;
+}
+
+.navbar-btn {
+  height: 50px;
+  width: 80%;
+  font-size: 14px;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-self: center;
+}

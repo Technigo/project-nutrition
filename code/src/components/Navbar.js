@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 
 
 import { ui } from '../reducers/ui'
+import './css/navbar.css'
 
 export const Navbar = () => {
   const dispatch = useDispatch()
@@ -22,17 +23,18 @@ export const Navbar = () => {
   return (
 
     <nav>
-      <button className="showscanner-btn" type="button" disabled={disableScanBtn} onClick={() => { history.push("/scan"); dispatch(ui.actions.setShowScanner(true)) }}>
+      <button className="navbar-btn" type="button" disabled={disableScanBtn} onClick={() => { history.push("/scan"); dispatch(ui.actions.setShowScanner(true)) }}>
         Scan barcode
       </button>
       {!showProduct && (
-        <button className="showscanner-btn" type="button" disabled={disableCancelBtn} onClick={() => dispatch(ui.actions.setShowScanner(false))}>
+        <button className="navbar-btn" type="button" disabled={disableCancelBtn} onClick={() => dispatch(ui.actions.setShowScanner(false))}>
           Cancel
       </button>
       )}
+      {showProduct && (<div></div>)}
 
 
-      <button className="showscanner-btn" type="button" disabled={disableSaveBtn} >
+      <button className="navbar-btn" type="button" disabled={disableSaveBtn} >
         Save
       </button>
 
