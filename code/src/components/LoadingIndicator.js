@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
+import './loadingindicator.css'
 
 export const LoadingIndicator = () => {
   const isLoading = useSelector(state => state.ui.isLoading)
@@ -9,9 +10,11 @@ export const LoadingIndicator = () => {
     <>
       {isLoading && (
 
-        <lottie-player id="loading"
-          src="https://assets4.lottiefiles.com/datafiles/KS8ZpEdYbIuaZqg/data.json" background="transparent" speed="1" loop autoplay >
-        </lottie-player>
+        <div class="lds-dual-ring"></div>
+
+        // <lottie-player id="loading"
+        //   src="https://assets4.lottiefiles.com/datafiles/KS8ZpEdYbIuaZqg/data.json" background="transparent" speed="1" loop autoplay >
+        // </lottie-player>
       )}
 
     </>
