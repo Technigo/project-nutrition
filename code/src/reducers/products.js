@@ -2,9 +2,6 @@ import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
 
 
-
-
-
 export const products = createSlice({
     name: 'products',
     initialState: {
@@ -17,8 +14,9 @@ export const products = createSlice({
             console.log(state)
             console.log(action)
             state.product = action.payload
-            // state.items.push({ id: state.code, text: action.payload })
-        }
+
+        },
+
 
     }
 })

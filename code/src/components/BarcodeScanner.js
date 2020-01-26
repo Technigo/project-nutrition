@@ -21,12 +21,7 @@ const Camera = styled.div`
   width: 300px;
   height: 200px;
 `
-// do some styling on this or a loadingspinner
-// const LoadingText = styled.div`
-//   display: flex;
-//   text-align: center;
-//   font-size: 20px;
-// `
+
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)

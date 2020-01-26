@@ -21,37 +21,81 @@ const BtnContainer = styled.div`
   width: 100%;
   justify-content: space-around;
   align-content: center;
+
+  @media (min-width: 650px) {
+    justify-content: space-evenly;
+    width: 60%;
+    align-self: center;
+  }
 `;
+const BackIcon = styled.button`
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    height: 65px;
+    background-color: inherit;
+    border: none;
+    margin: 10px 5px;
+    opacity: 0.5;
+    justify-content: flex-end;
+    text-decoration-line: none;
+    align-items: center;
+    justify-content: center;
 
-const Icon = styled.button`
-  flex-direction: column;
-  align-content: center;
-  width: 65px;
-  height: auto;
-  justify-content: center;
-  align-items: center;
-  background-color: inherit;
-  border: none;
-  margin: 10px 5px;
-  opacity: 0.5;
+    ${BtnContainer}:hover & {
+        opacity: 1;
+        }
+`
+const ScanIcon = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 65px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    border: none;
+    margin: 10px 5px;
+    opacity: 0.5;
+    text-decoration-line: none;
 
-  ${BtnContainer}:hover & {
-    opacity: 1;
+    ${BtnContainer}:hover & {
+        opacity: 1;
+  }
+`
+const ProfileIcon = styled.button`
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 65px;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    border: none;
+    margin: 10px 5px;
+    opacity: 0.5;
+
+    ${BtnContainer}:hover & {
+        opacity: 1;
   }
 `;
 
 const Emoji = styled.p`
-  font-size: 15px;
-  padding: 0;
-  margin: 0;
-  height: auto;
-  color: transparent;
-  text-shadow: 0 0 0 red;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    color: transparent;
+    text-shadow: 0 0 0 red;
+
 `;
 const Label = styled.p`
-  font-size: 12px;
-  color: red;
-  font-weight: 700;
+    font-size: 12px;
+    color: red;
+    font-weight: 700;
+    margin: 0;
 `;
 
 const ScanImg = styled.img`
@@ -66,26 +110,26 @@ export const BottomBar = () => {
     return (
         <Container>
             <BtnContainer>
-                <Icon>
+                <BackIcon as="a" href="/">
                     <Emoji>
                         <ScanImg src="/assets/red-arrow.svg" ></ScanImg>
 
                     </Emoji>
                     <Label>Back</Label>
-                </Icon>
-                <Icon as="a" href="/">
+                </BackIcon>
+                <ScanIcon as="a" href="/">
                     <Emoji>
                         <ScanImg src="/assets/red-scan-icon.svg" ></ScanImg>
                     </Emoji>
                     <Label>Scan</Label>
-                </Icon>
-                <Icon>
+                </ScanIcon>
+                <ProfileIcon>
                     <Emoji>
                         <ScanImg src="/assets/red-user-icon.svg" ></ScanImg>
 
                     </Emoji>
                     <Label>Profile</Label>
-                </Icon>
+                </ProfileIcon>
 
             </BtnContainer>
         </Container>
