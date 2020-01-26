@@ -7,7 +7,7 @@ export const Header = () => (
 
   <Wrapper>
     <TextWrapper>
-      <PrimaryText>What's in your food? </PrimaryText>
+      <PrimaryText>Don´t know what to #hashtag your product?</PrimaryText>
       <SecondaryText>Click on "Show scanner" and scan the barcode with your cam!</SecondaryText>
     </TextWrapper>
   </Wrapper>
