@@ -1,25 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import { BarcodeScanner } from "components/BarcodeScanner";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { fetchProduct } from "reducers/products";
+import { ui } from "reducers/ui"
 
 export const ScanBarcode = () => {
-  const [showScanner, setShowScanner] = useState(false);
+  const showScanner = useSelector(state => state.ui.showScanner);
   const dispatch = useDispatch();
 
   return (
     <>
-      {!showScanner && (
-        <button type="button" onClick={() => setShowScanner(true)}>
-          Show scanner
-        </button>
-      )}
-
       {showScanner && (
         <BarcodeScanner
           onDetected={code => {
             console.log("Got barcode", code);
-            setShowScanner(false);
+            dispatch(ui.actions.setShowScanner(false));
             dispatch(fetchProduct(code));
           }}
         />

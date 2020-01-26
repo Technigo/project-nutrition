@@ -14,6 +14,10 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       inputStream: {
         name: 'Live',
         type: 'LiveStream',
+        constraints: {
+          width: 400,
+          height: 400
+        },
         target: cameraDivRef.current
       },
       decoder: {
