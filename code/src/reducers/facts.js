@@ -4,15 +4,14 @@ import { loading } from 'reducers/loading'
 export const facts = createSlice({
     name: 'facts',
     initialState: {
-        products: []
+        product: null
     },
 
     reducers: {
         setProduct: (state, action) => {
-            state.products = action.payload
+            state.product = action.payload
         }
     },
-
 
 })
 
@@ -23,7 +22,8 @@ export const fetchProduct = (barcode) => {
             .then((res) => res.json())
             .then((json) => {
                 console.log("json", json)
-                dispatch(facts.actions.setProduct(json))
+                const { product } = json
+                dispatch(facts.actions.setProduct(product))
                 dispatch(loading.actions.setLoading(false))
             })
     }

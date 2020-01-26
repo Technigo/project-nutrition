@@ -10,9 +10,12 @@ import styled from 'styled-components'
 
 
 const Bg = styled.div`
-background-color:lightyellow;
-padding:50px;
-font-family: 'Roboto', sans-serif;;
+font-family: 'Roboto', sans-serif;
+align-items:center;
+justify-content:center;
+display:flex;
+flex-direction:column;
+padding:100px;
 `
 
 const reducer = combineReducers({
