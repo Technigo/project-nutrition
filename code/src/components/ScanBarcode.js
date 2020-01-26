@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux'
 import { useSelector } from 'react-redux'
 import './scanner.css'
 
+
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch  = useDispatch()

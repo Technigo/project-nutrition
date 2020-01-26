@@ -16,15 +16,15 @@ export const products = createSlice({
 
 
 export const fetchProduct = (barcode) => {
-    return dispatch =>  {
+    return dispatch => {
         dispatch(ui.actions.setLoading(true))
         fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-        .then(res => res.json())
-        .then(json => {
-            dispatch(products.actions.setProduct(json))
-            console.log(products.product)
-            dispatch(ui.actions.setLoading(false))
+            .then(res => res.json())
+            .then(json => {
+                dispatch(products.actions.setProduct(json))
+                console.log(products.product)
+                dispatch(ui.actions.setLoading(false))
 
-        })
+            })
     }
 }

@@ -6,9 +6,9 @@ export const ui = createSlice({
         isLoading: false,
         isShowMenu: false
     },
-    
+
     reducers: {
-        setLoading: (state, action)  =>  {
+        setLoading: (state, action) => {
             state.isLoading = action.payload
         },
         setShowMenu: (state, action) => {
