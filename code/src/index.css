@@ -5,7 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #A73852;
+  background-image: url('./assets/boudewijn-huysmans-y-y3JMAzIdM-unsplash.jpg');
+  background-size: cover;
 }
 
 code {

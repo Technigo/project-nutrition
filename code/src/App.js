@@ -10,13 +10,17 @@ import { products } from 'reducers/products'
 import { ScanBarcode } from 'components/ScanBarcode'
 import { Product } from 'components/Product'
 import styled from 'styled-components'
+import { InputBarcode } from 'components/InputBarcode'
 
 const Container = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  /* background: firebrick;
+  background-image: url('./assets/boudewijn-huysmans-y-y3JMAzIdM-unsplash.jpg'); */
 `
 
 const reducer = combineReducers({
@@ -31,6 +35,7 @@ export const App = () => {
     <Provider store={store}>
       <Container>
         <ScanBarcode />
+        <InputBarcode />
         {/* <LoadingIndicator /> */}
         <Product />
       </Container>      
