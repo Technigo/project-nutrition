@@ -1,0 +1,46 @@
+/* .error-message {
+color: blue;
+} */
+
+.result {
+  background-image: url('../Assets/food.jpg');
+  background-size: cover;
+  width: 80%;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  /* flex-direction: row; */
+  align-items: flex-end;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.product-wrapper {
+  margin-right: 70px;
+  width: 200px;
+}
+
+.product-name {
+
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+
+.front-image {
+border-radius: 10%;
+margin: 10px;
+width: 30%;
+align-self: flex-end;
+
+}
+
+.nutrition-image {
+  border-radius: 10%;
+  margin: 10px;
+  width: 40%;
+}
