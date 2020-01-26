@@ -3,7 +3,7 @@ body {
   font-family: 'Encode Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #83de9526;
+  background-color: #83de9515;
 }
 
 h2 {
@@ -127,9 +127,45 @@ video {
 .stats-2018 {
   margin: 0 2em 1em;
 }
+
 .more-info-button {
   padding: 0.5em 0.7em;
   background-color: #83de95;
   color: #1c2924;
   font-size: 0.9em;
+}
+
+@media (max-width: 900px) {
+  main {
+    max-width: 70%;
+  }
+
+  .stats-material,
+  .stats-before-2020,
+  .stats-after-2020,
+  .stats-2018 {
+    margin: 0 1em 1em;
+  }
+}
+
+@media (max-width: 660px) {
+  main {
+    max-width: 80%;
+  }
+
+  .intro-text p {
+    font-size: 1.1em;
+  }
+
+  .stats-material,
+  .stats-before-2020,
+  .stats-after-2020,
+  .stats-2018 {
+    margin: 0 1em 1em;
+  }
+
+  .more-info-box p,
+  .more-info-box h5 {
+    font-size: 0.8em;
+  }
 }

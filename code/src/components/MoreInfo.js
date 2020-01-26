@@ -28,7 +28,7 @@ export const MoreInfo = () => {
           <h4>Recycle goals before and after 2020 (%)</h4>
           <div className='stats'>
             <div className='stats-material'>
-              <h5>Material</h5>
+              <h5>Recycle material</h5>
               <p>Metal</p>
               <p>Carton</p>
               <p>Plastic</p>
