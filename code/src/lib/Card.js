@@ -63,10 +63,12 @@ const Content = styled.div`
 `
 
 const Title = styled.h1`
+font-size: 30px;
   margin: 0;
   font-size: 24px; 
 `
 const SecondaryText = styled.h2`
+font-size: 20px;
   margin: 0;
   color: #6b6b6b;
   `

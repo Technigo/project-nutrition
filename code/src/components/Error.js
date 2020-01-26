@@ -7,8 +7,9 @@ export const Error = () => {
 
   return (
     <>
-      <Text>{scan.status_verbose}</Text>
-      <Text>Visit:</Text><Text><a href='https://world.openfoodfacts.org/'>OpenFoodFacts site</a></Text><Text> and add your product</Text>
+      <Text>{scan.status_verbose}, please try again or visit </Text>
+      <a href='https://world.openfoodfacts.org/'>OpenFoodFacts site</a>
+      <Text> and add your product</Text>
     </>
   )
 }

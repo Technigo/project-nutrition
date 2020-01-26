@@ -13,7 +13,7 @@ export const products = createSlice({
   }
 })
 
-// const barcode = "5701073062265" 
+// const barcode = "5701073062265"
 //If I want to hard-code a product
 
 export const fetchProduct = (barcode) => {
