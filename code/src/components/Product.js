@@ -22,9 +22,9 @@ export const Product = () => {
           <ThinnerCard
             coverImage={product.product.image_url}
             thumbnailUrl={product.product.image_front_thumb_url}
-            title={product.product && product.product.product_name}
-            secondaryText={product.product && product.product.ingredients_text_en}
-            type={product.product && product.product.pnns_groups_2}
+            title={product.product.product_name}
+            secondaryText={product.product.ingredients_text_en}
+            type={product.product.pnns_groups_2}
           />
 
         </section>

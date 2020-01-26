@@ -52,9 +52,9 @@ const Type = styled.p`
 `;
 
 const Thumbnail = styled.div`
-  width: 100px;
-  height: 100px;
-  /* border-radius: 50%; */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   background-image: url(${(props) => props.url});
   background-size: scale-down;
   margin-right: 10px;
@@ -67,7 +67,7 @@ const TitleBar = styled.div`
 
 const CoverImage = styled.img`
   width: 100%;
-  max-height:300px;
+  /* max-height:300px; */
   object-fit: cover;
   border-radius: 6px 6px 0 0;
 `;

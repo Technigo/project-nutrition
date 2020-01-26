@@ -34,7 +34,6 @@ const HideButton = styled.button`
 
 // // If the scanning doesn't work, call fetchProduct with this instead  
 // const OATLY_CODE = 7394376615979 // 
-// const MILK_CODE = 7350038192021 //
 // const TEA_CODE = 8722700001232 //
 
 
