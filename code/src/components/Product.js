@@ -9,20 +9,20 @@ export const Product = () => {
 
   const isItVegan = product => {
     if (!product)
-      return <h2>Sorry, We don't know if this product is vegan or not.</h2>;
+      return <h4>Sorry, We don't know if this product is vegan or not.</h4>;
 
     if (product.ingredients.every(ingredient => ingredient.vegan !== "no"))
       return (
         <>
-          <h1> {product.product_name}</h1>
-          <h2>Yes! This product is vegan!</h2>
+          <h3> {product.product_name}</h3>
+          <h4>Yes! This product is vegan.</h4>
         </>
       );
     else
       return (
         <>
-          <h1> {product.product_name}</h1>
-          <h2>No! This product is NOT vegan!</h2>
+          <h3> {product.product_name}</h3>
+          <h4>No! This product is NOT vegan.</h4>
         </>
       );
   };
