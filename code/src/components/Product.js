@@ -1,13 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 
 
@@ -19,14 +12,14 @@ export const Product = () => {
   console.log("ITEM:", item)
 
   // if item == undefined (default) go to /scan
-  if (item == undefined) {
+  if (item === undefined) {
     history.push("/scan")
     return (<div></div>)
   }
 
   return (
     <div className="product-container">
-      {item.status == 0 ? <div>Product not found</div> :
+      {item.status === 0 ? <div>Product not found</div> :
         <div>
           <img src={item.product.image_url} alt="product-image" height="300" width="300" />
           <img src={item.product.image_front_small_url} alt="" />
