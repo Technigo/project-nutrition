@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 
 const StyledShowInfo = styled.div`
-  padding: 2rem 6rem;
+  padding: 4rem 3rem;
 `;
 
 const Item = styled.li`
