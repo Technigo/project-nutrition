@@ -9,7 +9,8 @@ import gum from './gum.json' // for testing
 export const products = createSlice({
   name: "products",
   initialState: {
-    item: gum
+    item: gum,
+    savedProducts: []
   },
 
   reducers: {

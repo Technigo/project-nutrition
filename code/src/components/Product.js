@@ -23,7 +23,7 @@ export const Product = () => {
 
   return (
     <div className="product">
-      {item.status === 0 ? <div>Product not found</div> :
+      {item.status === 0 ? <h1 className="not-found">Product not found! <span>😞</span></h1> :
         <div>
           <h1 className="title">{item.product.product_name}</h1>
           <div className="product-wrapper">

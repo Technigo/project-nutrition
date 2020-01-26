@@ -7,8 +7,9 @@ export const ui = createSlice({
     showScanner: false,
     showProduct: false,
     disableScanBtn: false,
-    disableCancelBtn: false,
-    disableSaveBtn: true
+    disableCancelBtn: true,
+    disableSaveBtn: true,
+    showSaveBtn: false,
   },
 
   reducers: {

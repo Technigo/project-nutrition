@@ -7,9 +7,7 @@ body {
   background-image: url("/assets/food-bg-large.jpg");
   background-size: cover;
   background-position: center;
-  /* Center the image */
   background-repeat: no-repeat;
-  /* Do not repeat the image */
   box-sizing: border-box;
 }
 
@@ -26,15 +24,14 @@ body {
 }
 
 main {
-  background-color: #edf7fa;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 600px;
   height: 520px;
-  border-radius: 20px 20px 0 0;
-  -moz-border-radius: 20px 20px 0 0;
-  -webkit-border-radius: 20px 20px 0 0;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
   border: 1px solid #1fab89;
   -webkit-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);

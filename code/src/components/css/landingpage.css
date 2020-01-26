@@ -1,0 +1,33 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #c6f1d6;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+}
+
+.landing-page .get-started-btn {
+  height: 50px;
+  width: 200px;
+  font-size: 15px;
+  color: #c6f1d6;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-self: center;
+  background-color: #1fab89;
+  border: 1px solid #1fab89;
+}
+
+.landing-page .get-started-btn:hover {
+  color: #1fab89;
+  background-color: #c6f1d6;
+  border: 1px solid #1fab89;
+}
+
+.landing-page img {
+  width: 50%;
+}

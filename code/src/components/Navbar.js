@@ -17,26 +17,28 @@ export const Navbar = () => {
 
   const showScanner = useSelector((state) => state.ui.showScanner)
   const showProduct = useSelector((state) => state.ui.showProduct)
+  const showSaveBtn = useSelector((state) => state.ui.showSaveBtn)
   console.log("showScanner", showScanner)
   console.log("showProduct", showProduct)
 
   return (
 
     <nav>
-      <button className="navbar-btn" type="button" disabled={disableScanBtn} onClick={() => { history.push("/scan"); dispatch(ui.actions.setShowScanner(true)) }}>
+      <button className="navbar-btn" type="button" disabled={disableScanBtn} onClick={() => { history.push("/scan"); dispatch(ui.actions.setShowProduct(false)); dispatch(ui.actions.setShowScanner(true)) }}>
         Scan barcode
       </button>
       {!showProduct && (
         <button className="navbar-btn" type="button" disabled={disableCancelBtn} onClick={() => dispatch(ui.actions.setShowScanner(false))}>
           Cancel
-      </button>
+        </button>
       )}
       {showProduct && (<div></div>)}
 
-
-      <button className="navbar-btn" type="button" disabled={disableSaveBtn} >
-        Save
-      </button>
+      {showSaveBtn && (
+        <button className="navbar-btn" type="button" disabled={disableSaveBtn} >
+          Save
+        </button>
+      )}
 
     </nav >
   )

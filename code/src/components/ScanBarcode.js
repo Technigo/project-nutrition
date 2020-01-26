@@ -33,6 +33,12 @@ export const ScanBarcode = () => {
 
         </div>
       }
+      {!showScanner &&
+        <div className="scanbarcode-container">
+          <p> Scan a product to find out its nutrients</p>
+          <img src="assets/barcode.png" />
+        </div>
+      }
     </div>
   )
 }

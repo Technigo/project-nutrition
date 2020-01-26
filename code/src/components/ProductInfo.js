@@ -5,8 +5,27 @@ export const ProductInfo = (props) => {
 
   return (
     <div className="product-info">
-      <span>The product name:</span>
-      <span>{props.product.product_name}</span>
+      {props.product.nutriments.energy_100g && (
+        <div className="nutrient">
+          <span><span>⚡️</span>Energy: </span>
+          <span>{props.product.nutriments.energy_100g} {props.product.nutriments.energy_unit}</span>
+        </div>
+      )}
+      {props.product.nutriments.salt_100g && (
+        <div className="nutrient">
+          <span> <span>🧂</span>Salt: </span>
+          <span>{props.product.nutriments.salt_100g} g</span>
+        </div>
+      )}
+      {props.product.nutriments.sugars_100g && (
+        <div className="nutrient">
+          <span><span>🍭</span>Sugars: </span>
+          <span>{props.product.nutriments.sugars_100g} g</span>
+        </div>
+      )}
+
+
+
     </div>
   )
 }

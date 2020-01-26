@@ -1,9 +1,12 @@
 nav {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: #1fab89;
   padding: 10px;
   height: auto;
+  border-radius: 0 20px 0px 0px;
+  -moz-border-radius: 0 0 20px 20px;
+  -webkit-border-radius: 0 0 20px 20px;
 }
 
 nav .navbar-btn {
@@ -18,8 +21,13 @@ nav .navbar-btn {
   border: 1px solid #c6f1d6;
 }
 
-nav .navbar-btn:hover {
+nav .navbar-btn:hover:not([disabled]) {
   color: #1fab89;
   background-color: #c6f1d6;
   border: 1px solid #1fab89;
+}
+
+nav .navbar-btn:disabled {
+  color: gray;
+  border: 1px solid gray;
 }

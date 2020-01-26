@@ -1,13 +1,26 @@
 .product-info {
-  width: 100%;
   justify-self: stretch;
-  background-color: lightcoral;
-  height: 100%;
+  height: 85px;
   grid-column: 1 / span 2;
+  padding: 0px 15px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-info .nutrient {
+  padding: 5px 15px 5px 15px;
 }
 
 @media only screen and (max-width: 601px) {
   .product-info {
     grid-column: 1;
+    padding: 0px 5px;
+  }
+  .product-info .nutrient {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
