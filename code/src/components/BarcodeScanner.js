@@ -11,6 +11,7 @@ color:white;
 font-weight:bold;
 `
 
+
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()

@@ -6,7 +6,7 @@ import styled from "styled-components/macro"
 
 const Icon = styled.img`
     height:30px;
-    margin-left:20px;
+    margin: 5px 0 0 20px;
 `
 
 const Title = styled.h1`
@@ -23,10 +23,20 @@ const Wrap = styled.div`
     align-items:center;
     padding:50px 0;
     border-radius:8px;
+
+    @media (max-width: 768px) {
+    padding:10px;
+    width:auto;
+  }
+    
     `
 const TitleDiv = styled.div`
     display:flex;
     margin:50px;
+
+    @media (max-width: 768px) {
+    margin:30px;
+  }
 `
 
 const Name = styled.h2`
@@ -38,33 +48,39 @@ const TextInfo = styled.h3`
 `
 
 const Image = styled.img`
-    border-radius:8px;`
-
-
+    border-radius:8px;
+   
+    @media (max-width: 768px) {
+    width:70%;
+  }`
 
 export const Product = () => {
-    const product = useSelector(state => state.facts.product)
+    const json = useSelector(state => state.facts.product)
 
-    if (!product)
+    if (!json) {
         return null
+    }
+
+    const { product, status, status_verbose } = json
 
     return (
-        <>
-            <Wrap>
-                <TitleDiv>
-                    <Title>Search find </Title>
-                    <Icon alt="glass" src={mglass} />
-                </TitleDiv>
+        <Wrap>
+            {status === 1 && (
+                <>
+                    <TitleDiv>
+                        <Title>Search find </Title>
+                        <Icon alt="glass" src={mglass} />
+                    </TitleDiv>
 
-                <Name>Name of product: {product && product.product_name}</Name>
-                <Image alt="product" src={product && product.image_url} />
-                <TextInfo>Ingredients:</TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
-                <TextInfo>Brand: {product && product.brands}</TextInfo>
-            </Wrap>
+                    <Name>Name of product: {product && product.product_name}</Name>
+                    <Image alt="product" src={product && product.image_url} />
+                    <TextInfo>Ingredients:</TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
+                    <TextInfo>Brand: {product && product.brands}</TextInfo>
+                </>)}
 
 
-
+            {status === 0 && <h1>{status_verbose}</h1>}
             {/* {product.status === 0 && <Error msg={product.status_verbose} <h1>{product.status_verbose}</h1>} /> */}
-        </>
+        </Wrap>
     )
 }

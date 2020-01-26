@@ -21,9 +21,7 @@ export const fetchProduct = (barcode) => {
         fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
             .then((res) => res.json())
             .then((json) => {
-                console.log("json", json)
-                const { product } = json
-                dispatch(facts.actions.setProduct(product))
+                dispatch(facts.actions.setProduct(json))
                 dispatch(loading.actions.setLoading(false))
             })
     }

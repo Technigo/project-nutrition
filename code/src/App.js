@@ -6,16 +6,18 @@ import { facts } from 'reducers/facts'
 import { loading } from 'reducers/loading'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 
 const Bg = styled.div`
 font-family: 'Roboto', sans-serif;
-align-items:center;
-justify-content:center;
-display:flex;
-flex-direction:column;
 padding:100px;
+margin: auto;
+max-width: 800px;
+
+@media (max-width: 768px) {
+    padding:10px;
+  }
 `
 
 const reducer = combineReducers({

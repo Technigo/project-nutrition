@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { fetchProduct } from 'reducers/facts'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import styled from "styled-components/macro"
 import code from 'assets/code2.jpg'
 
@@ -27,6 +27,10 @@ font-size:33px;
     background-color:white;
     border-radius:6px;
     text-shadow:2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+   text-align:center;
+  }
 `
 
 const Image = styled.img`
@@ -34,6 +38,11 @@ const Image = styled.img`
     width:40%;
     border-radius:6px;
     margin-bottom:50px;
+
+    @media (max-width: 768px) {
+   margin-bottom:20px;
+   
+  }
     `
 const Wrap = styled.div`
     background-color:white;
@@ -44,12 +53,21 @@ const Wrap = styled.div`
     align-items:center;
     padding:50px 0;
     border-radius:8px;
+
+    @media (max-width: 768px) {
+    padding:20px;
+  }
     `
 
 
 export const ScanBarcode = () => {
     const dispatch = useDispatch()
     const [showScanner, setShowScanner] = useState(false)
+    const json = useSelector(state => state.facts.product)
+
+    if (json !== null) {
+        return null
+    }
 
     return (
         <>
