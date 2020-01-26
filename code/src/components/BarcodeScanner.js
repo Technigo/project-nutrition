@@ -4,10 +4,15 @@ import styled from 'styled-components';
 
 const Camera = styled.div`
   width: 80%;
+  height: 40%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
 
   video {
     width: 100%;
