@@ -7,11 +7,11 @@ export const ProductDiagram = (props) => {
 
   return (
     <div className="product-diagram">
-      {/* <div className="title">Nutrients per 100g</div> */}
+      <span className="title">Nutrients per 100g</span>
       <div className="rotate">
-        <StyledCarbBar className="carb" bar={props.product.nutriments.carbohydrates_100g}> Carbs {props.product.nutriments.carbohydrates_100g} g</StyledCarbBar>
-        <StyledProteinBar className="protein" bar={props.product.nutriments.proteins_100g}> Protein {props.product.nutriments.proteins_100g} g</StyledProteinBar>
-        <StyledFatBar className="fat" bar={props.product.nutriments.fat_100g}> Fat {props.product.nutriments.fat_100g} g </StyledFatBar>
+        <StyledCarbBar className="carb" bar={props.product.nutriments.carbohydrates_100g}> &nbsp;	 Carbs {props.product.nutriments.carbohydrates_100g} g</StyledCarbBar>
+        <StyledProteinBar className="protein" bar={props.product.nutriments.proteins_100g}> &nbsp;	 Protein {props.product.nutriments.proteins_100g} g</StyledProteinBar>
+        <StyledFatBar className="fat" bar={props.product.nutriments.fat_100g}> &nbsp;	 Fat {props.product.nutriments.fat_100g} g </StyledFatBar>
       </div>
 
     </div>
@@ -20,7 +20,7 @@ export const ProductDiagram = (props) => {
 
 const StyledCarbBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: lightsalmon;
+  background-color: #ff8080;
   height: 30%;
   display: flex;
   justify-content: start;
@@ -31,7 +31,7 @@ const StyledCarbBar = styled.div`
 
 const StyledProteinBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: lightblue;
+  background-color: #1fab89;
   height: 30%;
   display: flex;
   justify-content: start;
@@ -41,12 +41,10 @@ const StyledProteinBar = styled.div`
 
 const StyledFatBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: lightpink;
+  background-color: #ffba92;
   height: 30%;
   display: flex;
   justify-content: start;
   align-items: center;
   white-space: nowrap;
-
-
 `

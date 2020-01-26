@@ -1,16 +1,16 @@
 .product-diagram {
-  background-color: rgb(146, 238, 195);
   flex-grow: 1;
   min-height: 30%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 300px;
+  width: 300px;
 }
 
 .product-diagram .rotate {
-  background-color: lightsteelblue;
+  position: relative;
   width: 90%;
   height: 90%;
   display: flex;
@@ -18,4 +18,10 @@
   justify-content: center;
   border-left: 2px solid black;
   border-top: 2px solid black;
+  transform: rotate(270deg);
+}
+
+.product-diagram .title {
+  position: relative;
+  top: 7%;
 }

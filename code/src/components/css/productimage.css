@@ -1,12 +1,12 @@
 .product-image {
-  background-color: rgb(146, 179, 208);
   flex-grow: 1;
   display: flex;
-  justify-content: center;
   height: 300px;
-  align-self: stretch;
+  overflow: hidden;
 }
 
 .product-image img {
   width: 100%;
+  mix-blend-mode: multiply;
+  align-self: center;
 }
