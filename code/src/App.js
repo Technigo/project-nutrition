@@ -8,12 +8,15 @@ import { ScanBarcode } from './components/ScanBarcode'
 import { Product } from './components/Product'
 import { LoadingIndicator } from './components/LoadingIndicator'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 // STYLED COMPONENTS
-const InnerContainer = styled.section`
-  height: 100%;
-  margin: 0;
-  padding-bottom: 50px;
+const OuterContainer = styled.section`
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 // COMBINING REDUCERS
@@ -29,12 +32,13 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
-      <Header />
-      <InnerContainer>
+      <OuterContainer>
+        <Header />
         <Product />
         <LoadingIndicator />
         <ScanBarcode />
-      </InnerContainer>
+      </OuterContainer>
+      <Footer />
     </Provider>
   )
 }

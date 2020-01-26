@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   height: 25vh;
   padding: 25px;
 `

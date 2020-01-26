@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 50vh;
   padding: 20px;
 `
 const Button = styled.button`
@@ -24,8 +23,9 @@ const Button = styled.button`
   border-radius: 50%;
   height: 120px;
   width: 120px;
+  margin: 10px 0;
   border: none;
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
   transition: 0.4s;
   &:hover {
     opacity: 0.7;

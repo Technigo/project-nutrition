@@ -8,6 +8,7 @@ import { ProductOther } from './ProductOther'
 
 // STYLED COMPONENTS
 const ProductWrapper = styled.section`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -16,9 +17,14 @@ const ProductWrapper = styled.section`
 const TextNotFound = styled.h3`
   padding: 20px;
   margin: 0;
-  color: #333;
+  color: #f1f1f1;
   text-align: center;
 `
+const Link = styled.a`
+  color: #B5FFE1;
+  text-decoration: none;
+`
+
 // PRODUCT COMPONENT
 export const Product = () => {
 
@@ -44,7 +50,7 @@ export const Product = () => {
       {product.status === 0 && (
         <ProductWrapper>
           <TextNotFound>Product not found in database!</TextNotFound>
-          <TextNotFound>Feel free to contribute with your product by visiting <a href='https://world.openfoodfacts.org/'>OpenFoodFacts site >></a></TextNotFound>
+          <TextNotFound>Feel free to contribute with your product by visiting <Link href='https://world.openfoodfacts.org/'>OpenFoodFacts site >></Link></TextNotFound>
         </ProductWrapper>
       )}
     </>
