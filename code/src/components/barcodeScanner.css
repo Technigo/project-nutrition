@@ -1,36 +1,28 @@
-/* .scanner {
-    background-image: url('code/src/assets/Tag.jpeg');
-    background:  #e5faf5;
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  } */
-  
-  .scanner {
-    background-image: url('../assets/tag.jpg');
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .scanner video {
-    /*  transform: scaleX(-1); flip the video */
-    width: 60%;
-    border-radius: 10px;
-    width: 600px;
-    height: 600px;
-  }
-  .scanner canvas {
-    /* border: 2px solid black; */
-    height: 0;
-  }
-  .drawingBuffer {
-    background-image: url('../assets/tag.jpg');
-  }
+.scanner {
+  background-image: url('../assets/tag.jpg');
+  background-size: cover;
+  width: 60%;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scanner video {
+  /*  transform: scaleX(-1); flip the video */
+  width: 70%;
+  border-radius: 10px;
+  height: 500px;
+  position: absolute;
+  margin-top: 50px;
+}
+.scanner canvas {
+  /* border: 2px solid black; */
+  height: 0;
+}
+.drawingBuffer {
+  background-image: url('../assets/tag.jpg');
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+}

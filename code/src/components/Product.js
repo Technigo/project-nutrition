@@ -11,21 +11,21 @@ const ProductHeading = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    color: #bceaef;
+    color: darkslategrey;
 `
 const ProductInfo = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: #bceaef;
+    color: darkslategrey;
 `
 const ProductStore = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    color: #bceaef;
+    color: darkslategrey;
 `
 const ProductImg = styled.div`
     display: flex;

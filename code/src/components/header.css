@@ -1,10 +1,8 @@
-
 h1 {
   display: inline-block;
   padding: 10px;
+  color: darkslategray;
 }
-
-
 .headerContainer {
   justify-content: center;
   display: flex;
@@ -15,28 +13,26 @@ h1 {
   align-items: center;
   justify-content: space-between;
   }
-
 .hamburger {
   display: flex;
   width: 25px;
   height: 25px;
   flex-direction: column;
-  margin-top: 10pxkr;
   justify-content: space-between;
   object-position: left;
   margin-right: 104px;
+  margin-top: 0px;
   margin-left: 20px
   
 }
 /* lines for the hamburger menu, same width as the container, but thinner */
-
 .hamburger div {
   width: 30px;
   height: 3px;
-  background: white;
+  /* background: white; */
+  background-color: darkslategray;
   border-radius: 5px;
 }
-
 .headerInfo {
   color: white;
   align-content: center;
@@ -48,17 +44,17 @@ h1 {
   height: 80px; */
   display: flex;
   flex-direction: row;
- 
+  font-weight: bold;
   padding: 0px 10px;
 }
-
 .headerNavigation {
-  color: white;
+  /* color: white; */
+  color: darkslategray;
   justify-content: space-between;
   display: inline-block;
   text-decoration: none;
   padding: 10px;
   margin-right: 10px;
   flex-direction: row;
-
+  font-weight: bolder;
 }

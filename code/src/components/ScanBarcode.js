@@ -14,7 +14,7 @@ const Button = styled.button`
   padding: 0.25em 1em;
   border: 2px solid #bceaef;
   background: #bceaef;
-  color: white;
+  color:  darkslategrey;
   border-radius: 3px;
   transition: all 0.5s;
   cursor: pointer;
