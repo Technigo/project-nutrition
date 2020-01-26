@@ -10,9 +10,10 @@ export const LandingPage = () => {
   return (
 
     <div className="landing-page">
-      <h2>Are you excited to see some facts about food?</h2>
+      <h2>Welcome to find out facts about food!</h2>
 
-      <img src="assets/no-image.png" />
+      <img src="assets/fruit-heart.png" />
+      <br />
       <Link to="/scan">
         <button className="get-started-btn"> Get started >></button>
       </Link>

@@ -20,6 +20,7 @@
   justify-self: center;
   background-color: #1fab89;
   border: 1px solid #1fab89;
+  margin-bottom: 30px;
 }
 
 .landing-page .get-started-btn:hover {
@@ -29,5 +30,5 @@
 }
 
 .landing-page img {
-  width: 50%;
+  width: 40%;
 }
