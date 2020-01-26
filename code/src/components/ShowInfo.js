@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 import { useSelector } from 'react-redux';
 
 const StyledShowInfo = styled.div`
@@ -27,7 +27,7 @@ export const ShowInfo = () => {
   const showScanner = useSelector(state => state.scanner.showScanner);
   const productFound = useSelector(state => state.food);
 
-  console.log(productFound);
+  // console.log(productFound);
 
   return (
     <StyledShowInfo>
