@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { IoIosSearch, IoMdBarcode } from 'react-icons/io'
 import styled from 'styled-components/macro'
 
@@ -18,18 +19,24 @@ const Intro = styled.span`
 `
 
 export const StartPage = () => {
+    const showScanner = useSelector(state => state.ui.showScanner);
+
     return (
-        <Start>
-            <StartTitle>Welcome to Open Food Data!</StartTitle>
+        <>
+            {!showScanner && (
+                <Start>
+                    <StartTitle>Welcome to Open Food Data!</StartTitle>
 
-            <Intro>
-                <p>Open Food Facts is a food products database made by everyone, for everyone.</p>
+                    <Intro>
+                        <p>Open Food Facts is a food products database made by everyone, for everyone.</p>
 
-                You can use it to make better food choices, and as it is open data, anyone can re-use it for any purpose.
-            </Intro>
+                        You can use it to make better food choices, and as it is open data, anyone can re-use it for any purpose.
+                    </Intro>
 
-            <p>Click <IoMdBarcode size="24px" color="#3061fc" /> to scan a barcode.</p>
-            <p>Or click  <IoIosSearch size="24px" color="#3061fc" /> to insert a barcode manually.</p>
-        </Start>
+                    <p>Click <IoMdBarcode size="24px" color="#3061fc" /> to scan a barcode.</p>
+                    <p>Or click  <IoIosSearch size="24px" color="#3061fc" /> to insert a barcode manually.</p>
+                </Start>
+            )}
+        </>
     )
 }
