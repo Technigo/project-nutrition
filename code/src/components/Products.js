@@ -43,11 +43,11 @@ const TitleDiv = styled.div`
     }
 `
 
-const Name = styled.h2`
+const Name = styled.p`
     font-size:22px;
 `
 
-const TextInfo = styled.h3`
+const TextInfo = styled.p`
     font-size:20px;
 `
 
@@ -61,6 +61,7 @@ const Image = styled.img`
 
 export const Products = () => {
     const products = useSelector(state => state.facts.products)
+    console.log('prod', products)
 
     if (!products.length) {
         return null
@@ -75,10 +76,11 @@ export const Products = () => {
                         <Icon alt="glass" src={mglass} />
                     </TitleDiv>
 
-                    <Name>Name of product: {product && product.product_name}</Name>
+                    <Name><strong>Name of product: </strong>{product && product.product_name}</Name>
                     <Image alt="product" src={product && product.image_url} />
-                    <TextInfo>Ingredients:</TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
-                    <TextInfo>Brand: {product && product.brands}</TextInfo>
+                    <TextInfo><strong>Ingredients:</strong></TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
+                    <TextInfo><strong>Brand:</strong> {product && product.brands}</TextInfo>
+                    <TextInfo><strong>Country of origin:</strong> {product && product.countries}</TextInfo>
                 </>)}
             {status === 0 && <h1>Product not found</h1>}
         </Wrap>

@@ -8,7 +8,7 @@ const Wrap = styled.div`
     justify-content:center;
     align-items:center;
     color:white;
-    font-weight:bold;
+    /* font-weight:bold; */
 `
 
 
