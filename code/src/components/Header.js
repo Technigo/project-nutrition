@@ -1,11 +1,5 @@
-
 import React from 'react'
 import 'components/header.css'
-
-// import { useDispatch } from 'react-redux'
-// import { TodoTasksSummary } from './TodoTasksSummary';
-// import { ClearButton } from './ClearButton';
-
 
 export const Header = () => {
 
@@ -23,10 +17,10 @@ export const Header = () => {
             </div>
 
             <nav className="headerNavigation">
-            <p href="#">Home</p>
-            <p href="#">Subscribe</p>
-            <p href="#">Search</p>
-        </nav>
+                <p href="#">Home</p>
+                <p href="#">Subscribe</p>
+                <p href="#">Search</p>
+            </nav>
 
         </div>
     )
