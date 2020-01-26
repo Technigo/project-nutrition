@@ -4,20 +4,20 @@ import styled from 'styled-components';
 
 const Camera = styled.div`
   width: 80%;
-  height: 40%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width: 768px) {
-    height: 100%;
-  }
-
   video {
     width: 100%;
+    height: 60%;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
+
+    @media screen and (min-width: 768px) {
+      height: 100%;
+    }
   }
 
   canvas {
