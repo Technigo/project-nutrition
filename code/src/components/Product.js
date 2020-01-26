@@ -24,9 +24,6 @@ export const Product = () => {
 
   const product = useSelector(state => state.products.product)
 
-  console.log('Product:', product)
-  console.log('Status:', product.status)
-
   if (!product) return null
 
   // Only show tabs when product is found
