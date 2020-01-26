@@ -8,7 +8,7 @@ const Main = styled.div`
   background: #f8c3af;
   width: 100%;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   padding: 1rem 0;
 `;
 
@@ -18,7 +18,7 @@ export const ProductHeader = () => {
   return (
     <Main>
       <h2>Below you will find information about your product</h2>
-      <p>We also do like {scan.product.product_name}! Tasty!</p>
+      <p>Try to make {scan.product.product_name} yourself! It will be tasty!</p>
     </Main>
   );
 };

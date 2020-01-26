@@ -5,12 +5,15 @@ import "./barcodescanner.css";
 import styled from "styled-components";
 
 const colors = [
-  "#3e206d",
-  "#916dd5",
-  "#d89cf6",
-  "#f0e3ff",
-  "#c9b6e4",
-  "#be9fe1"
+  "#fff",
+  "#ddd",
+  "#ccc",
+  "#aaa",
+  "#000",
+  "#222",
+  "#444",
+  "#666",
+  "#888"
 ];
 const color = colors[Math.floor(Math.random() * colors.length)];
 // setInterval(color, 1000);
@@ -20,11 +23,10 @@ const Background = styled.div`
 `;
 
 const Start = styled.div`
-  background: black;
+  background: #c9b6e4;
   height: 100px;
   text-align: center;
-  color: white;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weigth: bold;
 `;
 

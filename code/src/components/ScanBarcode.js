@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { BarcodeScanner } from "components/BarcodeScanner";
+import { Product } from "components/Product";
 import { fetchProduct } from "reducers/products";
 
 import styled from "styled-components";
@@ -26,6 +27,7 @@ const Button = styled.button`
   padding: 1rem;
   border: none;
   letter-spacing: 1px;
+  margin-bottom: 3rem;
   :hover {
     background: #e1ccec;
   }
@@ -39,17 +41,19 @@ export const ScanBarcode = () => {
   // onClick={() => setShowScanner(true)
 
   const test = () => {
-    dispatch(fetchProduct(3045));
+    dispatch(fetchProduct(7394376615979));
   };
 
   return (
     <>
+      <Product />
+      <Header>
+        <h1>Scan barcode of the product</h1>
+        <p>...that you would like to recreate!</p>
+      </Header>
+
       {!showScanner && (
         <Main>
-          <Header>
-            <h1>Scan barcode here</h1>
-            <p>...and get information about your product!</p>
-          </Header>
           <ion-icon name="barcode"></ion-icon>
           <Button type="button" onClick={test}>
             SHOW SCANNER

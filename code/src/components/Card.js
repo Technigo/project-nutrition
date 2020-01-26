@@ -31,8 +31,13 @@ const TitleBar = styled.div`
 
 const CoverImage = styled.img`
   width: 100%;
-
   border-radius: 6px 6px 0 0;
+  @media (min-width: 900px) {
+    border-top: 6rem white solid;
+    border-left: 8rem white solid;
+    border-right: 8rem white solid;
+    border-bottom: 2rem white solid;
+  }
 `;
 
 const Content = styled.div`
