@@ -1,22 +1,44 @@
 import React from 'react';
-import { useDispatch, Selector, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { scanner } from 'reducers/scanner';
 import styled from 'styled-components';
 import { Button } from 'semantic-ui-react';
 
 const StyledFooter = styled.div`
   position: fixed;
-  display: flex;
   justify-content: center;
   align-items: center;
-  /* background: green; */
-  /* height: 80px; */
-  /* border: 1px solid red; */
-  padding: 2rem;
+  background: #383e42;
   width: 100%;
   color: white;
   bottom: 0;
   left: 0;
+`;
+
+const WrapperButton = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: white;
+  padding-bottom: 2rem;
+`;
+
+const WrapperInfo = styled.div`
+  padding: 1.5rem;
+
+  p {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  a {
+    color: white;
+    text-decoration: underline;
+
+    &:hover {
+      color: green;
+    }
+  }
 `;
 
 export const Footer = () => {
@@ -25,15 +47,25 @@ export const Footer = () => {
 
   return (
     <StyledFooter>
-      {!showScanner && (
-        <Button
-          type="button"
-          onClick={() => dispatch(scanner.actions.setShowScanner(true))}
-          color="yellow"
-        >
-          Scan product
-        </Button>
-      )}
+      <WrapperButton>
+        {!showScanner && (
+          <Button
+            type="button"
+            onClick={() => dispatch(scanner.actions.setShowScanner(true))}
+            color="yellow"
+          >
+            Scan product
+          </Button>
+        )}
+      </WrapperButton>
+      <WrapperInfo>
+        <p>
+          This site is based on an API from{' '}
+          <a href="https://world.openfoodfacts.org/">Open Food Facts</a>. Open
+          Food Facts is a non-profit project developed by thousands of
+          volunteers from around the world.
+        </p>
+      </WrapperInfo>
     </StyledFooter>
   );
 };

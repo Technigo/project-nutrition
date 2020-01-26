@@ -3,35 +3,26 @@ import { BarcodeScanner } from 'components/BarcodeScanner';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProduct } from '../reducers/food';
 import { scanner } from 'reducers/scanner';
-import { Button } from 'semantic-ui-react';
 import styled from 'styled-components';
+// import './barcodeScanner.css';
 
 const StyledScanBarcode = styled.div`
-  display: flex;
+  width: 100%;
+  display: ${props => (props.visible ? 'flex' : 'none')};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
-  /* border: 1px solid orange; */
-  margin-top: 3rem;
+  margin-top: 30px;
 `;
+
+// className="scanner"
 
 export const ScanBarcode = () => {
   const showScanner = useSelector(state => state.scanner.showScanner);
-  // const [showScanner, setShowScanner] = useState(false);
   const dispatch = useDispatch();
 
   return (
-    <StyledScanBarcode>
-      {/* {!showScanner && (
-        <Button
-          type="button"
-          onClick={() => dispatch(scanner.actions.setShowScanner(true))}
-        >
-          Scan product
-        </Button>
-      )} */}
-
+    <StyledScanBarcode visible={showScanner}>
       {showScanner && (
         <BarcodeScanner
           onDetected={code => {

@@ -1,13 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledScanInfo = styled.div`
+const StyledHeader = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 2rem; */
-  /* border: 1px solid yellow; */
 `;
 
 const Heading = styled.h1`
@@ -16,19 +14,18 @@ const Heading = styled.h1`
 `;
 
 const Message = styled.p`
-  /* border: 1px solid blue; */
   text-align: center;
   font-style: italic;
 `;
 
-export const ScanInfo = () => {
+export const Header = () => {
   return (
-    <StyledScanInfo>
+    <StyledHeader>
       <Heading>Find your product</Heading>
       <Message>
         Scan the barcode of any product with your phone to find detailed
         information.
       </Message>
-    </StyledScanInfo>
+    </StyledHeader>
   );
 };

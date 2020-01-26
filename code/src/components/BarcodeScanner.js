@@ -4,19 +4,38 @@ import styled from 'styled-components';
 
 const Camera = styled.div`
   width: 80%;
-  height: 300px;
-  max-width: 600px;
-  box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
-  border-radius: 10px;
-  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  video {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
+  }
+
+  canvas {
+    height: 0;
+    border: 0;
+  }
 `;
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
   const cameraDivRef = useRef();
+  const hasResult = useRef(false);
 
   Quagga.onDetected(data => {
-    onDetected(data.codeResult.code);
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code);
+    }
+
+    hasResult.current = true;
+
+    setTimeout(() => {
+      hasResult.current = false;
+    }, 500);
   });
 
   useLayoutEffect(() => {
