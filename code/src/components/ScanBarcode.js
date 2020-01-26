@@ -18,22 +18,20 @@ export const ScanBarcode = () => {
         <button type="button" onClick={() => setShowScanner(true)}>
           Show scanner
         </button>
-        </>
-  )
-}
+      }
 
-{
-  showScanner && (
-    <>
-      <BarcodeScanner className="scanner" onDetected={(code) => {
-        console.log('Got barcode', code)
-        setShowScanner(false)
-        dispatch(fetchProduct(code))
-      }} />
-      <button type="button" id="cancel-button" onClick={() => setShowScanner(false)}>Cancel</button>
-    </>
-  )
-}
+      {
+        showScanner && (
+          <>
+            <BarcodeScanner className="scanner" onDetected={(code) => {
+              console.log('Got barcode', code)
+              setShowScanner(false)
+              dispatch(fetchProduct(code))
+            }} />
+            <button type="button" id="cancel-button" onClick={() => setShowScanner(false)}>Cancel</button>
+          </>
+        )
+      }
     </>
   )
 }
