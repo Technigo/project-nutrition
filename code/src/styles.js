@@ -27,7 +27,8 @@ export const ContentWrapper = styled.div`
   height: 70%;
 `;
 
-export const ScanButton = styled.button`
+export const Button = styled.button`
+  font-size: 0.8rem;
   display: inline-block;
   border: none;
   border-radius: 2px;
@@ -44,6 +45,12 @@ export const ScanButton = styled.button`
   &:hover {
     background: #0053ba;
   }
+`;
+
+export const CountingSheep = styled.img`
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
 `;
 
 export const Scan = styled.div`

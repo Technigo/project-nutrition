@@ -1,8 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import sheep from "../sheep.gif";
+import { CountingSheep } from "styles";
 
 export const LoadingIndicator = () => {
-  const isLoading = useSelector(state => state.ui.isLoading);
-
-  return <>{isLoading && <h1>LOADING</h1>}</>;
+  return (
+    <>
+      <CountingSheep src={sheep} />
+      <h2>Loading...</h2>
+    </>
+  );
 };

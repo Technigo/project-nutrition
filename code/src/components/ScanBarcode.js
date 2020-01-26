@@ -1,18 +1,26 @@
 import React, { useState } from "react";
 import { BarcodeScanner } from "components/BarcodeScanner";
-import { useDispatch } from "react-redux";
-import { fetchProduct } from "../reducers/products";
-import { ScanButton } from "styles";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProduct, removeProduct } from "../reducers/products";
+import { Button } from "styles";
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false);
   const dispatch = useDispatch();
+  const { product } = useSelector(state => state.products.product);
+
+  if (product)
+    return (
+      <Button type="button" onClick={() => dispatch(removeProduct())}>
+        Back
+      </Button>
+    );
   return (
     <>
       {!showScanner && (
-        <ScanButton type="button" onClick={() => setShowScanner(true)}>
-          Show scanner
-        </ScanButton>
+        <Button type="button" onClick={() => setShowScanner(true)}>
+          Scan Product
+        </Button>
       )}
 
       {showScanner && (
@@ -20,7 +28,7 @@ export const ScanBarcode = () => {
           onDetected={code => {
             console.log("Got barcode", code);
             setShowScanner(false);
-            dispatch(fetchProduct(4000540003468));
+            dispatch(fetchProduct(code));
           }}
         />
       )}

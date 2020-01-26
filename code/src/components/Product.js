@@ -11,14 +11,24 @@ export const Product = () => {
   if (!product) return <h1>Is it vegan?</h1>;
 
   const isItVegan = product => {
-    if (!product)
+    if (!product || product.ingredients === [])
       return <h2>Sorry, We don't know if this product is vegan or not.</h2>;
 
     if (product.ingredients[3].vegan === "yes" || "Yes")
-      return <h2>Yes! This product is vegan!</h2>;
+      return (
+        <>
+          <h1> {product.product_name}</h1>
+          <h2>Yes! This product is vegan!</h2>
+        </>
+      );
 
     if (product.ingredients[3].vegan === "no" || "No")
-      return <h2>No! This product is NOT vegan!</h2>;
+      return (
+        <>
+          <h1> {product.product_name}</h1>
+          <h2>No! This product is NOT vegan!</h2>
+        </>
+      );
   };
 
   return (

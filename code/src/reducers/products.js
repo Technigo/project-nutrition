@@ -9,6 +9,9 @@ export const products = createSlice({
   reducers: {
     setProduct: (state, action) => {
       state.product = action.payload;
+    },
+    removeProduct: (state, action) => {
+      state.product = [];
     }
   }
 });
@@ -19,8 +22,16 @@ export const fetchProduct = barcode => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
       .then(res => res.json())
       .then(json => {
-        dispatch(products.actions.setProduct(json));
-        dispatch(ui.actions.setLoading(false));
+        setTimeout(() => {
+          dispatch(products.actions.setProduct(json));
+          dispatch(ui.actions.setLoading(false));
+        }, 2000);
       });
+  };
+};
+
+export const removeProduct = () => {
+  return dispatch => {
+    dispatch(products.actions.removeProduct());
   };
 };
