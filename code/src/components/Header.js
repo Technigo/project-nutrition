@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 const Container = styled.div`
   display: flex;
@@ -10,6 +10,7 @@ const Container = styled.div`
   height: 80px;
   margin: 0;
   position: fixed;
+  top: 0px;
 `;
 
 const BtnContainer = styled.div`

@@ -57,15 +57,29 @@ code {
   justify-content: center;
 }
 
-.scan-btn{
-  color: white;
-  background-color: lightgrey;
-  font-size: 1rem;
-  padding: 15px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  margin-top: 10px;
+
+.productName {
+  margin-top: 100px;
 }
+
+.scanner{
+  background-color: lightgrey;
+  background-image: url(coverimg.jpg);
+  background-size: cover;
+  width: 80%;
+  margin: 0 auto;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner video{
+  width: 60%;
+  border-radius: 10px;
+}
+
+.scanner canvas{
+  height: 0;
+}
+

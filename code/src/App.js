@@ -10,6 +10,7 @@ import { Product } from 'components/Product'
 import { InsulinCounter } from 'components/InsulinCounter'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
+import { Error } from 'components/Error'
 import './index.css'
 
 
@@ -29,10 +30,10 @@ export const App = () => {
      
       <Header/>
       <LoadingIndicator/>
-     
-      <InsulinCounter/>
       <Product/>
+      <InsulinCounter/>
       <ScanBarcode />
+      <Error/>
       <Footer/>
     </div>
     </Provider>
