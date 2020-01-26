@@ -3,27 +3,31 @@ import { useSelector } from 'react-redux'
 
 export const Product = () => {
   const scan = useSelector((state) => state.products.product)
+  let formattedIngredientAnalysis = []
+  let formattedNutritients = []
+  let formattedAllergens = []
   console.log(scan)
 
-  const formattedIngredientAnalysis =
-    scan.product && 
-    scan.product.ingredients_analysis_tags.map(ingredient => 
-      ingredient.replace('en', ' ').replace(/-/gi,' ').replace(':', ' ')
-    )
-  
-  const formattedNutritients =
-    scan.product &&
-    scan.product.nutrient_levels_tags.map(ingredient => 
-      ingredient.replace('en', ' ').replace(/-/gi,' ').replace(':', ' ')
-    )
-  
-  const formattedAllergens =
-    scan.product &&
-    scan.product.allergens_tags.map(ingredient => 
-      ingredient.replace('en', ' ').replace(/-/gi,' ').replace(':', ' ')
-    )
-
   if(!scan) return null
+
+  if(scan.product && scan.product.ingredients_analysis_tags) {
+    formattedIngredientAnalysis = scan.product.ingredients_analysis_tags.map(ingredient => 
+      ingredient.replace(/\w+:/, ' ').replace(/-/gi,' ').replace(':', ' ')
+    )
+  }
+
+  if(scan.product && scan.product.nutrient_levels_tags) {
+    formattedNutritients = scan.product.nutrient_levels_tags.map(ingredient => 
+      ingredient.replace(/\w+:/, ' ').replace(/-/gi,' ').replace(':', ' ')
+    )
+  }
+
+  if(scan.product && scan.product.allergens_tags) {
+    formattedAllergens = scan.product.allergens_tags.map(ingredient => 
+      ingredient.replace(/\w+:/, ' ').replace(/-/gi,' ').replace(':', ' ')
+    )
+  }
+
 
   return (
     <div>
@@ -64,7 +68,12 @@ export const Product = () => {
           <img src={scan.product.image_ingredients_url} alt="ingredients" />
       </div>
       } 
-        {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+        {scan.status === 0 && 
+          <h1 className="not-found">{scan.status_verbose} 
+            <span role="img" aria-label="sad smiley">☹️</span>
+            Please try again or use something sweeter!
+          </h1>
+        }
     </div>
   )
 }

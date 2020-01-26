@@ -47,6 +47,7 @@ ul {
   line-height: 1.5em;
   list-style-type: none;
   padding-right: 8vw;
+  text-transform: capitalize;
 }
 
 .li a {
@@ -56,6 +57,10 @@ ul {
 
 .highlight {
   font-weight: bold;
+}
+
+.not-found {
+  color: red;
 }
 
 /* ScanBarcode component ********/
