@@ -24,22 +24,13 @@ export const Product = () => {
             thumbnailUrl={product.product.image_front_thumb_url}
             title={product.product && product.product.product_name}
             secondaryText={product.product && product.product.ingredients_text_en}
-            numberOfIng={product.product && product.product.pnns_groups_2}
-
+            type={product.product && product.product.pnns_groups_2}
           />
-          {/* 
-          <img src={product.product && product.product.image_url} alt="product"></img>
 
-          <h2>Nutrients:</h2>
-          <p>{product.product && product.product.ingredients_text_with_allergens_en}</p>
-          <h2>Store:</h2>
-          <p>{product.product && product.product.stores}</p>
-          <h2>All available facts:</h2>
-          <p>{product.product && product.product.ingredients_original_tags}</p> */}
         </section>
       )}
 
-      {product.status === 0 && <h1>{product.status_verbose}</h1>}
+      {product.status === 0 && <h2>{product.status_verbose}</h2>}
 
     </>
   )

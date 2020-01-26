@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Card = ({
   title,
   secondaryText,
-  numberOfIng,
+  type,
   thumbnailUrl,
   coverImage,
   className,
@@ -18,7 +18,7 @@ export const Card = ({
           <div>
             {title && <Title>{title}</Title>}
             {secondaryText && <SecondaryText>{secondaryText}</SecondaryText>}
-            {numberOfIng && <NumberOfIng>{numberOfIng}</NumberOfIng>}
+            {type && <Type>{type}</Type>}
           </div>
         </TitleBar>
         {children && <ChildrenContent>{children}</ChildrenContent>}
@@ -45,7 +45,7 @@ const SecondaryText = styled.p`
   color: #6b6b6b;
 `;
 
-const NumberOfIng = styled.p`
+const Type = styled.p`
   margin: 0;
   font-size: 14px;
   color: darkorange;
