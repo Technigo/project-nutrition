@@ -21,10 +21,10 @@ h1 {
   width: 25px;
   height: 25px;
   flex-direction: column;
+  margin-top: 10pxkr;
   justify-content: space-between;
   object-position: left;
   margin-right: 104px;
-  margin-top: 30px;
   margin-left: 20px
   
 }
