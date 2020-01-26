@@ -1,20 +1,27 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
 import styled from "styled-components"
+import 'components/barcodeScanner.css'
 
-const Scanner = styled.div`
-  display: flex;
-  flex-direction: row;
-  // width: 500px;
-  justify-content: center;
+const CameraDiv = styled.div`
+  background:  #e5faf5;
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
+  const hasResult = useRef(false)
 
   Quagga.onDetected((data) => {
+    if (!hasResult.current) {
     onDetected(data.codeResult.code)
+    
+    }
+    hasResult.current = true
+
+    setTimeout(() => {
+      hasResult.current = false
+    }, 500)
   })
 
   useLayoutEffect(() => {
@@ -42,9 +49,9 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   }, [])
 
   return (
-    <Scanner>
+    <CameraDiv>
       {initializing && <div>Starting camera...</div>}
       <div ref={cameraDivRef} className={className} />
-    </Scanner>
+    </CameraDiv>
   )
 }

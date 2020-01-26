@@ -11,8 +11,7 @@ h1 {
   flex-direction: row;
   width: auto;
   height: 100px;
-  background-color: #bce9ef;
-  margin-bottom: 20px;
+  background-color: #bceaef;
   align-items: center;
   justify-content: space-between;
   }
