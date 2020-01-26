@@ -29,12 +29,16 @@ main {
   max-width: 60%;
 }
 
-header img {
-  width: 100%;
+header {
   background-color: #83de95;
+}
+
+header img {
+  display: block;
+  width: 80%;
   padding: 1em;
   box-sizing: border-box;
-  margin-bottom: 2em;
+  margin: 0 auto 4em;
 }
 
 .loader {
@@ -70,7 +74,15 @@ header img {
 }
 
 video {
+  display: block;
   transform: scaleX(-1);
+  border-radius: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+canvas {
+  display: none;
 }
 
 .more-info-container {
@@ -167,5 +179,9 @@ video {
   .more-info-box p,
   .more-info-box h5 {
     font-size: 0.8em;
+  }
+
+  .picture {
+    display: none;
   }
 }
