@@ -11,7 +11,7 @@ const Camera = styled.div`
 
   video {
     width: 100%;
-    height: 40%;
+    height: 100px;
     border-radius: 10px;
     box-shadow: 0 2px 4px 0 rgba(14, 30, 37, 0.4);
 
