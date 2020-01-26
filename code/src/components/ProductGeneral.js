@@ -7,7 +7,7 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 `
 const Card = styled.div`
   display: flex; 
@@ -18,7 +18,6 @@ const Card = styled.div`
   background: #fff;
   width: 50%;
   height: 100%;
-  margin-bottom: 20px;
   padding: 20px;
   font-size: 18px;
   @media (max-width: 449px) {

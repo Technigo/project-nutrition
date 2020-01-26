@@ -10,7 +10,7 @@ const Scan = styled.div`
   border-radius: 6px;
   overflow: hidden;
   @media (max-width: 449px) {
-    width: 90vw;
+    width: 95%;
     height: 220px;
   }
 `
@@ -34,7 +34,6 @@ export const BarcodeScanner = ({ onDetected }) => {
     }, 500)
   })
 
-  // Added constarints to set size on cam view
   useLayoutEffect(() => {
 
     Quagga.init({
@@ -62,7 +61,7 @@ export const BarcodeScanner = ({ onDetected }) => {
 
   return (
     <>
-      {initializing && <Loader type="ThreeDots" color="#333" height={80} width={80} />}
+      {initializing && <Loader type="ThreeDots" color="#B5FFE1" height={80} width={80} />}
       <Scan ref={cameraDivRef} />
     </>
   )

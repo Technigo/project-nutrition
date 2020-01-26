@@ -11,7 +11,7 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 50vh;
-  padding: 30px;
+  padding: 20px;
 `
 const Button = styled.button`
   font-family: 'Roboto', sans-serif;
@@ -19,14 +19,17 @@ const Button = styled.button`
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;
-  margin-top: 20px;
-  padding: 20px 15px;
-  background: #721817;
-  border: 3px solid #721817;
-  border-radius: 6px;
+  padding: 10px;
+  background: #CC2936;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  border: none;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
   transition: 0.4s;
   &:hover {
-    background: #D8C0BF;
+    /* background: #D8C0BF; */
+  opacity: 0.7;
   }
 `
 // COMPONENT SCANBARCODE
@@ -35,18 +38,18 @@ export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
   // const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
-  // const OTHER_CODE = 7318690013402 // If the scanning doesn't work, call fetchProduct with this instead
+  const OTHER_CODE = 7318690013402 // If the scanning doesn't work, call fetchProduct with this instead
 
   // To start the web cam
-  const handleShowScan = () => {
-    dispatch(products.actions.resetProduct())
-    setShowScanner(true)
-  }
+  // const handleShowScan = () => {
+  //   dispatch(products.actions.resetProduct())
+  //   setShowScanner(true)
+  // }
 
   // To use hardcoded product
-  // const handleShowScan = () => {
-  //   dispatch(fetchProduct(OTHER_CODE))
-  // }
+  const handleShowScan = () => {
+    dispatch(fetchProduct(OTHER_CODE))
+  }
 
   // To fetch the product you scan
   const handleScan = (code) => {
@@ -58,7 +61,7 @@ export const ScanBarcode = () => {
   return (
     <Wrapper>
       {!showScanner &&
-        <Button onClick={handleShowScan}>Scan your product</Button>
+        <Button onClick={handleShowScan}>Start scanner</Button>
       }
       {showScanner &&
         <BarcodeScanner onDetected={handleScan} />

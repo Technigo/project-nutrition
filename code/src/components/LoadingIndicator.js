@@ -17,7 +17,7 @@ export const LoadingIndicator = () => {
     <>
       {isLoading &&
         <LoadingWrapper>
-          <Loader type="ThreeDots" color="#333" height={80} width={80} />
+          <Loader type="ThreeDots" color="#B5FFE1" height={80} width={80} />
         </LoadingWrapper>
       }
     </>

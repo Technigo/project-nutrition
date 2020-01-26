@@ -7,7 +7,7 @@ const ContentWrapper = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 `
 const Card = styled.div`
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
@@ -15,7 +15,6 @@ const Card = styled.div`
   background: #fff;
   width: 50%;
   height: 100%;
-  margin-bottom: 20px;
   padding: 20px;
   font-size: 18px;
   @media (max-width: 449px) {
@@ -28,11 +27,13 @@ const Card = styled.div`
 `
 const List = styled.ul`
   list-style: square inside;
+  font-weight: bold;
   padding: 0;
   margin: 0;
 `
 const ListItems = styled.li`
-  margin: 0;
+  font-weight: normal;
+  margin: 5px 0 0 0;
 `
 
 export const ProductOther = () => {
@@ -48,7 +49,7 @@ export const ProductOther = () => {
   return (
     <ContentWrapper>
       <Card>
-        <List>{formattedCategories.map((category, index) => (
+        <List>Product category {formattedCategories.map((category, index) => (
           <ListItems key={index}>{category}</ListItems>
         ))}</List>
       </Card>

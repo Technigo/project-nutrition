@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import img from 'assets/image-dark.webp'
 
 // STYLED COMPONENTS
 const Wrapper = styled.section`
@@ -9,16 +8,15 @@ const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #1a1a1a;
-  background-image: url(${img});  
   width: 100vw;
-  height: 30vh;
-  padding: 30px;
+  height: 25vh;
+  padding: 25px;
 `
 const PrimaryText = styled.h1`
+  font-family: 'Bowlby One SC', cursive;
   letter-spacing: 1.5px;
   font-size: 26px;
-  color: #f1f1f1;
+  color: #B5FFE1;
   text-transform: uppercase;
   margin: 0;
   @media (max-width: 449px) {
@@ -41,8 +39,8 @@ const SecondaryText = styled.h2`
 export const Header = () => (
 
   <Wrapper>
-    <PrimaryText>Want to know what's in your product?</PrimaryText>
-    <SecondaryText>Click on "Scan your product" and scan the barcode with your cam!</SecondaryText>
+    <PrimaryText>Want to know what you're eating?</PrimaryText>
+    <SecondaryText>Click on "Start scanner" and scan the barcode of your tasty snack!</SecondaryText>
   </Wrapper>
 
 )

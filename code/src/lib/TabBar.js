@@ -6,7 +6,7 @@ const TabContainer = styled.section`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 60px;
+  height: 50px;
 `
 const TabButton = styled.button`
   cursor: pointer;
@@ -19,7 +19,7 @@ const TabButton = styled.button`
   align-items: center;
   position: relative;
   transition: 0.6s;
-  background: ${props => (props.active ? "#F2EAE9" : "#fff")};
+  background: ${props => (props.active ? "#D1FFEC" : "#fff")};
   &:focus {
     outline: none;
   }
@@ -31,27 +31,13 @@ const Title = styled.span`
   justify-content: center;
   height: inherit;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
-  color: ${props => (props.active ? "#721817" : "#333")};
+  color: ${props => (props.active ? "#CC2936" : "#333")};
   transition: 0.6s;
   @media (max-width: 449px) {
     font-size: 16px;
   }
-  @media (min-width: 450px) and (max-width: 800px) {
-    font-size: 20px;
-  }
-`
-const Indicator = styled.span`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-bottom-width: 2px;
-  border-bottom-style: solid;
-  border-bottom-color: ${props => (props.active ? "#721817" : "#d9d9d9")};
-  transition: 0.6s;
 `
 // TABBAR COMPONENT
 export const TabBar = ({ tabs }) => {
@@ -63,7 +49,6 @@ export const TabBar = ({ tabs }) => {
         {tabs.map((tab, index) => (
           <TabButton key={index} active={activeTab === index} onClick={() => setActiveTab(index)}>
             <Title active={activeTab === index}>{tab.title}</Title>
-            <Indicator active={activeTab === index} />
           </TabButton>
         ))}
       </TabContainer>
