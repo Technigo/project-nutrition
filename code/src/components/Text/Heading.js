@@ -14,13 +14,16 @@ const HeadingOne = styled.h1`
 `
 
 const HeadingTwo = styled.h2`
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
+
   &:first-letter {
     text-transform: capitalize;
   }
 `
 
 const HeadingThree = styled.h3`
+  font-size: 1.2rem;
   margin-bottom: 0.25rem;
   margin-top: 1rem;
 
