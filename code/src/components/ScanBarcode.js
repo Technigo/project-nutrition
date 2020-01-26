@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
-import { fetchProduct } from 'reducers/facts'
+import { facts, fetchProduct } from 'reducers/facts'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from "styled-components/macro"
 import code from 'assets/code2.jpg'
@@ -8,88 +8,102 @@ import code from 'assets/code2.jpg'
 const Button = styled.button`
     height:50px;
     width:200px;
-    background: lightblue;
-    border-radius: 6px;
-    border: 2px solid lightblue;
-    box-shadow:0px 11px 15px -7px rgba(0, 0, 0, 0.2),
-    0px 22px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
-    color: black;
     margin: 0.5em 1em;
     padding: 0.25em 1em;
+    border-radius: 6px;
+    border: 2px solid lightblue;
+    background: lightblue;
+    box-shadow:2px 2px 1px rgba(0, 0, 0, 0.2);
     font-size:16px;
     font-weight:bold;
     cursor: pointer;
-    `
+    &:hover {
+        transform: translate(2px, 2px);
+    }
+`
+
+const TextButton = styled(Button)`
+    height:auto;
+    width:auto;
+    padding:5px 8px;
+    margin-top: 10px;
+    box-shadow:2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-size:14px;
+    &:hover {
+        transform: translate(1px, 1px);
+    }
+`
 
 const Title = styled.h1`
-font-size:33px;
     margin:0 0 50px;
     background-color:white;
     border-radius:6px;
     text-shadow:2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-size:33px;
 
     @media (max-width: 768px) {
-   text-align:center;
-  }
+        text-align:center;
+    }
 `
 
 const Image = styled.img`
-    height:40%;
+    height:auto;
     width:40%;
-    border-radius:6px;
     margin-bottom:50px;
+    border-radius:6px;
 
     @media (max-width: 768px) {
-   margin-bottom:20px;
-   
-  }
-    `
+        margin-bottom:20px;
+    }
+`
 const Wrap = styled.div`
-    background-color:white;
-    max-width:800px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     padding:50px 0;
     border-radius:8px;
+    background-color:white;
 
     @media (max-width: 768px) {
-    padding:20px;
-  }
-    `
+        padding:20px;
+    }
+`
 
 
 export const ScanBarcode = () => {
     const dispatch = useDispatch()
     const [showScanner, setShowScanner] = useState(false)
-    const json = useSelector(state => state.facts.product)
-
-    if (json !== null) {
-        return null
-    }
+    const products = useSelector(state => state.facts.products)
 
     return (
         <>
             {!showScanner && (
-                <>
-                    <Wrap>
-                        <Title>What do you wanna scan today?</Title>
-                        <Image alt="barcode" src={code} />
-                        <Button type="button" onClick={() => setShowScanner(true)}>
-                            Show Scanner</Button>
-                    </Wrap>
-                </>
-            )}
+                <Wrap>
+                    {!products.length && (
+                        <>
+                            <Title>What do you wanna scan today?</Title>
+                            <Image alt="barcode" src={code} />
+                        </>
+                    )}
+                    <Button type="button" onClick={() => setShowScanner(true)}>
+                        {!products.length ? 'Show Scanner' : 'Scan again'}</Button>
 
-            {showScanner && (
-                <BarcodeScanner className="Scanner" onDetected={(code) => {
-                    console.log('Got barcode', code)
-                    setShowScanner(false)
-                    dispatch(fetchProduct(code))
-                }} />
+                    {products.length > 0 &&
+                        <TextButton type="button" onClick={() => dispatch(facts.actions.clearProducts())}>Clear products</TextButton>}
+                </Wrap>
+            )
+            }
 
-            )}
+            {
+                showScanner && (
+                    <BarcodeScanner className="Scanner" onDetected={(code) => {
+                        console.log('Got barcode', code)
+                        setShowScanner(false)
+                        dispatch(fetchProduct(code))
+                    }} />
+                )
+            }
         </>
     )
 }

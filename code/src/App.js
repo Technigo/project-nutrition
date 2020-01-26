@@ -5,19 +5,19 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { facts } from 'reducers/facts'
 import { loading } from 'reducers/loading'
 import { LoadingIndicator } from 'components/LoadingIndicator'
-import { Product } from 'components/Product'
+import { Products } from 'components/Products'
 import styled from 'styled-components/macro'
 
 
 const Bg = styled.div`
-font-family: 'Roboto', sans-serif;
-padding:100px;
-margin: auto;
-max-width: 800px;
-
-@media (max-width: 768px) {
-    padding:10px;
-  }
+    margin: auto;
+    max-width: 800px;
+    padding:100px;
+    font-family: 'Roboto', sans-serif;
+   
+    @media (max-width: 768px) {
+        padding:10px;
+    }
 `
 
 const reducer = combineReducers({
@@ -33,7 +33,7 @@ export const App = () => {
       <Bg>
         <LoadingIndicator />
         <ScanBarcode />
-        <Product />
+        <Products />
       </Bg>
     </Provider>
   )

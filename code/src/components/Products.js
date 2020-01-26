@@ -12,31 +12,35 @@ const Icon = styled.img`
 const Title = styled.h1`
     margin:0;
     font-size:40px;
+
+    @media (max-width: 768px) {
+        font-size:33px;
+    }
 `
 
 const Wrap = styled.div`
-    background-color:white;
-    width:800px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    margin-top: 5%;
     padding:50px 0;
     border-radius:8px;
-
+    background-color:white;
+   
     @media (max-width: 768px) {
-    padding:10px;
-    width:auto;
-  }
-    
-    `
+        width:auto;
+        padding:10px;
+    }
+`
+
 const TitleDiv = styled.div`
     display:flex;
     margin:50px;
 
     @media (max-width: 768px) {
-    margin:30px;
-  }
+        margin:30px;
+    }
 `
 
 const Name = styled.h2`
@@ -51,24 +55,23 @@ const Image = styled.img`
     border-radius:8px;
    
     @media (max-width: 768px) {
-    width:70%;
-  }`
+        width:60%;
+    }
+`
 
-export const Product = () => {
-    const json = useSelector(state => state.facts.product)
+export const Products = () => {
+    const products = useSelector(state => state.facts.products)
 
-    if (!json) {
+    if (!products.length) {
         return null
     }
 
-    const { product, status, status_verbose } = json
-
-    return (
-        <Wrap>
+    return products.map(({ status, product, code }, index) => (
+        <Wrap key={`${code}_${index}`}>
             {status === 1 && (
                 <>
                     <TitleDiv>
-                        <Title>Search find </Title>
+                        <Title>Search results </Title>
                         <Icon alt="glass" src={mglass} />
                     </TitleDiv>
 
@@ -77,10 +80,7 @@ export const Product = () => {
                     <TextInfo>Ingredients:</TextInfo> <Image alt="ingrediens" src={product && product.image_ingredients_url} />
                     <TextInfo>Brand: {product && product.brands}</TextInfo>
                 </>)}
-
-
-            {status === 0 && <h1>{status_verbose}</h1>}
-            {/* {product.status === 0 && <Error msg={product.status_verbose} <h1>{product.status_verbose}</h1>} /> */}
+            {status === 0 && <h1>Product not found</h1>}
         </Wrap>
-    )
+    ))
 }
