@@ -36,3 +36,16 @@ h3{
   font-family: 'Alata', sans-serif;
   font-size: 28px;
 }
+
+
+/* MEDIA QUERIES */
+
+
+@media (min-width: 768px){
+
+  footer{
+    left: 350px;
+    top: 700px;
+  }
+
+}
