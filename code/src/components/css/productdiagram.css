@@ -7,9 +7,11 @@
   justify-content: center;
   height: 300px;
   width: 300px;
+  justify-self: center;
 }
 
 .product-diagram .rotate {
+  top: -10px;
   position: relative;
   width: 90%;
   height: 90%;
@@ -21,7 +23,7 @@
   transform: rotate(270deg);
 }
 
-.product-diagram .title {
+.product-diagram .diagram-title {
   position: relative;
-  top: 7%;
+  top: 10px;
 }

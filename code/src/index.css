@@ -2,7 +2,6 @@ body {
   margin: 0;
   min-width: 320px;
   height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("/assets/food-bg-large.jpg");
@@ -14,8 +13,8 @@ body {
   box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+* {
+  font-family: 'Roboto', sans-serif;
 }
 
 #root {

@@ -24,13 +24,14 @@ export const Product = () => {
   return (
     <div className="product">
       {item.status === 0 ? <div>Product not found</div> :
-
-        <div className="product-wrapper">
-          <ProductImage product={item.product} />
-          <ProductDiagram product={item.product} />
-          <ProductInfo product={item.product} />
+        <div>
+          <h1 className="title">{item.product.product_name}</h1>
+          <div className="product-wrapper">
+            <ProductImage product={item.product} />
+            <ProductDiagram product={item.product} />
+            <ProductInfo product={item.product} />
+          </div>
         </div>
-
 
       }
     </div >

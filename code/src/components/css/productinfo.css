@@ -1,4 +1,13 @@
 .product-info {
   width: 100%;
   justify-self: stretch;
+  background-color: lightcoral;
+  height: 100%;
+  grid-column: 1 / span 2;
+}
+
+@media only screen and (max-width: 601px) {
+  .product-info {
+    grid-column: 1;
+  }
 }
