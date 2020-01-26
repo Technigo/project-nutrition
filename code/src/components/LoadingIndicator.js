@@ -8,7 +8,10 @@ export const LoadingIndicator = () => {
   return (
     <>
       {isLoading && (
-        <h1>LOADING</h1>
+
+        <lottie-player id="loading"
+          src="https://assets4.lottiefiles.com/datafiles/KS8ZpEdYbIuaZqg/data.json" background="transparent" speed="1" loop autoplay >
+        </lottie-player>
       )}
 
     </>
