@@ -6,6 +6,7 @@ import { products } from 'reducers/products'
 import { ScanBarcode } from 'components/ScanBarcode'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
+import { InputForm } from 'components/Inputform'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -21,6 +22,7 @@ export const App = () => {
         <LoadingIndicator />
         <h1>Banana banana banana</h1>
         <ScanBarcode />
+        <InputForm />
         <Product />
       </Provider>
     </div>

@@ -20,7 +20,7 @@ export const fetchProduct = (barcode) => {
 
   return (dispatch) => {
     dispatch(ui.actions.setLoading(true))
-    fetch(`https://world.openfoodfacts.org/api/v0/product/8722700001232.json`)
+    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
       .then(res => res.json())
       .then(json => {
         dispatch(products.actions.setProduct(json))
@@ -28,3 +28,5 @@ export const fetchProduct = (barcode) => {
       })
   }
 }
+
+//8722700001232 this Tea-code you can put directly in the fetch instead of ${barcode}, to test that the bardoce fetch is working.

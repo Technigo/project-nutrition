@@ -17,6 +17,8 @@ export const Product = () => {
       <p>{product.product && product.product.ingredients_text_with_allergens_en}</p>
       <h2>Store:</h2>
       <p>{product.product && product.product.stores}</p>
+      <h2>All available facts:</h2>
+      <p>{product.product && product.product.ingredients_original_tags}</p>
 
 
     </>
