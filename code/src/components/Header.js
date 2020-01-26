@@ -45,13 +45,12 @@ const NavigationIcons = styled.button`
 export const Header = ({ title }) => {
   return (
     <Head>
-      
       <NavigationIcons>
         <div />
         <div />
         <div />
       </NavigationIcons>
-      <h1>{title}<i class="fas fa-barcode"></i></h1>
+      <h1>{title}</h1>
     </Head>
   );
 };

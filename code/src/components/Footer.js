@@ -14,16 +14,20 @@ const Container = styled.div`
 `;
 
 const Button = styled.button`
-  color: black;
   border: none;
-  background: lightgrey;
+  color: blue;
+  font-size: 12px;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px gray;
+  background: lightgray;
 `;
 
 const Title = styled.p`
   color: black;
 
   ${Button}:hover & {
-    text-decoration: underline;
+    color: blue;
+    font-size: 15px;
   }
 `;
 

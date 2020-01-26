@@ -4,14 +4,15 @@ import { fetchBarcode } from 'reducers/barcodes';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
-const ButtonWrapper = styled.div`
+const ScannerContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: pink;
-  height: 500px;
+  height: 600px;
 `;
+const ButtonWrapper = styled.div``;
 
 const FloatingButton = styled.button`
   width: 200px;
@@ -19,7 +20,7 @@ const FloatingButton = styled.button`
   border-radius: 50%;
   background-color: #4195fc;
   color: white;
-  box-shadow: 4px 4px 30px 4px #0ff;
+  box-shadow: 4px 4px 4px 4px gray;
   border: none;
   font-size: 18px;
   position: relative;
@@ -27,12 +28,12 @@ const FloatingButton = styled.button`
   ${ButtonWrapper}:hover & {
     background-color: purple;
     color: black;
-    box-shadow: 4px 4px 4px 4px gray;
   }
 
   ${ButtonWrapper}:active & {
     box-shadow: none;
     border: 1px solid rebeccapurple;
+    box-shadow: 4px 4px 30px 4px #0ff;
   }
 
   ${ButtonWrapper}:focus & {
@@ -66,19 +67,21 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-        <ButtonWrapper>
-          <FloatingButton
-            className="button"
-            type="button"
-            onClick={() => setShowScanner(true)}
-          >
-            {' '}
-            <Icon>
-              <i class="fas fa-expand"></i>
-            </Icon>
-            Scan Product
-          </FloatingButton>
-        </ButtonWrapper>
+        <ScannerContainer>
+          <ButtonWrapper>
+            <FloatingButton
+              className="button"
+              type="button"
+              onClick={() => setShowScanner(true)}
+            >
+              {' '}
+              <Icon>
+                <i class="fas fa-expand"></i>
+              </Icon>
+              Scan Product
+            </FloatingButton>
+          </ButtonWrapper>
+        </ScannerContainer>
       )}
 
       {showScanner && (

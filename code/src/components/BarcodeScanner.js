@@ -10,7 +10,7 @@ const Wrapper = styled.div`
 
 const ScannerContainer = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
 `;
 
