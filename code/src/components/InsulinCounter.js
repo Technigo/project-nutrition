@@ -6,8 +6,7 @@ const Container = styled.div`
 @media (min-width: 900px){
     font-size: 1.5em;
   }
-
-`
+`;
 
 export const InsulinCounter = () => { 
     const insulinDose = useSelector(state => state.products.insulinDose)

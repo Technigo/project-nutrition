@@ -30,9 +30,9 @@ export const App = () => {
         <LoadingIndicator/>
         <Product/>
         <div className="main-Img-Container">
-        <div className="imgContainer">
-          <ScanBarcode />
-        </div>
+          <div className="imgContainer">
+            <ScanBarcode />
+          </div>
         </div>
         <Error/>
         <Footer/>

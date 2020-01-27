@@ -7,7 +7,6 @@ const Container = styled.div`
   justify-content: space-between;
   background-color:  #adebeb;
   border-top: 2px solid white;
-  
   width: 100%;
   height: 80px;
   margin: 0;
@@ -23,17 +22,15 @@ const BtnContainer = styled.div`
   @media (min-width: 650px){
     margin-right: 50px;
     font-size: 40px;
-    }
-    @media (min-width: 900px){
-      margin-right: 200px;
-    }
- 
+  }
+  @media (min-width: 900px){
+    margin-right: 200px;
+  }
 `;
 
 const Icon = styled.button`
   flex-direction: column;
   align-content: center;
-  
   height: auto;
   justify-content: center;
   align-items: center;
@@ -42,7 +39,6 @@ const Icon = styled.button`
   margin: 10px 5px;
   padding: 0px;
   opacity: 1;
-
   ${BtnContainer}:hover & {
     opacity: 1;
   }

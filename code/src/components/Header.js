@@ -5,15 +5,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color:  #adebeb;
+  background-color: #adebeb;
   border-bottom: 2px solid white;
   width: 100%;
   height: 80px;
   margin: 0;
   position: fixed;
   top: 0px;
-
-  
 `;
 
 const BtnContainer = styled.div`
@@ -36,9 +34,7 @@ const BtnContainer = styled.div`
 const IconContainer = styled.div`
   display: flex;
   flex-direction: row;
- 
-`
-
+`;
 const Icon = styled.button`
   display: flex;
   flex-direction: column;
@@ -71,11 +67,9 @@ const Label = styled.p`
 
 const Title = styled.h1`
 color: white;
-
 @media (min-width: 650px){
   font-size: 3em;
 }
-
 `;
 
 
@@ -111,7 +105,5 @@ export const Header = () => {
         </IconContainer>
       </BtnContainer>
     </Container>
-
-  
 )
 }

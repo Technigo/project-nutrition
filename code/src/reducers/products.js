@@ -13,7 +13,9 @@ export const products = createSlice({
         setProduct: (state, action) => {
             state.product = action.payload
             console.log(state)
-            if (state.product && state.product.product.nutriments.carbohydrates){
+            if (state.product.status === 0){
+                console.log("No product found")
+            }else if (state.product && state.product.product.nutriments.carbohydrates){
                 state.insulinDose = state.product.product.nutriments.carbohydrates / state.personalCarbsPerUnit
                 console.log(state.insulinDose)
             }

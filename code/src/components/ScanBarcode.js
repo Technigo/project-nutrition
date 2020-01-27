@@ -18,18 +18,20 @@ const Button = styled.button`
   border: none;
   position: absolute;
   border: 1px solid black;
-`
-
+  opacity: 0.8;
+  :hover {opacity: 1;}
+`;
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
 
   const testCode = 7340001803020
+  const testCodeNonWorking = 7340001803123
 
   return (
     <div className="scan-btn-container">
-      {/* The line below will fetch a static product (Blueberry Cake) at startup (for testing) */}
+      {/* Change the 'code' in the line below to 'testCode' to fetch a static product (Blueberry Cake) at startup (for testing) */}
       {dispatch(fetchProduct('code'))}
 
       {!showScanner && (

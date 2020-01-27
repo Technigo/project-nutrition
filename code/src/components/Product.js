@@ -9,7 +9,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-`
+`;
+
 const TextContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -24,19 +25,21 @@ padding: 20px;
     padding: 10px;
     margin-top: 95px;
     }
-`
+`;
+
 const Title = styled.h1`
 @media (min-width: 900px){
 font-size: 2.5em;
 }
-`
+`;
+
 const Text = styled.p`
 margin: 0px;
 margin-bottom: 10px;
 @media (min-width: 900px){
     font-size: 1.5em;
     }
-`
+`;
 
 const Img = styled.img`
 width: 320px;
@@ -47,17 +50,12 @@ border: 2px solid black;
     width: 500px;
     margin-top: 15px;
 }
-`
+`;
 
 export const Product = () => { 
 const product = useSelector(state => state.products.product)
-//const showProduct = useSelector(state => state.showProduct)
-const [showProduct, setShowProduct] = useState(false)
 
 if (!product) return null
-//if (!product || !showProduct) return null
-console.log(product)
-console.log("showProduct: " + showProduct)
 
 return (
     <>
@@ -71,9 +69,9 @@ return (
         </TextContainer>
         <Img src={product.product && product.product.image_url}/>
     </MainContainer>
-    </> 
+    </>
 )}
 
-{product.status === 0 && <Error msg={product.status_verbose}/>}
+{product.status === 0 && <Error msg={product.status_verbose} />}
 </>
 )}
