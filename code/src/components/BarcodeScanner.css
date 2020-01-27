@@ -30,8 +30,17 @@
   /* z-index: -1; */
 }
 
-.img {
-  width: 220px;
+h4 {
+  display: flex;
+  justify-content: left;
+  /* align-items: left;
+  flex-direction: column;
+  width: 40%;
+  text-align: center;
+} */
+}
+.img sc-AykKE.fWwLwL {
+  width: 0 auto; 
 }
 /* .sc-AykKE {
   font-size: 16px;

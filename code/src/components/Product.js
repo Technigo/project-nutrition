@@ -43,7 +43,7 @@ export const Product = () => {
     return (
         <ProductContainer>
             <ProductHeading>
-                <img src={scan.product && scan.product.image_thumb_url} alt="" />
+                {/* <img src={scan.product && scan.product.image_thumb_url} alt="" /> */}
                 <h1>{scan.product && scan.product.product_name}</h1>
                 {/* <h4>Ingredients:{product.product && product.product.ingredients_tags}</h4> */}
             </ProductHeading>

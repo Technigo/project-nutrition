@@ -26,7 +26,7 @@ const Icon = styled.button`
   align-items: center;
   background-color: inherit;
   border: none;
-  margin: 10px 35px;
+  margin: 10px 15px;
   opacity: 0.5;
   ${BtnContainer}:hover & {
     opacity: 1;

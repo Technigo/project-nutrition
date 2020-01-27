@@ -1,6 +1,6 @@
 h1 {
   display: inline-block;
-  padding: 100px;
+  /* padding: 30px; */
   color: darkslategray;
 }
 
@@ -22,11 +22,10 @@ h1 {
   height: 25px;
   flex-direction: column;
   justify-content: space-between;
-  object-position: left;
-  /* margin-right: 104px; */
+  /* object-position: left; */
   margin-top: 0px;
-  /* margin-left: 20px */
-  
+  /* margin-left: 20px; */
+  padding-left: 20px;
 }
 /* lines for the hamburger menu, same width as the container, but thinner */
 .hamburger div {
@@ -35,11 +34,14 @@ h1 {
   /* background: white; */
   background-color: darkslategray;
   border-radius: 5px;
+  margin-right: 30px;
 }
 .headerInfo {
   color: white;
   align-content: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  padding-left: 30px;
+  padding-right: 30px;
   justify-content: center;
   align-self: center;
   /* margin-left: 25%; */
@@ -56,8 +58,13 @@ h1 {
   justify-content: space-evenly;
   display: inline-block;
   text-decoration: none;
-  /* padding: 10px; */
-  /* margin-right: 10px; */
+  /* padding-right: 10px; */
+  /* margin-right: 20px; */
   flex-direction: row;
   font-weight: bolder;
+}
+
+.sc-AykKH.ePXwWz {
+  padding-bottom: 30px;
+
 }
