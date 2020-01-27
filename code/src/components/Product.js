@@ -5,14 +5,17 @@ import { Errors } from 'components/Errors';
 
 const Wrapper = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
 `;
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin: 0 10px 20px 10px;
   background-image: url(${props => props.src});
-  width: 100%;
+  width: 60%;
+  height: 100%;
 
   @media (max-width: 600px) {
     flex-direction: column;

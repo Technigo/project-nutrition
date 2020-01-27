@@ -82,7 +82,7 @@ export const ScanBarcode = () => {
         <ButtonWrapper>
           <ScannerContainer>
             <IntroSection>
-              <IntroTitle>Are you a food allergicer?</IntroTitle>
+              <IntroTitle>Do you have food allergies?</IntroTitle>
               <IntroTxt>Scan your products before you eat</IntroTxt>
             </IntroSection>
 
