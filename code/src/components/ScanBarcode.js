@@ -6,16 +6,18 @@ import styled from "styled-components/macro";
 
 const Button = styled.button`
   color: white;
-  background-color: grey;
+  background-color: #28a4a4;
   font-size: 1rem;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 15px;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 1rem;
   cursor: pointer;
-  margin-top: 380px;
+  margin-top: 120px;
   border: none;
+  position: absolute;
+  border: 1px solid black;
 `
 
 
@@ -32,7 +34,7 @@ export const ScanBarcode = () => {
 
       {!showScanner && (
         <Button type="button" onClick={() => setShowScanner(true) }>
-          Show scanner
+         scan item >>
         </Button>
       )}
 

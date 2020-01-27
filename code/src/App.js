@@ -25,11 +25,15 @@ export const store = configureStore ({reducer})
 export const App = () => {
   return (
     <Provider store={store}>
-      <div className="Container">
+      <div>
         <Header/>
         <LoadingIndicator/>
         <Product/>
-        <ScanBarcode />
+        <div className="main-Img-Container">
+        <div className="imgContainer">
+          <ScanBarcode />
+        </div>
+        </div>
         <Error/>
         <Footer/>
       </div>

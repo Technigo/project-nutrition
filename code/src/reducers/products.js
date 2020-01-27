@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from 'reducers/ui'
-import { InsulinCounter } from 'components/InsulinCounter'
+
 /*import { insulinCounter } from 'reducers/insulinCounter'*/
 
 export const products = createSlice({
@@ -14,7 +14,6 @@ export const products = createSlice({
             state.product = action.payload
             console.log(state)
             if (state.product && state.product.product.nutriments.carbohydrates){
-                console.log("setDose(): Inside if")
                 state.insulinDose = state.product.product.nutriments.carbohydrates / state.personalCarbsPerUnit
                 console.log(state.insulinDose)
             }

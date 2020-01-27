@@ -5,8 +5,8 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color:  midnightblue;
-  border: 2px solid white;
+  background-color:  #adebeb;
+  border-top: 2px solid white;
   
   width: 100%;
   height: 80px;
@@ -20,6 +20,13 @@ const BtnContainer = styled.div`
   flex-direction: row;
   justify-content: flex-end;
   margin-right: 10px;
+  @media (min-width: 650px){
+    margin-right: 50px;
+    font-size: 40px;
+    }
+    @media (min-width: 900px){
+      margin-right: 200px;
+    }
  
 `;
 
@@ -39,6 +46,9 @@ const Icon = styled.button`
   ${BtnContainer}:hover & {
     opacity: 1;
   }
+  @media (min-width: 900px){
+    margin-left: 30px;
+  }
 `;
 
 const Emoji = styled.p`
@@ -50,6 +60,10 @@ const Emoji = styled.p`
   text-shadow: 0 0 0 white;
   font-size: 25px;
   padding: 10px 0px;
+  @media (min-width: 650px){
+    padding: 0px;
+    font-size: 40px;
+    }
 `;
 const Label = styled.p`
   font-size: 12px;

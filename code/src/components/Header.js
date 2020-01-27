@@ -5,13 +5,15 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color:  midnightblue;
-  border: 2px solid white;
+  background-color:  #adebeb;
+  border-bottom: 2px solid white;
   width: 100%;
   height: 80px;
   margin: 0;
   position: fixed;
   top: 0px;
+
+  
 `;
 
 const BtnContainer = styled.div`
@@ -20,6 +22,15 @@ const BtnContainer = styled.div`
   width: 500px;
   justify-content: space-between;
   margin-right: 10px;
+  align-items: center;
+  @media (min-width: 650px){
+  margin-right: 50px;
+  width: 650px;
+  }
+  @media (min-width: 900px){
+    margin-right: 200px;
+    width: 900px;
+  }
 `;
 
 const IconContainer = styled.div`
@@ -36,7 +47,9 @@ const Icon = styled.button`
   align-items: center;
   background-color: inherit;
   border: none;
-  
+  @media (min-width: 900px){
+    margin-left: 30px;
+  }
   `;
 
 const Emoji = styled.p`
@@ -46,6 +59,9 @@ const Emoji = styled.p`
   height: auto;
   color: transparent;
   text-shadow: 0 0 0 white;
+  @media (min-width: 650px){
+    font-size: 25px;
+  }
 `;
 
 const Label = styled.p`
@@ -55,6 +71,11 @@ const Label = styled.p`
 
 const Title = styled.h1`
 color: white;
+
+@media (min-width: 650px){
+  font-size: 3em;
+}
+
 `;
 
 
@@ -64,7 +85,7 @@ export const Header = () => {
   return (
        
     <Container>
-      {/* <!--Creating a hamburger menu with lines, made by div's--> */}
+      {/* <!--Creating a hamburger menu with lines, made by div's styled in main css-file--> */}
       <div className="hamburger">
         <div></div>
         <div></div>
