@@ -1,34 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "./ui";
+import { getVeganPercentage, getNotVegan } from "../utils/array";
 
 const isItVegan = response => {
   if (response.status === 0) {
     return {
       fetched: true,
       exist: false,
-      code: response.code,
+      barcode: response.code,
       text: "Sorry, We dont know if this product is vegan or not"
     };
   }
 
-  if (
-    response.product.ingredients.every(ingredient => ingredient.vegan !== "no")
-  ) {
-    return {
-      fetched: true,
-      exist: true,
-      code: response.code,
-      name: response.product.product_name,
-      text: "Yes! This product is vegan."
-    };
-  }
+  const notVegan = getNotVegan(response);
+  const percentage = getVeganPercentage(response);
 
   return {
     fetched: true,
     exist: true,
-    code: response.code,
+    barcode: response.code,
     name: response.product.product_name,
-    text: "No! This product is NOT vegan."
+    text: notVegan
+      ? "This product is NOT vegan!"
+      : `${percentage}% of this products' ingredients are vegan`
   };
 };
 
