@@ -1,5 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
+import { LoadingIndicator } from "./LoadingIndicator"
 import "./barcodeScanner.css"
 
 export const BarcodeScanner = ({ className, onDetected }) => {
@@ -13,7 +14,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   // sets to true. After 500 milliseconds it sets to false anyway
 
   const handler = data => {
-    console.log("found")
     if (!hasResult.current) {
       onDetected(data.codeResult.code)
     }
@@ -60,7 +60,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
+      {initializing && <LoadingIndicator />}
       <div ref={cameraDivRef} className={className} />
     </>
   )

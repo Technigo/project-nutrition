@@ -1,12 +1,12 @@
 .scanner {
   background: transparent;
-  width: 80%;
+  max-width: 70%;
   margin: 0 auto;
-  height: 450px;
+  max-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .scanner video {
