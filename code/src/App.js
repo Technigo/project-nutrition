@@ -9,6 +9,7 @@ import { Product } from 'components/Product'
 import { Header } from 'components/Header'
 
 import './app.css'
+import './components/mediaqueries.css'
 
 
 const reducer = combineReducers({
