@@ -2,13 +2,11 @@ import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
 import "./barcodeScanner.css"
 
-
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
   const hasResult = useRef(false)
   //We want it to check if it already has a code. No double scans
-
 
   // Function to handle whether barcode is found or not.
   // if not found - onDetected should run and hasResult
@@ -26,8 +24,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       hasResult.current = false
     }, 500)
   }
-
-
 
   useLayoutEffect(() => {
     Quagga.init({
@@ -61,9 +57,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
     }
 
   }, [])
-
-
-  // onDetected(5701073062265)
 
   return (
     <>

@@ -1,7 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-
-// import { useDispatch } from "react-redux"
-
 import { ui } from "./ui"
 
 export const products = createSlice({
@@ -15,12 +12,11 @@ export const products = createSlice({
       state.product = action.payload
     },
     saveProduct: (state, action) => {
-      // state.savedProducts.push(action.payload)
       state.savedProducts.push({ id: Date.now(), name: action.payload })
     }
   }
 })
-const testCode = 5701073062265
+
 export const fetchProduct = (barcode) => {
   return dispatch => {
     dispatch(ui.actions.setLoading(true))
@@ -31,6 +27,4 @@ export const fetchProduct = (barcode) => {
         dispatch(ui.actions.setLoading(false))
       })
   }
-
-
 }

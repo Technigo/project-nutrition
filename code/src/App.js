@@ -39,6 +39,5 @@ align-items: center;
 background-image: url(${foodimage});
 background-size: cover;
 background-position: center;
-background-repeat: no-repeat;
 min-height: 600px;
 `

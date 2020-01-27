@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from './BarcodeScanner'
 import { fetchProduct } from 'reducers/products'
-
 import { useDispatch } from "react-redux"
 import styled from "styled-components/macro"
-
-
-const testCode = 5701073062265
-const testCode2 = 5000184321064
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
