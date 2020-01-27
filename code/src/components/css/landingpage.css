@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-color: #f8f3d4;
+  background-color: #e5e4cc;
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -13,22 +13,24 @@
 .landing-page .get-started-btn {
   height: 50px;
   width: 200px;
-  font-size: 15px;
-  color: #faf5e4;
+  font-size: 18px;
+  color: #e5e4cc;
   border-radius: 5px;
+  border: 1px solid #698474;
   cursor: pointer;
   justify-self: center;
-  background-color: #00b8a9;
+  background-color: #889e81;
   margin-bottom: 30px;
 }
 
 .landing-page .get-started-btn:hover {
-  color: #00b8a9;
-  background-color: #faf5e4;
-  border: 2px solid #028e82;
+  color: #698474;
+  background-color: #e5e4cc;
+  border: 1px solid #698474;
 }
 
 .landing-page img {
-  width: 30%;
-  filter: brightness(70%);
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
 }

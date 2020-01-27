@@ -15,8 +15,8 @@
 }
 
 .nutrient-title {
-  color: #f6416c;
   font-weight: bold;
+  font-size: 22px;
 }
 
 @media only screen and (max-width: 601px) {

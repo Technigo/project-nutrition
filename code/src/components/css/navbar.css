@@ -1,7 +1,7 @@
 nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background-color: #00b8a9;
+  background-color: #698474;
   padding: 10px;
   height: auto;
   border-radius: 0 20px 0px 0px;
@@ -12,23 +12,24 @@ nav {
 nav .navbar-btn {
   height: 50px;
   width: 80%;
-  font-size: 15px;
-  color: #faf5e4;
+  font-size: 18px;
+  color: #e5e4cc;
   border-radius: 5px;
   cursor: pointer;
   justify-self: center;
   background-color: transparent;
-  border: 1px solid #c6f1d6;
+  border: 1px solid #bac7a7;
 }
 
 nav .navbar-btn:hover:not([disabled]) {
-  color: #00b8a9;
-  background-color: #faf5e4;
-  border: 1px solid #028e82;
+  color: #698474;
+  background-color: #e5e4cc;
+  border: 1px solid #698474;
   cursor: pointer;
 }
 
 nav .navbar-btn:disabled {
-  color: gray;
-  border: 1px solid gray;
+  color: rgb(73, 71, 71);
+  border: 1px solid rgb(73, 71, 71);
+  cursor: default;
 }

@@ -20,7 +20,7 @@ export const ProductDiagram = (props) => {
 
 const StyledCarbBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: #f6416c;
+  background-color: #65a280;
   height: 30%;
   display: flex;
   justify-content: start;
@@ -31,7 +31,7 @@ const StyledCarbBar = styled.div`
 
 const StyledProteinBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: #00b8a9;
+  background-color: #61b187;
   height: 30%;
   display: flex;
   justify-content: start;
@@ -41,7 +41,7 @@ const StyledProteinBar = styled.div`
 
 const StyledFatBar = styled.div`
   width: ${props => props.bar}%;
-  background-color: #f8b400;
+  background-color:#5bc08d;
   height: 30%;
   display: flex;
   justify-content: start;

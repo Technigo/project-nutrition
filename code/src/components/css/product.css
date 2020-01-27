@@ -1,5 +1,5 @@
 .product {
-  background-color: #f8f3d4;
+  background-color: #e5e4cc;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,7 @@
   text-align: center;
   margin: 0;
   padding: 15px 20px 10px 20px;
-  color: #00b8a9;
+  color: #698474;
   text-shadow: 1px 1px 2px #000;
   -moz-text-shadow: 1px 1px 2px #000;
   -webkit-text-shadow: 1px 1px 2px #000;

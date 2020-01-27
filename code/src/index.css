@@ -4,11 +4,21 @@ body {
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ffde7d;
   /* background-image: url("/assets/food-bg-large.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e5e4cc+0,bac7a7+0,bac7a7+0,bac7a7+48,bac7a7+56,e5e4cc+100 */
+  background: #e5e4cc;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #e5e4cc 0%, #bac7a7 0%, #bac7a7 0%, #bac7a7 48%, #bac7a7 56%, #e5e4cc 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #e5e4cc 0%, #bac7a7 0%, #bac7a7 0%, #bac7a7 48%, #bac7a7 56%, #e5e4cc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #e5e4cc 0%, #bac7a7 0%, #bac7a7 0%, #bac7a7 48%, #bac7a7 56%, #e5e4cc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e4cc', endColorstr='#e5e4cc', GradientType=1);
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 * {
@@ -20,7 +30,7 @@ body {
 #root {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -35,11 +45,10 @@ main {
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  border: 1px solid #ffde7d;
+  border: 1px solid #e5e4cc;
   -webkit-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
-  margin-top: 50px;
 }
 
 /* Mobile */
