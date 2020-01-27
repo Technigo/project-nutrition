@@ -44,6 +44,10 @@ export const fetchNutritionValues = (code) => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
     .then(res => res.json())
     .then(json => {
+      if (json.status === 0) {
+        dispatch(ui.actions.setLoading(false))
+        return
+      }
 
       const food = { /* create a food object to be put in foods array */ 
         name: json.product.generic_name,
@@ -59,5 +63,6 @@ export const fetchNutritionValues = (code) => {
       dispatch(macros.actions.addFood(food))
       dispatch(ui.actions.setLoading(false))
     })
+
   }
 }

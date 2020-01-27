@@ -35,8 +35,8 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
-      <div ref={cameraDivRef} className={className} />
+      {initializing && <div class="loadingIndicator">Starting camera...</div>}
+      <div ref={cameraDivRef} className={className} />  
     </>
   )
 }

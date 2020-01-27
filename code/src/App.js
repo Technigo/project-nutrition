@@ -6,6 +6,7 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { ScanBarcode } from './components/ScanBarcode.js'
 import { LoadingIndicator } from './components/LoadingIndicator.js'
 import { FoodsList } from './components/FoodsList.js'
+import { InfoBar } from './components/InfoBar.js'
 
 const reducer = combineReducers({
   macros: macros.reducer,
@@ -14,12 +15,26 @@ const reducer = combineReducers({
 
 const store = configureStore({ reducer })
 
+//const errorMsg = useSelector(state => state.ui.)
+const handleClose = () => {
+  return
+}
+
 export const App = () => {
   return (
     <Provider store={store}>
-      <ScanBarcode />
-      <LoadingIndicator />
-      <FoodsList />
+      <header>
+        <h1>Barcode scanner</h1>
+      </header>
+      <main>
+        <ScanBarcode />
+        <div class="status-info">
+          <LoadingIndicator />
+        </div>
+        <FoodsList />
+        <InfoBar />
+        
+      </main>
   </Provider>
   )
 }
