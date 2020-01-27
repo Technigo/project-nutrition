@@ -23,9 +23,12 @@ export const ProductInfo = (props) => {
           <span>{props.product.nutriments.sugars_100g} g</span>
         </div>
       )}
-
-
-
+      {props.product.allergens && (
+        <div className="allergies">
+          <span><span>📢</span>Allergens: </span>
+          <span>{props.product.allergens} </span>
+        </div>
+      )}
     </div>
   )
 }
