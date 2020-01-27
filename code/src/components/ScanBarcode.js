@@ -7,9 +7,9 @@ import { Button } from "styles";
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false);
   const dispatch = useDispatch();
-  const { product } = useSelector(state => state.products.product);
+  const product = useSelector(state => state.products.product);
 
-  if (product)
+  if (product.fetched)
     return (
       <Button type="button" onClick={() => dispatch(removeProduct())}>
         Back

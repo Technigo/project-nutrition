@@ -1,18 +1,48 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { ui } from "./ui";
 
+const isItVegan = response => {
+  if (response.status === 0) {
+    return {
+      fetched: true,
+      exist: false,
+      code: response.code,
+      text: "Sorry, We dont know if this product is vegan or not"
+    };
+  }
+
+  if (
+    response.product.ingredients.every(ingredient => ingredient.vegan !== "no")
+  ) {
+    return {
+      fetched: true,
+      exist: true,
+      code: response.code,
+      name: response.product.product_name,
+      text: "Yes! This product is vegan."
+    };
+  }
+
+  return {
+    fetched: true,
+    exist: true,
+    code: response.code,
+    name: response.product.product_name,
+    text: "No! This product is NOT vegan."
+  };
+};
+
 export const products = createSlice({
   name: "products",
   initialState: {
-    product: []
+    product: {}
   },
   reducers: {
-    setProduct: (state, action) => {
-      console.log("set product");
-      state.product = action.payload;
+    setProduct: (state, { payload }) => {
+      state.product = { ...payload };
     },
-    removeProduct: (state, action) => {
-      state.product = [];
+    removeProduct: state => {
+      state.product = {};
     }
   }
 });
@@ -24,7 +54,7 @@ export const fetchProduct = barcode => {
       .then(res => res.json())
       .then(json => {
         setTimeout(() => {
-          dispatch(products.actions.setProduct(json));
+          dispatch(products.actions.setProduct(isItVegan(json)));
           dispatch(ui.actions.setLoading(false));
         }, 2000);
       });
