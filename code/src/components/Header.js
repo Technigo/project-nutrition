@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Head = styled.h1`
+const Head = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +12,11 @@ const Head = styled.h1`
   border-top-radius: 16px;
   border-bottom: 1px solid purple;
   box-shadow: 2px 2px 4px grey;
+`;
 
-  h1 {
-    color: black;
-    font-size: 20px;
-  }
+const HeaderTitle = styled.div`
+  color: black;
+  font-size: 15px;
 `;
 
 const NavigationIcons = styled.button`
@@ -50,7 +50,9 @@ export const Header = ({ title }) => {
         <div />
         <div />
       </NavigationIcons>
-      <h1>{title}</h1>
+      <HeaderTitle>
+        <h1>{title}</h1>
+      </HeaderTitle>
     </Head>
   );
 };

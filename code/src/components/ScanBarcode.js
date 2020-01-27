@@ -10,7 +10,7 @@ const ScannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: pink;
-  height: 600px;
+  height: 400px;
 `;
 const ButtonWrapper = styled.div``;
 
@@ -76,7 +76,7 @@ export const ScanBarcode = () => {
             >
               {' '}
               <Icon>
-                <i class="fas fa-expand"></i>
+                <i className="fas fa-expand"></i>
               </Icon>
               Scan Product
             </FloatingButton>

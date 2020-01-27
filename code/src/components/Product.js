@@ -38,7 +38,7 @@ const ScanItem = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.div`
   color: black;
   font-weight: bold;
   display: flex;
@@ -55,18 +55,6 @@ const Title = styled.p`
   p {
     font-weight: normal;
     margin: 0;
-  }
-`;
-
-const ProductImage = styled.p`
-  width: 30%;
-  height: 300px;
-  border: 1px solid pink;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  @media (max-width: 600px) {
-    width: 350px;
   }
 `;
 
@@ -150,7 +138,8 @@ export const Product = () => {
           <Container>
             <ScanItem>
               <Title>
-                Brand and product <p>{scan.product && scan.product.brands}</p>
+                Brand and product
+                <p>{scan.product && scan.product.brands}</p>
                 <p>{scan.product && scan.product.ingredients_text}</p>
               </Title>
 

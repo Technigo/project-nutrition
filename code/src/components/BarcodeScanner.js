@@ -14,7 +14,7 @@ const ScannerContainer = styled.div`
   width: 100%;
 `;
 
-const Scanner = styled.div`
+const Camera = styled.div`
   background-image: url('../assets/scan-icon.png');
 `;
 
@@ -69,7 +69,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
           </Wrapper>
         )}
 
-        <Scanner ref={cameraDivRef} className={className}></Scanner>
+        <Camera ref={cameraDivRef} className={className}></Camera>
       </ScannerContainer>
     </>
   );

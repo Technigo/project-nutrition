@@ -2,14 +2,14 @@
   background: lightgrey;
   width: 100%;
   margin: 0 auto;
-  height: 600px;
+  height: 400px;
   align-items: center;
   justify-content: center;
   display: flex;
 }
 
 .scanner video {
-  width: 60%;
+  width: 80%;
   border-radius: 16px;
 }
 
