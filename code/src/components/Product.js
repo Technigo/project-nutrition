@@ -16,16 +16,13 @@ export const Product = () => {
             alt="barcode"
             src={scan.product && scan.product.image_nutrition_url}
           />
-          <h2>This product is: {scan.product && scan.product.labels}</h2>
+          <h2>
+            This product contains {scan.product.nutriments.energy_100g}
+            {scan.product.nutriments.energy_unit}.
+          </h2>
         </section>
       )}
       {scan.status === 0 && <h2>Ooops! Product not found!</h2>}
     </>
   );
-};
-
-export const Scan = () => {
-  const scan = useSelector(state => state.products.product);
-  if (scan.product && scan.product.labels !== "vegeterian")
-    return <h3>This product is not vegetarian!</h3>;
 };

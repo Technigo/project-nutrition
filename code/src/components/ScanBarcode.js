@@ -20,13 +20,15 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <section className="scanner-container">
-          <h1 className="scanner-title">Is this product vegetarian?</h1>
+          <h1 className="scanner-title">
+            Are you on a diet and counting calories?
+          </h1>
           <Button type="button" onClick={() => setShowScanner(true)}>
             <img src={barcode} alt="barcode" className="barcode-icon" />
           </Button>
           <p className="scanner-text">
-            Find it out by clicking on the button <br /> and scanning your
-            barcode!
+            Find out your product's calorie amount by clicking <br /> on the
+            button and scanning your barcode!
           </p>
         </section>
       )}
