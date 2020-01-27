@@ -8,8 +8,15 @@ export const Product = () => {
 
     return (
         <>
-            <h1> Product: </h1>
-            <img src={product.product && product.product.image_nutrition_url} />
+            {product.product && product.status === 1 && (
+                <section>
+                    <h1>{product.product.product_name}</h1>
+                    <p>Nutrition grade: {product.product.nutrition_grades}</p>
+                    <img src={product.product.image_nutrition_url} />
+                    <img src={product.product.image_nutrition_url} />
+                </section>
+            )}
+            {product.status === 0 && <h1>{product.status_verbose}</h1>}
         </>
     )
 }
