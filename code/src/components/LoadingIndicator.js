@@ -6,7 +6,7 @@ export const LoadingIndicator = () => {
     return (
         <>
             {isLoading && (
-                <h1>LOADING</h1>
+                <h1>LOADING......</h1>
             )}
         </>
     )

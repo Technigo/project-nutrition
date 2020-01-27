@@ -1,18 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
-// import styled from 'styled-components'
 
-// I am trying to use styled components to style video, but how?
-
-// const Container = styled.div`
-//   background-color:grey;
-//   width:80%;
-//   margin: 0 auto;
-//   height:600px;
-//   display:flex;
-//   align-items:center;
-//   justify-content:center;
-// `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)

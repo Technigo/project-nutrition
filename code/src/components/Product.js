@@ -3,16 +3,17 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
 const Error = styled.h1`
-
+    font-size:25px;
 `
 
 const Title = styled.h1`
     margin: 10px 15px 0 15px;
-    font-size: 25px;
+    font-size: 20px;
 `
 
 const Text = styled.p`
     margin:10px 15px 0 15px;
+    display:inline-block;
 `
 const Infobox = styled.section`
     display:flex;
@@ -25,6 +26,7 @@ const Infobox = styled.section`
 const Picture = styled.img`
     align-self:center;
     width:30%;
+    margin:10px;
 `
 
 export const Product = () => {

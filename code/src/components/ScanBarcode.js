@@ -16,7 +16,7 @@ const Button = styled.button`
     padding: 20px; 
     width: 250px; 
     height: 200px;
-    margin:10px;
+    margin:20px;
     transition: all 0.5s; 
     cursor: grab;
 `

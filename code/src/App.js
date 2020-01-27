@@ -24,7 +24,12 @@ const Box = styled.div`
   justify-content:center;
   align-items:center;
   width:auto;
-  height:900px;
+  height:80vh;
+`
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction:column;
 `
 
 const reducer = combineReducers({
@@ -37,13 +42,15 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
-      <Header />
-      <Box>
-        <LoadingIndicator />
-        <ScanBarcode />
-        <Product />
-      </Box>
-      <Footer />
+      <Container>
+        <Header />
+        <Box>
+          <LoadingIndicator />
+          <ScanBarcode />
+          <Product />
+        </Box>
+        <Footer />
+      </Container>
     </Provider>
   )
 }
