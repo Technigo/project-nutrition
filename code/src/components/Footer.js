@@ -7,6 +7,7 @@ const BottomBox = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: olivedrab;
 `
 
 export const Footer = () => {

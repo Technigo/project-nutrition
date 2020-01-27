@@ -1,18 +1,49 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import styled from 'styled-components'
+
+const Error = styled.h1`
+
+`
+
+const Title = styled.h1`
+    margin: 10px 15px 0 15px;
+    font-size: 25px;
+`
+
+const Text = styled.p`
+    margin:10px 15px 0 15px;
+`
+const Infobox = styled.section`
+    display:flex;
+    flex-direction:column;
+    justify-content:center:
+    align-items:center;
+    width:auto;
+`
+
+const Picture = styled.img`
+    align-self:center;
+    width:30%;
+`
 
 export const Product = () => {
-    const product = useSelector(state => state.products.product)
+    const scan = useSelector(state => state.products.product)
 
-    if (!product) return null
+    if (!scan) return null
 
-    console.log('product', product)
+    console.log('scan', scan)
 
     return (
         <>
-            <h1>{product.product && product.product.product_name}</h1>
-            <p>{product.pruduct && product.product.brand}</p>
-            <img src={product.product && product.product.image_url} alt="Nothing" />
+            {scan.product && scan.status === 1 && (
+                <Infobox>
+                    <Title>Product Name: {scan.product && scan.product.product_name}</Title>
+                    <Text>Nutrition Grade: {scan.product && scan.product.nutrition_grades}</Text>
+                    <Picture src={scan.product && scan.product.image_url} />
+                </Infobox>
+            )}
+            {scan.status === 0 && <Error>{scan.status_verbose}</Error>}
         </>
     )
 }

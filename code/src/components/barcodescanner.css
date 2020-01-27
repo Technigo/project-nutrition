@@ -1,0 +1,20 @@
+.scanner {
+    width:80%;
+    margin: 0 auto;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.scanner video {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    border-radius:10px;
+}
+
+.scanner canvas {
+    height:0px;
+}

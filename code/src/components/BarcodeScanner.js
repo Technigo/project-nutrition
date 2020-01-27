@@ -1,12 +1,35 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
+// import styled from 'styled-components'
+
+// I am trying to use styled components to style video, but how?
+
+// const Container = styled.div`
+//   background-color:grey;
+//   width:80%;
+//   margin: 0 auto;
+//   height:600px;
+//   display:flex;
+//   align-items:center;
+//   justify-content:center;
+// `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
   const cameraDivRef = useRef()
+  const hasResult = useRef(false)
 
   Quagga.onDetected((data) => {
-    onDetected(data.codeResult.code)
+    // To change so that it only scan 1 time
+    if (!hasResult.current) {
+      onDetected(data.codeResult.code)
+    }
+
+    hasResult.current = true
+
+    setTimeout(() => {
+      hasResult.current = false
+    }, 500)
   })
 
   useLayoutEffect(() => {

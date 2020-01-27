@@ -3,21 +3,22 @@ import styled from 'styled-components/macro'
 
 const Container = styled.div`
     display:flex;
+    align-items:center;
     justify-content:center;
-    background-color:gray;
+    background-color:olivedrab;
     margin:0px;
     width:100%;
-    height:100px;
+    height:120px;
 `
 const Headline = styled.h1`
-    margin: 10px 10px 0 10px;
-    font-size:30px;
+    margin: 10px 15px 0 15px;
+    font-size:25px;
 `
 
 export const Header = () => {
     return (
         <Container>
-            <Headline>Whats in my fridge?</Headline>
+            <Headline>What's in my fridge?</Headline>
         </Container>
     )
 }

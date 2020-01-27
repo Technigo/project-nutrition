@@ -8,6 +8,7 @@ import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
 import { Header } from 'components/Header'
 import { Footer } from 'components/Footer'
+import img from 'components/sustainable.jpg';
 
 import { ui } from 'reducers/ui'
 import { products } from 'reducers/products'
@@ -16,9 +17,14 @@ import { products } from 'reducers/products'
 
 const Box = styled.div`
   display:flex;
+  background-image: url(${img});
+  background-size: cover;
+  background-position: center; 
   flex-direction:column;
   justify-content:center;
   align-items:center;
+  width:auto;
+  height:900px;
 `
 
 const reducer = combineReducers({
@@ -31,13 +37,13 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
+      <Header />
       <Box>
-        <Header />
         <LoadingIndicator />
         <ScanBarcode />
         <Product />
-        <Footer />
       </Box>
+      <Footer />
     </Provider>
   )
 }
