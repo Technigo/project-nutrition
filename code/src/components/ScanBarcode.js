@@ -16,6 +16,10 @@ export const ScanBarcode = () => {
       )}
 
       {showScanner && (
+        <div>
+        <h2 className="showbarcode-text">
+          Show your webcam a sweet barcode <span role="img" aria-label="detective">🕵</span>
+        </h2>
         <BarcodeScanner 
           className="scanner"
           onDetected={code => {
@@ -24,6 +28,7 @@ export const ScanBarcode = () => {
           dispatch(fetchProducts(code))
         }} 
         />
+        </div>
       )}
     </>
   )
