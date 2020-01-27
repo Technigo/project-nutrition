@@ -13,7 +13,7 @@ export const Product = () => {
   const history = useHistory()
 
   const item = useSelector((state) => state.products.item)
-  console.log("ITEM:", item)
+
 
   // if item == undefined (default) go to /scan
   if (item === undefined) {
@@ -29,7 +29,7 @@ export const Product = () => {
           <h3>Scan the product again or try another product</h3>
         </div> :
         <div>
-          <h1 className="title">{item.product_name}</h1>
+          <h1 className="title">{item.product.product_name}</h1>
           <div className="product-wrapper">
             <ProductImage product={item.product} />
             <ProductDiagram product={item.product} />

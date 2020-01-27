@@ -4,7 +4,7 @@ body {
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #2c786c;
+  background-color: #ffde7d;
   /* background-image: url("/assets/food-bg-large.jpg");
   background-size: cover;
   background-position: center;
@@ -34,7 +34,7 @@ main {
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
-  border: 1px solid #004445;
+  border: 1px solid #ffde7d;
   -webkit-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 32px 5px rgba(0, 0, 0, 0.75);

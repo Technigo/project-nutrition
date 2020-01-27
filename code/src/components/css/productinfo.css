@@ -14,6 +14,11 @@
   padding: 5px 15px 5px 15px;
 }
 
+.nutrient-title {
+  color: #f6416c;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 601px) {
   .product-info {
     grid-column: 1;
