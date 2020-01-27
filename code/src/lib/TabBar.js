@@ -43,10 +43,12 @@ const Title = styled.span`
 export const TabBar = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0)
 
+
+  // Filters the tabs that not is skip
   return (
     <>
       <TabContainer>
-        {tabs.map((tab, index) => (
+        {tabs.filter(tab => !tab.skip).map((tab, index) => (
           <TabButton key={index} active={activeTab === index} onClick={() => setActiveTab(index)}>
             <Title active={activeTab === index}>{tab.title}</Title>
           </TabButton>

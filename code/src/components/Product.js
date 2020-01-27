@@ -33,6 +33,7 @@ export const Product = () => {
   if (!product) return null
 
   // Only show tabs when product is found
+  //Skip mapping tab if the tabs content array is 0
   return (
     <>
       {product.product && product.status === 1 && (
@@ -40,8 +41,8 @@ export const Product = () => {
           <TabBar
             tabs={[
               { title: "General", render: () => <ProductGeneral /> },
-              { title: "Ingredients", render: () => <ProductIngredients /> },
-              { title: "Category", render: () => <ProductOther /> }
+              { title: "Ingredients", render: () => <ProductIngredients />, skip: product.product.ingredients_hierarchy === 0 },
+              { title: "Category", render: () => <ProductOther />, skip: product.product.categories_tags === 0 }
             ]}
           />
         </ProductWrapper>

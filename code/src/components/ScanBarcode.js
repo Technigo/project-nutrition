@@ -6,6 +6,7 @@ import { products, fetchProduct } from 'reducers/products'
 
 // STYLED COMPONENTS
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -47,7 +48,7 @@ export const ScanBarcode = () => {
 
   // To use hardcoded product
   // const handleShowScan = () => {
-  //   dispatch(fetchProduct(OTHER_CODE))
+  //   dispatch(fetchProduct(OATLY_CODE))
   // }
 
   // To fetch the product you scan
