@@ -27,7 +27,6 @@ const FooterText = styled.p`
   margin: 0 0 5px 0;
   font-size: 12px;
   color: #f1f1f1;
-  width: 200px;
   text-align: center;
   @media (max-width: 449px) {
     font-size: 10px;
