@@ -27,6 +27,8 @@
   grid-template-rows: auto;
 }
 
-.product-diagram .not-found {
+.product .not-found {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }

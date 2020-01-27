@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-color: #c6f1d6;
+  background-color: #faf5e4;
   border-radius: 20px;
   -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -14,21 +14,22 @@
   height: 50px;
   width: 200px;
   font-size: 15px;
-  color: #c6f1d6;
+  color: #faf5e4;
   border-radius: 5px;
   cursor: pointer;
   justify-self: center;
-  background-color: #1fab89;
-  border: 1px solid #1fab89;
+  background-color: #2c786c;
+  border: 1px solid #004445;
   margin-bottom: 30px;
 }
 
 .landing-page .get-started-btn:hover {
-  color: #1fab89;
-  background-color: #c6f1d6;
-  border: 1px solid #1fab89;
+  color: #2c786c;
+  background-color: #faf5e4;
+  border: 1px solid #004445;
 }
 
 .landing-page img {
   width: 40%;
+  filter: brightness(70%);
 }
