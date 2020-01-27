@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
+import { Errors } from 'components/Errors';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -126,37 +127,6 @@ const ActionButton = styled.button`
   text-shadow: 2px 2px 3px gray;
 `;
 
-const ErrorSection = styled.div`
-  display: flex;
-  justify-content: center;
-  background: lightgrey;
-  padding 20px;
-`;
-
-const Error = styled.div`
-  padding: 20px;
-  background: white;
-  box-shadow: 2px 2px 4px grey;
-`;
-
-const ErrorTitle = styled.h4`
-  font-weight: bold;
-`;
-
-const ErrorText = styled.div`
-  color: black;
-`;
-
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const Button = styled.button`
-  padding: 10px;
-  margin-top: 10px;
-  box-shadow: 1px 1px 2px grey;
-`;
 export const Product = () => {
   const scan = useSelector(state => state.barcodes.product);
 
@@ -164,7 +134,7 @@ export const Product = () => {
 
   console.log('product', scan);
 
-  const categories =
+  const allergies =
     scan.product &&
     scan.product.traces_hierarchy.map(cat =>
       cat.replace('en', '').replace(':', '')
@@ -172,26 +142,9 @@ export const Product = () => {
 
   return (
     <>
-      <ErrorSection>
-        {scan.status === 0 && (
-          <Error>
-            <ErrorTitle>Sorry {scan.status_verbose}</ErrorTitle>
-            <ErrorText>
-              Try to scan your product again. Or your product may not be
-              included on www.openfoodfact.org. You can add your product on Open
-              Food Fact here.{' '}
-              <ButtonContainer>
-                <Button type="button" href="https://www.us.openfoodfacts.org/">
-                  Add product to Open Food Fact
-                </Button>
-              </ButtonContainer>
-            </ErrorText>
-          </Error>
-        )}
-      </ErrorSection>
+      <Errors />
       {scan.product && (
         <Wrapper>
-          <ErrorSection></ErrorSection>
           <Container>
             <ScanItem>
               <Title>
@@ -202,10 +155,11 @@ export const Product = () => {
                 </ul>
               </Title>
               <Categories>
-                This product contains {categories.length} traces to be aware of:{' '}
+                This product contains {allergies.length} traces of allergenic
+                food
                 <ul>
-                  {categories.map((nutrient, index) => (
-                    <li key={index}>{nutrient}</li>
+                  {allergies.map((allergy, index) => (
+                    <li key={index}>{allergy}</li>
                   ))}
                 </ul>
               </Categories>
@@ -221,48 +175,3 @@ export const Product = () => {
     </>
   );
 };
-
-/*
-
-const nutrients =
-    product.product &&
-    product.product.nutrient_levels.map(nut => nut.replace('en', ''));
-    
-<Nutrient>
-              <Title>Nutrient</Title>
-              <ul>
-                {nutrients.map((nutr, index) => (
-                  <li key={index}>{nutr}</li>
-                ))}
-              </ul>
-            </Nutrient>
-
-
-
-            <ScanItem>
-              <Title>Product image</Title>
-              <Image
-                src={scan.product && scan.product.image_front_small_url}
-              ></Image>
-            </ScanItem>
-
-            <ScanItem>
-              <Title>Packaging</Title>
-              {scan.product && scan.product.packaging}
-            </ScanItem>
-            <ScanItem>
-              <Title>
-                Nutrient{' '}
-                <ul>
-                  {categories.map((nutrient, index) => (
-                    <li key={index}>{nutrient}</li>
-                  ))}
-                </ul>
-              </Title>
-              <ul>
-                {categories.map((nutrient, index) => (
-                  <li key={index}>{nutrient}</li>
-                ))}
-              </ul>
-            </ScanItem>
-*/

@@ -19,7 +19,6 @@ const Button = styled.button`
   color: #33629a;
   font-size: 15px;
   font-weight: bold;
-  text-shadow: 2px 2px 3px gray;
   background: lightgray;
 `;
 
@@ -27,7 +26,8 @@ const Title = styled.p`
   color: #33629a;
 
   ${Button}:hover & {
-    font-size: 12px;
+    font-size: 15px;
+    text-shadow: 2px 2px 3px gray;
   }
 `;
 

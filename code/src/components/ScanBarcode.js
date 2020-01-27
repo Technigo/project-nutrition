@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
 const IntroSection = styled.div`
-  display: flex;
+  dislay: flex;
   flex-direction: column;
   align-items; center;
   margin-bottom: 20px;
@@ -15,7 +15,7 @@ const IntroTitle = styled.h1`
   text-align: center;
 `;
 
-const IntroText = styled.h3`
+const IntroTxt = styled.h3`
   text-align: center;
 `;
 
@@ -28,6 +28,7 @@ const ScannerContainer = styled.div`
   background-color: lightgrey;
   height: 400px;
 `;
+
 const ButtonWrapper = styled.div``;
 
 const FloatingButton = styled.button`
@@ -78,13 +79,13 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-        <ScannerContainer>
-          <IntroSection>
-            <IntroTitle>Are you a food allergicer?</IntroTitle>
-            <IntroText>Scan your products before you eat</IntroText>
-          </IntroSection>
+        <ButtonWrapper>
+          <ScannerContainer>
+            <IntroSection>
+              <IntroTitle>Are you a food allergicer?</IntroTitle>
+              <IntroTxt>Scan your products before you eat</IntroTxt>
+            </IntroSection>
 
-          <ButtonWrapper>
             <FloatingButton
               className="button"
               type="button"
@@ -96,8 +97,8 @@ export const ScanBarcode = () => {
               </Icon>
               Scan Product
             </FloatingButton>
-          </ButtonWrapper>
-        </ScannerContainer>
+          </ScannerContainer>
+        </ButtonWrapper>
       )}
 
       {showScanner && (
@@ -106,41 +107,10 @@ export const ScanBarcode = () => {
           onDetected={code => {
             console.log('Got barcode', code);
             setShowScanner(false);
-            dispatch(fetchBarcode(47694903));
+            dispatch(fetchBarcode(code));
           }}
         />
       )}
     </>
   );
 };
-
-/*
-
-  &::before,
-  &::after {
-    contents: '';
-    display: blocks;
-    position: absolute;
-    background: #fff;
-  }
-
-  &::before {
-    top: -0.3em;
-    bottom: -0.3em;
-    left: 1em;
-    right: 1em;
-
-    &::after {
-      left: 0.3em;
-      right: -0.3em;
-      top: 1em;
-      bottom: 1em;
-    }
-
-    ${FloatingButton} & {
-      position: relative;
-      z-index: 1;
-    }
-  }
-`;
-*/
