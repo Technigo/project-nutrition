@@ -1,19 +1,17 @@
 # Technigo React Starter App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This web app has been generated using `create-react-app`-boilerplate. The project is a barcode scanner, which scans and fetch an API through which we can get information about the scanned product. The web app renders information wether the product contains palm oil or not, and it also renders a message in case the scanning did not work or if the product is missing in the API.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+The project has been built with react redux, state-hooks and redux-hooks such as useDispatch and thunk.
 
-## Usage
+## The process
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+First I set upp the store and reducers for the web app, after that I mounted the barcodescanner and fetched the API to see what information I could get from it. Based on this I decided what the focus of the app would be an could start the planning of the project. Next step was to start mount data from the API, then I focused on bulidng the function and layput of the menu at the top left-corner. NExt step was to focus on conditional rednerings and adding the function behind the cancel-button that is showing when the scanner is active. 
 
-Alternatively, if you don't want a new git repo on your account;
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If I had more time I would have used route to make several pages for the app. I also would have adjusted what is visible when a barcode has been scanned and a product is showing. For example I would not want the barcode animation to show when a product has been found. 
+
+
+## Deployed site
+
+https://palmoil-nothanks.netlify.com/
