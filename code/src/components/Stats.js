@@ -13,8 +13,8 @@ export const Stats = () => {
             <p>Carton</p>
             <p>Plastic</p>
             <p>Glass</p>
-            <p>Pantburkar</p>
-            <p>PET-flaskor</p>
+            <p>Cans</p>
+            <p>Plastic bottles</p>
           </div>
           <div className='stats-before-2020'>
             <h5>Before 2020</h5>
@@ -45,23 +45,12 @@ export const Stats = () => {
           </div>
         </div>
 
-        <button
-          className='more-info-button'
-          type='button'
-          onClick={(e) => {
-            e.preventDefault()
-            window.location.href =
-              'https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/atervinning-av-forpackningar-i-sverige/'
-          }}>
+        <a
+          className='more-info-link'
+          href='https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/atervinning-av-forpackningar-i-sverige/'>
           Dig deeper
-        </button>
+        </a>
       </div>
     </div>
   )
-}
-
-{
-  /* <a className='more-info-button' href='https://www.ftiab.se/173.html'>
-Find recycling spot
-</a> */
 }

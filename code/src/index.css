@@ -3,8 +3,7 @@ body {
   font-family: 'Encode Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #83de9515; */
-  /* background-image: url(images/paperbackground2.png); */
+  background-color: #00000010;
 }
 
 h2,
@@ -32,15 +31,16 @@ main {
 }
 
 header {
-  background-color: #83de95;
+  background-color: #2d2f2e;
+  border-bottom: solid 10px #96d0ad;
 }
 
 header img {
   display: block;
   width: 80%;
-  padding: 1em;
+  padding: 1em 1em 0;
   box-sizing: border-box;
-  margin: 0 auto 4em;
+  margin: 0 auto 2em;
 }
 
 .loader {
@@ -49,13 +49,13 @@ header img {
 
 .scanning-button {
   padding: 0.5em 0.7em;
-  background-color: #1c2924;
+  background-color: #2d2f2e;
   color: white;
   font-size: 1.1em;
 }
 
 .not-found {
-  border: 2px solid gray;
+  border: 2px solid #1c2924;
   padding: 1em;
   text-align: center;
   margin-bottom: 3em;
@@ -96,8 +96,8 @@ canvas {
 .more-info-container {
   width: 100%;
   margin-top: 6em;
-  border-top: 3px solid #83de95;
-  border-bottom: 3px solid #83de95;
+  border-top: 3px solid #96d0ad;
+  border-bottom: 3px solid #96d0ad;
   padding: 4em 0;
   display: flex;
   justify-content: space-between;
@@ -111,19 +111,16 @@ canvas {
   margin: 0 0 1em;
 }
 
-.more-info-box {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
-  padding: 0.7em;
-  justify-content: center;
-  box-shadow: 4px 4px #5b5c5b50;
-  box-sizing: border-box;
-  max-width: 45%;
+.picture-one {
+  background: url(./images/återvinning.jpeg);
 }
 
-.picture {
-  background: url(./images/återvinning.jpeg);
+.picture-two {
+  background: url(./images/pantamera.png);
+}
+
+.picture-one,
+.picture-two {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -137,15 +134,24 @@ canvas {
   align-items: center;
 }
 
+.more-info-box {
+  flex-direction: column;
+  max-width: 45%;
+}
+
 .stats-box {
-  display: flex;
-  background-color: white;
-  padding: 0.7em;
-  justify-content: center;
-  box-shadow: 4px 4px #5b5c5b50;
-  box-sizing: border-box;
   margin: 4em 0;
   width: 100%;
+}
+
+.more-info-box,
+.stats-box {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  box-shadow: 4px 4px #5b5c5b50;
+  box-sizing: border-box;
+  padding: 0.7em;
 }
 
 .stats {
@@ -161,11 +167,12 @@ canvas {
   margin: 0 2em 1em;
 }
 
-.more-info-button {
+.more-info-link {
   padding: 0.5em 0.7em;
-  background-color: #83de95;
+  background-color: #96d0ad;
   color: #1c2924;
   font-size: 0.9em;
+  text-decoration: none;
 }
 
 @media (max-width: 900px) {
@@ -202,7 +209,8 @@ canvas {
     font-size: 0.8em;
   }
 
-  .picture {
+  .picture-one,
+  .picture-two {
     display: none;
   }
 }
