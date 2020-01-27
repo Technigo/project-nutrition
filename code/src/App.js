@@ -25,7 +25,7 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-
+      <div />
       <main>
         <Router>
           <Switch>

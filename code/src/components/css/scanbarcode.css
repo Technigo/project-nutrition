@@ -30,6 +30,7 @@
 
 .scanner video {
   width: 100%;
+  border-radius: 10px 10px 0 0;
 }
 
 .scanner canvas {
@@ -38,4 +39,12 @@
 
 .scanbarcode-container img {
   width: 50%;
+}
+
+@media only screen and (max-width: 601px) {
+  .scan-container {
+    width: 100%;
+    min-height: 80vh;
+    height: auto;
+  }
 }

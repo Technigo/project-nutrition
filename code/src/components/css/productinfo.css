@@ -22,10 +22,19 @@
 @media only screen and (max-width: 601px) {
   .product-info {
     grid-column: 1;
-    padding: 0px 5px;
+    height: 60px;
+    padding: 1px 0;
+    margin-bottom: 3px;
   }
   .product-info .nutrient {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .nutrient, .nutrient-title {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .product-info .nutrient {
+    padding: 0px 0px;
   }
 }
