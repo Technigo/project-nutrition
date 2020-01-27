@@ -1,0 +1,20 @@
+.showProduct {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showProduct img {
+    width: 50%;
+    height: 50%;
+}
+
+h2 {
+    font-size: 20px;
+    text-decoration-line: underline;
+}
+
+h4 {
+    margin: 20px;
+}

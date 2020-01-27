@@ -16,11 +16,12 @@ export const store = configureStore({ reducer})
 
 export const App = () => {
   return (
+    <section className="mainSection">
   <Provider store={store}>
     <ScanBarcode />
     <LoadingIndicator />
     <Product />
-    
     </Provider>
+    </section>
   )
 }

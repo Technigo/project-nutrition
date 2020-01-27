@@ -1,19 +1,21 @@
-.scanner {
-    background-color: brown;
-    width: 80%;
-    margin: 0 auto;
-    height: 600px;
+.scanSection {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+ 
 }
 
-.scanner video {
-    width: 60%;
-    border-radius: 10px;
+.startScanning {
+    background-color: #765285 ;
+    color: white;
+    border: White;
+    margin: 1.2rem;
+    font-size: 1rem;
+    font-family: 'Muli', sans-serif;
 }
 
-.scanner canvas {
-    height: 0;
+
+h3 {
+    margin: -10px 20px 0px 20px;
 }

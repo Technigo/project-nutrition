@@ -1,0 +1,23 @@
+.scanner {
+    /* background-color: brown; */
+    width: 80%;
+    margin: 0 auto;
+    /* height: 600px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scanner video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0px;
+}
+
+.scanner canvas {
+    height: 0;
+}
+
+img {
+    height: 400px;
+}
