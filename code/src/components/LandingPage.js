@@ -13,6 +13,7 @@ export const LandingPage = () => {
       <h2>Welcome to find out facts about food!</h2>
 
       <img src="assets/fruit-heart.png" />
+
       <br />
       <Link to="/scan">
         <button className="get-started-btn"> Get started >></button>
