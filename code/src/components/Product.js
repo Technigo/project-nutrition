@@ -11,13 +11,13 @@ export const Product = () => {
         <div className='not-found'>
           <p>Oh no, I couldn't find this product.</p>
           <p>
-            If you have the time, please visit{' '}
+            If you have the time, please visit
             <a
               href='https://world.openfoodfacts.org/'
               target='_blank'
               rel='noopener noreferrer'>
               Open Food Facts
-            </a>{' '}
+            </a>
             and add the product for others to find!
           </p>
         </div>
@@ -32,9 +32,17 @@ export const Product = () => {
           />
           <div className='product-text'>
             <h3>{scan.product.product_name}</h3>
-            <h2>
-              Please sort this as{''} {scan.product.packaging.toLowerCase()}
-            </h2>
+
+            {scan.product.packaging ? (
+              <h2>
+                Please sort this as{''} {scan.product.packaging.toLowerCase()}
+              </h2>
+            ) : (
+              <p>
+                Oh no, this product doesn't have any sorting advice. Ask a
+                friend for advice!
+              </p>
+            )}
           </div>
         </div>
       )}

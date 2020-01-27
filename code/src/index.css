@@ -3,7 +3,8 @@ body {
   font-family: 'Encode Sans Condensed', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #83de9515;
+  /* background-color: #83de9515; */
+  /* background-image: url(images/paperbackground2.png); */
 }
 
 h2,
