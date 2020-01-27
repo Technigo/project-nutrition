@@ -1,0 +1,14 @@
+.result-box {
+  background-color: #d7fcd4;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+}

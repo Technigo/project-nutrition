@@ -1,11 +1,24 @@
-.button-container {
+.scanner {
+  margin: 30px;
+}
+
+.drawingBuffer {
+  width: 0;
+  height: 0;
+}
+
+.camera-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.button-style {
+video {
+  max-width: 350px;
+}
+
+.button-cancel {
   background: #610345;
   color: white;
   font-size: 22px;
@@ -18,12 +31,15 @@
   margin: 20px;
 }
 
-.button-style:hover {
+.button-cancel:hover {
   opacity: 0.7;
 }
 
 @media (min-width: 668px) {
   .button-container {
     flex-direction: row;
+  }
+  video {
+    max-width: 500px;
   }
 }

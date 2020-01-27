@@ -6,7 +6,7 @@ import { ui } from 'reducers/ui'
 import { products } from 'reducers/products'
 import { Loading } from 'components/Loading'
 import { Product } from 'components/Product'
-import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -19,9 +19,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Loading />
-      <Header />
       <ScanBarcode />
       <Product />
+      <Footer />
     </Provider>
   )
 }

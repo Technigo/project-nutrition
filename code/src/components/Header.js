@@ -1,16 +1,23 @@
 import React from 'react'
-import orangutang from '../assets/orangutang.png'
-import styled from 'styled-components/macro'
+import { useSelector } from 'react-redux'
+import { Image } from './Image'
+
 
 export const Header = () => {
+  const cameraOn = useSelector(state => state.ui.isCameraOn)
+  
   return (
-    <ImageContainer>
-  <img src={orangutang} alt="Orangutang" />
-  </ImageContainer>
+  <>
+    {cameraOn && (
+      <div>
+        <Image />
+      </div>
+      )} 
+    {!cameraOn && (
+      <div>
+        <Image />
+      </div>
+      )} 
+  </>
   )
-}
-
-const ImageContainer = styled.div`
-display: flex;
-justify-content: center;
-`
+  }
