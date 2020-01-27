@@ -22,7 +22,7 @@ const Container = styled.div`
 
 const ScanItem = styled.div`
   color: black;
-  width: 30%;
+  width: 80%;
   height: 100%;
 
   display: flex;
@@ -52,9 +52,17 @@ const Title = styled.div`
   margin: 0px 20px 5px 20px;
   padding: 20px;
   border-bottom: 1px solid gray;
-  p {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  p.brand {
     font-weight: normal;
     margin: 0;
+    border-top: 1px solid black;
+  }
+  li {
+    font-weight: normal;
+    margin: 0;
+    list-style-type: none;
   }
 `;
 
@@ -77,9 +85,10 @@ const Packaging = styled.div`
   padding: 20px;
   border-bottom: 1px solid gray;
 
-  p {
+  li {
     font-weight: normal;
     margin: 0;
+    list-style-type: none;
   }
 `;
 
@@ -97,6 +106,7 @@ const Categories = styled.div`
 
   li {
     font-weight: normal;
+    list-style-type: none;
   }
 `;
 
@@ -116,6 +126,37 @@ const ActionButton = styled.button`
   text-shadow: 2px 2px 3px gray;
 `;
 
+const ErrorSection = styled.div`
+  display: flex;
+  justify-content: center;
+  background: lightgrey;
+  padding 20px;
+`;
+
+const Error = styled.div`
+  padding: 20px;
+  background: white;
+  box-shadow: 2px 2px 4px grey;
+`;
+
+const ErrorTitle = styled.h4`
+  font-weight: bold;
+`;
+
+const ErrorText = styled.div`
+  color: black;
+`;
+
+const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 2px grey;
+`;
 export const Product = () => {
   const scan = useSelector(state => state.barcodes.product);
 
@@ -125,29 +166,43 @@ export const Product = () => {
 
   const categories =
     scan.product &&
-    scan.product.categories_tags.map(cat =>
+    scan.product.traces_hierarchy.map(cat =>
       cat.replace('en', '').replace(':', '')
     );
 
   return (
     <>
-      {scan.status === 0 && <p>{scan.status_verbose}</p>}
-
+      <ErrorSection>
+        {scan.status === 0 && (
+          <Error>
+            <ErrorTitle>Sorry {scan.status_verbose}</ErrorTitle>
+            <ErrorText>
+              Try to scan your product again. Or your product may not be
+              included on www.openfoodfact.org. You can add your product on Open
+              Food Fact here.{' '}
+              <ButtonContainer>
+                <Button type="button" href="https://www.us.openfoodfacts.org/">
+                  Add product to Open Food Fact
+                </Button>
+              </ButtonContainer>
+            </ErrorText>
+          </Error>
+        )}
+      </ErrorSection>
       {scan.product && (
         <Wrapper>
+          <ErrorSection></ErrorSection>
           <Container>
             <ScanItem>
               <Title>
                 Brand and product
-                <p>{scan.product && scan.product.brands}</p>
-                <p>{scan.product && scan.product.ingredients_text}</p>
+                <ul className="Brand">
+                  <li>{scan.product && scan.product.brands}</li>
+                  <li>{scan.product && scan.product.product_name_en}</li>
+                </ul>
               </Title>
-
-              <Packaging>
-                Packaging<p>{scan.product && scan.product.packaging}</p>
-              </Packaging>
               <Categories>
-                Categories{' '}
+                This product contains {categories.length} traces to be aware of:{' '}
                 <ul>
                   {categories.map((nutrient, index) => (
                     <li key={index}>{nutrient}</li>

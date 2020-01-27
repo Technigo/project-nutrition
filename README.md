@@ -1,6 +1,29 @@
-# Project Nutrition
+# Project Nutrition built with React Hooks
 
-This week's project is all about tying together the skills you've learnt to build an app which scans barcodes on food packages to retrieve the product name and nutritional information.
+In this project I used React with Redux using a thunk to wrap my api call. I fetch the product data from the [Open world facts api](https://world.openfoodfacts.org/).
+
+In my barcode scan app, you can scan the barcode on any food package, if the product is found you will get a information card with
+
+- The name of the brand and product
+- The packaging of the product
+- Allergens information
+- Image of the product
+- And a message if the product is not found.
+
+I also use [quagga](https://github.com/serratus/quaggaJS) in order to access the webcam to use it to scan the products.
+
+In this project you will find;
+
+- API calls around Redux using thunks
+- Redux store
+- Structuring the redux store to suit the data
+
+Tools and techniques
+This prohjecy is build with functional React, and it's devided into multiple components. If I had more time I would have add a alert message if the product is not found and react router to divide the product info into a new page.
+
+- Use redux, preferably using a thunk to wrap your api call (but you don't have to if you don't want to).
+- Focus on making the UX of your app good. Handle when a product isn't found. Try to display relevant information about products and not overload your page with data.
+- Your page should be responsive.
 
 What you do with that information, and how you present it, is completely up to you. For example, you could build an app which makes an inventory of items you have in your kitchen, or you could build a calorie counter, or an app which counts the protein, salt, or fat content of foods.
 
@@ -10,8 +33,8 @@ Make sure to read through the hints and tips section further down to read up on 
 
 ## What you will learn 🧠
 
-* How to make API calls around Redux using thunks
-* How to structure your redux store to suit your data
+- How to make API calls around Redux using thunks
+- How to structure your redux store to suit your data
 
 ## How to get started 💪🏼
 
@@ -35,11 +58,11 @@ In src/components, you'll find a premade `BarcodeScanner` component. When mounte
 When the `BarcodeScanner` component sucessfully scans a barcode, it invokes a callback function with the barcode code. Here's an example component which mounts the `BarcodeScanner` when a user clicks a button:
 
 ```jsx
-import React, { useState } from 'react'
-import { BarcodeScanner } from 'components/BarcodeScanner'
+import React, { useState } from 'react';
+import { BarcodeScanner } from 'components/BarcodeScanner';
 
 export const ScanBarcode = () => {
-  const [showScanner, setShowScanner] = useState(false)
+  const [showScanner, setShowScanner] = useState(false);
 
   return (
     <>
@@ -50,14 +73,16 @@ export const ScanBarcode = () => {
       )}
 
       {showScanner && (
-        <BarcodeScanner onDetected={(code) => {
-          console.log('Got barcode', code)
-          setShowScanner(false)
-        }} />
+        <BarcodeScanner
+          onDetected={code => {
+            console.log('Got barcode', code);
+            setShowScanner(false);
+          }}
+        />
       )}
     </>
-  )
-}
+  );
+};
 ```
 
 Once you have the barcode, you can pass that to the [Open world facts api](https://world.openfoodfacts.org/) to try to find information about that product.
@@ -72,17 +97,16 @@ If the product was found in the database, you'll get a massive response back wit
 
 Since the scope for this project is very broad, the enforced requirements are few. You're free to decide how many tools and what approaches you use!
 
-* Use redux, preferably using a thunk to wrap your api call (but you don't have to if you don't want to).
-* Focus on making the UX of your app good. Handle when a product isn't found. Try to display relevant information about products and not overload your page with data.
-* Your page should be responsive.
-* Code follows Technigo’s code guidelines.
-* Contribute by helping others with this project on Stack Overflow.
-* If selected; demo your solution for your team.
-
+- Use redux, preferably using a thunk to wrap your api call (but you don't have to if you don't want to).
+- Focus on making the UX of your app good. Handle when a product isn't found. Try to display relevant information about products and not overload your page with data.
+- Your page should be responsive.
+- Code follows Technigo’s code guidelines.
+- Contribute by helping others with this project on Stack Overflow.
+- If selected; demo your solution for your team.
 
 ## How to hand in the code 🎯
 
-* When you’re finished with the project, push your code to GitHub with these commands:
+- When you’re finished with the project, push your code to GitHub with these commands:
 
   ```
   git add .
@@ -90,12 +114,12 @@ Since the scope for this project is very broad, the enforced requirements are fe
   git push origin master
   ```
 
-* Navigate to your repo and create a Pull Request into the Technigo repo (Add a link to your deployed project.)
-* Wait for the code review from your teachers
+- Navigate to your repo and create a Pull Request into the Technigo repo (Add a link to your deployed project.)
+- Wait for the code review from your teachers
 
 ## How to get help 🆘
 
-Ask for help and share your knowledge about this project with the 'project-nutrition' tag on [Stack Overflow](https://stackoverflow.com/c/technigo/questions). Talk to your team on Slack and help each other out. Do some research about your problem, you are surely not the first one with this problem, Google is your friend 🙂. And you can of course also book a tech call. 
+Ask for help and share your knowledge about this project with the 'project-nutrition' tag on [Stack Overflow](https://stackoverflow.com/c/technigo/questions). Talk to your team on Slack and help each other out. Do some research about your problem, you are surely not the first one with this problem, Google is your friend 🙂. And you can of course also book a tech call.
 
 ## Stretch Goals 🏃‍♂
 

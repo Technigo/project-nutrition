@@ -5,6 +5,7 @@ const Section = styled.div`
   width: 100%;
   margin-bottom: 0;
   background: lightgrey;
+  border-top: 1px solid grey;
 `;
 const Container = styled.div`
   display: flex;
@@ -15,19 +16,18 @@ const Container = styled.div`
 
 const Button = styled.button`
   border: none;
-  color: blue;
-  font-size: 12px;
+  color: #33629a;
+  font-size: 15px;
   font-weight: bold;
   text-shadow: 2px 2px 3px gray;
   background: lightgray;
 `;
 
 const Title = styled.p`
-  color: black;
+  color: #33629a;
 
   ${Button}:hover & {
-    color: blue;
-    font-size: 15px;
+    font-size: 12px;
   }
 `;
 

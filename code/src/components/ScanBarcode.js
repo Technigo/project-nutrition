@@ -4,12 +4,28 @@ import { fetchBarcode } from 'reducers/barcodes';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 
+const IntroSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items; center;
+  margin-bottom: 20px;
+`;
+
+const IntroTitle = styled.h1`
+  text-align: center;
+`;
+
+const IntroText = styled.h3`
+  text-align: center;
+`;
+
 const ScannerContainer = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: pink;
+  background-color: lightgrey;
   height: 400px;
 `;
 const ButtonWrapper = styled.div``;
@@ -18,7 +34,7 @@ const FloatingButton = styled.button`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: #4195fc;
+  background-color: #33629a;
   color: white;
   box-shadow: 4px 4px 4px 4px gray;
   border: none;
@@ -26,14 +42,14 @@ const FloatingButton = styled.button`
   position: relative;
 
   ${ButtonWrapper}:hover & {
-    background-color: purple;
-    color: black;
+    background-color: #4e97ec;
+    color: white;
+    box-shadow: 4px 4px 30px 4px #3072c1;
   }
 
   ${ButtonWrapper}:active & {
     box-shadow: none;
-    border: 1px solid rebeccapurple;
-    box-shadow: 4px 4px 30px 4px #0ff;
+    border: 1px inset white;
   }
 
   ${ButtonWrapper}:focus & {
@@ -45,11 +61,6 @@ const FloatingButton = styled.button`
     -moz-box-shadow: 0px 0px 4px #4195fc;
     -webkit-box-shadow: 0px 0px 4px #4195fc;
   }
-`;
-
-const Scan = styled.p`
-  padding: 1em;
-  position: absolute;
 `;
 
 const Icon = styled.i`
@@ -68,6 +79,11 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <ScannerContainer>
+          <IntroSection>
+            <IntroTitle>Are you a food allergicer?</IntroTitle>
+            <IntroText>Scan your products before you eat</IntroText>
+          </IntroSection>
+
           <ButtonWrapper>
             <FloatingButton
               className="button"
@@ -90,7 +106,7 @@ export const ScanBarcode = () => {
           onDetected={code => {
             console.log('Got barcode', code);
             setShowScanner(false);
-            dispatch(fetchBarcode(code));
+            dispatch(fetchBarcode(47694903));
           }}
         />
       )}

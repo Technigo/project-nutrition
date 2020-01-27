@@ -23,10 +23,11 @@ export const store = configureStore({
 export const App = () => {
   return (
     <Provider store={store}>
-      <Header title="nutrition scanner" />
+      <Header title="food tracer" />
       <LoadingIndicator />
-      <ScanBarcode />
       <Product />
+
+      <ScanBarcode />
       <Footer />
     </Provider>
   );

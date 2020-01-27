@@ -10,7 +10,7 @@ const Head = styled.div`
   width: 100%;
   margin: 0;
   border-top-radius: 16px;
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid #e2b9bd;
   box-shadow: 2px 2px 4px grey;
 `;
 

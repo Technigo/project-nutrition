@@ -16,3 +16,12 @@
 .scanner canvas {
   height: 0;
 }
+
+@media (min-width: 900px) {
+  .scanner video {
+    height: 400px;
+  }
+  .scanner canvas {
+    border-radius: 16px;
+  }
+}
