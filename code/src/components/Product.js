@@ -36,18 +36,23 @@ justify-content: center;
 align-items: center;
 background: rgb(69, 191, 15, 0.2);
 border: 2px solid black;
-margin-top: 20px;
+margin: 20px 10px 10px 10px;
 padding: 20px;
 font-family: 'Quicksand', sans-serif;
+@media (min-width: 668px) {
+  margin: 20px 0 0 0;
+}
 `
 
 const ContainerRow = styled.div`
+@media (min-width: 668px) {
 display: flex;
 flex-direction: row;
 justify-content: center;
 background: rgba(255, 255, 255, 0.8);
 padding: 20px;
 margin: 20px 10px;
+}
 `
 
 const ProductName = styled.h1`

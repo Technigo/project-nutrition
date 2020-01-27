@@ -28,11 +28,18 @@ const SavedList = styled.div`
 background: rgba(255, 255, 255, 0.8);
 font-family: 'Quicksand', sans-serif;
 padding: 10px;
-margin: 30px;
+margin: 20px 10px;
+@media (min-width: 668px) {
+  margin: 30px;
+}
 `
 
 const Heading = styled.h1`
 margin: 5px;
+font-size: 28px; 
+@media (min-width: 668px) {
+  font-size: 20px;
+}
 `
 
 const List = styled.ul`
