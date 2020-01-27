@@ -1,9 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import styled from 'styled-components/macro';
-import AlertTemplate from 'react-alert-template-basic';
-import { transitions, positions, Provider as AlertProvider } from 'react-alert';
-import { useAlert } from 'react-alert';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -12,9 +9,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 10px 0 10px;
+  margin: 0 10px 20px 10px;
   background-image: url(${props => props.src});
   width: 100%;
+
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
@@ -131,7 +129,6 @@ const ActionButton = styled.button`
 `;
 
 export const Product = () => {
-  const alert = useAlert();
   const scan = useSelector(state => state.barcodes.product);
 
   if (!scan) return null;
@@ -144,17 +141,10 @@ export const Product = () => {
       cat.replace('en', '').replace(':', '')
     );
 
-  const options = {
-    // you can also just use 'bottom center'
-    position: positions.BOTTOM_CENTER,
-    timeout: 5000,
-    offset: '30px',
-    // you can also just use 'scale'
-    transition: transitions.SCALE
-  };
-
   return (
     <>
+      {scan.status === 0 && <p>{scan.status_verbose}</p>}
+
       {scan.product && (
         <Wrapper>
           <Container>
@@ -184,12 +174,6 @@ export const Product = () => {
           </Container>
         </Wrapper>
       )}
-      <AlertProvider
-        onChange={() => alert.show(scan.status_verbose)}
-        type="error"
-      >
-        {scan.status === 0 && <p>{scan.status_verbose}</p>}
-      </AlertProvider>
     </>
   );
 };
