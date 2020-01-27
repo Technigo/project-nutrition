@@ -11,6 +11,7 @@ import { LandingPage } from './components/LandingPage'
 import { ScanBarcode } from './components/ScanBarcode'
 import { Product } from './components/Product'
 import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -24,25 +25,27 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-       <main>
-      <Router>
-        <Switch>
-         
+
+      <main>
+        <Router>
+          <Switch>
+
             <Route path="/" exact>
-              <LandingPage /> 
+              <LandingPage />
             </Route>
-            
+
             <Route path="/scan">
               <ScanBarcode />
-              <Navbar/>
+              <Navbar />
             </Route>
             <Route path="/product">
               <Product />
-              <Navbar/>
+              <Navbar />
             </Route>
-        </Switch>
-      </Router>
+          </Switch>
+        </Router>
       </main>
+      <Footer />
     </Provider>
   )
 }
