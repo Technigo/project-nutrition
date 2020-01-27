@@ -12,7 +12,7 @@
   /*  transform: scaleX(-1); flip the video */
   width: 70%;
   border-radius: 10px;
-  height: 500px;
+  height: 700px;
   position: absolute;
   margin-top: 50px;
 }
@@ -25,7 +25,15 @@
 .drawingBuffer {
   background-image: url('../assets/Tag.jpeg');
   border-radius: 10px;
-  width: 500px;
-  height: 500px;
+  width: 700px;
+  height: 700px;
   /* z-index: -1; */
 }
+
+.img {
+  width: 220px;
+}
+/* .sc-AykKE {
+  font-size: 16px;
+
+} */
