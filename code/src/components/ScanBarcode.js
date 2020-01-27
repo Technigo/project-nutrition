@@ -38,43 +38,43 @@ export const ScanBarcode = () => {
 
   const dispatch = useDispatch();
 
-  // onClick={() => setShowScanner(true)
-
-  const test = () => {
-    dispatch(fetchProduct(7394376615979));
-  };
-
   return (
     <>
-      <Product />
-      <Header>
-        <h1>Scan barcode of the product</h1>
-        <p>...that you would like to recreate!</p>
-      </Header>
-
       {!showScanner && (
         <Main>
+          <Product />
+          <Header>
+            <h1>Scan barcode of the product</h1>
+            <p>...that you would like to recreate!</p>
+          </Header>
           <ion-icon name="barcode"></ion-icon>
-          <Button type="button" onClick={test}>
+          <Button type="button" onClick={() => setShowScanner(true)}>
             SHOW SCANNER
           </Button>
         </Main>
       )}
 
       {showScanner && (
-        <BarcodeScanner
-          className="scanner"
-          onDetected={code => {
-            console.log("Got barcode", code);
-            setShowScanner(false);
-            dispatch(fetchProduct(7394376615979));
-          }}
-        />
+        <>
+          <Header>
+            <h1>Scan barcode of the product</h1>
+            <p>...that you would like to recreate!</p>
+          </Header>
+          <BarcodeScanner
+            className="scanner"
+            onDetected={code => {
+              console.log("Got barcode", code);
+              setShowScanner(false);
+              dispatch(fetchProduct(code));
+            }}
+          />
+        </>
       )}
     </>
   );
 };
 
-// 3045140105502
+//BARCODES I USED FOR TESTING:
+//3045140105502
 //8437014211962
 //7394376615979

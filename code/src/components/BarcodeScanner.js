@@ -16,7 +16,6 @@ const colors = [
   "#888"
 ];
 const color = colors[Math.floor(Math.random() * colors.length)];
-// setInterval(color, 1000);
 
 const Background = styled.div`
   background: ${color};
@@ -77,7 +76,6 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   return (
     <>
       {initializing && <Start>Starting camera...</Start>}
-
       <Background ref={cameraDivRef} className={className} />
     </>
   );

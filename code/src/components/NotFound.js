@@ -29,7 +29,7 @@ export const NotFound = () => {
     <Main>
       <Header>Product not found!</Header>
       <p>
-        Want to scan another product! Go down to the barcode scanner{" "}
+        Want to scan another product? Go down to the barcode scanner{" "}
         <span have role="img" aria-labelledby="go to scanner">
           👇{" "}
         </span>

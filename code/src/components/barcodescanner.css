@@ -1,6 +1,6 @@
 .scanner {
   margin: 0 auto;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,7 +14,7 @@
 .scanner canvas {
   height: 0;
 }
-/*  */
+
 @media (min-width: 700px) {
   .scanner video {
     width: 50%;
