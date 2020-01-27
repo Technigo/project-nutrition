@@ -17,7 +17,7 @@ export const ScanBarcode = () => {
         <h3>Find out were you can by more - scan you bar code</h3>
       {!showScanner && (
         <button type="button" className="startScanning" onClick={() => setShowScanner(true)}>
-          Start scanner
+          Start scanner >>
         </button>
       )}
 

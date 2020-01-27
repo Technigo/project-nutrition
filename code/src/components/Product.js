@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import './products.css'
+import { Error } from 'components/ErrorMsg'
 
 export const Product = () => {
     const product = useSelector(state => state.products.product)
@@ -18,7 +19,7 @@ export const Product = () => {
                 <h2> You will find it here: {product.product.stores}</h2>
             </section>
         )}
-        {product.status === 0 && <h4>We couldnt find the product, pleas try again! <span>🤞🏼</span></h4>}
+        {product.status === 0 && <Error />}
     
         </> 
     )
