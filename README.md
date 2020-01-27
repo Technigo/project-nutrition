@@ -4,7 +4,7 @@ This week's project at the Technigo boot camp was to build an app which scans ba
 
 Tech:
 <br>React</br>
-<br>Redux</br>
+Redux
 
 I created reducers for the UI and for the products and components for scanning the barcode, for displaying information about the scanned product and for handling loading. When the BarcodeScanner successfully scans a barcode, it invokes a callback function with the barcode code. The barcode is passed to the [Open world facts api](https://world.openfoodfacts.org/) to try to find information about that product.
 I used a thunk to wrap the API call and an error message for when the product isn't found.
