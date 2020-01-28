@@ -14,5 +14,5 @@ export const getVeganPercentage = data => {
 };
 
 export const getNotVegan = data => {
-  return data.product.ingredients.find(ingredient => ingredient.vegan && ingredient.vegan === "no");
+  return data.product.ingredients.some(ingredient => ingredient.vegan && ingredient.vegan === "no");
 };

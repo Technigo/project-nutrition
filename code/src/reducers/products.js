@@ -8,7 +8,7 @@ const isItVegan = response => {
       fetched: true,
       exist: false,
       barcode: response.code,
-      text: "Sorry, We dont know if this product is vegan or not"
+      text: "Sorry, We can't find this product"
     };
   }
 
@@ -22,7 +22,7 @@ const isItVegan = response => {
     name: response.product.product_name,
     text: notVegan
       ? "This product is NOT vegan!"
-      : `${percentage}% of this products' ingredients are vegan`
+      : `${percentage}% of this products' ingredients are marked as vegan`
   };
 };
 

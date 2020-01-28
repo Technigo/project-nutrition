@@ -60,6 +60,7 @@ export const Scan = styled.div`
   justify-content: center;
   align-items: center;
   & > video {
+    height: 50vh;
     border-radius: 20px;
   }
   & > canvas {

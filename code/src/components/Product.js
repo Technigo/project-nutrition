@@ -6,7 +6,7 @@ export const Product = () => {
 
   if (!product.fetched) return <h1>How vegan is your product?</h1>;
   if (!product.exist) {
-    return <h4>Sorry, We don't know if this product is vegan or not.</h4>;
+    return <h4>{product.text}</h4>;
   }
 
   return (

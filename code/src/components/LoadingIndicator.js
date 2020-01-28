@@ -6,7 +6,7 @@ export const LoadingIndicator = () => {
   return (
     <>
       <CountingSheep src={sheep} />
-      <h2>Loading...</h2>
+      <h2>Looking for product...</h2>
     </>
   );
 };
