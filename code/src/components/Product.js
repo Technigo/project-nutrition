@@ -42,7 +42,7 @@ const ScanItem = styled.div`
   }
 `;
 
-const Title = styled.div`
+const Brand = styled.div`
   color: black;
   font-weight: bold;
   display: flex;
@@ -70,48 +70,28 @@ const Title = styled.div`
   }
 `;
 
+const Allergies = styled.div`
+  color: black;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 85%;
+  background: white;
+  margin: 0px 20px 5px 20px;
+  padding: 20px;
+
+  li {
+    font-weight: normal;
+    list-style-type: none;
+  }
+`;
+
 const Image = styled.img`
   border: none;
   background-size: cover;
   width: 100%;
-`;
-
-const Packaging = styled.div`
-  color: black;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100%;
-  width: 85%;
-  background: white;
-  margin: 0px 20px 5px 20px;
-  padding: 20px;
-  border-bottom: 1px solid gray;
-
-  li {
-    font-weight: normal;
-    margin: 0;
-    list-style-type: none;
-  }
-`;
-
-const Categories = styled.div`
-  color: black;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: 100%;
-  width: 85%;
-  background: white;
-  margin: 0px 20px 5px 20px;
-  padding: 20px;
-
-  li {
-    font-weight: normal;
-    list-style-type: none;
-  }
 `;
 
 const ActionButtonsContainer = styled.div`
@@ -150,14 +130,15 @@ export const Product = () => {
         <Wrapper>
           <Container>
             <ScanItem>
-              <Title>
+              <Brand>
                 Brand and product
                 <ul className="Brand">
                   <li>{scan.product && scan.product.brands}</li>
                   <li>{scan.product && scan.product.product_name_en}</li>
                 </ul>
-              </Title>
-              <Categories>
+              </Brand>
+
+              <Allergies>
                 This product contains {allergies.length} traces of allergenic
                 food
                 <ul>
@@ -165,8 +146,10 @@ export const Product = () => {
                     <li key={index}>{allergy}</li>
                   ))}
                 </ul>
-              </Categories>
+              </Allergies>
+
               <Image src={scan.product && scan.product.image_front_url}></Image>
+
               <ActionButtonsContainer>
                 <ActionButton type="button">Add to favourites</ActionButton>
                 <ActionButton type="button">Share product</ActionButton>
