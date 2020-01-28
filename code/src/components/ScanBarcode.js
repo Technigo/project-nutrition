@@ -6,7 +6,6 @@ import styled from 'styled-components/macro'
 import './barcodeScanner.css'
 
 
-
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
@@ -14,11 +13,11 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-
-        <button className="button" type="button" onClick={() => setShowScanner(true)}>
-          SHOW SCANNER
+        <div className="background">
+          <button className="button" type="button" onClick={() => setShowScanner(true)}>
+            SHOW SCANNER
         </button>
-
+        </div>
       )}
 
       {showScanner && (

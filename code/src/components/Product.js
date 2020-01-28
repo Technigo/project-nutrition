@@ -18,17 +18,16 @@ export const Product = () => {
           <section className="result">
             <div className="product-wrapper">
               <h1 className="product-name">{scan.product.product_name}</h1>
-              <p>INGREDIENTS: {scan.product.ingredients_text}</p>
+              <p className="ingredients">INGREDIENTS: {scan.product.ingredients_text}</p>
             </div>
             <div className="image-wrapper" >
               <img className="front-image" src={scan.product.image_front_url} />
-              <img className="nutrition-image" src={scan.product.image_nutrition_url} />
             </div>
 
 
           </section>
         )}
-      {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+      {scan.status === 0 && <h1 className="not-found">{scan.status_verbose}</h1>}
     </>
   )
 }

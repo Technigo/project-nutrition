@@ -1,0 +1,16 @@
+.background{
+  background-image: url(./Assets/food.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fde7dc;
+ 
+}
+
+#id {
+  height: 100%;
+}

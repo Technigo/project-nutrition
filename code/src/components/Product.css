@@ -1,15 +1,11 @@
-/* .error-message {
-color: blue;
-} */
 
 .result {
-  background-image: url('../Assets/food.jpg');
   background-size: cover;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  height: 600px;
+  height: 800px;
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: row;
   align-items: flex-end;
   justify-content: space-evenly;
   flex-direction: column;
@@ -21,6 +17,13 @@ color: blue;
 }
 
 .product-name {
+  font-size: 40px;
+  font-weight: normal;
+}
+
+.ingredients {
+  font-size: 20px;
+  font-weight: normal;
 
 }
 
@@ -32,15 +35,28 @@ color: blue;
 }
 
 .front-image {
-border-radius: 10%;
-margin: 10px;
-width: 30%;
-align-self: flex-end;
-
+  border-radius: 10%;
+  margin: 30px;
+  width: 80%;
+  align-self: flex-end;
 }
 
-.nutrition-image {
-  border-radius: 10%;
-  margin: 10px;
-  width: 40%;
+.not-found {
+  font-size: 30px;
+  font-weight: normal;
+  position: absolute;
+}
+
+@media (max-width: 375px) {
+
+.result {
+  width: 50%;
+  margin-right: 20px;
+}
+  
+.product-wrapper {
+  margin-left: 200px;
+  margin-right: 0;
+}
+
 }

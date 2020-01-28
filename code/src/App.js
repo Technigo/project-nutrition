@@ -6,6 +6,7 @@ import { ui } from './reducers/ui'
 import { products } from './reducers/products'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
+import './app.css'
 
 const reducer = combineReducers({
   ui: ui.reducer,
@@ -17,9 +18,11 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
-      <LoadingIndicator />
-      <ScanBarcode />
-      <Product />
+      <div className="background">
+        <LoadingIndicator />
+        <ScanBarcode />
+        <Product />
+      </div>
     </Provider>
   )
 }

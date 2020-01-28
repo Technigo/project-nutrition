@@ -1,20 +1,19 @@
 .scanner {
   background-image: url('../Assets/food.jpg');
   background-size: cover;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  height: 600px;
+  height: 800px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-position: relative;
 }
 
 .scanner video {
   transform: scaleX(-1);
-  width: 40%;
+  width: 30%;
   border-radius: 10px;
-  margin: 60px;
+  margin-right: 100px;
 }
 
 .scanner canvas {
@@ -28,29 +27,44 @@ position: relative;
 
 }
 
-
-
 .button {
-background: #bb2d4a;
-border-radius: 50%;
-background-size: cover;;
-display: inline-block;
-border: none;
-padding: 20px;
-width: 140px;
-height: 140px;
-margin: 10px;
-transition: all 0.5;
-cursor: pointer; 
-position: absolute;
-bottom: 400px;
-font-size: 18px;
-font-weight: 700;
-
+  background: #bb2d4a;
+  border-radius: 50%;
+  background-size: cover;;
+  display: inline-block;
+  border: none;
+  padding: 20px;
+  width: 140px;
+  height: 140px;
+  margin: 10px;
+  transition: all 0.5;
+  cursor: pointer; 
+  position: absolute;
+  bottom: 400px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.starting-camera {
-  text-align: center;
+@media (max-width: 375px) {
 
+  .scanner {
+    height: 700px;
+  }
+
+  .button {
+    height: 90px;
+    width: 90px;
+    font-size: 12px;
+    bottom: 550px;;
+    
+  }
+
+  .scanner video {
+    width: 60%;
+    margin-right: 80px;
+    margin-left: 50px;
+    align-content: center;
+  }
+  
 }
 
