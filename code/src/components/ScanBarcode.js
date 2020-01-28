@@ -26,7 +26,11 @@ const ScannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: lightgrey;
-  height: 500px;
+  height: 400px;
+
+  @media (min-width: 900px) {
+    height: 500px;
+  }
 `;
 
 const ButtonWrapper = styled.div``;
