@@ -11,13 +11,13 @@ export const Product = () => {
         <div className='not-found'>
           <p>Oh no, I couldn't find this product.</p>
           <p>
-            If you have the time, please visit
+            If you have the time, please visit{' '}
             <a
               href='https://world.openfoodfacts.org/'
               target='_blank'
               rel='noopener noreferrer'>
               Open Food Facts
-            </a>
+            </a>{' '}
             and add the product for others to find!
           </p>
         </div>
@@ -25,11 +25,20 @@ export const Product = () => {
 
       {!isScanning && scan.status === 1 && (
         <div className='product-info'>
-          <img
-            className='product-image'
-            src={scan.product.image_url}
-            alt='product'
-          />
+          {scan.product.image_url ? (
+            <img
+              className='product-image'
+              src={scan.product.image_url}
+              alt='product'
+            />
+          ) : (
+            <div className='no-image'>
+              <p>Image</p>
+              <p>not</p>
+              <p>found</p>
+            </div>
+          )}
+
           <div className='product-text'>
             <h3>{scan.product.product_name}</h3>
 
@@ -40,7 +49,7 @@ export const Product = () => {
             ) : (
               <p>
                 Oh no, this product doesn't have any sorting advice. Ask a
-                friend for advice!
+                friend for help!
               </p>
             )}
           </div>

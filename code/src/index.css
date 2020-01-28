@@ -81,6 +81,17 @@ header img {
   margin-right: 1em;
 }
 
+.no-image {
+  display: flex;
+  flex-direction: column;
+  line-height: 0;
+  margin-right: 4em;
+}
+
+.no-image p {
+  margin-top: 0.5em;
+}
+
 video {
   display: block;
   transform: scaleX(-1);
