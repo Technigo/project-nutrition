@@ -4,14 +4,11 @@ export const ui = createSlice({
   name: 'ui',
   initialState: {
     isLoading: false,
-    isImage: true,
+    isImage: false,
   },
   reducers: {
     setLoading: (state, action) => {
       state.isLoading = action.payload
-    },
-    setImage: (state, action) => {
-      state.isImage = action.payload
     }
   }
 })
