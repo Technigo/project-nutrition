@@ -24,7 +24,10 @@ console.log('SCAN', scan)
         </div>
         </div>
       )}
-       {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+   
+       <div className="result-container">
+         {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+       </div>
     </>
   )
 }

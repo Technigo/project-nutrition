@@ -19,8 +19,8 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Loading />
-      <Product />
       <ScanBarcode />
+      <Product />
       <Footer />
     </Provider>
   )

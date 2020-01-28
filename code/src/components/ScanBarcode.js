@@ -14,7 +14,7 @@ export const ScanBarcode = () => {
 
   return (
     <>
-      {!showScanner && (
+      {!showScanner && ( 
         <div className="button-container">
           <Image />
           <button className="button-style" type="button" onClick={() => setShowScanner(true)}>
