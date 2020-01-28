@@ -26,7 +26,7 @@ const ScannerContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: lightgrey;
-  height: 400px;
+  height: 430px;
 
   @media (min-width: 900px) {
     height: 500px;
