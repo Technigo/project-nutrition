@@ -14,13 +14,13 @@ export const Header = () => {
                 <div></div>
             </div>
             <div className="headerInfo">
-                <h1>Nutrition info</h1>
+                <h1>Food scanner</h1>
 
             </div>
             <nav
                 className="headerNavigation">
                 <p href="#">Home</p>
-                {/* <p href="#">Subscribe</p> */}
+                <p href="#">Subscribe</p>
                 <p href="#">Search</p>
             </nav>
         </div>

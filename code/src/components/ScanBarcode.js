@@ -10,8 +10,8 @@ const Button = styled.button`
   text-align: center;
   justifycontent: center;
   font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
+  margin: 4em;
+  padding: 0.50em 2em;
   border: 2px solid #bceaef;
   background: #bceaef;
 //   color: white;
@@ -25,6 +25,7 @@ const Btn = styled.div`
   flex-direction: row;
   justify-content: center;
   background:  #e5faf5;
+  margin: 0px;
 `
 export const ScanBarcode = () => {
     const [showScanner, setShowScanner] = useState(false)

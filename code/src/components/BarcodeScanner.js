@@ -1,6 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
-import styled from "styled-components"
+import styled from "styled-components/macro"
 import 'components/BarcodeScanner.css'
 const CameraDiv = styled.div`
   background:  #e5faf5;

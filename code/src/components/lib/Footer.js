@@ -7,7 +7,7 @@ const Container = styled.div`
   justify-content: space-between;
   background-color: #bce9ef;
   width: 100%;
-  height: 80px;
+  height: 90px;
   margin: 0;
 `
 const BtnContainer = styled.div`
