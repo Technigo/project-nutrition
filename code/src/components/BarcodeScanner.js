@@ -6,6 +6,7 @@ import './barcodeScanner.css';
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
+  height: 100%;
 `;
 
 const ScannerContainer = styled.div`

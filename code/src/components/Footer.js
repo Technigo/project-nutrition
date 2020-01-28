@@ -7,11 +7,11 @@ const Section = styled.div`
   background: lightgrey;
   border-top: 1px solid grey;
 `;
-const Container = styled.div`
+const ButtonContainer = styled.div`
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 30px;
 `;
 
 const Button = styled.button`
@@ -23,20 +23,44 @@ const Button = styled.button`
 `;
 
 const Title = styled.p`
-  color: #33629a;
+  color: black;
 
   ${Button}:hover & {
     font-size: 15px;
     text-shadow: 2px 2px 3px gray;
+    color: #33629a;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+`;
+
+const AboutSection = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+
+  p {
+    padding: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    padding: 20px;
+    width: 80%;
   }
 `;
 
 export const Footer = () => {
   return (
     <Section>
-      <Container>
+      <ButtonContainer>
         <Button type="button">
-          <Title>Scan</Title>
+          <Title>About</Title>
         </Button>
         <Button type="button">
           <Title>History</Title>
@@ -44,7 +68,14 @@ export const Footer = () => {
         <Button type="button">
           <Title>Favourites</Title>
         </Button>
-      </Container>
+      </ButtonContainer>
+      <AboutSection>
+        <Title>
+          This site uses data from Open Food Facts, a free and open database.
+          You can add information to products on{' '}
+          <a href="https://www.openfoodfact.org">www.openfoodfact.org</a>
+        </Title>
+      </AboutSection>
     </Section>
   );
 };

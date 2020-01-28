@@ -19,9 +19,7 @@
 
 @media (min-width: 900px) {
   .scanner video {
-    height: 400px;
-  }
-  .scanner canvas {
+    height: 80%;
     border-radius: 16px;
   }
 }
