@@ -13,7 +13,7 @@ export const Error = (props) => {
     return (
       <ParentContainer>
       <Container>
-      {props.msg}!
+      {props.msg}
       </Container>
       </ParentContainer>
     );
