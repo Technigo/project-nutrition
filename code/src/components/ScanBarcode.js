@@ -8,8 +8,6 @@ import './button.css'
 import './scanner.css' 
 
 
-
-
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
@@ -40,6 +38,7 @@ export const ScanBarcode = () => {
         </button>
         </div>
       )}
+      
     </>
   )
 }
