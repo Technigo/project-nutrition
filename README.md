@@ -1,5 +1,10 @@
 # Project Nutrition
 
+## See the web app live here:
+https://ninamansster-food.netlify.com/
+
+
+## Introduction
 This week's project is all about tying together the skills you've learnt to build an app which scans barcodes on food packages to retrieve the product name and nutritional information.
 
 What you do with that information, and how you present it, is completely up to you. For example, you could build an app which makes an inventory of items you have in your kitchen, or you could build a calorie counter, or an app which counts the protein, salt, or fat content of foods.
