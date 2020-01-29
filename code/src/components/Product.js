@@ -39,25 +39,42 @@ export const Product = () => {
     if (!scan) return null
     // if we get a product, we want to show it
     console.log('SCAN', scan)
+    
+    const formattedCategories =
+    scan.product &&
+    scan.product.ingredients_tags.map(cat =>
+      cat.replace('sv:', '').replace(/-/gi, ' ')
+    )
+    
+    
     return (
-        <ProductContainer>
-            <ProductHeading>
-                <img src={scan.product && scan.product.image_thumb_url} alt="" />
-                <h1>{scan.product && scan.product.product_name}</h1>
-                {/* <h4>Ingredients:{product.product && product.product.ingredients_tags}</h4> */}
-            </ProductHeading>
-            <ProductInfo>
-                <h4>Ingredients:</h4>
-                <h4>{scan.product && scan.product.ingredients_tags}</h4>
-            </ProductInfo>
-            <ProductStore>
-                <h5 className="Stores">Stores:{scan.product && scan.product.stores}</h5>
-            </ProductStore>
-            <ProductImg>
-                {/* first checking that we get the product in the fetch && then show the picture of the product */}
-                <img src={scan.product && scan.product.image_url} alt="" />
-                {/* <img src={scan.product && scan.product.image_nutrition_url} alt="" /> */}
-            </ProductImg>
-        </ProductContainer>
+        <>
+        {scan.product && scan.status === 1 && (
+            <ProductContainer>
+                <ProductHeading>
+                    <img src={scan.product && scan.product.image_thumb_url} alt="" />
+                    <h1>{scan.product && scan.product.product_name}</h1>
+                    {/* <h4>Ingredients:{product.product && product.product.ingredients_tags}</h4> */}
+                </ProductHeading>
+                <ProductInfo>
+                    <h4>Ingredients:</h4>
+                        <ul>
+                            {formattedCategories.map((cat, index) => (
+                                <li key={index}>{cat}</li>
+                            ))}
+                        </ul>
+                </ProductInfo>
+                <ProductStore>
+                    <h5 className="Stores">Stores:{scan.product && scan.product.stores}</h5>
+                </ProductStore>
+                <ProductImg>
+                    {/* first checking that we get the product in the fetch && then show the picture of the product */}
+                    <img src={scan.product && scan.product.image_url} alt="" />
+                    {/* <img src={scan.product && scan.product.image_nutrition_url} alt="" /> */}
+                </ProductImg>
+            </ProductContainer>
+        )}
+        {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
+        </>
     )
 }

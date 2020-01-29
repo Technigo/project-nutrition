@@ -4,6 +4,16 @@ import { useDispatch } from 'react-redux'
 import { fetchProduct } from ' reducers/products'
 import styled from "styled-components/macro"
 
+// const ScanBarcodeContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   background-color: yellow;
+//   width: 100%;
+//   height: 300px;
+//   margin: 0;
+// `
+
 const Button = styled.button`
   display: flex;
   flex-direction: row;
@@ -33,6 +43,7 @@ export const ScanBarcode = () => {
 
   return (
     <>
+      {/* <ScanBarcodeContainer> */}
       <Btn>
         {!showScanner && (
           <Button type='button' onClick={() => setShowScanner(true)}>
@@ -41,7 +52,7 @@ export const ScanBarcode = () => {
       
       )}
     </Btn>
-   
+    {/* </ScanBarcodeContainer> */}
         {showScanner && (
           <BarcodeScanner 
             className='scanner' 
