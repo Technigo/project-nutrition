@@ -3,8 +3,8 @@ import { useSelector } from 'react-redux'
 
 export const Product = () => {
   const scan = useSelector(state => state.products.product)
-  const formatIngredients = []
-  const formattedNutritients = []
+  let formatIngredients = []
+  let formatNutritients = []
   console.log('scan', scan)
 
 
@@ -17,12 +17,10 @@ export const Product = () => {
   }
 
   if (scan.product && scan.product.nutrient_levels_tags) {
-    formattedNutritients = scan.product.nutrient_levels_tags.map(ingredient =>
+    formatNutritients = scan.product.nutrient_levels_tags.map(ingredient =>
       ingredient.replace(/\w+:/, ' ').replace(/-/gi, ' ').replace(':', ' ')
     )
   }
-
-
 
   return (
     <div>
@@ -48,7 +46,7 @@ export const Product = () => {
 
             <ul className="product-info">
               <span className="highlight">Nutritional information:</span>
-              {formattedNutritients.map((nutritient, index) => (
+              {formatNutritients.map((nutritient, index) => (
                 <li key={index}>{nutritient}</li>
               ))}
             </ul>
