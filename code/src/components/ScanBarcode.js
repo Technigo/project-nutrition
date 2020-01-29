@@ -4,7 +4,7 @@ import { fetchNutritionValues } from '../reducers/macros.js'
 import { useDispatch } from 'react-redux'
 import { Button } from '@material-ui/core'
 
-const TESTCODE = '7310865071804' /** mjölk=7310865071804 kaviar=5218020031149*/
+const TESTCODE = '7310865071804' /** mjölk=7310865071804 kaviar=5218020031149* oatly=7394376615733 */
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
 

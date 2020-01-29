@@ -28,7 +28,7 @@ export const App = () => {
       </header>
       <main>
         <ScanBarcode />
-        <div class="status-info">
+        <div className="status-info">
           <LoadingIndicator />
         </div>
         <FoodsList />

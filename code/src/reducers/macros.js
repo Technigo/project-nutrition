@@ -20,7 +20,7 @@ const foods = [{
     fat: 10,
     proteins: 10,
     carbohydrates: 10
-  }
+  },
 }]
 export const macros = createSlice({
   name: 'macros',
@@ -44,13 +44,15 @@ export const fetchNutritionValues = (code) => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
     .then(res => res.json())
     .then(json => {
+      console.log(json)
       if (json.status === 0) {
         dispatch(ui.actions.setLoading(false))
+        dispatch(ui.actions.setShowSnackbar([true, `Could not find any product with code ${code}`, 'error']))
         return
       }
 
       const food = { /* create a food object to be put in foods array */ 
-        name: json.product.generic_name,
+        name: json.product.product_name,
         barcode: code,
         kcal: Math.round(json.product.nutriments.energy_value / 4.2), /* Change from kJ to kcal */ 
         macroValues: {
@@ -59,9 +61,9 @@ export const fetchNutritionValues = (code) => {
           carbohydrates: json.product.nutriments.carbohydrates_100g
         }
       }
-      
       dispatch(macros.actions.addFood(food))
       dispatch(ui.actions.setLoading(false))
+      dispatch(ui.actions.setShowSnackbar([true, `Added ${food.name}`, 'success']))
     })
 
   }
