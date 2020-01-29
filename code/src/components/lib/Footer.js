@@ -54,34 +54,34 @@ export const Footer = () => {
         <Icon>
           <Emoji>
             <span role="img" aria-label="star">
-              💫
+              🔦
             </span>
           </Emoji>
-          <Label>Adventure</Label>
+          <Label>Search</Label>
         </Icon>
         <Icon>
           <Emoji>
             <span role="img" aria-label="snowflake">
-              ⭐️
+              🍿
             </span>
           </Emoji>
-          <Label>Snow</Label>
+          <Label>My list</Label>
         </Icon>
         <Icon>
           <Emoji>
             <span role="img" aria-label="sun">
-              ☀️
+              📷
             </span>
           </Emoji>
-          <Label>Sun</Label>
+          <Label>Photos</Label>
         </Icon>
         <Icon>
           <Emoji>
             <span role="img" aria-label="sun">
-              🌴
+              📲
             </span>
           </Emoji>
-          <Label>Favourites</Label>
+          <Label>APP</Label>
         </Icon>
       </BtnContainer>
     </Container>

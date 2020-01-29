@@ -1,8 +1,6 @@
 import React from 'react'
 import 'components/header.css'
-// import { useDispatch } from 'react-redux'
-// import { TodoTasksSummary } from './TodoTasksSummary';
-// import { ClearButton } from './ClearButton';
+
 export const Header = () => {
     // const dispatch = useDispatch()
     return (
