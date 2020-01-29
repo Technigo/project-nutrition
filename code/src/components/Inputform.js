@@ -101,6 +101,7 @@ export const InputForm = () => {
             <Input
               type="text"
               placeholder="Enter code"
+              autoFocus="autoFocus"
               value={code}
               onChange={(event) => setCode(event.target.value)}
               handleSubmit={code => {
