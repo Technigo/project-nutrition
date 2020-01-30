@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.roots{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+
+video{
+    display: flex;
+    width: 50vw;
+    border: 1em solid;
+    border-color: powderblue;
+}
+canvas{
+  height: 0;
+}
+
+
+h1, h2{
+  font-family: 'Abril Fatface', cursive;
+}

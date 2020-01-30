@@ -1,0 +1,35 @@
+
+
+.intro-text{
+    border: solid;
+    border-style: solid;
+    width: 60vw;
+    margin-top: 3em;
+    background: powderblue;
+}
+
+
+.card img{
+  margin: 1em;
+}
+.product{
+list-style-type: none;
+    border: solid;
+    padding: 2em;
+}
+
+.highlight-info{
+  font-size: 2em;
+    color: teal;
+}
+
+
+
+
+
+
+
+
+
+
+
