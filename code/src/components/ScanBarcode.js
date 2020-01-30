@@ -8,7 +8,7 @@ export const ScanBarcode = () => {
   const dispatch = useDispatch
 
   return (
-    <>
+    <div>
       {!showScanner && (
         <button type="button" onClick={() => setShowScanner(true)}>
           Show scanner
@@ -24,6 +24,6 @@ export const ScanBarcode = () => {
           }}
         />
       )}
-    </>
+    </div>
   )
 }
