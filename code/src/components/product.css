@@ -25,7 +25,11 @@ list-style-type: none;
 
 
 
-
+.not-found{
+  display: block;
+    background-color: antiquewhite;
+    width: 60vw;
+}
 
 
 

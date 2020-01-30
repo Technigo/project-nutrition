@@ -10,6 +10,9 @@ export const Product = () => {
   console.log('scan', scan)
 
 
+
+
+
   if (!scan) return null
 
   if (scan.product && scan.product.ingredients_analysis_tags) {
@@ -41,7 +44,7 @@ export const Product = () => {
           <img src={scan.product.image_front_url} alt="productpic" />
           <img src={scan.product.image_ingredients_url} alt="ingredients pics" />
 
-          <div className="product-container">
+          <div>
 
             <ul className="product">
               <span className="highlight-info">Ingredients:</span>
@@ -60,9 +63,13 @@ export const Product = () => {
         </div>
       }
       {scan.status === 0 &&
-        <h1 className="not-found">{scan.status_verbose}
-          Please try again or chocie another product!
+
+        <div className="not-found">
+          <h1 >
+            Please try again or chocie another product!
           </h1>
+        </div>
+
       }
     </div>
   )
