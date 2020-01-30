@@ -54,3 +54,5 @@ export const Stats = () => {
     </div>
   )
 }
+
+//todo when there is time: change this to a table for content
