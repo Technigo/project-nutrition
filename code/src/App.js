@@ -19,8 +19,6 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 20px;
-  /* background: firebrick;
-  background-image: url('./assets/boudewijn-huysmans-y-y3JMAzIdM-unsplash.jpg'); */
 `
 
 const reducer = combineReducers({
@@ -36,7 +34,6 @@ export const App = () => {
       <Container>
         <ScanBarcode />
         <InputBarcode />
-        {/* <LoadingIndicator /> */}
         <Product />
       </Container>      
     </Provider>

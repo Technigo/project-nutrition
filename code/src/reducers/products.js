@@ -14,9 +14,7 @@ export const products = createSlice({
 })
 export const fetchProduct = (barcode) => {
     return dispatch => {
-        // dispatch(ui.actions.setLoading(true))
         fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-        // fetch(`https://world.openfoodfacts.org/api/v0/product/5000184321064.json`)
         .then(res => res.json())
         .then(json => {
             console.log(json)

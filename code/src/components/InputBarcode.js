@@ -10,7 +10,6 @@ export const InputBarcode = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         dispatch(fetchProduct(barcode))
-        // setName('')
     }
     return (
         <form onSubmit={handleSubmit}>
@@ -25,9 +24,7 @@ export const InputBarcode = () => {
                  type="submit"
                  disabled={barcode.length < 1}
                  >Search barcode</Button>
-           
-        </form>
-        
+        </form> 
     )
 }
 
@@ -43,4 +40,6 @@ margin: 10px 0px;
 background: #366e00;
 border: none;
 box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+font-family: 'Nunito', sans-serif;
+color: white;
 `

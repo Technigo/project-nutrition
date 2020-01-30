@@ -1,0 +1,18 @@
+
+.scanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scanner video {
+    width: 50%;
+    height: auto;
+    margin-bottom: 10px;
+    background: #366e00;
+    border: none;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+}
+
+.scanner canvas {
+    display: none;
+}

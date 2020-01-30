@@ -16,23 +16,21 @@ export const ScanBarcode = () => {
         <Button type="button" onClick={() => setShowScanner(true)}>
           Show scanner
         </Button>
-        // <Button type="button" onClick={() => {
-        //   console.log('Got product')
-        //   setShowScanner(false)
-        //   dispatch(fetchProduct())
-        // }}>
-        //   Show product
-        // </Button>
       )}
 
       {showScanner && (
-        <BarcodeScanner 
-        className='scanner'
-        onDetected={(code) => {
-          console.log('Got barcode', code)
-          setShowScanner(false)
-          dispatch(fetchProduct(code))
-        }} />
+        <>
+        <Button type="button" onClick={() => setShowScanner(false)}>
+          Hide scanner
+        </Button>
+          <BarcodeScanner 
+          className='scanner'
+          onDetected={(code) => {
+            console.log('Got barcode', code)
+            setShowScanner(false)
+            dispatch(fetchProduct(code))
+          }} />
+      </>
       )}
     </>
   )
@@ -50,4 +48,6 @@ margin: 10px 0px;
 background: #366e00;
 border: none;
 box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.2), 0px 3px 3px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0,0,0,.12);
+color: white;
+font-family: 'Nunito', sans-serif;
 `
