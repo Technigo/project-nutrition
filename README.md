@@ -1,7 +1,7 @@
 
 # "Project Nutrition" a multi-page app using React-Redux & React Router
 
-  This project is an app which scans barcodes on food packages to retrieve the product name and nutritional information. The      data is taken from <link> https://world.openfoodfacts.org/ </link>
+Identify your food items with barcode scanner. Scan the item, get some nutritional information. The data is taken from <link> https://world.openfoodfacts.org/ </link>
 
 ### Learning objectives 🧠
 
