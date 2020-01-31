@@ -1,11 +1,12 @@
 import styled from "styled-components/macro";
+import apples from "./apples.jpg";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(315deg, #f2cf07 0%, #55d284 74%); 
+  background: url(${apples});
   background-size: cover;
   height: 100vh;
 `;
@@ -14,7 +15,7 @@ export const ColorOverlay = styled.div`
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: 0.45;
+  opacity: 0.2;
   position: absolute;
 `;
 

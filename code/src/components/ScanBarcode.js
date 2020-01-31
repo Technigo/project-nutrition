@@ -10,10 +10,10 @@ export const ScanBarcode = () => {
 
   return (
     <>
-      <h1>Is this local?</h1>
+      {<h1>Is this local?</h1>}
       {!showScanner && (
         <Button type="button" onClick={() => setShowScanner(true)}>
-          Scan Product
+          Scan product
         </Button>
       )}
 
