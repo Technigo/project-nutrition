@@ -4,18 +4,33 @@ import { useDispatch } from 'react-redux'
 // import styled from 'styled-components'
 
 export const ManualCode = () => {
+  const [showinputForm, setShowInputForm] = useState(false)
   const [code, setCode] = useState('')
   const dispatch = useDispatch()
 
   const handleSubmit = (e) => {
-    e.preventDefaut()
+    e.preventDefault()
     dispatch(fetchProduct(code))
     setCode('')
   }
 
   return (
+    <>
+    {!showinputForm && (
+        <button type="button" onClick={() => setShowInputForm(true)}>
+          Barcode search
+        </button>
+      )}
+
+      {showinputForm && (
+        <button type="button" onClick={() => setShowInputForm(false)}>
+          Hide Barcode search
+        </button>
+      )}
+
+  {showinputForm && (
     <form onSubmit={handleSubmit}>
-      <section>
+      <div>
         <button type="submit">
           Search
         </button>
@@ -24,8 +39,10 @@ export const ManualCode = () => {
         placeholder="Enter product code"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        handlesubmit={code} />
-      </section>
+        />
+      </div>
     </form>
+  )}
+    </>
   )
 }

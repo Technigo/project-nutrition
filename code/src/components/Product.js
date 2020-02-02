@@ -3,42 +3,72 @@ import { useSelector } from 'react-redux'
 
 export const Product = () => {
   const scan = useSelector(state => state.products.product)
+  let formatIngredients = []
+  let formatNutritients = []
+  console.log('scan', scan)
+
+
+
+
 
   if (!scan) return null
 
-  console.log('SCAN', scan)
-
-  const formattedCategories =
-    scan.product &&
-    scan.product.categories_tags.map(cat =>
-      cat.replace('en:', '').replace(/-/gi, ' ')
+  if (scan.product && scan.product.ingredients_analysis_tags) {
+    formatIngredients = scan.product.ingredients_analysis_tags.map(ingredient =>
+      ingredient.replace(/\w+:/, ' ').replace(/-/gi, ' ').replace(':', ' ')
     )
-  /*
-  replace can be used with string or regular expression. When used with a string, as in the first example -> .replace('en:', '') it will replace the first time this string occurs. Also since we're mapping through an array this will happen for each item in the array.
-  If the replace method is used with a regex (regular expression) like in the second example -> it will replace all the '-'with a ' ' (space) not only the first time for each item in the array. 
-  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
-  */
-  console.log('CAT', formattedCategories)
+  }
+
+  if (scan.product && scan.product.nutrient_levels_tags) {
+    formatNutritients = scan.product.nutrient_levels_tags.map(ingredient =>
+      ingredient.replace(/\w+:/, ' ').replace(/-/gi, ' ').replace(':', ' ')
+    )
+  }
 
   return (
-    <>
-      {scan.product && scan.status === 1 && (
-        <section className='product-container'>
-          <h1 className='title'>{scan.product.product_name}</h1>
-          <p>Nutrition grade: {scan.product.nutrition_grades}</p>
-          <img className='nutriton' src={scan.product.image_nutrition_url} />
-          {scan.product.photographers_tags.map(photographer => (
-            <p key={photographer}>{photographer}</p>
-          ))}
-          <h3>Categories:</h3>
-          <ul>
-            {formattedCategories.map((cat, index) => (
-              <li key={index}>{cat}</li>
-            ))}
-          </ul>
-        </section>
-      )}
-      {scan.status === 0 && <h1>{scan.status_verbose}</h1>}
-    </>
+    <div className="container">
+
+      {!scan.product &&
+        <div className="intro-container">
+          <div className="intro-text">
+            <h1> Healthy Life </h1>
+            <h2>Ingredient and Nutritional information</h2>
+          </div>
+        </div>
+      }
+
+      {scan.product &&
+        <div className="card">
+          <img src={scan.product.image_front_url} alt="productpic" />
+          <img src={scan.product.image_ingredients_url} alt="ingredients pics" />
+
+          <div>
+
+            <ul className="product">
+              <span className="highlight-info">Ingredients:</span>
+              {formatIngredients.map((ingredient, index) => (
+                <li key={index}>{ingredient}</li>
+              ))}
+            </ul>
+
+            <ul className="product">
+              <span className="highlight-info">Nutritional information:</span>
+              {formatNutritients.map((nutritient, index) => (
+                <li key={index}>{nutritient}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      }
+      {scan.status === 0 &&
+
+        <div className="not-found">
+          <h1 >
+            Please try again or chocie another product!
+          </h1>
+        </div>
+
+      }
+    </div>
   )
 }
