@@ -2,7 +2,7 @@
 
 On the 16th week of the Technigo Bootcamp the task was to build an app which scans barcodes of food products to retrieve different kinds of information from the API.
 
-Link to the deployes site: https://nutrition-agnes.netlify.com/
+Link to the deployed site: https://nutrition-agnes.netlify.com/
 
 ## The requirements for the project:
 
