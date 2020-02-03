@@ -77,7 +77,7 @@ export const Product = () => {
                     </ProductHeading>
 
                     <ProductInfo>
-                        <h4>Ingredients:</h4>
+                        {/* <h4>Ingredients:</h4> */}
                         <ul>
                             {formattedCategories.map((cat, index) => (
                                 <li key={index}>{cat}</li>

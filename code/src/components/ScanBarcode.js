@@ -16,12 +16,11 @@ const Button = styled.button`
   text-align: center;
   justifycontent: center;
   font-size: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.50em;
   margin-top: 1em;
-  padding: 0.50em 2em;
+  padding: 0.50em 1em;
   border: 2px solid #bceaef;
   background: #bceaef;
-//   color: white;
   color:  darkslategrey;
   border-radius: 3px;
   border: 1px solid slategrey;

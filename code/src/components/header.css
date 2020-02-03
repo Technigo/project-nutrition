@@ -1,4 +1,4 @@
-.headerInfo h1 {
+.headerInfo h2{
   display: inline-block;
   padding-left: 40px;
   padding-right: 40px;
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   width: auto;
-  height: 110px;
+  height: 100px;
   background-color: #bceaef;
   align-items: center;
   justify-content: space-evenly;
@@ -46,9 +46,10 @@
 }
 .headerNavigation {
   color: darkslategray;
-  justify-content: space-evenly;
+  /* justify-content: space-between; */
   display: inline-block;
   text-decoration: none;
   flex-direction: row;
   font-weight: bolder;
+
 }

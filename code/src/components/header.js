@@ -12,14 +12,14 @@ export const Header = () => {
                 <div></div>
             </div>
             <div className="headerInfo">
-                <h1>Food scanner</h1>
+                <h2>Product scanner</h2>
 
             </div>
             <nav
                 className="headerNavigation">
                 <p href="#">Home</p>
+                <p href="#">Login</p>
                 <p href="#">Search</p>
-                <p href="#">Log in</p>
             </nav>
         </div>
     )
