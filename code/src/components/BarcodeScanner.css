@@ -1,5 +1,5 @@
 .scanner {
-  background-image: url('../assets/Tag.jpeg');
+  /* background-image: url('../assets/Tag.jpeg'); */
   background-size: cover;
   width: 30%;
   margin: 0 auto;
@@ -26,9 +26,13 @@
 
 .drawingBuffer {
   border-radius: 10px;
-  height: 200px;
-  width: 200px; 
-  position: absolute;
+  /* height: 200px; */
+  /* width: 200px;  */
+  /* position: absolute; */
+  /* background: #e5faf5; */
+  /* height: 100%;
+  width: 100%; */
+  /* background-image: url('../assets/Tag.jpeg'); */
 }
 
 h4 {

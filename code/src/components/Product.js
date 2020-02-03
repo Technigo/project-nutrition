@@ -55,7 +55,7 @@ export const Product = () => {
         scan.product &&
         scan.product.ingredients_original_tags.map(cat =>
             // cat.replace(/-/gi, ' ')
-            cat.replace('sv:', '').replace(/:/gi, '')
+            cat.replace('sv:', '').replace('en:', '')
         )
 
     return (

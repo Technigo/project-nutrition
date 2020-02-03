@@ -3,19 +3,22 @@ import styled from "styled-components/macro";
 
 const Container = styled.div`
   display: flex;
+  position: fixed; 
   flex-direction: column;
   justify-content: space-between;
   background-color: #bce9ef;
   width: 100%;
   height: 90px;
   margin: 0;
+  position: fixed; 
+  bottom: 0;
 `
 const BtnContainer = styled.div`
   display: flex;
   flex-direction: row;
   // width: 500px;
-  justify-content: center;
-  
+  justify-content: space-evenly;
+  align-items: center;
 `
 const Icon = styled.button`
   flex-direction: column;
@@ -29,8 +32,8 @@ const Icon = styled.button`
   margin: 10px 15px;
   opacity: 0.5;
   ${BtnContainer}:hover & {
-    opacity: 1;
-  }
+  opacity: 1;
+}
 `
 const Emoji = styled.p`
   font-size: 15px;
