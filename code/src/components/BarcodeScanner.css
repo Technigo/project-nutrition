@@ -1,7 +1,7 @@
 .scanner {
   /* background-image: url('../assets/Tag.jpeg'); */
   background-size: cover;
-  width: 30%;
+  width: 35%;
   margin: 0 auto;
   height: 500px;
   display: flex;
@@ -10,21 +10,22 @@
 }
 .scanner video {
   /*  transform: scaleX(-1); flip the video */
-  width: 30%;
-  border-radius: 10px;
-  height: 400px;
+  width: 35%;
+  /* border-radius: 10px; */
+  /* height: 500px; */
   position: absolute;
-  border: 5px solid black;
+  /* border: 5px solid black;
+  border-image-width: auto; */
   padding: 0px;
-  background-color: black;
+  margin-top: 50px;
 }
 
-.scanner canvas {
+/* .scanner canvas {
   /* border: 2px solid black; */
-  height: 0;
-}
+  /* height: 0;
+}  */
 
-.drawingBuffer {
+/* .drawingBuffer {
   border-radius: 10px;
   /* height: 200px; */
   /* width: 200px;  */
@@ -33,12 +34,12 @@
   /* height: 100%;
   width: 100%; */
   /* background-image: url('../assets/Tag.jpeg'); */
-}
+
 
 h4 {
   display: flex;
   justify-content: left;
 }
-.img sc-AykKE.fWwLwL {
-  width: 0 auto; 
-}
+/* .img sc-AykKE.fWwLwL {
+  width: 100 auto; 
+} */

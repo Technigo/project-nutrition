@@ -15,12 +15,20 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
+// const Main = styled.main`
+// // display: flex;
+// background: #e5faf5;
+// display-flex; 
+// height: 1000px;
+// background-size: cover;
+// `
+
 const Main = styled.main`
-// display: flex;
+display: flex;
+flex-direction: column;
+widht: 100;
+height: 100;
 background: #e5faf5;
-display-flex; 
-height: 1000px;
-background-size: cover;
 `
 export const store = configureStore({ reducer })
 export const App = () => {
@@ -32,9 +40,10 @@ export const App = () => {
         <LoadingIndicator />
         <ScanBarcode />
         <Product />
+        <Footer />
       </Main>
 
-      <Footer />
+
     </Provider>
   )
 }

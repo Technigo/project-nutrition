@@ -12,7 +12,7 @@ const ProductContainer = styled.div`
     display: flex;
     flex-direction: column;
     // flex-wrap: wrap; 
-    align-items: center;      
+    align-items: center;    
 `
 const ProductHeading = styled.div`
     display: flex;

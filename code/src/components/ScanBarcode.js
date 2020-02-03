@@ -25,9 +25,7 @@ const Btn = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-//   background:  #e5faf5;
   background-size: cover; 
-  background-image: url('../assets/Tag.jpeg');
   margin: 0 auto;
   width: 100%;
 `
