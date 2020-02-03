@@ -40,7 +40,7 @@ export const App = () => {
         <LoadingIndicator />
         <ScanBarcode />
         <Product />
-        <Footer />
+        {/* <Footer /> */}
       </Main>
 
 
