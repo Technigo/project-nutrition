@@ -4,6 +4,12 @@ import { useDispatch } from 'react-redux'
 import { fetchProduct } from 'reducers/products'
 import styled from 'styled-components/macro'
 
+const h1 = styled.h1`
+display: inline-flex;
+justify-content: center;
+text-align: center;
+
+`
 const Button = styled.button`
   display: flex;
   flex-direction: row;
@@ -11,13 +17,14 @@ const Button = styled.button`
   justifycontent: center;
   font-size: 1em;
   margin-bottom: 1em;
-  margin-top: 3em;
+  margin-top: 1em;
   padding: 0.50em 2em;
   border: 2px solid #bceaef;
   background: #bceaef;
 //   color: white;
   color:  darkslategrey;
   border-radius: 3px;
+  border: 1px solid slategrey;
   transition: all 0.5s;
   cursor: pointer;
 `
