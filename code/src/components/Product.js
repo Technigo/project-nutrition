@@ -3,10 +3,13 @@ import { useSelector } from 'react-redux'
 //this component Product, whill show the product when we fetched it
 import styled from 'styled-components/macro'
 
-const h4 = styled.h4`
-    margin: 0;
-    padding: 0;
-`
+
+// const h4 = styled.h4`
+//     display: flex;
+//     justify-content: center;
+//     margin-bottom: 0;
+//     padding: 0;
+// `
 const ProductContainer = styled.div`
     // background:  #e5faf5;
     // background-image: url('../assets/tag.jpg');   

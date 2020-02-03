@@ -20,26 +20,32 @@
   margin-top: 40px;
 }
 
-/* .scanner canvas {
-  /* border: 2px solid black; */
-  /* height: 0;
-}  */
-
-/* .drawingBuffer {
-  border-radius: 10px;
-  /* height: 200px; */
-  /* width: 200px;  */
-  /* position: absolute; */
-  /* background: #e5faf5; */
-  /* height: 100%;
-  width: 100%; */
-  /* background-image: url('../assets/Tag.jpeg'); */
-
-
 h4 {
   display: flex;
   justify-content: left;
+  margin-bottom: 3; 
 }
-/* .img sc-AykKE.fWwLwL {
-  width: 100 auto; 
-} */
+
+@media (min-width: 650px) and (max-width: 950px) {
+.headerInfo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.hamburger {
+  text-align: center;
+  }
+.headerNavigation {
+  text-align: center;
+  }
+}
+
+@media (min-width: 951px) and (max-width: 1024px) {
+.hamburger {
+  margin-left: 50px;
+  }
+.headerNavigation {
+  margin-right: 50px;
+  }
+}
+

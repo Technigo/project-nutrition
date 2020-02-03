@@ -23,25 +23,25 @@ const reducer = combineReducers({
 // background-size: cover;
 // `
 
-const Main = styled.main`
-display: flex;
-flex-direction: column;
-widht: 100;
-height: 100;
-background: #e5faf5;
-`
+// const Main = styled.main`
+// display: flex;
+// flex-direction: column;
+// widht: 100;
+// height: 100;
+// background: #e5faf5;
+// `
 export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
       <Header />
 
-      <Main>
-        <LoadingIndicator />
-        <ScanBarcode />
-        <Product />
-        {/* <Footer /> */}
-      </Main>
+      {/* <Main> */}
+      <LoadingIndicator />
+      <ScanBarcode />
+      <Product />
+      {/* <Footer /> */}
+      {/* </Main> */}
 
 
     </Provider>
