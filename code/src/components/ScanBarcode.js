@@ -10,8 +10,8 @@ const Button = styled.button`
   text-align: center;
   justifycontent: center;
   font-size: 1em;
-  margin-bottom: 5em;
-  margin-top: 4em;
+  margin-bottom: 1em;
+  margin-top: 3em;
   padding: 0.50em 2em;
   border: 2px solid #bceaef;
   background: #bceaef;

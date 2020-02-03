@@ -5,13 +5,12 @@ import styled from 'styled-components/macro'
 
 
 const ProductContainer = styled.div`
-    background:  #e5faf5;
-    background-image: url('../assets/tag.jpg');   
-    height: 63vh;  
-    margin: 0px;  
+    // background:  #e5faf5;
+    // background-image: url('../assets/tag.jpg');   
+    // height: 63vh;  
+    // margin-top: -10px;  
     display: flex;
     flex-direction: column;
-    // flex-wrap: wrap; 
     align-items: center;    
 `
 const ProductHeading = styled.div`
@@ -19,16 +18,16 @@ const ProductHeading = styled.div`
     flex-direction: column;
     justify-content: center;
     color: darkslategrey;
-    padding-right: 5px;
+    // padding-right: 5px;
     display: flex;
 `
 
 const ProductInfo = styled.div`
-    align - items: center;
-    justify - content: center;
+    align-items: center;
+    justify-content: center;
     color: darkslategrey;
     display: flex;
-    flex - direction: column;
+    flex-direction: column;
 `
 const ProductStore = styled.div`
     display: flex;
@@ -53,7 +52,7 @@ export const Product = () => {
 
     const formattedCategories =
         scan.product &&
-        scan.product.ingredients_original_tags.map(cat =>
+        scan.product.ingredients_tags.map(cat =>
             // cat.replace(/-/gi, ' ')
             cat.replace('sv:', '').replace('en:', '')
         )
