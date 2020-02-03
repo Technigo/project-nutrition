@@ -18,8 +18,8 @@ export const Header = () => {
             <nav
                 className="headerNavigation">
                 <p href="#">Home</p>
-                <p href="#">Subscribe</p>
                 <p href="#">Search</p>
+                <p href="#">Log in</p>
             </nav>
         </div>
     )

@@ -1,7 +1,7 @@
 .headerInfo h1 {
   display: inline-block;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
   color: darkslategray;
 }
 
@@ -13,7 +13,7 @@
   height: 110px;
   background-color: #bceaef;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   place-content: center;
   }
 
