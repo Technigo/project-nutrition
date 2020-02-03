@@ -47,7 +47,6 @@ const Label = styled.p`
   font-size: 12px;
   color: darkslategrey;
   font-weight: bold;
-  // color: darkslategrey;
 `
 export const Footer = () => {
   return (
@@ -59,7 +58,7 @@ export const Footer = () => {
               💫
             </span>
           </Emoji>
-          <Label>Adventure</Label>
+          <Label>Info</Label>
         </Icon>
         <Icon>
           <Emoji>
@@ -67,7 +66,7 @@ export const Footer = () => {
               ⭐️
             </span>
           </Emoji>
-          <Label>Snow</Label>
+          <Label>Vitamines</Label>
         </Icon>
         <Icon>
           <Emoji>
@@ -83,7 +82,7 @@ export const Footer = () => {
               🦋
             </span>
           </Emoji>
-          <Label>Favourites</Label>
+          <Label>Inspiration</Label>
         </Icon>
       </BtnContainer>
     </Container>

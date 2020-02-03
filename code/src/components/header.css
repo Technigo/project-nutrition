@@ -13,7 +13,6 @@ h1 {
   height: 100px;
   background-color: #bceaef;
   align-items: center;
- 
   }
 .hamburger {
   display: flex;
@@ -24,8 +23,7 @@ h1 {
   object-position: left;
   margin-right: 104px;
   margin-top: 0px;
-  margin-left: 20px
-  
+  margin-left: 20px 
 }
 /* lines for the hamburger menu, same width as the container, but thinner */
 .hamburger div {

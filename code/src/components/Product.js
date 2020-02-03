@@ -1,21 +1,23 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 //this component Product, whill show the product when we fetched it
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 const ProductContainer = styled.div`
-    background:  #e5faf5;
-    background-image: url('../assets/tag.jpg');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 const ProductHeading = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     color: darkslategrey;
+ 
 `
 const ProductInfo = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: darkslategrey;
@@ -46,14 +48,13 @@ export const Product = () => {
       cat.replace('sv:', '').replace('en:', '')
     )
     
-    
     return (
         <>
         {scan.product && scan.status === 1 && (
             <ProductContainer>
                 <ProductHeading>
-                    <img src={scan.product && scan.product.image_thumb_url} alt="" />
-                    <h1>{scan.product && scan.product.product_name}</h1>
+                    {/* <img src={scan.product && scan.product.image_thumb_url} alt="" /> */}
+                    <h2>{scan.product && scan.product.product_name}</h2>
                     {/* <h4>Ingredients:{product.product && product.product.ingredients_tags}</h4> */}
                 </ProductHeading>
                 <ProductInfo>

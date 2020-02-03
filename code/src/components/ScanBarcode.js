@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux'
 import { fetchProduct } from ' reducers/products'
 import styled from "styled-components/macro"
 
+
+
 // const ScanBarcodeContainer = styled.div`
 //   display: flex;
 //   flex-direction: column;
@@ -34,7 +36,6 @@ const Btn = styled.div`
   flex-direction: row;
   justify-content: center;
   background:  #e5faf5;
-  
 `
 
 
@@ -44,6 +45,7 @@ export const ScanBarcode = () => {
 
   return (
     <>
+
       {/* <ScanBarcodeContainer> */}
       <Btn>
         {!showScanner && (
@@ -51,8 +53,8 @@ export const ScanBarcode = () => {
             Show scanner
           </Button>
       
-      )}
-    </Btn>
+        )}
+      </Btn>
     {/* </ScanBarcodeContainer> */}
         {showScanner && (
           <BarcodeScanner 

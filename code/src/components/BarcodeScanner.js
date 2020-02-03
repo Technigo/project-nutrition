@@ -1,11 +1,10 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
-import styled from "styled-components"
+import styled from "styled-components/macro"
 import 'components/barcodeScanner.css'
 
 const CameraDiv = styled.div`
-  background:  #e5faf5;
- 
+  text-align: center;
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {
