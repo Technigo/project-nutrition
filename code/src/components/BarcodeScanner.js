@@ -5,6 +5,7 @@ import 'components/barcodeScanner.css'
 
 const CameraDiv = styled.div`
   background:  #e5faf5;
+ 
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {

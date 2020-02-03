@@ -5,13 +5,15 @@ h1 {
 }
 .headerContainer {
   justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   flex-direction: row;
   width: auto;
   height: 100px;
   background-color: #bceaef;
   align-items: center;
-  justify-content: space-between;
+ 
   }
 .hamburger {
   display: flex;

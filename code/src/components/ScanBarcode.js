@@ -34,6 +34,7 @@ const Btn = styled.div`
   flex-direction: row;
   justify-content: center;
   background:  #e5faf5;
+  
 `
 
 

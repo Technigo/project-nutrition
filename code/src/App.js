@@ -8,6 +8,7 @@ import { Header } from './components/Header'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from './components/Product'
 import { Footer } from './components/lib/Footer'
+import styled from "styled-components/macro"
 
 
 
@@ -15,7 +16,6 @@ import { Footer } from './components/lib/Footer'
 const reducer = combineReducers({
   ui: ui.reducer,
   products : products.reducer
-
 })
 
 export const store = configureStore({ reducer })
@@ -24,9 +24,9 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Header />
-      <LoadingIndicator />
-      <ScanBarcode />
-      <Product />
+        <LoadingIndicator />
+        <ScanBarcode />
+        <Product />
       <Footer />
     </Provider>
   )

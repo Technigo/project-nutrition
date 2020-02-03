@@ -3,8 +3,10 @@ import styled from "styled-components/macro"
 
 const Container = styled.div`
   display: flex;
+  position: fixed;
+  bottom: 0;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   background-color: #bce9ef;
   width: 100%;
   height: 80px;

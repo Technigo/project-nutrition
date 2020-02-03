@@ -43,7 +43,7 @@ export const Product = () => {
     const formattedCategories =
     scan.product &&
     scan.product.ingredients_tags.map(cat =>
-      cat.replace('sv:', '').replace(/-/gi, ' ')
+      cat.replace('sv:', '').replace('en:', '')
     )
     
     
