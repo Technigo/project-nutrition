@@ -25,6 +25,8 @@ const Button = styled.button`
   padding: 10px 30px;
   background-color: #df3457;
   color: #fff;
+  border: none;
+  border-radius: 10px;
 `
 
 export const Header = () => {
