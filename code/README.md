@@ -1,4 +1,4 @@
-# Technigo React Starter App
+# Barcode Scanner project
 
 This web app has been generated using `create-react-app`-boilerplate. The project is a barcode scanner, which scans and fetch an API through which we can get information about the scanned product. The web app renders information wether the product contains palm oil or not, and it also renders a message in case the scanning did not work or if the product is missing in the API.
 
