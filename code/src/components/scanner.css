@@ -1,56 +1,53 @@
 .scanner{
-    height: 0px;
+  height: 0px;
 }
 
 .loading-camera{
-font-size:30px;
-position: absolute;
-top: 180px;
-color: #eb98bf;
-z-index:8;
-
+  font-size:30px;
+  position: absolute;
+  top: 180px;
+  color: #eb98bf;
+  z-index:8;
 }
 
 video{
-    height: 200px;
-    width: 300px;
-    border: 4px solid #5c0f47;
-    border-radius: 25px;
-    background: #5c0f47;
-    position: absolute;
-    top: 114px;
-    left: 38px;
+  height: 200px;
+  width: 300px;
+  border: 4px solid #5c0f47;
+  border-radius: 25px;
+  background: #5c0f47;
+  position: absolute;
+  top: 114px;
+  left: 38px;
 }
 
 .scan-placeholder{
-    border: 4px solid #eb98bf;
-    height: 200px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 25px;
+  border: 4px solid #eb98bf;
+  height: 200px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
 }
 
 .drawingBuffer{
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
-
 
 lottie-player{
-    width: 150px;
+  width: 150px;
 }
 
-
 button{
-    background: #5c0f47;
-    border: 0;
-    padding: 12px;
-    color: #a3538d;
-    font-size: 32px;
-    font-family: 'Karla', sans-serif;
-    margin: 12px;
-    border-radius: 6px;
+  background: #5c0f47;
+  border: 0;
+  padding: 12px;
+  color: #a3538d;
+  font-size: 32px;
+  font-family: 'Karla', sans-serif;
+  margin: 12px;
+  border-radius: 6px;
 }

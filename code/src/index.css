@@ -11,16 +11,6 @@ code {
     monospace;
 }
 
-footer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-  position: absolute;
-  top: 570px;
-  left: 140px;
-}
-
 img{
   width: 50px;
 }

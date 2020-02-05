@@ -34,8 +34,9 @@ export const App = () => {
           <LoadingIndicator />
           <Product />
         </article>
-
-
+        <footer>
+          <img src="palm-tree.png" />
+        </footer>
       </Provider>
 
     </>

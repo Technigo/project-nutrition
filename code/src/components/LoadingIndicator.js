@@ -10,7 +10,7 @@ export const LoadingIndicator = () => {
     <>
       {isLoading && (
 
-        <div class="lds-dual-ring"></div>
+        <div className="loading"></div>
 
       )}
 
