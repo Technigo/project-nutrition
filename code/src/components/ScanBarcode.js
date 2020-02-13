@@ -16,6 +16,11 @@ const Button = styled.button`
   cursor: pointer;
 `
 
+const CameraContainer = styled.div`
+display: flex;
+margin-left: 600px;
+`
+
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
@@ -29,14 +34,15 @@ export const ScanBarcode = () => {
       )}
 
       {showScanner && (
+        <CameraContainer>
         <BarcodeScanner
           className='scanner'
           onDetected={code => {
-            console.log('Got barcode', code)
             setShowScanner(false)
             dispatch(fetchProduct(code))
           }}
         />
+        </CameraContainer>
       )}
     </>
   )

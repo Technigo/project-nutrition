@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { fetchProduct } from 'reducers/products'
 import { useDispatch } from 'react-redux'
-// import styled from 'styled-components'
 
 export const ManualCode = () => {
   const [showinputForm, setShowInputForm] = useState(false)

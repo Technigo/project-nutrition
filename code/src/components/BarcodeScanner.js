@@ -35,7 +35,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       Quagga.stop()
     }
   }, [])
-
+  
   return ( 
     <>
       {initializing && <div>Starting camera...</div>}
