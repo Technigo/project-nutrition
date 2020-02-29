@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Head = styled.div`
+const Head = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;

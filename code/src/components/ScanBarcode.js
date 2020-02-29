@@ -83,13 +83,12 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-        <ButtonWrapper>
-          <ScannerContainer>
-            <IntroSection>
-              <IntroTitle>Do you have food allergies?</IntroTitle>
-              <IntroTxt>Scan your products before you eat</IntroTxt>
-            </IntroSection>
-
+        <ScannerContainer>
+          <IntroSection>
+            <IntroTitle>Do you have food allergies?</IntroTitle>
+            <IntroTxt>Scan your products before you eat</IntroTxt>
+          </IntroSection>
+          <ButtonWrapper>
             <FloatingButton
               className="button"
               type="button"
@@ -101,8 +100,8 @@ export const ScanBarcode = () => {
               </Icon>
               Scan Product
             </FloatingButton>
-          </ScannerContainer>
-        </ButtonWrapper>
+          </ButtonWrapper>
+        </ScannerContainer>
       )}
 
       {showScanner && (

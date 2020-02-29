@@ -42,7 +42,7 @@ const AboutSection = styled.div`
   justify-content: center;
   width: 100%;
   align-items: center;
-  margin: 20px 20px 20px 20px;
+  margin: 20px;
 
   p {
     padding: 20px;

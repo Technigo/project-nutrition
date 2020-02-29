@@ -65,7 +65,11 @@ export const Errors = () => {
             <ButtonContainer>
               <Button>
                 <Link>
-                  <a href="https://www.openfoodfacts.org/" target="_blank">
+                  <a
+                    href="https://www.openfoodfacts.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Add product to Open Food Fact
                   </a>
                 </Link>
