@@ -1,0 +1,32 @@
+section.infoContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: solid black 1px;
+  border-radius: 30px;
+  font-size: 16px;
+  margin-top: 0px;
+}
+
+button:hover {
+  border: dotted green 3px;
+  color: green;
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: pointer;
+}

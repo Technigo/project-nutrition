@@ -1,0 +1,10 @@
+header {
+    display: block;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem; 
+    font-size: 20px;
+    color: black;
+    position: relative;
+  }

@@ -1,0 +1,35 @@
+footer {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 0px;
+    position: relative;
+    bottom: 10%;
+  }
+
+span.barcodeHead {
+  font-family:'Libre Barcode 128';
+  font-size: 60px;
+  color: black;
+  text-decoration: line-through wavy white;
+}
+
+/** RAINBOW WEBPAGE SECTION **/
+
+span.orange {
+  color: orange;
+} 
+
+span.pink {
+  color: fuchsia;
+}
+
+span.blue {
+  color: blue;
+}
+
+span.green {
+  color: green;
+}

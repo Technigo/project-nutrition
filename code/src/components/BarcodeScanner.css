@@ -1,5 +1,5 @@
 .scanner {
-    background: green;
+    background-image: url(./assets/brooke-lark-HlNcigvUi4Q-unsplash.png);
     background-size: cover;
     width: 80%;
     margin: 0 auto;
@@ -7,15 +7,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
   }
   
   .scanner video {
     /*  transform: scaleX(-1); flip the video */
-    width: 60%;
+    width: 50%;
     border-radius: 10px;
   }
   
   .scanner canvas {
-    /* border: 2px solid black; */
+    /*border: 2px solid black;*/
     height: 0;
   }

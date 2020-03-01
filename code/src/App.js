@@ -8,6 +8,10 @@ import { ui } from 'reducers/ui'
 import {ScanBarcode} from 'components/ScanBarcode'
 import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
+import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
+
+import './index.css'
 
 
 
@@ -20,10 +24,13 @@ export const store = configureStore ({ reducer })
 
 export const App = () => {
   return (
+    
     <Provider store={store}>
-      <LoadingIndicator />
+      <Header/>
+        <LoadingIndicator />
         <ScanBarcode />
-      <Product />
-    </Provider>  
+        <Product/> 
+      <Footer/>  
+    </Provider> 
   )
 }
