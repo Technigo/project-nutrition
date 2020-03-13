@@ -5,7 +5,9 @@ export const Product = () => {
     const productScan = useSelector(state => state.products.product)
 
     if (!productScan)
-        return null
+        return (
+            <div>product not found</div>
+        )
 
     console.log('product', productScan)
 

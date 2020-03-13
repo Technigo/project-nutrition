@@ -1,5 +1,6 @@
 import React, { useRef, useState, useLayoutEffect } from 'react'
 import Quagga from 'quagga'
+import '../index.css'
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true)
@@ -35,8 +36,10 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
-      <div ref={cameraDivRef} className={className} />
+      <div className="cameraArea">
+        {initializing && <div className="startingCamera">Starting camera...</div>}
+        <div ref={cameraDivRef} className={className} />
+      </div>
     </>
   )
 }

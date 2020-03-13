@@ -17,12 +17,14 @@ export const fetchProduct = (barcode) => {
 
     return dispatch => {
         dispatch(ui.actions.setLoading(true))
-        fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-            .then(res => res.json())
-            .then(json => {
-                // this is the thunk
-                dispatch(products.actions.setProduct(json))
-                dispatch(ui.actions.setLoading(false))
-            })
+        try {
+            fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+                .then(res => res.json())
+                .then(json => {
+                    // this is the thunk
+                    dispatch(products.actions.setProduct(json))
+                    dispatch(ui.actions.setLoading(false))
+                })
+        } catch (err) { console.log(err) }
     }
 }
