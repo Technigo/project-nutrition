@@ -8,11 +8,6 @@ export const Product = () => {
   const scan = useSelector(state => state.products.product)
   let formatIngredients = []
   let formatNutritients = []
-  console.log('scan', scan)
-
-
-
-
 
   if (!scan) return null
 

@@ -4,16 +4,23 @@ import { useDispatch } from 'react-redux'
 import { fetchProduct } from 'reducers/products'
 import styled from 'styled-components'
 
+const Wrapper = styled.section`
+
+`
+
 const Button = styled.button`
-  background: yellow;
-  display: inline-block;
+  display: flex;
   border: none;
-  padding: 20px;
-  width: 70px;
+  justify-content: center;
+  width: 150px;
   height: 70px;
   margin: 10px;
   transition: all 0.5s;
   cursor: pointer;
+  border-radius: 31px;
+  background: #FF7F11;
+  box-shadow:  50px 50px 100px #b85b0c, 
+             -50px -50px 100px #ffa316;
 `
 
 const CameraContainer = styled.div`
@@ -26,10 +33,10 @@ export const ScanBarcode = () => {
   const dispatch = useDispatch()
 
   return (
-    <>
+    <Wrapper>
       {!showScanner && (
         <Button type='button' onClick={() => setShowScanner(true)}>
-          Show scanner
+          Open camera to scan
         </Button>
       )}
 
@@ -44,6 +51,6 @@ export const ScanBarcode = () => {
         />
         </CameraContainer>
       )}
-    </>
+    </Wrapper>
   )
 }

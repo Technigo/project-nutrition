@@ -7,6 +7,16 @@ import { LoadingIndicator } from 'components/LoadingIndicator'
 import { Product } from 'components/Product'
 import style from 'styled-components'
 
+const Section = style.section`
+background: #FF7F11;
+height: 100vh;
+color: #FDFFFC;
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+`
+
 const reducer = combineReducers({
   ui: ui.reducer,
   products: products.reducer
@@ -25,5 +35,4 @@ export const App = () => {
   )
 }
 
-const Section = style.section`
-`
+
