@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const Button = styled.button`
   display: flex;
@@ -11,8 +11,6 @@ export const Button = styled.button`
   transition: all 0.5s;
   cursor: pointer;
   border-radius: 54px;
-  background: #FF7F11;
-  box-shadow:  23px 23px 34px #b55a0c, 
-               -23px -23px 34px #ffa416;
-              
+  background: #ff7f11;
+  box-shadow: 23px 23px 34px #b55a0c, -23px -23px 34px #ffa416;
 `

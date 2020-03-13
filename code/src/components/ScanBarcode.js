@@ -1,17 +1,14 @@
-import React, { useState } from 'react'
-import { BarcodeScanner } from 'components/BarcodeScanner'
-import { useDispatch } from 'react-redux'
-import { fetchProduct } from 'reducers/products'
-import styled from 'styled-components'
-import { Button } from 'library/Button'
-import './css/scanbarcode.css'
+import React, { useState } from "react"
+import { BarcodeScanner } from "components/BarcodeScanner"
+import { useDispatch } from "react-redux"
+import { fetchProduct } from "reducers/products"
+import styled from "styled-components"
+import { Button } from "library/Button"
+import "./css/scanbarcode.css"
 
-const Wrapper = styled.section`
-`
+const Wrapper = styled.section``
 
-const CameraContainer = styled.div`
-
-`
+const CameraContainer = styled.div``
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -27,14 +24,13 @@ export const ScanBarcode = () => {
 
       {showScanner && (
         <CameraContainer>
-        <BarcodeScanner
-          className='scanner'
-          onDetected={code => {
-            setShowScanner(false)
-            dispatch(fetchProduct(code))
-          }}
-        />
-       
+          <BarcodeScanner
+            className='scanner'
+            onDetected={code => {
+              setShowScanner(false)
+              dispatch(fetchProduct(code))
+            }}
+          />
         </CameraContainer>
       )}
     </Wrapper>
