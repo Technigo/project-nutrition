@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { fetchProduct } from 'reducers/products'
 import { useDispatch } from 'react-redux'
+import { Button } from 'library/Button'
+
+
 
 export const ManualCode = () => {
   const [showinputForm, setShowInputForm] = useState(false)
@@ -16,29 +19,30 @@ export const ManualCode = () => {
   return (
     <>
     {!showinputForm && (
-        <button type="button" onClick={() => setShowInputForm(true)}>
-          Barcode search
-        </button>
+        <Button type="Button" onClick={() => setShowInputForm(true)}>
+          Manual search
+        </Button>
       )}
 
       {showinputForm && (
-        <button type="button" onClick={() => setShowInputForm(false)}>
-          Hide Barcode search
-        </button>
+        <Button type="Button" onClick={() => setShowInputForm(false)}>
+          Hide manual search
+        </Button>
       )}
 
   {showinputForm && (
     <form onSubmit={handleSubmit}>
       <div>
-        <button type="submit">
-          Search
-        </button>
+
         <input 
         type="text"
         placeholder="Enter product code"
         value={code}
         onChange={(e) => setCode(e.target.value)}
         />
+         <Button type="submit">
+          Search
+        </Button>
       </div>
     </form>
   )}

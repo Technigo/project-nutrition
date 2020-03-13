@@ -2,7 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { ManualCode } from 'components/ManualCode'
 import { ScanBarcode } from 'components/ScanBarcode'
-import style from 'styled-components'
+import styled from 'styled-components'
+
 
 export const Product = () => {
   const scan = useSelector(state => state.products.product)
@@ -24,18 +25,18 @@ export const Product = () => {
   }
 
   return (
+    
     <Container>
-      <ScanBarcode />
-      {!scan.product &&
+            {!scan.product &&
         <div>
           <h1>Check what you eat</h1>
         </div>
       }
+           <ScanBarcode />
+      <ManualCode />
+
       {scan.product &&
         <div className="card">
-          <img src={scan.product.image_front_url} alt="productpic" />
-          <img src={scan.product.image_ingredients_url} alt="ingredients pics" />
-          
             <ul className="product">
               <span className="highlight-info">Ingredients:</span>
               {formatIngredients.map((ingredient, index) => (
@@ -58,12 +59,12 @@ export const Product = () => {
           </h1>
         </div>
       }
-      <ManualCode />
+ 
     </Container>
   )
 }
 
-const Container = style.section`
+const Container = styled.section`
 display: flex;
 Justify-content: center;
 align-items: center;

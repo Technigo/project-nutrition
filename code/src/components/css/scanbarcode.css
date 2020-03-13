@@ -1,0 +1,21 @@
+.scanner {
+  width: 50%;
+  margin:  auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scanner video {
+  width: 100%;
+  margin: 25px;
+  border-radius: 54px;
+background: #FF7F11;
+box-shadow:  23px 23px 34px #b55a0c, 
+             -23px -23px 34px #ffa416;
+}
+
+.scanner canvas {
+  height: 0;
+}
