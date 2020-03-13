@@ -34,6 +34,7 @@ export const ScanBarcode = () => {
             dispatch(fetchProduct(code))
           }}
         />
+       
         </CameraContainer>
       )}
     </Wrapper>

@@ -15,6 +15,7 @@ position: relative;
 display: flex;
 justify-content: center;
 align-items: center;
+flex-direction: column;
 `
 
 const reducer = combineReducers({
@@ -28,9 +29,11 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Section>
-      <LoadingIndicator />
+      
       <Product />
+      <LoadingIndicator />
       </Section>
+      
     </Provider>
   )
 }

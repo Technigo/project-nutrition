@@ -4,6 +4,10 @@ import { ManualCode } from 'components/ManualCode'
 import { ScanBarcode } from 'components/ScanBarcode'
 import styled from 'styled-components'
 
+const InfoText = styled.h1`
+margin-bottom: 20px;
+text-align: center;
+`
 
 export const Product = () => {
   const scan = useSelector(state => state.products.product)
@@ -28,9 +32,9 @@ export const Product = () => {
     
     <Container>
             {!scan.product &&
-        <div>
-          <h1>Check what you eat</h1>
-        </div>
+        <InfoText>
+          <h1>Scan product to get a conclusion of what you are about to eat</h1>
+        </InfoText>
       }
            <ScanBarcode />
       <ManualCode />
@@ -52,13 +56,15 @@ export const Product = () => {
           
         </div>
       }
-      {scan.status === 0 &&
+    
         <div className="not-found">
-          <h1 >
-            Product not found
-          </h1>
+         {scan.status === 0 &&
+          <InfoText>
+            Product not found, scan again or try another product
+          </InfoText>}
         </div>
-      }
+        
+      
  
     </Container>
   )

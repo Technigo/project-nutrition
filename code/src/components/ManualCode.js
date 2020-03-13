@@ -33,7 +33,6 @@ export const ManualCode = () => {
   {showinputForm && (
     <form onSubmit={handleSubmit}>
       <div>
-
         <input 
         type="text"
         placeholder="Enter product code"
