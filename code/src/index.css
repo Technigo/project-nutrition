@@ -57,11 +57,11 @@ div.startingCamera {
 }
 
 video {
-  position: absolute;
-  /* border: 2px solid green; */
-  width: 684px;
-  height:484px;
-  background-color: grey;
+  display: block;
+  transform: scaleX(-1);
+  border-radius: 20px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .buttonScanner {
