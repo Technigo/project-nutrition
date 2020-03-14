@@ -1,46 +1,38 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
-import { fetchProduct } from 'redusers/products.js'
 import { useDispatch } from 'react-redux'
-// import { Image } from './Image'
+import { fetchProduct } from 'reducers/products'
+import styled from 'styled-components'
+import { Button } from 'library/Button'
+import './css/scanbarcode.css'
+
+const Wrapper = styled.section``
+
+const CameraContainer = styled.div``
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
 
   return (
-    <>
+    <Wrapper>
       {!showScanner && (
-        <div className="button-container">
-          <button
-            className="button-style"
-            type="button"
-            onClick={() => setShowScanner(true)}
-          >
-            Show scanner
-          </button>
-        </div>
+        <Button type="button" onClick={() => setShowScanner(true)}>
+          Open camera to scan
+        </Button>
       )}
 
       {showScanner && (
-        <div className="camera-container">
+        <CameraContainer>
           <BarcodeScanner
             className="scanner"
             onDetected={(code) => {
-              console.log('Got barcode', code)
               setShowScanner(false)
               dispatch(fetchProduct(code))
             }}
           />
-          <button
-            className="button-cancel"
-            type="button"
-            onClick={() => setShowScanner(false)}
-          >
-            Cancel
-          </button>
-        </div>
+        </CameraContainer>
       )}
-    </>
+    </Wrapper>
   )
 }
