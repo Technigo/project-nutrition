@@ -18,7 +18,7 @@ export const App = () => {
     <Provider store={store}>
       <main>
         <h1>Welcome to your Nutrition app</h1>
-        <p> please click on the scanner button to open the camera and scan your product</p>
+        <p> please click on the scanner button to open the camera and scan your product.</p>
         <LoaderIndicator />
         <ScanBarcode />
         <Product />
