@@ -1,6 +1,6 @@
 # Project Nutrition
 
-This week's project is about building an app which scans barcodes on food packages to retrieve the product name and nutritional information.
+This week's project is about building an site for which you can scans barcodes on food packages to retrieve the product name and nutritional information.
 
 I chocie to display nutriant infromation and package picures. 
 
