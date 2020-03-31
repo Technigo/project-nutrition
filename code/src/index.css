@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-.roots{
+.roots {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,18 +22,25 @@ code {
   text-align: center;
 }
 
-
-video{
-    display: flex;
-    width: 50vw;
-    border: 1em solid;
-    border-color: powderblue;
+.infoContainer {
+  border: solid #d7e6e4 3px;
+  background-image: url("abstract2.jpg");
+  position: relative;
+  height: 50vh;
+  padding: 50px;
 }
-canvas{
+
+video {
+  display: inline-flex;
+  width: 50vw;
+  border: 1em solid;
+  border-color: bisque;
+}
+canvas {
   height: 0;
 }
 
-
-h1, h2{
-  font-family: 'Abril Fatface', cursive;
+h1,
+h2 {
+  font-family: "Abril Fatface", cursive;
 }

@@ -1,39 +1,31 @@
-
-
-.intro-text{
-    border: solid;
-    border-style: solid;
-    width: 60vw;
-    margin-top: 3em;
-    background: powderblue;
+.card {
+  background-color: aquamarine;
 }
 
+.intro-text {
+  border: solid;
+  border-style: solid;
+  width: 60vw;
+  margin-top: 3em;
+  background: powderblue;
+}
 
-.card img{
+.card img {
   margin: 1em;
 }
-.product{
-list-style-type: none;
-    border: solid;
-    padding: 2em;
+.product {
+  list-style-type: none;
+  border: solid;
+  padding: 2em;
 }
 
-.highlight-info{
+.highlight-info {
   font-size: 2em;
-    color: teal;
+  color: teal;
 }
 
-
-
-.not-found{
+.not-found {
   display: block;
-    background-color: antiquewhite;
-    width: 60vw;
+  background-color: antiquewhite;
+  width: 60vw;
 }
-
-
-
-
-
-
-
