@@ -11,7 +11,6 @@ const Section = styled.div`
   height: 50px;
   margin: 15px;
 `
-
 const Camera = styled.div`
   display: flex;
   flex-direction: column;
@@ -20,13 +19,6 @@ const Camera = styled.div`
   right: 0px;
   width: 300px;
   height: 200px;
-
-`
-// do some styling on this or a loadingspinner
-const LoadingText = styled.div`
-  display: flex;
-  text-align: center;
-  font-size: 20px;
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {

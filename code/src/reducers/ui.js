@@ -7,7 +7,6 @@ export const ui = createSlice({
     },
     reducers: {
         setLoading: (state, action, ) => {
-
             state.isLoading = action.payload
         }
     }

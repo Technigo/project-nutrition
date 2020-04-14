@@ -6,19 +6,14 @@ const Section = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: auto;
-  
+    height: auto; 
 `
 
 /**** To show the product info  ****/
-
 export const ProductInfo = () => {
 
     const product = useSelector((state) => state.products.product)
-
     if (!product) return null
-
-    console.log('product', product)
 
     return (
         <Section>
@@ -31,21 +26,6 @@ export const ProductInfo = () => {
             <img src={product.product && product.product.images[1].sizes[400]} />
             <p>{product.product && product.product._keywords[1]}</p>
             <p>{product.product && product.product.ingredients_original_tags}</p>
-
-
         </Section>
     )
 }
-
-
-// <ul>
-//                 <p>{product.product && product.product._keywords[1]}</p>
-//                 <p>{product.product && product.product._keywords[1]}</p>
-//                 <li>{product.product && product.product.product_name}</li>
-//                 <li>{product.product && product.product.product_name}</li>
-//                 {/* {barcodes.map((item) => (
-//                     <li key={item.code} item={item}>
-//                         {item.product.generic_name_sv}
-//                     </li>
-//                 ))} */}
-//             </ul>

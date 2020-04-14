@@ -1,18 +1,13 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import styled from 'styled-components'
 import { ScanBarcode } from 'components/ScanBarcode'
 import { ProductInfo } from 'components/ProductInfo'
 import { Header } from 'components/Header'
 import { BottomBar } from 'components/BottomBar'
 
-// import { FetchBarcodesBtn } from 'components/FetchBarcodesBtn'
-
 import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
-
-
 
 
 const reducer = combineReducers({
@@ -29,7 +24,6 @@ export const App = () => {
     <div>
       <Provider store={store}>
         <Header />
-
         <ScanBarcode />
         <ProductInfo />
         <BottomBar />
