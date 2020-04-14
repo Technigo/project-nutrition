@@ -14,10 +14,7 @@ export const products = createSlice({
             console.log(state)
             console.log(action)
             state.product = action.payload
-
         },
-
-
     }
 })
 /******* The Thunk **********/
@@ -26,13 +23,11 @@ export const fetchBarcodes = (barcode) => {
         dispatch(ui.actions.setLoading(true))
 
         fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-
             .then((res) => res.json())
             .then((json) => {
                 console.log(json)
                 dispatch(products.actions.setBarcodes(json))
                 dispatch(ui.actions.setLoading(false))
             })
-
     }
 }

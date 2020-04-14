@@ -8,8 +8,6 @@ import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
 
 
-
-
 const reducer = combineReducers({
   ui: ui.reducer,
   products: products.reducer,

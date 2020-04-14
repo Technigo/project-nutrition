@@ -14,7 +14,6 @@ export const LoadingIndicator = () => {
                     height={80}
                     width={80}
                 />
-
             )}
         </>
     )

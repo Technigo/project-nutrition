@@ -13,8 +13,7 @@ const Container = styled.div`
   position: fixed;
   bottom: 0;
   border-top: 1px solid red;
-`;
-
+`
 const BtnContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -27,7 +26,7 @@ const BtnContainer = styled.div`
     width: 60%;
     align-self: center;
   }
-`;
+`
 const BackIcon = styled.button`
     display: flex;
     flex-direction: column;
@@ -76,12 +75,10 @@ const ProfileIcon = styled.button`
     border: none;
     margin: 10px 5px;
     opacity: 0.5;
-
     ${BtnContainer}:hover & {
         opacity: 1;
   }
-`;
-
+`
 const Emoji = styled.p`
     font-size: 20px;
     padding: 0;
@@ -89,15 +86,13 @@ const Emoji = styled.p`
     height: auto;
     color: transparent;
     text-shadow: 0 0 0 red;
-
-`;
+`
 const Label = styled.p`
     font-size: 12px;
     color: red;
     font-weight: 700;
     margin: 0;
-`;
-
+`
 const ScanImg = styled.img`
     width: 15px;
     height: auto;
@@ -107,31 +102,30 @@ const ScanImg = styled.img`
 `
 
 export const BottomBar = () => {
-    return (
-        <Container>
-            <BtnContainer>
-                <BackIcon as="a" href="/">
-                    <Emoji>
-                        <ScanImg src="/assets/red-arrow.svg" ></ScanImg>
+  return (
+    <Container>
+      <BtnContainer>
+        <BackIcon as="a" href="/">
+          <Emoji>
+            <ScanImg src="/assets/red-arrow.svg" ></ScanImg>
 
-                    </Emoji>
-                    <Label>Back</Label>
-                </BackIcon>
-                <ScanIcon as="a" href="/">
-                    <Emoji>
-                        <ScanImg src="/assets/red-scan-icon.svg" ></ScanImg>
-                    </Emoji>
-                    <Label>Scan</Label>
-                </ScanIcon>
-                <ProfileIcon>
-                    <Emoji>
-                        <ScanImg src="/assets/red-user-icon.svg" ></ScanImg>
+          </Emoji>
+          <Label>Back</Label>
+        </BackIcon>
+        <ScanIcon as="a" href="/">
+          <Emoji>
+            <ScanImg src="/assets/red-scan-icon.svg" ></ScanImg>
+          </Emoji>
+          <Label>Scan</Label>
+        </ScanIcon>
+        <ProfileIcon>
+          <Emoji>
+            <ScanImg src="/assets/red-user-icon.svg" ></ScanImg>
 
-                    </Emoji>
-                    <Label>Profile</Label>
-                </ProfileIcon>
-
-            </BtnContainer>
-        </Container>
-    );
-};
+          </Emoji>
+          <Label>Profile</Label>
+        </ProfileIcon>
+      </BtnContainer>
+    </Container>
+  )
+}

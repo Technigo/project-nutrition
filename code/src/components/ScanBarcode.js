@@ -8,7 +8,7 @@ import { Header } from 'components/Header'
 import { BottomBar } from 'components/BottomBar'
 
 
-const BarcodeKey = 7394376616037 //ikaffe
+const BarcodeKey = 7394376616037 //Oatly ikaffe
 
 const Section = styled.div`
     display: flex;
@@ -17,7 +17,6 @@ const Section = styled.div`
     align-items: center;
     padding: 100px 0 50px;
 `
-
 const Scanner = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,7 +28,6 @@ const BarcodeIcon = styled.img`
     width: 300px;
     height: auto;
 `
-
 const ShowScannerBtn = styled.button`
     display: flex;
     flex-direction: row;
@@ -60,42 +58,32 @@ const Icon = styled.img`
 
 export const ScanBarcode = (product) => {
     const [showScanner, setShowScanner] = useState(false)
-    // const [products, setProducts] = useState()
+
     const dispatch = useDispatch()
-
-
 
     return (
         <Section >
             <Header />
-            {/* <Link to="/productinfo" ></Link> */}
-
             <LoadingIndicator />
             <Scanner>
                 <BarcodeIcon src="/assets/barcode-icon.svg"></BarcodeIcon>
                 {showScanner && (
                     <BarcodeScanner onDetected={(code) => {
                         console.log('Got barcode', code)
-                        // dispatch(fetchBarcodes(code)) //this is the original code.
-                        dispatch(fetchBarcodes(BarcodeKey)) //this will give information about iKaffe.
+                        dispatch(fetchBarcodes(code))
+                        //dispatch(fetchBarcodes(BarcodeKey)) //this will give information about Oatly iKaffe no matter what you scan.
                         setShowScanner(false)
                     }} />
                 )}
-
             </Scanner>
             <h5>Scan your barcode to see information about your product</h5>
             {!showScanner && (
                 <ShowScannerBtn type="button" onClick={() => setShowScanner(true)}>
                     <Icon src="assets/white-scan-icon.svg" alt="scan-icon" ></Icon>
                     Scan Barcode
-                    </ShowScannerBtn>
+                </ShowScannerBtn>
             )}
-
             <BottomBar />
-
         </Section>
-
     )
-
-
 }

@@ -11,7 +11,6 @@ const Section = styled.div`
   height: 50px;
   margin: 15px;
 `
-
 const Camera = styled.div`
   display: flex;
   flex-direction: column;

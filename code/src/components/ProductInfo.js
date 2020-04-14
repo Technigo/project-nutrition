@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components/macro'
 
 
-
 const Section = styled.div`
     display: flex;
     flex-direction: column;
@@ -63,7 +62,6 @@ const ATagSection = styled.div`
     display: flex;
     align-self: center;
 `
-
 const Img = styled.img`
     width: 100%;
     height: 100%;
@@ -93,23 +91,17 @@ const A = styled.a`
 
 export const ProductInfo = () => {
     const product = useSelector((state) => state.products.product)
-
     if (!product) return null
-
-    console.log('product', product)
-
 
     const allergens = product.product && product.product.allergens_tags.map(allergen =>
         allergen.replace('en:', '')
     )
-    console.log('Allergen', allergens)
-
 
 
     return (
         <div>
             {product.product && product.status === 1 && (
-                <Section >
+                <Section>
                     <H1>Product information:</H1>
                     <HeadSection>
                         <ThumbImg src={product.product.image_thumb_url} alt="" ></ThumbImg>
@@ -146,7 +138,6 @@ export const ProductInfo = () => {
             </Section>
         </div>
     )
-
 }
 
 
