@@ -28,77 +28,77 @@ const BtnContainer = styled.div`
   }
 `
 const BackIcon = styled.button`
-    display: flex;
-    flex-direction: column;
-    width: 65px;
-    height: 65px;
-    background-color: inherit;
-    border: none;
-    margin: 10px 5px;
-    opacity: 0.5;
-    justify-content: flex-end;
-    text-decoration-line: none;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 65px;
+  height: 65px;
+  background-color: inherit;
+  border: none;
+  margin: 10px 5px;
+  opacity: 0.5;
+  justify-content: flex-end;
+  text-decoration-line: none;
+  align-items: center;
+  justify-content: center;
 
-    ${BtnContainer}:hover & {
-        opacity: 1;
-        }
+  ${BtnContainer}:hover & {
+    opacity: 1;
+  }
 `
 const ScanIcon = styled.button`
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 65px;
-    height: 65px;
-    justify-content: center;
-    align-items: center;
-    background-color: inherit;
-    border: none;
-    margin: 10px 5px;
-    opacity: 0.5;
-    text-decoration-line: none;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 65px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  margin: 10px 5px;
+  opacity: 0.5;
+  text-decoration-line: none;
 
-    ${BtnContainer}:hover & {
-        opacity: 1;
+  ${BtnContainer}:hover & {
+    opacity: 1;
   }
 `
 const ProfileIcon = styled.button`
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    width: 65px;
-    height: 65px;
-    justify-content: center;
-    align-items: center;
-    background-color: inherit;
-    border: none;
-    margin: 10px 5px;
-    opacity: 0.5;
-    ${BtnContainer}:hover & {
-        opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 65px;
+  height: 65px;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  border: none;
+  margin: 10px 5px;
+  opacity: 0.5;
+  ${BtnContainer}:hover & {
+    opacity: 1;
   }
 `
 const Emoji = styled.p`
-    font-size: 20px;
-    padding: 0;
-    margin: 0;
-    height: auto;
-    color: transparent;
-    text-shadow: 0 0 0 red;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  color: transparent;
+  text-shadow: 0 0 0 red;
 `
 const Label = styled.p`
-    font-size: 12px;
-    color: red;
-    font-weight: 700;
-    margin: 0;
+  font-size: 12px;
+  color: red;
+  font-weight: 700;
+  margin: 0;
 `
 const ScanImg = styled.img`
-    width: 15px;
-    height: auto;
-    color: red;
-    fill: red;
-    padding-top: 5px;
+  width: 15px;
+  height: auto;
+  color: red;
+  fill: red;
+  padding-top: 5px;
 `
 
 export const BottomBar = () => {
