@@ -3,10 +3,15 @@ import Quagga from "quagga";
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
+  const [product, setProduct] = useState("")
   const cameraDivRef = useRef();
 
   Quagga.onDetected((data) => {
-    onDetected(data.code);
+    // OLD VERSION
+    // onDetected(data.code);
+
+    // New version
+    onDetected(data.codeResult.code);
   });
 
   useLayoutEffect(() => {
@@ -38,8 +43,10 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
+    <p></p>
       {initializing && <div>Starting camera...</div>}
       <div ref={cameraDivRef} className={className} />
-    </>
+</>
+
   );
 };
