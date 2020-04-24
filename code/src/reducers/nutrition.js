@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  list: []
+  list: ["test"]
 }
 
 export const nutrition = createSlice({
@@ -9,7 +9,12 @@ export const nutrition = createSlice({
   initialState: initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.list.push(action.payload)
+
+      const foundItem = state.list.find((x) => x.code === action.payload.code)
+      if (!foundItem) {
+        state.list.push(action.payload)
+      }
+      else { console.log("Product already stored") }
     }
   }
 })
