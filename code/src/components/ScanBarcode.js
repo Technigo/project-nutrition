@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 
-export const ScanBarcode = () => {
+export const ScanBarcode = ({ onDetected }) => {
   const [showScanner, setShowScanner] = useState(false)
 
   return (
