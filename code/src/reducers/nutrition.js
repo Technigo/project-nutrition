@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  list: ["test"]
+  list: []
 }
 
 export const nutrition = createSlice({
@@ -20,7 +20,7 @@ export const nutrition = createSlice({
       state.list = []
     },
     clearItem: (state, action) => {
-      const {productCode} = action.payload
+      const { productCode } = action.payload
       state.list = state.list.filter((x) => x.code !== productCode)
     }
   }
