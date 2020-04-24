@@ -15,6 +15,13 @@ export const nutrition = createSlice({
         state.list.push(action.payload)
       }
       else { console.log("Product already stored") }
+    },
+    clearAll: (state) => {
+      state.list = []
+    },
+    clearItem: (state, action) => {
+      const {productCode} = action.payload
+      state.list = state.list.filter((x) => x.code !== productCode)
     }
   }
 })
