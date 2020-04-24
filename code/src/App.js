@@ -3,6 +3,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { productsList } from "./reducers/products";
 import { Provider } from "react-redux";
 import { Input } from "components/Input"
+import { ProductInfo } from "components/ProductInfo"
 
 // import { BarcodeScanner } from 'components/BarcodeScanner'
 import { ScanBarcode } from "./components/ScanBarcode";
@@ -30,6 +31,7 @@ export const App = () => {
       <Input />
       {/* <ScanBarcode onDetected={onDetected} /> */}
       <ScanBarcode />
+      <ProductInfo />
     </Provider>
   );
 };

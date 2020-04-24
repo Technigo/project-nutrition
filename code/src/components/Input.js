@@ -33,7 +33,7 @@ export const Input = (e) => {
         Test codes here:{" "}
         {/* <input type="text" value={(e.target.value)}></input> */}
         <input type="text"></input>
-        <button type="button" onClick={() => dispatch(fetchProducts(7310130003530))}>Submit the Snabbmakaroner</button>
+        <button type="button" onClick={() => dispatch(fetchProducts(7310130003530))}>Submit the great Snabbmakaroner </button>
       </label>
       <p>
         {" "}
