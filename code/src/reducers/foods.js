@@ -1,36 +1,35 @@
 
 import { createSlice } from '@reduxjs/toolkit'
 import { loading } from './loading'
-import { useDispatch } from 'react-redux'
 
 
 
-export const foodReducer = createSlice ({ 
-  name:'Food',
+export const foods = createSlice ({ 
+  name:'foods',
   initialState: 
   {
-    all: []
+    foodProduct: []
   },
 
   reducers: {
-    setFood: (state, action) => {
-      state.all = action.payload
+    setFoods: (state, action) => {
+      state.foodProduct = action.payload
     }
   }
 })
 
 // ----Denna är extra utifall vi vill ha en loading funk--------
-//  export const fetchFood = (code) => {
-//   return (dispatch) => {
-//     dispatch(loading.actions.setLoading(true))
-//     fetch(`hhttps://world.openfoodfacts.org/api/v0/product/${code}.json`)
-//     .then((res) => res.json())
-//     .then((json) => {
-//       dispatch(food.actions.setFood(json.product.ingredients_hierarchy))
-//       dispatch(loading.actions.setLoading(false))
-//     })
-//   }
-// }
+ export const fetchFoods = (code) => {
+  return (dispatch) => {
+    dispatch(loading.actions.setLoading(true))
+    fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
+    .then((res) => res.json())
+    .then((json) => {
+      dispatch(foods.actions.setFoods(json))
+      dispatch(loading.actions.setLoading(false))
+    })
+  }
+}
 /// ----Denna är extra utifall vi vill ha en loading funk--------
 
 
