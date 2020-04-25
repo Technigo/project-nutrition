@@ -1,5 +1,25 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
 import Quagga from "quagga";
+import styled from 'styled-components';
+
+const Section = styled.section` 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 90vh;
+
+  div{
+    width: 50%;
+    margin: auto;
+  }
+`
+
+const Video = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
@@ -43,10 +63,11 @@ export const BarcodeScanner = ({ className, onDetected }) => {
 
   return (
     <>
-    <p></p>
       {initializing && <div>Starting camera...</div>}
-      <div ref={cameraDivRef} className={className} />
-</>
+      <Section>
+        <div ref={cameraDivRef} className={className} />
+      </Section>
+    </>
 
   );
 };

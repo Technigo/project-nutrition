@@ -2,6 +2,23 @@ import React, { useState } from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 import { BarcodeScanner } from './BarcodeScanner'
 import {productStore} from '../reducers/productStore'
+import styled from 'styled-components'
+
+
+const Button = styled.button`
+  background-color: darkorange;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  border: 1px solid black;
+  cursor: pointer;
+
+  &:hover {
+    background-color: orange;
+    color: black;
+  }
+`
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -33,9 +50,9 @@ export const ScanBarcode = () => {
   return (
     <>
       {!showScanner && (
-        <button type="button" onClick={() => setShowScanner(true)}>
-          Show scanner
-        </button>
+        <Button onClick={() => setShowScanner(true)}>
+        Show scanner
+        </Button>
       )}
 
       {showScanner && (

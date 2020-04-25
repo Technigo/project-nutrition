@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 // Inital state
 const myInitialState = {
-	scannedProducts: []
+	scannedProducts: [
+		{
+			code: '7000',
+			product: { allergens: 'none, nothing at all no fun', product_name: 'test' }
+		}
+	]
 };
 
 export const productStore = createSlice({
