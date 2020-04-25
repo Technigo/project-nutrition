@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { ui } from "reducers/ui"
 
-export const Products = createSlice({
+export const products = createSlice({
   name: 'products',
   initialState: { product: [] },
   reducers: {
