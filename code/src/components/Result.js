@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.article`
 	width: 300px;
 	min-height: 300px;
-	background-color: #555;
+	background-color: #777;
 	border-radius: 10px;
 	padding: 10px;
 	margin-top: 16px;
