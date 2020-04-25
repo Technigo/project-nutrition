@@ -1,5 +1,6 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { ui } from 'reducers/ui'
+import { createSlice } from '@reduxjs/toolkit';
+import { ui } from 'reducers/ui';
+
 
 export const products = createSlice({
   name: 'products',
