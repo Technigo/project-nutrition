@@ -19,10 +19,12 @@ export const ScanBarcode = () => {
 				// products.push(json);
 				// console.log(products);
 				if (json.status === 1) {
-					products.push(json);
+          products.push(json);
+          // setProducts([json])
           // console.log('This is the useState:', products);
           setShowScanner(false)
           dispatch(productStore.actions.addProduct(products.find((item) => item.status === 1)));
+          setProducts([])
 				}
 				
 			});

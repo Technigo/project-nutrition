@@ -24,11 +24,11 @@ export const productStore = createSlice({
 				console.log('array:', state.scannedProducts);
 			}
 
-			// 	if (item.code !== action.payload.code) {
+			// 	if (item.code === action.payload.code) {
+			// 		console.log('This code already exists');
+			// 	} else {
 			// 		state.scannedProducts.push(action.payload);
 			// 		console.log('array', state.scannedProducts);
-			// 	} else {
-			// 		console.log('This code already exists');
 			// 	}
 			// });
 
