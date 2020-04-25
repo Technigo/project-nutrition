@@ -4,7 +4,7 @@ import { nutrition } from '../reducers/nutrition'
 import { BarcodeScanner } from "./BarcodeScanner";
 
 
-export const SetData = () => {
+export const SetData = ({ setBarcode, setShowScanner }) => {
     const dispatch = useDispatch()
     const onDetected = (code) => {
         console.log(`Code: ${code}`);
@@ -13,10 +13,8 @@ export const SetData = () => {
             .then((json) => {
                 if (json.product) {
                     if (json.product.product_name) {
-                        console.log(json);
-                        dispatch(
-                            nutrition.actions.addProduct(json)
-                        )
+                        setBarcode(code)
+                        setShowScanner(false)
                     } else { console.log('no product name') }
 
                 } else { console.log('no product') }

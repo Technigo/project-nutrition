@@ -1,7 +1,25 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  list: []
+  list: {
+    shelves: [
+      {
+        name: "Fruit & Veg",
+        reveal: false,
+        products: []
+      },
+      {
+        name: "Dairy",
+        reveal: false,
+        products: []
+      },
+      {
+        name: "Freezer",
+        reveal: false,
+        products: []
+      }
+    ]
+  }
 }
 
 export const nutrition = createSlice({
@@ -9,19 +27,26 @@ export const nutrition = createSlice({
   initialState: initialState,
   reducers: {
     addProduct: (state, action) => {
-
-      const foundItem = state.list.find((x) => x.code === action.payload.code)
+      const { newProduct, shelf } = action.payload
+      const foundShelf = state.list.shelves.find((x) => x.name === shelf)
+      const foundItem = foundShelf.products.find((x) => x.code === newProduct.code)
       if (!foundItem) {
-        state.list.push(action.payload)
+        foundShelf.products.push(newProduct)
       }
       else { console.log("Product already stored") }
     },
     clearAll: (state) => {
       state.list = []
     },
-    clearItem: (state, action) => {
-      const { productCode } = action.payload
-      state.list = state.list.filter((x) => x.code !== productCode)
+    removeShelf: (state, action) => {
+      const { shelfName } = action.payload
+      state.list.shelves = state.list.shelves.filter((x) => x.name !== shelfName)
+    },
+
+    revealProducts: (state, action) => {
+      const { shelfName, reveal } = action.payload
+      const foundShelf = state.list.shelves.find((x) => x.name === shelfName)
+      foundShelf.reveal = reveal
     }
   }
 })

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { BarcodeScanner } from './BarcodeScanner'
 import { SetData } from './SetData';
-import img from '../emptyFridge.png'
 
 const MainText = styled.h1`
   color: #fff;
@@ -17,15 +15,16 @@ const Image = styled.img`
   border-radius: 50%;
   height: 200px;
   height: 200px;
-  box-shadow: grey 5px 5px 5px 5px;
 `
 
 const Container = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: space-around;
-height: 80%;
+height: 100%;
 align-items: center;
+width: 100%;
+background-image: linear-gradient(31.5deg, #1e1313 58%, #277CC9 42% )
 `
 
 const Button = styled.button`
@@ -37,8 +36,8 @@ color: #fff;
   background: transparent;
   border: none;
   cursor: pointer;
-  &:hover{
-      background-color: navy;
+  &:hover {
+    color: yellow;
   }
   &:active {
       box-shadow: none;
