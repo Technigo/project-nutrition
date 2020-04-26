@@ -5,6 +5,7 @@ import { products } from "reducers/products";
 import { ui } from "reducers/ui";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { Header } from "components/Header"
+import { Footer } from "components/Footer";
 
 export const Home = () => {
   const reducer = combineReducers({ ui: ui.reducer, products: products.reducer});
@@ -14,6 +15,7 @@ export const Home = () => {
     <Provider store={store}>
       <Header/>
       <ScanBarcode/>
+      {/* <Footer/> */}
     </Provider>
   );
 };
