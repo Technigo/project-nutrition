@@ -1,9 +1,16 @@
 import React from 'react'
+import Lottie from "lottie-react-web";
+import animation from "../animations/flying-avocado.json";
 
 export const BeforeScan = () => {
   return (
     <div>
-      Gör något?
+      <Lottie
+          options={{
+            animationData: animation,
+          }}
+          width="150px"
+        />
     </div>
   )
 }
