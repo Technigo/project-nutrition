@@ -9,6 +9,9 @@ export const ShowLoader = () => {
           options={{
             animationData: animation,
           }}
+
+          width="150px"
+          height="150px"
         />
     </div>
   )
