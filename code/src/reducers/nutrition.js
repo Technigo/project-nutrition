@@ -14,6 +14,11 @@ const initialState = {
         products: []
       },
       {
+        name: "Meat & Fish",
+        reveal: false,
+        products: []
+      },
+      {
         name: "Freezer",
         reveal: false,
         products: []
