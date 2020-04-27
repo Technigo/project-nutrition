@@ -14,7 +14,7 @@ export const ScanBarcode = () => {
  
   return (
     <ScanSection>
-     {showScanner && (
+      {showScanner && (
         <BarcodeScanner onDetected={(code) => {
           setShowScanner(false)
           dispatch(onDetected(code))
@@ -29,7 +29,7 @@ export const ScanBarcode = () => {
       )}
     </ScanSection>
   );
-}
+};
 
 const ScanSection = styled.section`
 display:flex;
@@ -44,6 +44,7 @@ font-family: monospace;
 color: #4CAF50;
 text-shadow: -3px -3px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
 margin: auto;
+margin-bottom: 12px;
 border-radius: 10px;
 background: #fafff1;
 border: 2px dashed #8db55f;

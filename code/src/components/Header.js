@@ -7,24 +7,26 @@ import burger from "../animations/delicious-burger.json";
 export const Header = () => {
   return (
     <HeaderWrapper>
-       <Lottie
-          options={{
-            animationData: hotdog,
-          }}
-          width="100px"
-        />
-      <HeaderTitle>
-      Palm oil free?
-      </HeaderTitle>
       <Lottie
-          options={{
-            animationData: burger,
-          }}
-          width="100px"
-        />
+        options={{
+        animationData: hotdog,
+        }}
+        width="100px"
+      />
+
+      <HeaderTitle>
+        Palm oil free?
+      </HeaderTitle>
+
+      <Lottie
+        options={{
+        animationData: burger,
+        }}
+        width="100px"
+      />
     </HeaderWrapper>
-  )
-}
+  );
+};
 
 const HeaderWrapper = styled.header`
 display: flex;
@@ -46,6 +48,5 @@ text-shadow: -3px -3px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
     
 @media (max-width: 668px) {
   text-shadow: -2px -2px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, 1px 1px 0 #000;
-}
-  
+}  
 `

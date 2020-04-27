@@ -1,21 +1,21 @@
-import React from 'react'
+import React from 'react';
 import Lottie from "lottie-react-web";
 import animation from "../animations/error.json";
-import styled, {keyframes} from "styled-components"
+import styled, {keyframes} from "styled-components";
 
 export const ProductNotFound = () => {
   return (
     <AnimationContainer>
-     <Lottie
-          options={{
-            animationData: animation,
-            loop: false
-          }}
-          width="150px"
-          />
+      <Lottie
+        options={{
+        animationData: animation,
+        loop: false
+        }}
+        width="150px"
+      />
     </AnimationContainer>
   );
-}
+};
 
 const hide = keyframes`
 0% {
