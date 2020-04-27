@@ -45,11 +45,10 @@ export const BarcodeScanner = ({ className, onDetected }) => {
   );
 };
 
- const Wrapper = styled.section`
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- margin: auto;
- `
- 
+const Wrapper = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+`;

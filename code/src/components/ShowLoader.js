@@ -7,7 +7,7 @@ export const ShowLoader = () => {
     <div>
       <Lottie
         options={{
-        animationData: animation,
+          animationData: animation,
         }}
         width="150px"
         height="150px"
