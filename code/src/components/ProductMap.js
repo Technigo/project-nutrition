@@ -27,7 +27,7 @@ const Title = styled.p`
 `
 
 const Body = styled.div`
-  background-color: #a89797;
+  background-color: #ffefd5;
   display: flex;
   flex-direction: column;
   width: 100%;

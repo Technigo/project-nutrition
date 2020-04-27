@@ -4,19 +4,23 @@ import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
 const ShelfForm = styled.form`
-  background: transparent;
+  background: #fffaf0;
   border: none;
+  width: 300px;
 `
 const AddButton = styled.button`
   border: none;
-  background: transparent;
+  background: #fffaf0;
+  font-size: 16px;
+  padding: 3px 0 3px 8px;
 `
 
 const Input = styled.input`
   border: none;
   background: transparent;
-  border-bottom: 1px solid black;
-
+  border-bottom: 1px solid lightgrey;
+  font-size: 16px;
+  width: 225px;
 `
 
 export const AddShelf = ({ setShowAddShelf }) => {

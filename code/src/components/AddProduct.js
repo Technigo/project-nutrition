@@ -3,13 +3,25 @@ import { useSelector, useDispatch } from "react-redux"
 import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
+
+const AddButton = styled.button`
+  border: none;
+  background: transparent;
+`
+
 const Input = styled.input`
-    font-size: 20px;
+fonst-size: 16px;
+  border: none;
+  background: #fffaf0;
+  border-bottom: 1px solid lightgrey;
+  width: 190px;
+  padding: 6px 3px 3px 3px;
 `
 const Select = styled.select`
-    font-size: 20px;
-    padding-top: 1px;
-    padding-bottom: 2px;
+    font-size: 16px;
+    padding: 3px 3px 3px 0;
+    background: #fffaf0;
+    border: none;
 `
 
 export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
