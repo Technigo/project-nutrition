@@ -16,8 +16,13 @@ export const NutritionList = () => {
     //   .then((json) => {
     //     setFood(json);
     //   });  
+    
   
-
+// const formattedIngredients = product.product.ingredients_original_tags.map((ingredient) => (
+//   ingredient.replace(/\w+:/, '')
+  
+//   .replace('-', ' ')
+// ))
   return (
     <>
     
@@ -32,8 +37,13 @@ export const NutritionList = () => {
         <ul>
          <li> {product.product.product_name_nb} </li>
          <li><img src={product.product.image_front_url} alt='pic'/> </li> 
-         {product.product.ingredients_original_tags.map((food)=> (
-           <li> {food} </li>
+         
+         
+         
+         
+         {product.product.ingredients_original_tags.map((ingredient)=> (
+           
+           <li> {ingredient.replace(/\w+:/, '').replace('-', ' ')} </li>
          ))}
          
          

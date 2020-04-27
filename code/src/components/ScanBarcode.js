@@ -11,6 +11,7 @@ export const ScanBarcode = () => {
   const handleScan = (code) => {
     setShowScanner(false)
     dispatch(fetchFoods(code))
+    console.log(code)
   }
 
   return (
