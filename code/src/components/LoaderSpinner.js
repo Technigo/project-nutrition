@@ -1,25 +1,35 @@
-import React from "react";
-import styled, { keyframes } from 'styled-components'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import styled, { keyframes } from 'styled-components/macro'
 
 export const LoaderSpinner = () => {
+  const isLoading = useSelector((state) => state.ui.isLoading)
+
   return (
-    <LoaderContainer>
-      <Loading>
-        <EmojiLoad>🥜</EmojiLoad>
-        <EmojiLoad>🥚</EmojiLoad>
-        <EmojiLoad>🥛</EmojiLoad>
-      </Loading>
-    </LoaderContainer>
+    <>
+      {isLoading &&
+        <LoaderContainer>
+          <Loading>
+            <EmojiLoad>🥜</EmojiLoad>
+            <EmojiLoad>🥚</EmojiLoad>
+            <EmojiLoad>🥛</EmojiLoad>
+          </Loading>
+        </LoaderContainer>
+      }
+    </>
   );
 };
 
 const LoaderContainer = styled.div`
-background-color:transparent;
-display: flex;
+  background-color:transparent;
+  display: flex;
+  margin: auto;
+  justify-content: cemter;
 `
 
 const Loading = styled.div`
-margin-top: 100px;
+  margin: auto;
+  padding-top: 100px;
 `
 
 const bounce = keyframes` 

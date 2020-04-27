@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from './BarcodeScanner'
+import { StyledButton } from './StyledButton'
 import { useDispatch } from 'react-redux'
-import { fetchProduct } from 'reducers/products'
-import styled from 'styled-components';
+import { fetchProduct } from 'reducers/product'
 
 
 export const ScanBarcode = () => {
@@ -21,21 +21,9 @@ export const ScanBarcode = () => {
       }
 
       {!showScanner &&
-        <StyledButton onClick={() => setShowScanner(true)}>Scan Barcode</StyledButton>
+        <StyledButton onClick={() => setShowScanner(true)} buttonInfo="Scan product" />
       }
     </>
   )
 }
 
-const StyledButton = styled.button`
-  margin: 50px;
-  height: 70px;
-  border-radius: 18px;
-  box-shadow: 10px 5px #203240;
-  font-family: "Cabin", sans-serif;
-  font-size: 1.1rem;
-  font-weight: 500;
-  background-color: #91ccec;
-  outline: none;
-  border: none;
-`;

@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { ui } from "reducers/ui"
+import { ui } from 'reducers/ui'
 
-export const products = createSlice({
-  name: 'products',
+export const product = createSlice({
+  name: 'product',
   initialState: { product: [] },
   reducers: {
     setProduct: (state, action) => {
@@ -19,9 +19,8 @@ export const fetchProduct = barcode => {
     fetch(url)
       .then(response => response.json())
       .then(json => {
-        dispatch(products.actions.setProduct(json))
+        dispatch(product.actions.setProduct(json))
         dispatch(ui.actions.setLoading(false))
-
       })
   }
 }
