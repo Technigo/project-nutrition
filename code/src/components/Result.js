@@ -3,14 +3,13 @@ import { useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 const Container = styled.article`
-	width: 300px;
+	width: 400px;
 	min-height: 300px;
 	background-color: #777;
 	border-radius: 10px;
 	padding: 10px;
 	margin-top: 16px;
 `;
-
 const SubTitle = styled.h2`
 	color: darkorange;
 	font-size: 32px;
@@ -20,7 +19,6 @@ const Text = styled.p`
 	font-size: 24px;
 	text-decoration: underline;
 `;
-
 const Wrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
@@ -34,14 +32,12 @@ const Thumbnail = styled.img`
 
 export const Result = () => {
 	const products = useSelector((state) => state.productStore.scannedProducts);
-	const test = useSelector((state) => state.productStore.camera);
 
 	return (
 		<Container>
-			{console.log('camera is ', test)}
 			<SubTitle>Your Products</SubTitle>
 			{products.map((item) => (
-				<Wrapper>
+				<Wrapper key={item.code}>
 					<Text>{`Name: ${item.product.product_name} & Allergens: ${item.product.allergens}`} </Text>
 					<Thumbnail src={item.product.image_front_url} />
 				</Wrapper>

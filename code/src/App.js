@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { Provider, useDispatch } from 'react-redux';
+import { Provider } from 'react-redux';
 import { productStore } from 'reducers/productStore';
 import { ScanBarcode } from './components/ScanBarcode';
 import { Result } from 'components/Result';
@@ -22,8 +22,6 @@ const reducer = combineReducers({
 const store = configureStore({ reducer });
 
 export const App = () => {
-	const [ products, setProducts ] = useState([]);
-
 	return (
 		<ParentContainer>
 			<Provider store={store}>
@@ -34,7 +32,3 @@ export const App = () => {
 		</ParentContainer>
 	);
 };
-
-//Test codes here: <input type="text" onChange={(e) => onDetected(e.target.value)} />
-//console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
-//  product.image_front_url

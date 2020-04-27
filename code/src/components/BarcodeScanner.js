@@ -15,22 +15,11 @@ const Section = styled.section`
   }
 `
 
-const Video = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 export const BarcodeScanner = ({ className, onDetected }) => {
   const [initializing, setInitializing] = useState(true);
-  const [product, setProduct] = useState("")
   const cameraDivRef = useRef();
 
   Quagga.onDetected((data) => {
-    // OLD VERSION
-    // onDetected(data.code);
-
-    // New version
     onDetected(data.codeResult.code);
   });
 

@@ -14,8 +14,9 @@ export const productStore = createSlice({
 			console.log('this action', action.payload);
 			const productList = state.scannedProducts;
 			state.errorMessage = '';
+			//checking if scanned product is in our array
 			let notInside = true;
-			productList.map((item) => {
+			productList.forEach((item) => {
 				if (item.code === action.payload.code) {
 					notInside = false;
 				}
@@ -28,14 +29,6 @@ export const productStore = createSlice({
 		addError: (state, action) => {
 			state.errorMessage = action.payload;
 		},
-		toggleCamera: (state, action) => {
-			const status = state.camera;
-			if (status) {
-				state.camera = false;
-			} else {
-				state.camera = true;
-			}
-		},
 		startCamera: (state, action) => {
 			state.camera = true;
 		},
@@ -44,33 +37,29 @@ export const productStore = createSlice({
 		}
 	}
 });
-
+// Thunk for fetching product data
 export const fetchData = (code) => {
 	const foodUrl = `https://world.openfoodfacts.org/api/v0/product/${code}.json`;
 	return (dispatch) => {
 		fetch(foodUrl)
 			.then((data) => data.json())
 			.then((json) => {
-				// console.log(json.status);
-				// products.push(json);
-				// console.log(products);
+				// successful fetch
 				if (json.status === 1) {
 					let products = [];
 					products.push(json);
-					// setProducts([json])
-					// console.log('This is the useState:', products);
-					//setShowScanner(false);
+					// close camera
 					dispatch(productStore.actions.stopCamera());
+					// add product to store
 					dispatch(productStore.actions.addProduct(products.find((item) => item.status === 1)));
-					//	dispatch(productStore.actions.addError({ code: code, message: 'product found' }));
 					products = [];
 				} else {
+					// adding error message
 					dispatch(productStore.actions.addError('product not found'));
 				}
 			})
 			.catch(function(error) {
 				console.log(error);
-				dispatch(productStore.actions.addError(error));
 			});
 	};
 };
