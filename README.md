@@ -1,13 +1,10 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
+A pair programming project were the task was to build an app using the camera on the computer/phone to scan barcodes and fecth information from an open food api. We built and app in React using Redux that shows if the scanned product contains any allergens.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Tech we used
+React, Redux, Styled components, JSX, CSS
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Scan barcode and check for allergens here: https://romantic-perlman-ac01e7.netlify.app
