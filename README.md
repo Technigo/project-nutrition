@@ -20,4 +20,4 @@ The project went well, however it was a bit tricky to be able "to see" that we s
 
 ## View it live
 
-https://elated-saha-c1e2e2.netlify.app/
+https://cranky-agnesi-1a9eac.netlify.app/
