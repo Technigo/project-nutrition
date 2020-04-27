@@ -21,6 +21,17 @@ const Text = styled.p`
 	text-decoration: underline;
 `;
 
+const Wrapper = styled.div`
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+`;
+const Thumbnail = styled.img`
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+`;
+
 export const Result = () => {
 	const products = useSelector((state) => state.productStore.scannedProducts);
 	const test = useSelector((state) => state.productStore.camera);
@@ -30,7 +41,10 @@ export const Result = () => {
 			{console.log('camera is ', test)}
 			<SubTitle>Your Products</SubTitle>
 			{products.map((item) => (
-				<Text>{`Name: ${item.product.product_name} & Allergens: ${item.product.allergens}`} </Text>
+				<Wrapper>
+					<Text>{`Name: ${item.product.product_name} & Allergens: ${item.product.allergens}`} </Text>
+					<Thumbnail src={item.product.image_front_url} />
+				</Wrapper>
 			))}
 		</Container>
 	);

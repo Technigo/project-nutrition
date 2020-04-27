@@ -48,20 +48,25 @@ export const productStore = createSlice({
 export const fetchData = (code) => {
 	const foodUrl = `https://world.openfoodfacts.org/api/v0/product/${code}.json`;
 	return (dispatch) => {
-		fetch(foodUrl).then((data) => data.json()).then((json) => {
-			// console.log(json.status);
-			// products.push(json);
-			// console.log(products);
-			if (json.status === 1) {
-				let products = [];
-				products.push(json);
-				// setProducts([json])
-				// console.log('This is the useState:', products);
-				//setShowScanner(false);
-				dispatch(productStore.actions.stopCamera());
-				dispatch(productStore.actions.addProduct(products.find((item) => item.status === 1)));
-				products = [];
-			}
-		});
+		fetch(foodUrl)
+			.then((data) => data.json())
+			.then((json) => {
+				// console.log(json.status);
+				// products.push(json);
+				// console.log(products);
+				if (json.status === 1) {
+					let products = [];
+					products.push(json);
+					// setProducts([json])
+					// console.log('This is the useState:', products);
+					//setShowScanner(false);
+					dispatch(productStore.actions.stopCamera());
+					dispatch(productStore.actions.addProduct(products.find((item) => item.status === 1)));
+					products = [];
+				}
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
 	};
 };

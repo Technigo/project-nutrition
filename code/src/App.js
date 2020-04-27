@@ -36,3 +36,5 @@ export const App = () => {
 };
 
 //Test codes here: <input type="text" onChange={(e) => onDetected(e.target.value)} />
+//console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
+//  product.image_front_url
