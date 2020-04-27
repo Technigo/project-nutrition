@@ -23,8 +23,11 @@ const Text = styled.p`
 
 export const Result = () => {
 	const products = useSelector((state) => state.productStore.scannedProducts);
+	const test = useSelector((state) => state.productStore.camera);
+
 	return (
 		<Container>
+			{console.log('camera is ', test)}
 			<SubTitle>Your Products</SubTitle>
 			{products.map((item) => (
 				<Text>{`Name: ${item.product.product_name} & Allergens: ${item.product.allergens}`} </Text>
