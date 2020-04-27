@@ -1,13 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
-// Inital state
+
 const myInitialState = {
+	errorMessage: '',
 	camera: false,
-	scannedProducts: [
-		{
-			code: '7000',
-			product: { allergens: 'none, nothing at all no fun', product_name: 'test' }
-		}
-	]
+	scannedProducts: []
 };
 
 export const productStore = createSlice({
@@ -17,6 +13,7 @@ export const productStore = createSlice({
 		addProduct: (state, action) => {
 			console.log('this action', action.payload);
 			const productList = state.scannedProducts;
+			state.errorMessage = '';
 			let notInside = true;
 			productList.map((item) => {
 				if (item.code === action.payload.code) {
@@ -27,6 +24,9 @@ export const productStore = createSlice({
 				state.scannedProducts.push(action.payload);
 				console.log('array:', state.scannedProducts);
 			}
+		},
+		addError: (state, action) => {
+			state.errorMessage = action.payload;
 		},
 		toggleCamera: (state, action) => {
 			const status = state.camera;
@@ -62,11 +62,15 @@ export const fetchData = (code) => {
 					//setShowScanner(false);
 					dispatch(productStore.actions.stopCamera());
 					dispatch(productStore.actions.addProduct(products.find((item) => item.status === 1)));
+					//	dispatch(productStore.actions.addError({ code: code, message: 'product found' }));
 					products = [];
+				} else {
+					dispatch(productStore.actions.addError('product not found'));
 				}
 			})
 			.catch(function(error) {
 				console.log(error);
+				dispatch(productStore.actions.addError(error));
 			});
 	};
 };
