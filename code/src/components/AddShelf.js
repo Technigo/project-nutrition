@@ -3,6 +3,21 @@ import { useDispatch } from "react-redux"
 import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
+const ShelfForm = styled.form`
+  background: transparent;
+  border: none;
+`
+const AddButton = styled.button`
+  border: none;
+  background: transparent;
+`
+
+const Input = styled.input`
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid black;
+
+`
 
 export const AddShelf = ({ setShowAddShelf }) => {
     const [shelfName, setShelfName] = useState()
@@ -15,10 +30,10 @@ export const AddShelf = ({ setShowAddShelf }) => {
     }
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
-            <button type="submit">Add shelf</button>
-            <input value={shelfName} type="text" onChange={(e) => setShelfName(e.target.value)}></input>
-        </form>
+        <ShelfForm onSubmit={(e) => handleSubmit(e)}>
+            <AddButton type="submit">Add shelf</AddButton>
+            <Input value={shelfName} type="text" required onChange={(e) => setShelfName(e.target.value)}></Input>
+        </ShelfForm>
     )
 
 }

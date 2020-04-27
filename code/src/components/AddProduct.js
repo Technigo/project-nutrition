@@ -4,14 +4,12 @@ import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
 const Input = styled.input`
-    font-size: 24px;
-    border-radius: 8px 0 0 8px;
+    font-size: 20px;
 `
 const Select = styled.select`
-    font-size: 24px;
+    font-size: 20px;
     padding-top: 1px;
-    padding-bottom: 3px;
-    border-radius: 0 8px 8px 0;
+    padding-bottom: 2px;
 `
 
 export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
@@ -39,13 +37,13 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
 
     return (
         <form onSubmit={(e) => handleSubmit(e)}>
-            <Input type="text" value={barcode} required onChange={(e) => setBarcode(e.target.value)}></Input>
             <Select required onChange={(e) => setShelf(e.target.value)} value={shelf}>
                 <option value="">Pick shelf</option>
                 {shelves.map((shelf) => {
                     return <option value={shelf.name}>{shelf.name}</option>
                 })}
             </Select>
+            <Input type="text" value={barcode} required onChange={(e) => setBarcode(e.target.value)}></Input>
         </form>
     )
 }

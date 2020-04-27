@@ -8,6 +8,7 @@ const ShelfContainer = styled.section`
   display: flex;
   flex-direction: column;
   margin: 16px;
+  box-shadow: grey 2px 2px 2px 2px;
 `
 
 const Image = styled.img`
@@ -16,9 +17,22 @@ const Image = styled.img`
   display: flex;
   flex-direction: column;
   `
+
+const TextWrapper = styled.div`
+  padding: 16px;
+  display: flex;
+  align -items: center;
+  justify-content: space-between;
+`
 const Btn = styled.button`
-  font-size: 24px;
-  border-radius: 8px;
+  font-size: 16px;
+`
+
+const RemoveButton = styled.button`
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 `
 
 export const ShelfCard = ({ ...item }) => {
@@ -43,8 +57,13 @@ export const ShelfCard = ({ ...item }) => {
 
   return (
     <ShelfContainer>
-      <Btn> <Image src={generalProducts} alt="my image" onClick={() => revealProducts(item.name)} /> {item.name} ({totalItems} {item.products.length === 1 ? "item" : "items"})</Btn>
-      <button onClick={() => removeItem(item.name)}>Delete shelf</button>
+      <Btn> 
+        <Image src={generalProducts} alt="my image" onClick={() => revealProducts(item.name)} />
+        <TextWrapper>
+         {item.name} ({totalItems} {item.products.length === 1 ? "item" : "items"})
+        <RemoveButton onClick={() => removeItem(item.name)}>[x]</RemoveButton>
+        </TextWrapper>  
+        </Btn>
     </ShelfContainer>
 
   )

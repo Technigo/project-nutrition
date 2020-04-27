@@ -10,7 +10,6 @@ const CardContainer = styled.section`
     background-color: white;
     width: 300px;
     justify-content: space-between;
-    border-radius: 8px;
     padding: 8px;
     margin-top: 0;
 `
