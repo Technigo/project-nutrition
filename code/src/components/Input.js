@@ -1,14 +1,20 @@
-import React from "react";
-import { useDispatch } from 'react-redux'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { productsList } from "reducers/products";
-import { fetchProducts } from 'reducers/products'
+import { fetchProducts } from "reducers/products";
 
-export const Input = (e) => {
-  const dispatch = useDispatch()
+export const Input = () => {
+  const [barcode, setBarcode] = useState("");
+  const dispatch = useDispatch();
 
-  const handleOnSubmit = () => {
-    dispatch(productsList.actions.fetchProducts())
-  }
+  const handleOnSubmit = event => {
+    event.preventDefault();
+
+    // dispatch(productsList.actions.fetchProducts(barcode));
+    dispatch(fetchProducts(barcode));
+
+    setBarcode("");
+  };
 
   // const handleOnSubmit = (event) => {
   //   return (
@@ -28,15 +34,33 @@ export const Input = (e) => {
 
   return (
     <div>
-      <label>
+      <form onSubmit={handleOnSubmit}>
+        <input
+          placeholder="What is your barcode?"
+          type="text"
+          onChange={(event) => setBarcode(event.target.value)}
+          value={barcode}
+        ></input>
+        <button disabled={!barcode} type="submit" value="Add barcode">
+          Add barcode
+        </button>
+      </form>
+
+      {/* <form>
         {" "}
         Test codes here:{" "}
-        {/* <input type="text" value={(e.target.value)}></input> */}
-        <input type="text"></input>
-        {/* <button type="button" onClick={() => dispatch(fetchProducts(7310865071804))}>Submit the Milk product</button> */}
-        {/* <button type="button" onClick={() => dispatch(fetchProducts(7310130003530))}>Submit the Milk product</button> */}
+        <input type="text" value={(e.target.value)}></input>
+        <input
+          type="text"
+          value={barcode}
+          onChange={(event) => setBarcode(event.target.value)}
+        ></input>
         <button type="button" onClick={() => dispatch(fetchProducts(7310865071804))}>Submit the Milk product</button>
-      </label>
+        <button type="button" onClick={() => dispatch(fetchProducts(7310130003530))}>Submit the Milk product</button>
+        <button type="button" onClick={() => handleOnSubmit()}>
+          Submit the product
+        </button>
+      </form> */}
       <p>
         {" "}
         Use the field above to test barcodes manually and keep an eye on your
