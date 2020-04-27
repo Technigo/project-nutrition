@@ -9,18 +9,20 @@ export const productsList = createSlice({
   reducers: {
     addProduct: (state, action) => {
       state.products = action.payload
-      }
+    }
   },
 })
 
-export const fetchProducts = ({ barcode }) => {
+export const fetchProducts = (barcode) => {
+  const fetchUrl = `https://world.openfoodfacts.org/api/v0/product/${barcode}.json`
+  console.log(fetchUrl)
   return (dispatch) => {
     dispatch(ui.actions.setLoading(true))
-    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
-    .then((res) => res.json())
-    .then((json) => {
-      dispatch(productsList.actions.addProduct(json))
-      dispatch(ui.actions.setLoading(false))
-    })
+    fetch(fetchUrl)
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch(productsList.actions.addProduct(json))
+        dispatch(ui.actions.setLoading(false))
+      })
   }
 }
