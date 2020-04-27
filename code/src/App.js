@@ -6,6 +6,7 @@ import { ScanBarcode } from 'components/ScanBarcode'
 import { LoaderSpinner } from 'components/LoaderSpinner'
 import { products } from 'reducers/products'
 import { ui } from 'reducers/ui'
+import { ProductInfo } from './components/ProductInfo'
 
 
 const reducer = combineReducers({
@@ -28,7 +29,10 @@ export const store = configureStore({ reducer });
 export const App = () => {
   return (
     <Provider store={store}>
+
       <ScanBarcode />
+      <LoaderSpinner />
+      <ProductInfo />
     </Provider>
   );
 };

@@ -14,7 +14,8 @@ export const LoaderSpinner = () => {
 };
 
 const LoaderContainer = styled.div`
-background-color: #FFFFF;
+background-color:transparent;
+display: flex;
 `
 
 const Loading = styled.div`
