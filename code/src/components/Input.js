@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchFoods } from '../reducers/foods'
 
-export const Input = () => {
+export const Input = ({onDetected}) => {
 const dispatch = useDispatch()
 
   return ( 
@@ -16,8 +16,9 @@ const dispatch = useDispatch()
     </input> */}
 
   <input type="text" 
-    onChange={() => 
-    dispatch(fetchFoods())}>
+    onChange={(e) => 
+    onDetected(e.target.value)}>
+    
       
     </input>
 

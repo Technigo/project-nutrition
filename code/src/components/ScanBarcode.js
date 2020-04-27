@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
+import { Input } from 'components/Input'
 import { useDispatch } from 'react-redux'
 import { fetchFoods } from 'reducers/foods'
 
@@ -14,6 +15,7 @@ export const ScanBarcode = () => {
 
   return (
     <>
+    <Input onDetected={handleScan}/>
       {!showScanner && (
         <button type="button" onClick={() => setShowScanner(true)}>
           Show scanner
@@ -21,6 +23,7 @@ export const ScanBarcode = () => {
       )}
 
       {showScanner && (
+        
         <BarcodeScanner onDetected={handleScan} />
 
       /* {showScanner && (

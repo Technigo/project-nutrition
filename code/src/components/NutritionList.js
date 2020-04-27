@@ -23,16 +23,25 @@ export const NutritionList = () => {
     
       <div>
       
-      <ul>
+     
          {/* {all.product.ingredients_hierarchy.map((food) => (
           <li key={food.code}>{food.name}</li>
         ))}  */}
        {product.product && (
-         <li> info123: {product.product.manufacturing_places} </li> 
+        
+        <ul>
+         <li> {product.product.product_name_nb} </li>
+         <li><img src={product.product.image_front_url} alt='pic'/> </li> 
+         {product.product.ingredients_original_tags.map((food)=> (
+           <li> {food} </li>
+         ))}
+         
+         
+        </ul>
        )}
        
 
-      </ul>
+     
       </div>
     
     </>
