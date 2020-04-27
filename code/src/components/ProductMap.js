@@ -8,6 +8,7 @@ import { ShelfCard } from './ShelfCard'
 import img from '../emptyFridge.png'
 import { AddProduct } from './AddProduct'
 import { ProductCard } from './ProductCard'
+import { AddShelf } from './AddShelf'
 
 const Header = styled.div`
   width: 100%;
@@ -64,6 +65,7 @@ border-radius: 5px;
 export const ProductMap = () => {
   const dispatch = useDispatch()
   const [showScanner, setShowScanner] = useState(false)
+  const [showAddShelf, setShowAddShelf] = useState(false)
   const [barcode, setBarcode] = useState()
   const [shelf, setShelf] = useState()
   const shelfList = useSelector((store) => store.nutrition.list.shelves)
@@ -72,6 +74,7 @@ export const ProductMap = () => {
     <section>
       <Header>
         {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan<br /> item</ScanButton>}
+        <ScanButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> Shelf</ScanButton>
         <Title>Fridge</Title>
         {/* {shelfList.length !== 0 && <ClearButton onClick={() => dispatch(nutrition.actions.clearAll())}>Empty<br /> fridge</ClearButton>} */}
       </Header>
@@ -80,14 +83,15 @@ export const ProductMap = () => {
         {showScanner && <SetData setBarcode={setBarcode} setShowScanner={setShowScanner} />}
         {shelfList.length !== 0 &&
           <>
-            <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />
+            {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
+            {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}
             {shelfList.map((item) => {
               return (
                 <>
                   <ShelfCard {...item} />
                   {item.reveal &&
                     item.products.map((product) => {
-                      return <ProductCard {...product} />
+                      return <ProductCard shelf={item.name} {...product} />
                     })}
                 </>
               )

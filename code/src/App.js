@@ -1,9 +1,11 @@
 import React from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { Provider, useDispatch } from 'react-redux'
 import { createStore, configureStore, combineReducers } from '@reduxjs/toolkit'
 import { nutrition } from './reducers/nutrition'
 import { ProductMap } from './components/ProductMap'
+import { ProductDetails } from 'components/ProductDetails'
 
 const saveToLocalStorage = (state) => {
   try {
@@ -56,20 +58,16 @@ const onDetected = (code) => {
 export const App = () => {
   return (
     <Provider store={store}>
-      <div>
-        {/* <label>
-          {" "}
-        Test codes here:{" "} */}
-
-        {/* </label>
-        <p>
-          {" "}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
-      </p> */}
-        {/* <BarcodeScanner onDetected={onDetected}></BarcodeScanner> */}
-        <ProductMap />
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <ProductMap />
+          </Route>
+          <Route path="/:product">
+            <ProductDetails />
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </Provider>
   );
 };

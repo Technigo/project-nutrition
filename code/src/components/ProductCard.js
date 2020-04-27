@@ -1,5 +1,8 @@
 import React from "react"
+import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import styled from 'styled-components'
+import { nutrition } from '../reducers/nutrition'
 
 const CardContainer = styled.section`
     display: flex;
@@ -31,20 +34,41 @@ const Image = styled.img`
 `
 
 
-export const ProductCard = ({ ...product }) => {
-    
+export const ProductCard = ({ shelf, ...product }) => {
+    const dispatch = useDispatch()
+
+    const increaseQuantity = (shelf, code) => {
+
+        dispatch(nutrition.actions.increaseQuantity({ shelf: shelf, productId: code }))
+
+    }
+
+    const decreaseQuantity = (shelf, code) => {
+
+        dispatch(nutrition.actions.decreaseQuantity({ shelf: shelf, productId: code }))
+
+    }
+
+    const removeProduct = (shelf, code) => {
+        dispatch(nutrition.actions.removeProduct({ shelf: shelf, productId: code }))
+    }
+
+
     return (
         <CardContainer>
             <Info>
                 <Text>{product.product.product_name}</Text>
-                <Text>{product.product.brands}</Text>
-                <Text>{product.product.brands}</Text>
+                <Text>{product.quantity.toString()}</Text>
+                <button onClick={() => decreaseQuantity(shelf, product.code)}>-</button>
+                <button onClick={() => increaseQuantity(shelf, product.code)}>+</button>
+                <button onClick={() => removeProduct(shelf, product.code)}>[remove item]</button>
+                <Link to={`/${product.code}`}>{product.product.brands}</Link>
             </Info>
             <ImageContainer>
                 <Image src={product.product.image_thumb_url} />
-            </ImageContainer>   
+            </ImageContainer>
         </CardContainer>
-   
-    
+
+
     )
 }
