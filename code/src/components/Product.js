@@ -7,12 +7,19 @@ export const Product = () => {
 
   console.log('SCAN', scan)
 
-
   return (
     <>
       {scan.product && scan.status === 1 && (
-        <p>{scan.product.product_name}</p>
+        <div>
+          <img src={scan.product.image_front_small_url} alt={scan.product.product_name} />
+          <p>Product: {scan.product.product_name}</p>
+          <h3>Nutrition info 100g / daily recommendations:</h3>
+          <p>Protein: {scan.product.nutriments.proteins_100g}g /60g</p>
+          <p>Salt: {scan.product.nutriments.salt_100g}g /6g</p>
+          <p>Sugar: {scan.product.nutriments.sugars_100g}g /50g</p>
+        </div>
       )}
+      {scan.status === 0 && <h3>{scan.status_verbose}, please try again</h3>}
     </>
   )
 }
