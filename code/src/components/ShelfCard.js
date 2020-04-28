@@ -16,6 +16,7 @@ const ShelfContainer = styled.section`
   height: 300px;
   padding: 12px;
   background-color: white;
+}
 `
 
 const Image = styled.img`
@@ -38,6 +39,7 @@ const Btn = styled.button`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding-top: 20px;
   border: none;
   background: transparent;
 `

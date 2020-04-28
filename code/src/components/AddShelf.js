@@ -6,21 +6,22 @@ import { nutrition } from '../reducers/nutrition'
 const ShelfForm = styled.form`
   background: #fffaf0;
   border: none;
-  width: 300px;
+  width: 240px;
+  box-shadow: 3px 3px #fcdfa2;
 `
 const AddButton = styled.button`
   border: none;
   background: #fffaf0;
   font-size: 16px;
-  padding: 3px 0 3px 8px;
+  padding: 8.5px 0 8px 6px;
+  cursor: pointer;
 `
 
 const Input = styled.input`
   border: none;
   background: transparent;
-  border-bottom: 1px solid lightgrey;
   font-size: 16px;
-  width: 225px;
+  width: 130px;
 `
 
 export const AddShelf = ({ setShowAddShelf }) => {
