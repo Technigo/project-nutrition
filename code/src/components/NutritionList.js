@@ -35,12 +35,14 @@ export const NutritionList = () => {
        {product.product && (
          <div className='nutrition-card'> 
         <h2 className='product-name'>{product.product.product_name}</h2>
-        <ul>
+        <ul className='title-and-pic'>
          
          <li><img src={product.product.image_front_url} alt='pic'/> </li> 
          
          
          <li><span className='title'>Ingredients</span></li>
+         </ul>
+         <ul className='ingredient-list'>
          
          {product.product.ingredients_tags.map((ingredient)=> (
            

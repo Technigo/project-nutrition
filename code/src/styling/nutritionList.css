@@ -4,7 +4,12 @@ ul {
   margin-bottom: 20px;
   padding: 0;
   font-style: italic;
+  
+}
 
+li {
+  
+  
 }
 
 .nutrition-card {
@@ -22,9 +27,11 @@ margin-bottom: 30px;
 }
 
 .product-name {
-  color: rgb(63, 63, 63);
-  border-bottom: 0.2px solid rgb(150, 150, 150);
+  color: rgb(66, 65, 65);
+  border-bottom: 0.2px solid rgb(202, 200, 200);
   padding: 10px 0;
+  background: rgba(190, 190, 190, 0.322);
+  font-family: 'Roboto', sans-serif;
 }
 
 .title {
@@ -33,6 +40,8 @@ margin-bottom: 30px;
   line-height: 50px;
   letter-spacing: 2px;
   font-style: normal;
+  font-family: 'Roboto', sans-serif;
+  
 }
 
 img {
@@ -40,6 +49,20 @@ img {
   width: 200px;
   height: 200px;
 }
+
+.title-and-pic li {
+  text-align: center;
+}
+
+.ingredient-list li {
+  text-align: left;
+  border-bottom: 1px rgba(201, 183, 195, 0.753) dotted;
+  padding-left: 10px;
+  width: 80%;
+  margin: 0 auto;
+  
+}
+
 
 @media only screen and (min-width: 800px) {
  .nutrition-card {
