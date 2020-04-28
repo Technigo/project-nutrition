@@ -13,7 +13,6 @@ export const ScanBarcode = () => {
     <>
       {showScanner &&
         <BarcodeScanner onDetected={(code) => {
-          console.log('Got barcode', code)
           setShowScanner(false)
           dispatch(fetchProduct(code))
         }}

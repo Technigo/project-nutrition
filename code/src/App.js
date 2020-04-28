@@ -1,9 +1,10 @@
 import React from 'react';
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
+
 import { Welcome } from './components/Welcome'
-import { LoaderSpinner } from 'components/LoaderSpinner'
+import { Loader } from 'components/Loader'
 import { ProductInfo } from './components/ProductInfo'
 import { product } from 'reducers/product'
 import { ui } from 'reducers/ui'
@@ -14,10 +15,6 @@ const reducer = combineReducers({
   product: product.reducer
 });
 
-const Wrapper = styled.div`
-  text-align: center;
-`
-
 export const store = configureStore({ reducer });
 
 export const App = () => {
@@ -25,9 +22,15 @@ export const App = () => {
     <Provider store={store}>
       <Wrapper>
         <Welcome />
-        <LoaderSpinner />
+        <Loader />
         <ProductInfo />
       </Wrapper>
     </Provider>
   );
 };
+
+const Wrapper = styled.div`
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+`
