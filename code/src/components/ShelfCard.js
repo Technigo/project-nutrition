@@ -76,13 +76,13 @@ export const ShelfCard = ({ ...item }) => {
     <ShelfContainer>
       <Btn onClick={() => revealProducts(item.name)}>
         <Image src={item.image ? item.image : generalProducts} alt="my image" />
-        <TextWrapper>
-          {item.name} ({totalItems} {item.products.length === 1 ? "item" : "items"})
-        <RemoveButton onClick={() => removeItem(item.name)}>
-            <FontAwesomeIcon icon={faTimesCircle} />
-          </RemoveButton>
-        </TextWrapper>
       </Btn>
+      <TextWrapper>
+        {item.name} ({totalItems} {item.products.length === 1 ? "item" : "items"})
+        <RemoveButton onClick={() => removeItem(item.name)}>
+          <FontAwesomeIcon icon={faTimesCircle} />
+        </RemoveButton>
+      </TextWrapper>
     </ShelfContainer>
 
   )

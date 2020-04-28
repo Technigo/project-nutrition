@@ -23,6 +23,7 @@ const Select = styled.select`
     padding: 8px 3px 8px 3px;
     background: #fffaf0;
     border: none;
+    border-radius: 0;
 `
 
 export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {

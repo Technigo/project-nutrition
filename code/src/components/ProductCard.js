@@ -15,7 +15,7 @@ const CardContainer = styled.section`
     background-color: #f1f1f1;
     padding: 8px;
     margin: 10px;
-    
+    width: 70%;
 `
 
 const Thumbnail = styled.div`
@@ -56,6 +56,7 @@ background: transparent;
 
 
 export const ProductCard = ({ shelf, ...product }) => {
+    console.log(product)
     const dispatch = useDispatch()
     const [chipText, setChipText] = useState(`${product.product.product_name.substr(0, 20)}..`)
 
@@ -104,11 +105,6 @@ export const ProductCard = ({ shelf, ...product }) => {
                 <FontAwesomeIcon icon={faTimesCircle}
                     style={{ color: "red", fontSize: 18 }} />
             </RemoveButton>
-
-
-            {/* <ImageContainer>
-                <Image src={product.product.image_thumb_url} />
-            </ImageContainer> */}
         </CardContainer>
 
 
