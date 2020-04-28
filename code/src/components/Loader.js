@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import styled, { keyframes } from 'styled-components/macro'
 
-export const LoaderSpinner = () => {
+export const Loader = () => {
   const isLoading = useSelector((state) => state.ui.isLoading)
 
   return (

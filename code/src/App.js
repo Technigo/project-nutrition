@@ -4,7 +4,7 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import styled from 'styled-components/macro'
 
 import { Welcome } from './components/Welcome'
-import { LoaderSpinner } from 'components/LoaderSpinner'
+import { Loader } from 'components/Loader'
 import { ProductInfo } from './components/ProductInfo'
 import { product } from 'reducers/product'
 import { ui } from 'reducers/ui'
@@ -22,7 +22,7 @@ export const App = () => {
     <Provider store={store}>
       <Wrapper>
         <Welcome />
-        <LoaderSpinner />
+        <Loader />
         <ProductInfo />
       </Wrapper>
     </Provider>
