@@ -1,40 +1,63 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { nutrition } from '../reducers/nutrition'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimesCircle, faChevronCircleDown, faChevronCircleUp } from "@fortawesome/free-solid-svg-icons";
 
 const CardContainer = styled.section`
     display: flex;
-    flex-direction: row;
-    background-color: white;
-    width: 300px;
-    justify-content: space-between;
+    align-items: center;
+    border-radius: 500px;
+    box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    background-color: #f1f1f1;
     padding: 8px;
-    margin-top: 0;
+    margin: 10px;
+    
+`
+
+const Thumbnail = styled.div`
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-image: url(${(props) => props.background});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all .8s ease-in-out;
+  margin-right: 8px;
+  &:hover {
+      transform: scale(3)
+  }
 `
 
 const Text = styled.p`
-    font-size: 24px;
-    margin: 4px;
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+    width: 100px;
 `
 
-const Info = styled.section`
-    display: flex;
-    flex-direction: column;
+const ButtonWrapper = styled.div`
+display: flex;
+flex-direction: column;
 `
-const ImageContainer = styled.section`
-    width: 50px;
-    height: auto;
+const QuantityButtons = styled.button`
+border: none;
+background: transparent;
 `
-const Image = styled.img`
-    width: 100%
-    height: auto;
+
+const RemoveButton = styled.button`
+border: none;
+background: transparent;
 `
 
 
 export const ProductCard = ({ shelf, ...product }) => {
     const dispatch = useDispatch()
+    const [chipText, setChipText] = useState(`${product.product.product_name.substr(0, 20)}..`)
 
     const increaseQuantity = (shelf, code) => {
 
@@ -52,20 +75,40 @@ export const ProductCard = ({ shelf, ...product }) => {
         dispatch(nutrition.actions.removeProduct({ shelf: shelf, productId: code }))
     }
 
+    const mouseEnter = () => {
+        setChipText(product.product.product_name)
+    }
+
+    const mouseLeave = () => {
+        setChipText(product.product.product_name.substr(0, 25))
+    }
 
     return (
         <CardContainer>
-            <Info>
-                <Text>{product.product.product_name}</Text>
-                <Text>{product.quantity.toString()}</Text>
-                <button onClick={() => decreaseQuantity(shelf, product.code)}>-</button>
-                <button onClick={() => increaseQuantity(shelf, product.code)}>+</button>
-                <button onClick={() => removeProduct(shelf, product.code)}>[remove item]</button>
-                <Link to={`/${product.code}`}>{product.product.brands}</Link>
-            </Info>
-            <ImageContainer>
+            <Thumbnail background={product.product.image_thumb_url} />
+            <Link to={`/ ${product.code} `} style={{ textDecoration: "none" }}>
+                <Text onMouseEnter={() => mouseEnter()}
+                    onMouseLeave={() => mouseLeave()}
+                >{chipText}</Text>
+            </Link>
+            <p>({product.quantity})</p>
+            <ButtonWrapper>
+                <QuantityButtons onClick={() => increaseQuantity(shelf, product.code)}>
+                    <FontAwesomeIcon icon={faChevronCircleUp} />
+                </QuantityButtons>
+                <QuantityButtons onClick={() => decreaseQuantity(shelf, product.code)}>
+                    <FontAwesomeIcon icon={faChevronCircleDown} />
+                </QuantityButtons>
+            </ButtonWrapper>
+            <RemoveButton onClick={() => removeProduct(shelf, product.code)}>
+                <FontAwesomeIcon icon={faTimesCircle}
+                    style={{ color: "red", fontSize: 18 }} />
+            </RemoveButton>
+
+
+            {/* <ImageContainer>
                 <Image src={product.product.image_thumb_url} />
-            </ImageContainer>
+            </ImageContainer> */}
         </CardContainer>
 
 

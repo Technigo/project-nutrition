@@ -3,23 +3,26 @@ import { useSelector, useDispatch } from "react-redux"
 import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
-
+const Container = styled.form`
+border-bottom: 1px solid lightgrey;
+`
 const AddButton = styled.button`
   border: none;
   background: transparent;
 `
 
 const Input = styled.input`
-fonst-size: 16px;
+  fonst-size: 30px;
   border: none;
   background: #fffaf0;
-  border-bottom: 1px solid lightgrey;
+  line-height: 24px;
   width: 190px;
   padding: 6px 3px 3px 3px;
 `
 const Select = styled.select`
     font-size: 16px;
-    padding: 3px 3px 3px 0;
+    line-height: 24px;
+    padding: 6px 3px 3px 3px;
     background: #fffaf0;
     border: none;
 `
@@ -48,7 +51,7 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
 
 
     return (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <Container onSubmit={(e) => handleSubmit(e)}>
             <Select required onChange={(e) => setShelf(e.target.value)} value={shelf}>
                 <option value="">Pick shelf</option>
                 {shelves.map((shelf) => {
@@ -56,6 +59,6 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
                 })}
             </Select>
             <Input type="text" value={barcode} required onChange={(e) => setBarcode(e.target.value)}></Input>
-        </form>
+        </Container>
     )
 }

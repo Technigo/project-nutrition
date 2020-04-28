@@ -1,4 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
+import fruitVeg from '../assets/fruitVeg.png'
+import dairy from '../assets/dairy.png'
+import freezer from '../assets/freezer.png'
+import meat from '../assets/meat.png'
 
 const initialState = {
   list: {
@@ -6,22 +10,26 @@ const initialState = {
       {
         name: "Fruit & Veg",
         reveal: false,
-        products: []
+        products: [],
+        image: fruitVeg
       },
       {
         name: "Dairy",
         reveal: false,
-        products: []
+        products: [],
+        image: dairy
       },
       {
         name: "Meat & Fish",
         reveal: false,
-        products: []
+        products: [],
+        image: meat
       },
       {
         name: "Freezer",
         reveal: false,
-        products: []
+        products: [],
+        image: freezer
       }
     ]
   }
