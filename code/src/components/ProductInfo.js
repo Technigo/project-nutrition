@@ -53,6 +53,7 @@ const Wrapper = styled.section`
 display: flex;
 justify-content: center;
 flex-direction: column;
+max-width: 800px;
 `
 
 const Title = styled.h2`

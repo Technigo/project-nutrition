@@ -20,4 +20,5 @@ const Button = styled.button`
   background-color: #91ccec;
   outline: none;
   border: none;
+  max-width: 800px;
 `;
