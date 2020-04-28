@@ -63,9 +63,9 @@ export const Input = () => {
       </form> */}
       <p>
         {" "}
-        Use the field above to test barcodes manually and keep an eye on your
-        console in the browser. i.e. Type 7311070347272 - Pågen Gifflar. Yum
-        Pasta: 7310130003530 , Kikärtor: 7340011487906
+        Type 7311070347272 - Pågen Gifflar. Yum
+        Pasta: 7310130003530 , Kikärtor: 7340011487906, Mjölk: 7310865071804, 
+        Husman: 7300400118408, Ginger Chew: 7350031936216 
       </p>
       {/* <BarcodeScanner /> */}
     </div>

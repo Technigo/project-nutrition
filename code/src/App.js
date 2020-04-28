@@ -1,12 +1,13 @@
 import React from "react";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { productsList } from "./reducers/products";
+import { ui } from 'reducers/ui'
 import { Provider } from "react-redux";
 import { Input } from "components/Input"
 import { ProductInfo } from "components/ProductInfo"
 
 // import { BarcodeScanner } from 'components/BarcodeScanner'
-import { ScanBarcode } from "./components/ScanBarcode";
+// import { ScanBarcode } from "./components/ScanBarcode";
 
 // const onDetected = (code) => {
 //   console.log(`Code: ${code}`);
@@ -20,6 +21,7 @@ import { ScanBarcode } from "./components/ScanBarcode";
 // combine reducers
 const reducer = combineReducers({
   productsList: productsList.reducer,
+  ui: ui.reducer
 });
 
 // setup the store
@@ -30,7 +32,7 @@ export const App = () => {
     <Provider store={store}>
       <Input />
       {/* <ScanBarcode onDetected={onDetected} /> */}
-      <ScanBarcode />
+      {/* <ScanBarcode /> */}
       <ProductInfo />
     </Provider>
   );
