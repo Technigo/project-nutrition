@@ -64,4 +64,10 @@ const InnerContainer = styled.section`
   padding: 20px;
   margin-top: 20px;
   border: 15px solid #e3b49a;
+
+  @media (max-width: 400px) {
+    margin-top: 20px;
+    border: none;
+  },
+
 `;

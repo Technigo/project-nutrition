@@ -5,7 +5,7 @@ import styled from "styled-components/macro";
 export const Header = () => {
   return (
     <HeaderContainer>
-      <Headline>What are you eating?🍪</Headline>
+      <Headline>What are you eating?<span role='img' aria-label='cookie'>🍪</span></Headline>
       <HeaderText>
         Here you can find out how much fat, protein, sugars and calories there
         are in what you are eating!

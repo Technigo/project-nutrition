@@ -8,9 +8,15 @@ export const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #85FFBD;
-    background-image: linear-gradient(0deg, #85FFBD 0%, #FFFB7D 100%);
+    background-color: #eac87b;
+    background-image: linear-gradient(0deg, #eac87b 0%, #ffffff   100%);
     color: #193546;
+
+    @media (max-width: 400px) {
+    background-color: #c3d3e0;
+    background-image: none;
+  },
+    
   }
 
   code {
@@ -19,6 +25,8 @@ export const GlobalStyle = createGlobalStyle`
 }
 `;
 
+// background-color: #ffffff;
+// background-image: linear-gradient(160deg, #ffffff 0%, #eac87b 100%);
 
 // background-color: #85FFBD;
 // background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);

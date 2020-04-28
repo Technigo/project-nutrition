@@ -1,13 +1,21 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
+Mission was to build an app which uses barcodes on food packages to retrieve 
+the product name and nutritional information.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+We started by getting to know the code and testing the camera to scan barcodes. We didn't get the camera scan to work so we decided to put that on hold and focus on using an input field for the codes.
+
+We coded in VS code with live share and also used Google Hangout to share our screens. We also used Chrome inspector and Redux Devtools to see and test the result.
+
+If we had more time we would have worked on getting the loading spinner to work and to test even more using the camera scan.
+
+It was a fun project but the camera scan ate up a lot of our time in the beginning of the project. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Netlify:
+
+

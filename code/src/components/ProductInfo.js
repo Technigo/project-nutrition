@@ -36,7 +36,14 @@ export const ProductInfo = () => {
         )}
         {item.product && <NutrimentsGrams>per 100 g</NutrimentsGrams>}
       </Container>
-      {item.status === 0 && <h4>Oh no! {item.status_verbose}.</h4>}
+      {item.status === 0 && (
+        <ProductNotFound>
+          Oh no! {item.status_verbose}{" "}
+          <span role="img" aria-label="angry-beast">
+            👹
+          </span>
+        </ProductNotFound>
+      )}
     </div>
   );
 };
@@ -49,6 +56,12 @@ const Container = styled.section`
 
 const ProductName = styled.h2`
   font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5px;
+`;
+
+const ProductNotFound = styled.h2`
+  font-size: 1.2em;
   text-align: center;
   margin-bottom: 5px;
 `;
