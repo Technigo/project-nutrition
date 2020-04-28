@@ -16,7 +16,7 @@ const Input = styled.input`
   border: none;
   background: #fffaf0;
   width: 125px;
-  padding: 8.7px 3px 8px 3px;
+  padding: 8.5px 3px 8px 3px;
 `
 const Select = styled.select`
     font-size: 16px;

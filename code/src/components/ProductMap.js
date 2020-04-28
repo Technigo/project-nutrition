@@ -18,16 +18,24 @@ const Header = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  padding: 40px;
+  padding: 0 40px 40px 40px;
   height: 300px;
+  transition: 0.2s;
+
+  @media (min-width: 668px) {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 200px;
+  }
 `
 const TitleSmallScreen = styled.p`
-  font-size: 32px;
+  font-size: 48px;
   color: #fffaf0;
   margin: 0;
 
   @media (min-width: 668px) {
     visibility: hidden;
+    margin: -70px;
   }
 `
 
@@ -41,8 +49,6 @@ const TitleBigScreen = styled.p`
     color: #fffaf0;
     margin: 0;
 }
-
-
 `
 
 const Body = styled.div`
@@ -54,12 +60,6 @@ const Body = styled.div`
   padding: 20px;
 ` 
 
-const ClearButton = styled.button`
-  color: white;
-  background-color: transparent;
-  font-size: 15px;
-  border: none;
-`
 
 const ScanButton = styled.button`
   font-size: 16px;
@@ -74,6 +74,10 @@ const ScanButton = styled.button`
 
   &: active {
     box-shadow: none;
+  }
+
+  @media (min-width: 668px) {
+    width: 90px;
   }
 `
 const AddButton = styled.button`
@@ -96,12 +100,12 @@ const ShelfContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   
 @media (min-width: 668px) {
   flex-flow: row wrap;
 }
 `
+
 
 const CardContainer = styled.div`
 display: flex;

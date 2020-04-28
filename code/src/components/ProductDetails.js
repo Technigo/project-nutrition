@@ -25,7 +25,7 @@ export const ProductDetails = () => {
     `
     const Header = styled.div`
       width: 100%;
-      background: #282828;
+      background: #146381;
       color: #fff;
       display: flex;
       align-items: center;
