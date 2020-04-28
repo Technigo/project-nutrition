@@ -30,5 +30,7 @@ export const App = () => {
 };
 
 const Wrapper = styled.div`
+  max-width: 800px;
+  margin: auto;
   text-align: center;
 `

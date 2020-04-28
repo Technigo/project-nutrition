@@ -10,7 +10,8 @@ export const StyledButton = ({ onClick, buttonInfo }) => {
 }
 
 const Button = styled.button`
-  margin: 50px;
+  margin: auto;
+  margin-top: 50px;
   padding: 1.5rem 2rem;
   border-radius: 18px;
   box-shadow: 10px 5px #203240;
@@ -20,5 +21,5 @@ const Button = styled.button`
   background-color: #91ccec;
   outline: none;
   border: none;
-  max-width: 800px;
+  max-width: 200px;
 `;
