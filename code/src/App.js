@@ -68,6 +68,6 @@ const InnerContainer = styled.section`
   @media (max-width: 400px) {
     margin-top: 20px;
     border: none;
-  },
+  }
 
 `;

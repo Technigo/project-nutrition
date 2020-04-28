@@ -26,8 +26,7 @@ CAN'T SEE THE LOADING HAPPENING - WE'LL COME BACK TO IT!
 5. Styled components
 6. Responsive
 7. Display a message when a field empty
-
-
+-------
 
 // If we have time left: 
 
@@ -38,7 +37,12 @@ Ingredients: 	product.ingredients_hierarchy
 Img? product.image_front_thumb_url
 
 - Camera - scan
-
 -------
-Type 7311070347272 - Pågen Gifflar. Yum Pasta: 7310130003530 , Kikärtor: 7340011487906, Mjölk: 7310865071804, Husman: 7300400118408, Ginger Chew: 7350031936216
+Barcodes:
+Pågen Gifflar: 7311070347272
+Snabbmakaroner: 7310130003530  
+Kikärtor: 7340011487906 
+Mjölk: 7310865071804 
+Husman: 7300400118408
+Ginger Chew: 7350031936216
 

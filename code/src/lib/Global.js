@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     @media (max-width: 400px) {
     background-color: #c3d3e0;
     background-image: none;
-  },
+  }
     
   }
 
