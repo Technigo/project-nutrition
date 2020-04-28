@@ -33,21 +33,23 @@ export const NutritionList = () => {
           <li key={food.code}>{food.name}</li>
         ))}  */}
        {product.product && (
-        
+         <div className='nutrition-card'> 
+        <h2 className='product-name'>{product.product.product_name}</h2>
         <ul>
-         <li> {product.product.product_name_nb} </li>
+         
          <li><img src={product.product.image_front_url} alt='pic'/> </li> 
          
          
+         <li><span className='title'>Ingredients</span></li>
          
-         
-         {product.product.ingredients_original_tags.map((ingredient)=> (
+         {product.product.ingredients_tags.map((ingredient)=> (
            
            <li> {ingredient.replace(/\w+:/, '').replace('-', ' ')} </li>
          ))}
          
          
         </ul>
+        </div>
        )}
        
 
