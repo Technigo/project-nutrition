@@ -2,60 +2,77 @@ import React from "react";
 import { useSelector } from "react-redux";
 // import { NotFound } from 'components/NotFound'
 
+import styled from "styled-components/macro";
+
 export const ProductInfo = () => {
-  // => store.productsList.products ??
   const item = useSelector((store) => store.productsList.products);
-  // console.log(`Here is the item: ${item}`)
-  console.log(item);
 
-  if (!item) return null
+  if (!item) return null;
 
-/*   if (!item.product.product_name) {
-    return(
-      <>
-        <NotFound />
-      </>
-    )
-  } */
-  // If no items found
-  
-  // return <p>{item.product.product_name}</p>;
   return (
     <div>
-      {/* {item.product && product.status === 1 && ()} */}
-      {item.product && <h1>{item.product.product_name}</h1>}
-      {item.product && <h1>{item.product.brands}</h1>}
-      {item.product && <h1>Fat: {item.product.nutriments.fat_100g}</h1>}
-      {item.product && <h1>Calories: {item.product.nutriments.energy_100g}</h1>}
-      {item.product && <h1>Sugars: {item.product.nutriments.sugars_100g}</h1>}
-      {item.product && (
-        <h1>Proteins: {item.product.nutriments.proteins_100g}</h1>
-      )}
-
-
-      {/* <p>{item.status_verbose}</p> */}
-      {/* <p>{item.code}</p> */}
+      {item.product && <ProductName>{item.product.product_name}</ProductName>}
+      {item.product && <Brand>{item.product.brands}</Brand>}
+      <Container>
+        {item.product && (
+          <NutrimentsText>
+            Fat: {item.product.nutriments.fat_100g}
+          </NutrimentsText>
+        )}
+        {item.product && (
+          <NutrimentsText>
+            Calories: {item.product.nutriments.energy_100g}
+          </NutrimentsText>
+        )}
+        {item.product && (
+          <NutrimentsText>
+            Sugars: {item.product.nutriments.sugars_100g}
+          </NutrimentsText>
+        )}
+        {item.product && (
+          <NutrimentsText>
+            Proteins: {item.product.nutriments.proteins_100g}
+          </NutrimentsText>
+        )}
+        {item.product && <NutrimentsGrams>per 100 g</NutrimentsGrams>}
+      </Container>
       {item.status === 0 && <h4>Oh no! {item.status_verbose}.</h4>}
     </div>
   );
 };
-/*
-Name of the Product
-Type of product
-image
 
-{item.product && (
-        <h1>Vegan info:{item.product.ingredients_analysis_tags[0]}</h1>
-      )}
-      {item.product && (
-        <h1>Vegan info:{item.product.ingredients_analysis_tags[1]}</h1>
-      )}
-      {item.product && (
-        <h1>Vegan info:{item.product.ingredients_analysis_tags[2]}</h1>
-      )}
+const Container = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
 
+const ProductName = styled.h2`
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 5px;
+`;
 
+const Brand = styled.h3`
+  font-style: italic;
+  font-size: 1em;
+  text-align: center;
+  margin: 0 0 15px 0;
+`;
 
-{item.product && <h1>Date: {item.product.created_t}</h1>}
-{item.product && <h1>Generic_Name: {item.product.generic_name}</h1>}
-*/
+const NutrimentsText = styled.p`
+  font-weight: 500;
+  margin: 5px;
+  align-items: left;
+`;
+
+const NutrimentsGrams = styled.p`
+  border-top: 0.3px solid #305e75;
+  font-size: 0.9em;
+  text-align: center;
+  font-weight: 300;
+  font-style: italic;
+  margin: 10px;
+  padding-top: 10px;
+  width: 80px;
+`;

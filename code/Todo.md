@@ -39,3 +39,6 @@ Img? product.image_front_thumb_url
 
 - Camera - scan
 
+-------
+Type 7311070347272 - Pågen Gifflar. Yum Pasta: 7310130003530 , Kikärtor: 7340011487906, Mjölk: 7310865071804, Husman: 7300400118408, Ginger Chew: 7350031936216
+

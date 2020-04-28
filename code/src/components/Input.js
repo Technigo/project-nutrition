@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { productsList } from "reducers/products";
+// import { productsList } from "reducers/products";
 import { fetchProducts } from "reducers/products";
+import styled from "styled-components/macro";
 
 export const Input = () => {
   const [barcode, setBarcode] = useState("");
   const dispatch = useDispatch();
 
-  const handleOnSubmit = event => {
+  const handleOnSubmit = (event) => {
     event.preventDefault();
 
     // dispatch(productsList.actions.fetchProducts(barcode));
@@ -16,58 +17,55 @@ export const Input = () => {
     setBarcode("");
   };
 
-  // const handleOnSubmit = (event) => {
-  //   return (
-  //     event.preventDefault()
-  //     dispatch(products.productsList.actions.fetchProducts())
-  //   )
-  // }
-
-  // const onDetected = (code) => {
-  //   console.log(`Code: ${code}`);
-  //   fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
-  //     .then((data) => data.json())
-  //     .then((json) => {
-  //       console.log(json);
-  //     });
-  // };
-
   return (
     <div>
-      <form onSubmit={handleOnSubmit}>
-        <input
+      <Form onSubmit={handleOnSubmit}>
+        <InputField
           placeholder="What is your barcode?"
           type="text"
           onChange={(event) => setBarcode(event.target.value)}
           value={barcode}
-        ></input>
-        <button disabled={!barcode} type="submit" value="Add barcode">
+        ></InputField>
+        <BarcodeButton disabled={!barcode} type="submit" value="Add barcode">
           Add barcode
-        </button>
-      </form>
+        </BarcodeButton>
+      </Form>
 
-      {/* <form>
-        {" "}
-        Test codes here:{" "}
-        <input type="text" value={(e.target.value)}></input>
-        <input
-          type="text"
-          value={barcode}
-          onChange={(event) => setBarcode(event.target.value)}
-        ></input>
-        <button type="button" onClick={() => dispatch(fetchProducts(7310865071804))}>Submit the Milk product</button>
-        <button type="button" onClick={() => dispatch(fetchProducts(7310130003530))}>Submit the Milk product</button>
-        <button type="button" onClick={() => handleOnSubmit()}>
-          Submit the product
-        </button>
-      </form> */}
-      <p>
-        {" "}
-        Type 7311070347272 - Pågen Gifflar. Yum
-        Pasta: 7310130003530 , Kikärtor: 7340011487906, Mjölk: 7310865071804, 
-        Husman: 7300400118408, Ginger Chew: 7350031936216 
-      </p>
+
       {/* <BarcodeScanner /> */}
     </div>
   );
 };
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const InputField = styled.input`
+  border-radius: 6px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  ::placeholder {
+    color: #b2b2b2;
+  }
+`;
+
+const BarcodeButton = styled.button`
+  font-family: "Work Sans", sans-serif;
+  font-style: italic;
+  margin: 5px 0 20px 0;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  background: #ce784d;
+  color: whitesmoke;
+  &:hover {
+    background: #193546;
+  }
+`;
