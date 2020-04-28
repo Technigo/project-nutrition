@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from 'react'
+import styled from 'styled-components/macro'
 
 export const StyledButton = ({ onClick, buttonInfo }) => {
   return (

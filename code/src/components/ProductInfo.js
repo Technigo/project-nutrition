@@ -1,11 +1,10 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import styled from 'styled-components'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import styled from 'styled-components/macro'
 import { ScanBarcode } from './ScanBarcode'
 
 
 export const ProductInfo = () => {
-  const dispatch = useDispatch()
   const scannedProduct = useSelector((store) => store.product.product)
 
   if (scannedProduct.status === 1) {

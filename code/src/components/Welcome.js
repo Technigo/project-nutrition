@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 import { Emoji } from './Emoji'
 
 export const Welcome = () => {
@@ -7,7 +7,7 @@ export const Welcome = () => {
     <>
       <WelcomeText>
         Can I eat this?
-    </WelcomeText>
+      </WelcomeText>
       <EmojiWrapper>
         <Emoji emoji="🥛" label="milk" />
         <Emoji emoji="🥜" label="peanut" />
@@ -20,15 +20,15 @@ export const Welcome = () => {
 }
 
 const WelcomeText = styled.h1`
-font-weight: 600;
-font-size: 36px;
-display: flex;
-justify-content:center;
-margin-top: 45px;
+  font-weight: 600;
+  font-size: 36px;
+  display: flex;
+  justify-content:center;
+  margin-top: 45px;
 `
 
 const EmojiWrapper = styled.div`
-display: flex;
-justify-content:center;
+  display: flex;
+  justify-content:center;
 `
 
