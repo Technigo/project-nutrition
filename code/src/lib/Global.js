@@ -17,16 +17,13 @@ export const GlobalStyle = createGlobalStyle`
     background-image: none;
   }
     
-  }
-
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
 }
 `;
 
-// background-color: #ffffff;
-// background-image: linear-gradient(160deg, #ffffff 0%, #eac87b 100%);
-
-// background-color: #85FFBD;
-// background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+/* background-color: #ffffff;
+background-image: linear-gradient(160deg, #ffffff 0%, #eac87b 100%);
+background-color: #85FFBD;
+background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */

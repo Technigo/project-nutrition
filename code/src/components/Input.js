@@ -10,10 +10,8 @@ export const Input = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-
     // dispatch(productsList.actions.fetchProducts(barcode));
     dispatch(fetchProducts(barcode));
-
     setBarcode("");
   };
 
@@ -30,8 +28,6 @@ export const Input = () => {
           Add barcode
         </BarcodeButton>
       </Form>
-
-
       {/* <BarcodeScanner /> */}
     </div>
   );

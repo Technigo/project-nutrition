@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 // import { NotFound } from 'components/NotFound'
-
 import styled from "styled-components/macro";
 
 export const ProductInfo = () => {

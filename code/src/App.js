@@ -1,16 +1,14 @@
 import React from "react";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { Provider } from "react-redux";
 import { productsList } from "./reducers/products";
 import { ui } from "reducers/ui";
-import { Provider } from "react-redux";
 import { Input } from "components/Input";
 import { ProductInfo } from "components/ProductInfo";
-
+import { Header } from "./components/Header";
 import styled from "styled-components/macro";
 import { GlobalStyle } from "lib/Global";
-
-import { Header } from "./components/Header";
-
+// import { LoadingIndicator } from './components/LoadingIndicator'
 // import { BarcodeScanner } from 'components/BarcodeScanner'
 // import { ScanBarcode } from "./components/ScanBarcode";
 
@@ -23,13 +21,13 @@ import { Header } from "./components/Header";
 //     });
 // };
 
-// combine reducers
+// combine reducers:
 const reducer = combineReducers({
   productsList: productsList.reducer,
   ui: ui.reducer,
 });
 
-// setup the store
+// setup the store:
 const store = configureStore({ reducer });
 
 export const App = () => {
@@ -40,6 +38,7 @@ export const App = () => {
         <InnerContainer>
           <Header />
           <Input />
+          {/* <LoadingIndicator /> */}
           {/* <ScanBarcode onDetected={onDetected} /> */}
           {/* <ScanBarcode /> */}
           <ProductInfo />
@@ -51,7 +50,6 @@ export const App = () => {
 
 const Container = styled.section`
   font-family: "Work Sans", sans-serif;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,10 +62,8 @@ const InnerContainer = styled.section`
   padding: 20px;
   margin-top: 20px;
   border: 15px solid #e3b49a;
-
   @media (max-width: 400px) {
     margin-top: 20px;
     border: none;
   }
-
 `;
