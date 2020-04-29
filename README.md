@@ -1,6 +1,6 @@
 # Project Nutrition
 
-This was a pair-programming project, with the aim to build an app which scans barcodes on food packages to retrieve the product name and nutritional information.
+This was a pair-programming project with the aim to build an app which scans barcodes on food packages to retrieve the product name and nutritional information.
 
 ## The problem
 
