@@ -1,13 +1,11 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a pair-programming project, with the aim to build an app which scans barcodes on food packages to retrieve the product name and nutritional information.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For the project we used React and Redux to build our app. For the project we practiced on building and structuring the store, to make it suitable for our data and our app. To handle the API calls we used thunks. To scan the barcode we used Quagga. To be able to use Quagga the camera focus and the lighting has to be good, so to be able to use the app in several conditions we added the option of manuallly input the barcode. With more time it would have been interesting to add some more user interaction to the app, like being able to select which nutritional information you want to recieve.  
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://er-project-nutrition.netlify.app
