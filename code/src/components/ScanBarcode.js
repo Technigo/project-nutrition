@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { BarcodeScanner } from './BarcodeScanner'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchFood } from 'reducers/nutritionInfo'
+import { fetchFood } from 'reducers/nutritioninfo'
 import { LoadingLottie } from './LoadingLottie'
 import { NutritionList } from './NutritionList'
 
