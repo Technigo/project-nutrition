@@ -1,13 +1,15 @@
 # Project Nutrition
+Par programming - Anna Gustafsson and Jennifer Thorsén
+Build an app in react using redux which scans barcodes on food packages to retrieve the product name and nutritional information.
+The data is fetched from the Open world facts api. 
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+We choose to display data together with daily recommendations for five different nutrients.
+We are using Styled components for styling.
+Quagga is used to scan the barcode.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The Api was not a friend of ours.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-nutrition-technigo.netlify.app/
