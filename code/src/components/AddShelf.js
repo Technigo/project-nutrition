@@ -13,8 +13,6 @@ const AddButton = styled.button`
   border: none;
   background: #fffaf0;
   font-size: 16px;
-  height: 50px;
-  width: 50px;
   padding: 8.5px 0 8px 6px;
   cursor: pointer;
 `

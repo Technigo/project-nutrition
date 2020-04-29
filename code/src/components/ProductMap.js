@@ -126,9 +126,9 @@ export const ProductMap = () => {
         <ItemContainer>
           {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan item</ScanButton>}
         {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
-        </ItemContainer>
-        {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}
-        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> shelf</AddButton>}
+        
+          {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}</ItemContainer>
+        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>New<br /> shelf</AddButton>}
       </Header>
       <Body image={shelfList.length === 0 ? img : ""}>
         {shelfList.length === 0 && <EmptyState />}
