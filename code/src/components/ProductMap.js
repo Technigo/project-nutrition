@@ -15,10 +15,10 @@ const Header = styled.div`
   background: #146381;
   color: #fff;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding: 0 40px 40px 40px;
+  padding: 40px;
   height: 300px;
   transition: 0.2s;
 
@@ -28,27 +28,14 @@ const Header = styled.div`
     height: 200px;
   }
 `
-const TitleSmallScreen = styled.p`
-  font-size: 48px;
-  color: #fffaf0;
-  margin: 0;
+const ItemContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (min-width: 668px) {
-    visibility: hidden;
-    margin: -70px;
+    flex-direction: row;
   }
-`
-
-const TitleBigScreen = styled.p`
-  visibility: hidden;
-  margin: -40px;
-
-  @media (min-width: 668px) {
-    visibility: visible;
-    font-size: 32px;
-    color: #fffaf0;
-    margin: 0;
-}
 `
 
 const Body = styled.div`
@@ -60,13 +47,14 @@ const Body = styled.div`
   padding: 20px;
 ` 
 
-
 const ScanButton = styled.button`
+  display: flex;
   font-size: 16px;
   border: none;
   background: #fffaf0;
   width: 190px;
   padding: 8px 3px 8px 3px;
+  margin-bottom: 16px;
   box-shadow: 3px 3px #fcdfa2;
   cursor: pointer;
   transition: 0.2s;
@@ -78,6 +66,8 @@ const ScanButton = styled.button`
 
   @media (min-width: 668px) {
     width: 90px;
+    height: 36px;
+    margin: 32px;
   }
 `
 const AddButton = styled.button`
@@ -85,24 +75,33 @@ const AddButton = styled.button`
   font-size: 16px;
   background-color: #fffaf0;
   padding: 10px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   border: 0;
   box-shadow: 3px 3px #fcdfa2;
   cursor: pointer;
   transition: 0.2s;
+  margin-top: -80px;
 
   &: active {
     box-shadow: none;
   }
+
+  @media (min-width: 668px) {
+    margin-top: 0;
+  }
 `
 const ShelfContainer = styled.section`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  -webkit-align-items: none;
+  -webkit-box-align: none;
   
 @media (min-width: 668px) {
   flex-flow: row wrap;
+  
 }
 `
 
@@ -111,20 +110,7 @@ const CardContainer = styled.div`
 display: flex;
 flex-direction: column; `
 
-const HamburgerWrapper = styled.div`
-display: flex;
-flex-direction: column; 
-width: 30px;
-height: 25px; 
-justify-content: space-between;
-`
 
-const HamburgerFilling = styled.div`
-background: white;
-width: 30px;
-height: 5px; 
-border-radius: 5px;
-`
 
 export const ProductMap = () => {
   const dispatch = useDispatch()
@@ -137,12 +123,12 @@ export const ProductMap = () => {
   return (
     <section>
       <Header>
-        <TitleSmallScreen>Fridge</TitleSmallScreen>
+        <ItemContainer>
           {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan item</ScanButton>}
         {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
+        </ItemContainer>
         {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}
-        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> Shelf</AddButton>}
-        <TitleBigScreen>Fridge</TitleBigScreen>
+        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> shelf</AddButton>}
       </Header>
       <Body image={shelfList.length === 0 ? img : ""}>
         {shelfList.length === 0 && <EmptyState />}

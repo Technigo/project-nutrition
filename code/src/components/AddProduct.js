@@ -3,12 +3,26 @@ import { useSelector, useDispatch } from "react-redux"
 import styled from 'styled-components'
 import { nutrition } from '../reducers/nutrition'
 
+
 const Container = styled.form`
- box-shadow: 3px 3px #fcdfa2;  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+@media (min-width: 668px) {
+  flex-direction: row;
+}
 `
-const AddButton = styled.button`
-  border: none;
-  background: transparent;
+
+const EntryContainer = styled.div`
+ box-shadow: 3px 3px #fcdfa2;  
+
+ @media (min-width: 668px) {
+  display: flex;
+  flex-direction: row;
+}
+
 `
 
 const Input = styled.input`
@@ -24,6 +38,25 @@ const Select = styled.select`
     background: #fffaf0;
     border: none;
     border-radius: 0;
+`
+
+const AddButton = styled.button`
+  color: black;
+  font-size: 16px;
+  width: 60px;
+  height: 60px;
+  background-color: #fffaf0;
+  padding: 10px;
+  margin: 16px;
+  border-radius: 50%;
+  border: 0;
+  box-shadow: 3px 3px #fcdfa2;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &: active {
+    box-shadow: none;
+  }
 `
 
 export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
@@ -51,6 +84,7 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
 
     return (
         <Container onSubmit={(e) => handleSubmit(e)}>
+            <EntryContainer>
             <Select required onChange={(e) => setShelf(e.target.value)} value={shelf}>
                 <option value="">Pick shelf</option>
                 {shelves.map((shelf) => {
@@ -58,7 +92,8 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
                 })}
             </Select>
             <Input type="text" value={barcode} required onChange={(e) => setBarcode(e.target.value)}></Input>
-            <button type="submit">Add item</button>
+            </EntryContainer>
+            <AddButton type="submit">Add<br/>item</ AddButton>
         </Container>
     )
 }
