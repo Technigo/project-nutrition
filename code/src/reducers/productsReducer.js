@@ -14,13 +14,11 @@ export const productsReducer = createSlice({
 });
 
 export const getProduct = (code) => {
-  console.log(`Code: ${code}`);
   return dispatch => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
       .then((data) => data.json())
       .then((json) => {
         dispatch(productsReducer.actions.setProduct(json))
-        console.log(json);
       });
   }
 };

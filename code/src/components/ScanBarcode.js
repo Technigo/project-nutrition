@@ -12,9 +12,11 @@ export const ScanBarcode = () => {
   return (
     <Section>
       <Wrapper>
+        {!showScanner && (
+          <Ean src="../assets/ean.jpg" alt="ean" />
+        )}
         {showScanner && (
           <BarcodeScanner onDetected={(code) => {
-            console.log('Got barcode', code)
             setShowScanner(false)
             dispatch(getProduct(code))
           }} />
@@ -29,11 +31,10 @@ export const ScanBarcode = () => {
       )}
 
       {/* {showScanner && (
-        <button type="button" onClick={() => setShowScanner(false)}>
+        <ScanButton type="button" onClick={() => setShowScanner(false)}>
           Close camera
-        </button>
+        </ScanButton>
       )} */}
-
     </Section>
   )
 }
@@ -65,4 +66,8 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+
+const Ean = styled.img`
+  margin: 150px 50px;
 `
