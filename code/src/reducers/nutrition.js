@@ -50,7 +50,7 @@ export const nutrition = createSlice({
       if (!foundItem) {
         foundShelf.products.push(newProduct)
       }
-      else { console.log("Product already stored") }
+      else { alert('A product with this barcode already exists on this shelf.') }
     },
     clearAll: (state) => {
       state.list = []
@@ -112,7 +112,12 @@ export const fetchAndStore = (barcode) => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
       .then((res) => res.json())
       .then((json) => {
-        dispatch(nutrition.actions.setProductDetails({ slug: barcode, productDetails: json }))
+        if (json.product) {
+          dispatch(nutrition.actions.setProductDetails({ slug: barcode, productDetails: json }))
+        } else {
+          alert('This product does not exist. Redirecting you to homepage.')
+          window.location.replace('/')
+        }
       })
   }
 

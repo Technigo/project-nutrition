@@ -5,10 +5,11 @@ import { useParams, useHistory } from 'react-router-dom'
 import PieChart from 'react-minimal-pie-chart'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
-import { nutrition, fetchAndStore } from '../reducers/nutrition'
+import { fetchAndStore } from '../reducers/nutrition'
+import { Loader } from './Loader'
 
 export const ProductDetails = () => {
-    // const [selectedItem, setSelectedItem] = useState()
+
     const [showIngredients, setShowIngredients] = useState(false)
     const params = useParams()
     const history = useHistory()
@@ -24,6 +25,8 @@ export const ProductDetails = () => {
       align-items: center;
       @media (min-width: 660px) {
           flex-direction: row;
+          justify-content: space-around;
+          padding: 30px;
       }
     `
     const Header = styled.div`
@@ -44,7 +47,13 @@ export const ProductDetails = () => {
       margin-right: 8px;
     `
 
-
+    const PieChartContainer = styled.div`
+      width: 60%;
+      margin: 20px;
+      @media (min-width: 660px) {
+          width: 40%;
+      }
+    `
 
     const PieChartDetails = styled.div`
       display: flex;
@@ -53,7 +62,9 @@ export const ProductDetails = () => {
       flex-wrap: wrap;
       justify-content: center;
       @media (min-width: 660px) {
-          width: 60%;
+          width: 30%;
+          flex-direction: column;
+          align-items: flex-start;
       }
     `
 
@@ -73,20 +84,10 @@ export const ProductDetails = () => {
       font-size: 16px;
     `
 
-    const MoreDetailsWrapper = styled.div`
-      display: flex;
-      width: 80%;
-      justify-content: space-around;
-    `
-
     const IngredientsButton = styled.button`
       background: transparent;
       border: none;
       font-size: 18px;
-    `
-
-    const Ingredient = styled.div`
-      font-size: 18px;    
     `
 
     useEffect(() => {
@@ -94,12 +95,6 @@ export const ProductDetails = () => {
         if (selectedItem) {
             return;
         } else {
-            // fetch(`https://world.openfoodfacts.org/api/v0/product/${params.product}.json`)
-            //     .then((res) => res.json())
-            //     .then((json) => {
-            //         // setSelectedItem(json.product)
-            //         dispatch(nutrition.actions.setProductDetails({ slug: params.product, productDetails: json }))
-            //     })
             dispatch(fetchAndStore(params.product))
         }
     }, [])
@@ -107,7 +102,7 @@ export const ProductDetails = () => {
 
     return (
         <section>
-            {!selectedItem && <p>loading...</p>}
+            {!selectedItem && <Loader />}
             {selectedItem &&
                 <>
                     <Header>
@@ -115,7 +110,7 @@ export const ProductDetails = () => {
                         <p>{selectedItem.product.product_name}</p>
                     </Header>
                     <Container>
-                        <div style={{ width: "60%", margin: "20px" }}>
+                        <PieChartContainer>
                             <PieChart
                                 totalValue={selectedItem.product.nutriments.carbohydrates + selectedItem.product.nutriments.fat + selectedItem.product.nutriments.salt + selectedItem.product.nutriments.proteins + selectedItem.product.nutriments.fiber}
                                 startAngle={0}
@@ -127,7 +122,7 @@ export const ProductDetails = () => {
                                     { title: 'Salt', value: selectedItem.product.nutriments.salt ? selectedItem.product.nutriments.salt : 0, color: '#470202' },
                                     { title: 'Fibre', value: selectedItem.product.nutriments.fiber ? selectedItem.product.nutriments.fiber : 0, color: '#9e5414' }
                                 ]} />
-                        </div>
+                        </PieChartContainer>
                         <PieChartDetails>
                             <PieChartItem>
                                 <PieChartSwatch color="#692236" />
@@ -148,16 +143,13 @@ export const ProductDetails = () => {
 
                             <PieChartItem>
                                 <PieChartSwatch color="#9e5414" />
-                                <PieChartLabel>= fiber</PieChartLabel>
+                                <PieChartLabel>= fibre</PieChartLabel>
                             </PieChartItem>
                         </PieChartDetails>
 
-                        <MoreDetailsWrapper>
-                            <p>Calories per 100g: {selectedItem.product.nutriments['energy-kcal_value']}</p>
-                            <IngredientsButton onClick={() => setShowIngredients(!showIngredients)}>Show ingredients</IngredientsButton>
-                        </MoreDetailsWrapper>
-                        {showIngredients && <ul>
-                            {selectedItem.product.ingredients_original_tags.map((x) => {
+                        {selectedItem.product.ingredients_original_tags && <ul>
+                            <IngredientsButton onClick={() => setShowIngredients(!showIngredients)}>{showIngredients ? "Hide ingredients" : "Show Ingredients"}</IngredientsButton>
+                            {showIngredients && selectedItem.product.ingredients_original_tags.map((x) => {
                                 if (x.charAt(0) === 'e') {
                                     return <li>{x.substr(3, 50)}</li>
                                 }
@@ -166,7 +158,7 @@ export const ProductDetails = () => {
                     </Container>
                 </>
             }
-        </section>
+        </section >
     )
 
 }

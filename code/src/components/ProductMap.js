@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useSelector, useDispatch } from 'react-redux'
-import { nutrition } from '../reducers/nutrition'
+import { useSelector } from 'react-redux'
 import { EmptyState } from './EmptyState'
 import { SetData } from './SetData'
 import { ShelfCard } from './ShelfCard'
@@ -46,7 +45,7 @@ const Body = styled.div`
   width: 100%;
   align-items: center;
   padding: 20px;
-` 
+`
 
 const ScanButton = styled.button`
   display: flex;
@@ -114,7 +113,6 @@ flex-direction: column; `
 
 
 export const ProductMap = () => {
-  const dispatch = useDispatch()
   const [showScanner, setShowScanner] = useState(false)
   const [showAddShelf, setShowAddShelf] = useState(false)
   const [barcode, setBarcode] = useState()
@@ -126,10 +124,10 @@ export const ProductMap = () => {
       <Header>
         <ItemContainer>
           {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan item</ScanButton>}
-        {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
-        
+          {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
+
           {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}</ItemContainer>
-        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>New<br /> shelf</AddButton>}
+        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>{!showAddShelf ? 'New Shelf' : 'Back'}</AddButton>}
       </Header>
       <Body image={shelfList.length === 0 ? img : ""}>
         {shelfList.length === 0 && <EmptyState />}
@@ -137,17 +135,17 @@ export const ProductMap = () => {
         {shelfList.length !== 0 &&
           <>
             <ShelfContainer>
-            {shelfList.map((item) => {
-              return (
-                <CardContainer>
-                  <ShelfCard {...item} />
-                  {item.reveal &&
-                    item.products.map((product) => {
-                      return <ProductCard shelf={item.name} {...product} />
-                    })}
-                </CardContainer>
-              )
-            })}</ShelfContainer>
+              {shelfList.map((item) => {
+                return (
+                  <CardContainer>
+                    <ShelfCard {...item} />
+                    {item.reveal &&
+                      item.products.map((product) => {
+                        return <ProductCard shelf={item.name} {...product} />
+                      })}
+                  </CardContainer>
+                )
+              })}</ShelfContainer>
           </>
         }
 

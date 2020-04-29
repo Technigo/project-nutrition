@@ -1,9 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import thunk from 'redux-thunk'
-import { BarcodeScanner } from 'components/BarcodeScanner'
-import { Provider, useDispatch } from 'react-redux'
-import { createStore, configureStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
 import { nutrition } from './reducers/nutrition'
 import { ProductMap } from './components/ProductMap'
 import { ProductDetails } from 'components/ProductDetails'
@@ -40,23 +39,6 @@ const store = createStore(reducer, persistedState, composeEnhancer(applyMiddlewa
 
 store.subscribe(() => saveToLocalStorage(store.getState()))
 
-const onDetected = (code) => {
-  console.log(`Code: ${code}`);
-  fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
-    .then((data) => data.json())
-    .then((json) => {
-      if (json.product) {
-        if (json.product.product_name) {
-          console.log(json)
-        } else {
-          console.log('No product name')
-        }
-      } else {
-        console.log('no product')
-      }
-    });
-
-};
 
 export const App = () => {
   return (
@@ -66,7 +48,7 @@ export const App = () => {
           <Route path="/" exact>
             <ProductMap />
           </Route>
-          <Route path="/:product">
+          <Route path="/:product" exact>
             <ProductDetails />
           </Route>
         </Switch>
