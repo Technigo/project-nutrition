@@ -1,11 +1,14 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import thunk from 'redux-thunk'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { Provider, useDispatch } from 'react-redux'
-import { createStore, configureStore, combineReducers } from '@reduxjs/toolkit'
+import { createStore, configureStore, combineReducers, applyMiddleware, compose } from '@reduxjs/toolkit'
 import { nutrition } from './reducers/nutrition'
 import { ProductMap } from './components/ProductMap'
 import { ProductDetails } from 'components/ProductDetails'
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const saveToLocalStorage = (state) => {
   try {
@@ -33,7 +36,7 @@ const reducer = combineReducers({ nutrition: nutrition.reducer })
 
 const persistedState = loadFromLocalStorage()
 
-const store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducer, persistedState, composeEnhancer(applyMiddleware(thunk)))
 
 store.subscribe(() => saveToLocalStorage(store.getState()))
 

@@ -32,6 +32,9 @@ const initialState = {
         image: freezer
       }
     ]
+  },
+  productDetails: {
+
   }
 }
 
@@ -95,6 +98,22 @@ export const nutrition = createSlice({
       const { shelf, productId } = action.payload
       const foundShelf = state.list.shelves.find((x) => x.name === shelf)
       foundShelf.products = foundShelf.products.filter((x) => x.code !== productId)
+    },
+
+    setProductDetails: (state, action) => {
+      const { slug, productDetails } = action.payload;
+      state.productDetails[slug] = productDetails
     }
   }
 })
+
+export const fetchAndStore = (barcode) => {
+  return (dispatch) => {
+    fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch(nutrition.actions.setProductDetails({ slug: barcode, productDetails: json }))
+      })
+  }
+
+}

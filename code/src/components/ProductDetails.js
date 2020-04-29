@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from "react"
+import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
 import { useParams, useHistory } from 'react-router-dom'
 import PieChart from 'react-minimal-pie-chart'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronCircleLeft } from "@fortawesome/free-solid-svg-icons";
+import { nutrition, fetchAndStore } from '../reducers/nutrition'
 
 export const ProductDetails = () => {
-    const [selectedItem, setSelectedItem] = useState()
+    // const [selectedItem, setSelectedItem] = useState()
     const [showIngredients, setShowIngredients] = useState(false)
     const params = useParams()
     const history = useHistory()
-
+    const dispatch = useDispatch()
+    const selectedItem = useSelector((state) => state.nutrition.productDetails[params.product])
 
     const Container = styled.div`
       background-color: papayawhip;
@@ -87,11 +90,18 @@ export const ProductDetails = () => {
     `
 
     useEffect(() => {
-        fetch(`https://world.openfoodfacts.org/api/v0/product/${params.product}.json`)
-            .then((res) => res.json())
-            .then((json) => {
-                setSelectedItem(json.product)
-            })
+
+        if (selectedItem) {
+            return;
+        } else {
+            // fetch(`https://world.openfoodfacts.org/api/v0/product/${params.product}.json`)
+            //     .then((res) => res.json())
+            //     .then((json) => {
+            //         // setSelectedItem(json.product)
+            //         dispatch(nutrition.actions.setProductDetails({ slug: params.product, productDetails: json }))
+            //     })
+            dispatch(fetchAndStore(params.product))
+        }
     }, [])
 
 
@@ -102,20 +112,20 @@ export const ProductDetails = () => {
                 <>
                     <Header>
                         <BackButton onClick={() => history.push('/')}><FontAwesomeIcon icon={faChevronCircleLeft} /></BackButton>
-                        <p>{selectedItem.product_name}</p>
+                        <p>{selectedItem.product.product_name}</p>
                     </Header>
                     <Container>
                         <div style={{ width: "60%", margin: "20px" }}>
                             <PieChart
-                                totalValue={selectedItem.nutriments.carbohydrates + selectedItem.nutriments.fat + selectedItem.nutriments.salt + selectedItem.nutriments.proteins + selectedItem.nutriments.fiber}
+                                totalValue={selectedItem.product.nutriments.carbohydrates + selectedItem.product.nutriments.fat + selectedItem.product.nutriments.salt + selectedItem.product.nutriments.proteins + selectedItem.product.nutriments.fiber}
                                 startAngle={0}
                                 animate={true}
                                 data={[
-                                    { title: 'Fat', value: selectedItem.nutriments.fat ? selectedItem.nutriments.fat : 0, color: '#692236' },
-                                    { title: 'Protein', value: selectedItem.nutriments.proteins ? selectedItem.nutriments.proteins : 0, color: '#e18634' },
-                                    { title: 'Carbs', value: selectedItem.nutriments.carbohydrates ? selectedItem.nutriments.carbohydrates : 0, color: '#be3d3b' },
-                                    { title: 'Salt', value: selectedItem.nutriments.salt ? selectedItem.nutriments.salt : 0, color: '#470202' },
-                                    { title: 'Fibre', value: selectedItem.nutriments.fiber ? selectedItem.nutriments.fiber : 0, color: '#9e5414' }
+                                    { title: 'Fat', value: selectedItem.product.nutriments.fat ? selectedItem.product.nutriments.fat : 0, color: '#692236' },
+                                    { title: 'Protein', value: selectedItem.product.nutriments.proteins ? selectedItem.product.nutriments.proteins : 0, color: '#e18634' },
+                                    { title: 'Carbs', value: selectedItem.product.nutriments.carbohydrates ? selectedItem.product.nutriments.carbohydrates : 0, color: '#be3d3b' },
+                                    { title: 'Salt', value: selectedItem.product.nutriments.salt ? selectedItem.product.nutriments.salt : 0, color: '#470202' },
+                                    { title: 'Fibre', value: selectedItem.product.nutriments.fiber ? selectedItem.product.nutriments.fiber : 0, color: '#9e5414' }
                                 ]} />
                         </div>
                         <PieChartDetails>
@@ -143,11 +153,11 @@ export const ProductDetails = () => {
                         </PieChartDetails>
 
                         <MoreDetailsWrapper>
-                            <p>Calories per 100g: {selectedItem.nutriments['energy-kcal_value']}</p>
+                            <p>Calories per 100g: {selectedItem.product.nutriments['energy-kcal_value']}</p>
                             <IngredientsButton onClick={() => setShowIngredients(!showIngredients)}>Show ingredients</IngredientsButton>
                         </MoreDetailsWrapper>
                         {showIngredients && <ul>
-                            {selectedItem.ingredients_original_tags.map((x) => {
+                            {selectedItem.product.ingredients_original_tags.map((x) => {
                                 if (x.charAt(0) === 'e') {
                                     return <li>{x.substr(3, 50)}</li>
                                 }
