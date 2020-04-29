@@ -141,7 +141,7 @@ export const ProductMap = () => {
           {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan item</ScanButton>}
         {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
         {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}
-        <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> Shelf</AddButton>
+        {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>Add<br /> Shelf</AddButton>}
         <TitleBigScreen>Fridge</TitleBigScreen>
       </Header>
       <Body image={shelfList.length === 0 ? img : ""}>

@@ -58,6 +58,7 @@ export const AddProduct = ({ barcode, setShelf, setBarcode, shelf }) => {
                 })}
             </Select>
             <Input type="text" value={barcode} required onChange={(e) => setBarcode(e.target.value)}></Input>
+            <button type="submit">Add item</button>
         </Container>
     )
 }

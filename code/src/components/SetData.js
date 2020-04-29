@@ -21,10 +21,5 @@ export const SetData = ({ setBarcode, setShowScanner }) => {
             });
     };
 
-    return (
-        <>
-            <BarcodeScanner onDetected={onDetected} />
-            <input type="text" onChange={(e) => onDetected(e.target.value)}></input>
-            <p>7311070347272</p>
-        </>)
+    return <BarcodeScanner onDetected={onDetected} />
 }
