@@ -7,12 +7,19 @@ const ShelfForm = styled.form`
   background: #fffaf0;
   border: none;
   width: 240px;
+  height: 36px;
   box-shadow: 3px 3px #fcdfa2;
+  margin-bottom: 91px;
+
+  @media (min-width: 668px) {
+    margin-bottom: 0;
+  }
 `
 const AddButton = styled.button`
   border: none;
   background: #fffaf0;
   font-size: 16px;
+  height: 36px;
   padding: 8.5px 0 8px 6px;
   cursor: pointer;
 `

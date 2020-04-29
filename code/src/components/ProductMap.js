@@ -32,6 +32,7 @@ const ItemContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 
   @media (min-width: 668px) {
     flex-direction: row;
