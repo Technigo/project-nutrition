@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { fetchFoods } from '../reducers/foods'
+import '../styling/Input.css'
 
 export const Input = ({onDetected}) => {
 const dispatch = useDispatch()
@@ -8,14 +8,11 @@ const dispatch = useDispatch()
   return ( 
     <label>
     {" "}
-    Test codes here:{" "}
-    {/* <input type="text" 
-    onChange={(e) => 
-    onDetected(e.target.value)}>
-      
-    </input> */}
+    Test codes here:{"7311070347272 "}
+  
 
   <input type="text" 
+    placeholder="Test Code Here"
     onChange={(e) => 
     onDetected(e.target.value)}>
     

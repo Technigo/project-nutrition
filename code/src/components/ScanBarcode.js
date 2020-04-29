@@ -3,6 +3,8 @@ import { BarcodeScanner } from 'components/BarcodeScanner'
 import { Input } from 'components/Input'
 import { useDispatch } from 'react-redux'
 import { fetchFoods } from 'reducers/foods'
+import '../styling/ScanBarCode.css'
+
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -24,14 +26,8 @@ export const ScanBarcode = () => {
       )}
 
       {showScanner && (
-        
-        <BarcodeScanner onDetected={handleScan} />
-
-      /* {showScanner && (
-        <BarcodeScanner onDetected={(code) => {
-          console.log('Got barcode', code)
-          setShowScanner(false)
-        }} /> */
+        <BarcodeScanner 
+        onDetected={handleScan} />
       )}
     </>
   )

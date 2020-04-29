@@ -1,0 +1,43 @@
+
+.scanner {
+  background: transparent;
+  max-width: 70%;
+  margin: 0 auto;
+  max-height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50%;
+}
+.start{
+  display: flex;
+  justify-content: center;
+}
+ video {
+  width: 50%;
+  object-fit: cover;
+  border: 5px solid black;
+}
+
+.Container {
+  margin-top: 25px;
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+  position: absolute;
+  top: 25%;
+  left: 36%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.drawingBuffer {
+  height: 0;
+  width: 0;
+}
+@media only screen and (min-width: 800px) {
+  .Container{
+    width: 50%;
+  }
+ }

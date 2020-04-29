@@ -1,0 +1,42 @@
+input
+{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-size: 45px;
+    top: 15%;
+    left: 0;
+    right: 0;
+    width: 450px;
+    padding: 35px;
+    margin: -83px auto 0 auto;
+    background-color: #ff7575;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
+    transform: scale(0.6);
+}
+input[type="text"]::placeholder
+{
+    color: #e16868;
+}
+
+label {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media only screen and (min-width: 800px) {
+    .label {
+      width: 50%;
+    }
+   }
