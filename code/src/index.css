@@ -21,7 +21,8 @@ p {
 
 video {
   width: 320px;
-  height: 240px; 
+  height: 240px;
+  transform: scaleX(-1); 
 }
 
 @media (min-width: 667px){
