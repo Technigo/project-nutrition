@@ -40,8 +40,8 @@ export const ScanBarcode = () => {
 }
 
 const ScanButton = styled.button`
-  width: 200 px;
-  height: 100p px;
+  width: 200px;
+  height: 50px;
   font-family: 'Roboto Mono', monospace;
   color: black;
   background: transparent;
@@ -55,11 +55,16 @@ const ScanButton = styled.button`
 `
 
 const Wrapper = styled.div`
-  width: 640px;
-  height: 480px;
+  width: 320px;
+  height: 240px; 
   border-radius: 10px;
   border: 2px solid black;
   margin: 30px;
+
+@media (min-width: 667px){
+  width: 640px;
+  height: 480px;
+}
 `
 
 const Section = styled.section`
@@ -69,5 +74,12 @@ const Section = styled.section`
 `
 
 const Ean = styled.img`
-  margin: 150px 50px;
+  width: 200px;
+  height: 100px;
+  margin: 70px 0;
+ 
+@media (min-width: 667px){
+  margin: 200px 0;
+}
 `
+

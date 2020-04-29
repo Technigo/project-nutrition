@@ -11,5 +11,4 @@ Quagga is used to scan the barcode.
 The Api was not a friend of ours.
 
 ## View it live
-
 https://project-nutrition-technigo.netlify.app/
