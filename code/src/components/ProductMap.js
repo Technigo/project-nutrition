@@ -37,7 +37,6 @@ const ItemContainer = styled.section`
     flex-direction: row;
   }
 `
-
 const Body = styled.div`
   background-color: #ffefd5;
   display: flex;
@@ -46,7 +45,6 @@ const Body = styled.div`
   align-items: center;
   padding: 20px;
 `
-
 const ScanButton = styled.button`
   display: flex;
   font-size: 16px;
@@ -101,17 +99,13 @@ const ShelfContainer = styled.section`
   -webkit-box-align: none;
   
 @media (min-width: 668px) {
-  flex-flow: row wrap;
-  
+  flex-flow: row wrap; 
 }
 `
-
-
 const CardContainer = styled.div`
 display: flex;
-flex-direction: column; `
-
-
+flex-direction: column; 
+`
 
 export const ProductMap = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -126,7 +120,6 @@ export const ProductMap = () => {
         <ItemContainer>
           {shelfList.length !== 0 && <ScanButton onClick={() => setShowScanner(!showScanner)}>Scan item</ScanButton>}
           {!showAddShelf && <AddProduct barcode={barcode} setBarcode={setBarcode} setShelf={setShelf} shelf={shelf} />}
-
           {showAddShelf && <AddShelf setShowAddShelf={setShowAddShelf} />}</ItemContainer>
         {!showScanner && <AddButton onClick={() => setShowAddShelf(!showAddShelf)}>{!showAddShelf ? 'New Shelf' : 'Back'}</AddButton>}
       </Header>
@@ -149,7 +142,6 @@ export const ProductMap = () => {
               })}</ShelfContainer>
           </>
         }
-
       </Body>
     </section>
   )

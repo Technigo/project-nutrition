@@ -1,13 +1,11 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Pair programming porject for Technigo Remote Bootcamp. Using the product barcode to fetch information from the Open World Fact API and showing information in the app. Using Redux, React, styled component and Javascript to buikd the project.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Starting with exploring the info in the API, deciding to build an "fridge"-like app, with various shelves for the products, and detailed product pages for each product. First creating the Redux store and the functionality needed, then moving over to styling.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://app.netlify.com/sites/jovial-edison-eb743b/overview

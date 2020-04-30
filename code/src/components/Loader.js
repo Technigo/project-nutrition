@@ -5,7 +5,6 @@ const spinEffect = keyframes`
   0% {transform: rotate(0deg)}
   100% {transform: rotate(360deg)}
 `
-
 const Spinner = styled.div`
   width: 150px;
   height: 150px;
@@ -19,5 +18,5 @@ const Spinner = styled.div`
 
 export const Loader = () => {
 
-    return <Spinner />
+  return <Spinner />
 }

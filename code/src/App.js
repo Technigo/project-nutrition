@@ -8,7 +8,6 @@ import { ProductMap } from './components/ProductMap'
 import { ProductDetails } from 'components/ProductDetails'
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
 const saveToLocalStorage = (state) => {
   try {
     const serializedState = JSON.stringify(state)
@@ -17,7 +16,6 @@ const saveToLocalStorage = (state) => {
     console.log(error)
   }
 }
-
 const loadFromLocalStorage = () => {
   try {
     const serializedState = localStorage.getItem('pairNutritionState')
@@ -28,17 +26,10 @@ const loadFromLocalStorage = () => {
     return undefined
   }
 }
-
-
-
 const reducer = combineReducers({ nutrition: nutrition.reducer })
-
 const persistedState = loadFromLocalStorage()
-
 const store = createStore(reducer, persistedState, composeEnhancer(applyMiddleware(thunk)))
-
 store.subscribe(() => saveToLocalStorage(store.getState()))
-
 
 export const App = () => {
   return (
@@ -54,5 +45,5 @@ export const App = () => {
         </Switch>
       </BrowserRouter>
     </Provider>
-  );
-};
+  )
+}
