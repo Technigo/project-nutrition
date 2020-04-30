@@ -6,13 +6,13 @@ import Loader from "react-loader-spinner"
 export const Loading = () => {
   const isLoading = useSelector(state => state.ui.isLoading)
 
-  return(
+  return (
     <>
       {isLoading && (
         <Loader
           type='ThreeDots'
-          color='blue'/>
+          color='blue' />
       )}
-      </>
+    </>
   )
 }

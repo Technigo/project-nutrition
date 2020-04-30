@@ -1,5 +1,12 @@
 import React from "react";
 import { BarcodeScanner } from "components/BarcodeScanner";
+import { ui } from './reducers/ui'
+import { productStore } from './reducers/productStore'
+import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import { ScanBarcode } from "components/ScanBarcode";
+import { Provider } from 'react-redux'
+import { ProductList } from './components/ProductList'
+
 
 // const onDetected = (code) => {
 //   console.log(`Code: ${code}`);
@@ -9,18 +16,23 @@ import { BarcodeScanner } from "components/BarcodeScanner";
 //       console.log(json);
 //     });
 // };
-
-
+const reducer = combineReducers({
+  ui: ui.reducer,
+  productStore: productStore.reducer
+})
+export const store = configureStore({ reducer })
 
 export const App = () => {
   return (
-    <div>
-      {/* <label>
+    <Provider store={store}>
+      <ScanBarcode />
+      <ProductList />
+    </Provider>
+  )
+}
+{/* <label>
         {" "}
         Test codes here:{" "}
         <input type="text" onChange={(e) => onDetected(e.target.value)}></input>
       </label> */}
-        {/* <BarcodeScanner onDetected={onDetected}></BarcodeScanner> */}
-    </div>
-  );
-};
+{/* <BarcodeScanner onDetected={onDetected}></BarcodeScanner> */ }

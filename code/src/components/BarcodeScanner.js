@@ -1,14 +1,37 @@
 import React, { useRef, useState, useLayoutEffect } from "react";
 import Quagga from "quagga";
+import { Loading } from './Loading'
+import styled from 'styled-components'
+import 'index.css'
+
+const CameraContainer = styled.div`
+display: flex;
+flex-direction:column;
+justify-content:center;
+
+`
+const Instruction = styled.p`
+    font-size:23px;
+    font-weigth:bold;
+    margin-top:-530px;
+    color:#004445;
+    @media (max-width: 375px){
+      font-size:32px;
+      text-align:center;
+    }
+`
+const InstructionTextContainer = styled.div`
+
+`
 
 export const BarcodeScanner = ({ className, onDetected }) => {
-  const [initializing, setInitializing] = useState(true);
-  const cameraDivRef = useRef();
+
+  const [initializing, setInitializing] = useState(true)
+  const cameraDivRef = useRef()
 
   Quagga.onDetected((data) => {
-    onDetected(data.code);
-    console.log(onDetected)
-  });
+    onDetected(data.codeResult.code);
+  })
 
   useLayoutEffect(() => {
     Quagga.init(
@@ -24,23 +47,28 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       },
       (err) => {
         if (err) {
-          console.error("Failed to initialize reader", err);
-          return;
+          console.error("Failed to initialize reader", err)
+          return
         }
-        Quagga.start();
-        setInitializing(false);
+        Quagga.start()
+        setInitializing(false)
       }
-    );
+    )
 
     return () => {
-      Quagga.stop();
-    };
+      Quagga.stop()
+    }
   }, []);
 
   return (
     <>
-      {initializing && <div>Starting camera...</div>}
+    <CameraContainer>
+      {initializing && <div><Loading /></div>}
       <div ref={cameraDivRef} className={className} />
+      <InstructionTextContainer>
+      <Instruction>SCAN THE BARCODE TO LOOK FOR ALLERGENS</Instruction>
+      </InstructionTextContainer>
+    </CameraContainer>
     </>
-  );
-};
+  )
+}
