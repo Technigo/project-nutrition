@@ -59,6 +59,7 @@ const ScanButton = styled.button`
   cursor: pointer;
   transition: 0.2s;
   width: 240px;
+  justify-content: center;
 
   &: active {
     box-shadow: none;
