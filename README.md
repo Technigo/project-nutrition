@@ -1,13 +1,11 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a project in the Technigo Bootcamp. We used React Redux and Thunks to fetch data from Open Food Facts when scanning the barcode on a food product. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The biggest challenge was to connect the different techniques and to understand the usage of thunks. We struggeled to get the data to show as we wanted, the API was inconsistent.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://lisa-louise-project-nutrition.netlify.app/
