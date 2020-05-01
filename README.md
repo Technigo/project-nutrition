@@ -8,4 +8,4 @@ Starting with exploring the info in the API, deciding to build an "fridge"-like 
 
 ## View it live
 
-https://app.netlify.com/sites/jovial-edison-eb743b/overview
+https://jovial-edison-eb743b.netlify.app/
