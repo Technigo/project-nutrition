@@ -41,16 +41,16 @@ export const App = () => {
   const Content = styled.main`
   display: flex;
   flex-direction:column;
-  justify-content:space-between;
+  justyfy-content: center;
   align-items:center;
   height: auto;
   @media (max-width: 449px) {
-  width: 80%;
+  width: 100%;
   padding: 30px;
   margin-top: 30px;
   }
   @media (min-width: 450px) and (max-width: 750px) {
-  width: 80%;
+  width: 100%;
   padding: 30px;
   }
 `

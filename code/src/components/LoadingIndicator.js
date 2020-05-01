@@ -23,28 +23,7 @@ export const LoadingIndicator = () => {
 }
 
 
-
-
-
-
-export const LoadingSpinner = () => {
-  const isLoading = useSelector((state) => state.ui.isLoading)
-
-  return (
-    <LoadingIcon>
-      {isLoading && (
-        <Loader
-          type="ThreeDots"
-          color="black"
-          height="150"
-          width="150"
-        />
-      )}
-    </LoadingIcon>
-  )
-}
-
-const LoadingIcon = styled.div`
+const LoadingImg = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;

@@ -17,12 +17,13 @@ import styled from 'styled-components'
   
     return (
       <>
+      <h2>Or enter the barcode manually</h2>
         <form onSubmit={handleSubmit}>
             <Input
               type='text'
               value={code}
               onChange={e => setCode(e.target.value)}
-              placeholder='Enter barcode number...'
+              placeholder='Enter barcode number'
               required
             />
             <Button type='submit'

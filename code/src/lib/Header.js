@@ -8,7 +8,7 @@ export const Header = () => (
   <Wrapper>
     <TextWrapper>
       <PrimaryText>Think globally, eat locally</PrimaryText>
-      <SecondaryText>Find out the origin of you food by scanning the barcode of your product with your camera</SecondaryText>
+      <SecondaryText>Find out the origin of your food by scanning the barcode</SecondaryText>
     </TextWrapper>
   </Wrapper>
 
@@ -38,6 +38,7 @@ const PrimaryText = styled.h1`
   color: black;
   text-transform: uppercase;
   margin: 0;
+  font-family: 'Roboto';
   @media (max-width: 449px) {
     font-size: 20px;
   }
@@ -48,6 +49,7 @@ const PrimaryText = styled.h1`
 const SecondaryText = styled.h2`
   font-size: 16px;
   color: black;
+  font-family: 'Roboto';
   margin: 10px 0 0 0;
   @media (max-width: 449px) {
     font-size: 14px;

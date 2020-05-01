@@ -27,7 +27,7 @@ const Container = styled.div`
   width: 60%;
   }
   @media (min-width: 450px) and (max-width: 750px) {
-  width: 100%;
+  width: 60%;
   margin: 20px;
   }
 `
@@ -46,12 +46,12 @@ const CoverImage = styled.img`
   }
 `
 const ChildrenContent = styled.div`
-  padding: 10px;
+  padding: 15px;
 `
 
 const TitleBar = styled.div`
   display: flex;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 0px 0px 6px;
   align-items: center;
   padding: 30px;
   background: rgb(88,116,3);

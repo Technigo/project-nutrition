@@ -13,9 +13,8 @@ export const ScannedInfo = () => {
       {scannedItem.product && scannedItem.status === 1 && (
         <Card>
         <Text>
-          <p> Product: {scannedItem.product.product_name}</p>
+          <p>Product: {scannedItem.product.product_name}</p>
           <p>Origin: {scannedItem.product.origins}</p>
-          <p>Packaging: {scannedItem.product.packaging}</p>
         </Text>
       </Card>
     )

@@ -15,7 +15,7 @@ const FooterSection = styled.section`
   background-color: #F2F2F2;
   display: block;
   text-align: center;
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Monserat';
   font-size: 18px;
   font-style: italic;
   padding: 10px 18px;
