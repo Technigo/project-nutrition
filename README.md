@@ -1,13 +1,23 @@
-# Project Nutrition
+# A nutrition app using React.js and Redux
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://rautellin-nutrition.netlify.app/
+
+## What I got to learn 🧠
+
+* H
+
+## Requirements reached 🧪
+
+* The app list all todo tasks - completed or uncompleted
+* The app is able to mark an uncompleted task as complete
+* The app is able to change a completed task back to uncomplete
+* The app is able to add new tasks
+* The app is able to show a count of either all todos, or all uncomplete todos
+
+## Strech goals reached 🧘
+
+* Ad
+
