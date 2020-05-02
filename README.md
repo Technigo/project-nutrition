@@ -11,11 +11,10 @@ https://rautellin-nutrition.netlify.app/
 
 ## Requirements reached 🧪
 
-* The app list all todo tasks - completed or uncompleted
-* The app is able to mark an uncompleted task as complete
-* The app is able to change a completed task back to uncomplete
-* The app is able to add new tasks
-* The app is able to show a count of either all todos, or all uncomplete todos
+* Used redux
+* Added an error state when a product isn't found
+* Only displaying relevant information about each product without overloading the page with data
+* The app is responsive 
 
 ## Strech goals reached 🧘
 
