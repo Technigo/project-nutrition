@@ -1,11 +1,18 @@
-export const functionName = () => {
-  return (dispatch, getState) => {
-    // code to be executed
-  }
-}
+import { createSlice } from '@reduxjs/toolkit'
 
-//the dispatch function allows to dispatch more actions to the store/global state 
-//the getState function gets the current store/global state if needed 
+export const food = createSlice({
+  name: 'food',
+  initialState: {
+    items: ['cake', 'banana']
+  },
+  reducers: {
+    actionName: () => {
+      // code to be executed
+    }
+  }
+})
+
+/*
 
 export const functionName = () => {
   return (dispatch) => {
@@ -17,4 +24,4 @@ export const functionName = () => {
         // other code to be executed if so
       })
   }
-}
+}*/
