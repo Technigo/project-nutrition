@@ -7,7 +7,8 @@ https://rautellin-nutrition.netlify.app/
 
 ## What I got to learn 🧠
 
-* H
+* How to make API calls around Redux using thunks
+* How to structure redux store to suit the data
 
 ## Requirements reached 🧪
 

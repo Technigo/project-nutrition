@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { useDispatch } from 'react-redux'
+import { thunkName } from 'reducers/sliceName'
 
 export const Main = styled.main`
     display: flex;
