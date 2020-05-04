@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { useDispatch } from 'react-redux'
 import { fetchProduct } from 'reducers/foodproducts'
-
-const OATLY_CODE = 7394376615979 // If the scanning doesn't work, call fetchProduct with this instead
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
@@ -13,13 +12,13 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <button type='button' onClick={() => setShowScanner(true)}>
-          Show scanner
+          Show scanner  <FontAwesomeIcon icon="barcode" />
         </button>
       )}
 
       {showScanner && (
         <button type='button' onClick={() => setShowScanner(false)}>
-          Hide scanner
+          Hide scanner <FontAwesomeIcon icon="barcode" />
         </button>
       )}
 
