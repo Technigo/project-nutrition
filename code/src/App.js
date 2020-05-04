@@ -11,9 +11,9 @@ import { Navbar } from './lib/Navbar'
 import { Header } from './lib/Header'
 import { AppContainer } from './lib/Containers'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch, faBarcode, faChevronLeft, faHome, faEllipsisV } from '@fortawesome/free-solid-svg-icons'
+import { faBarcode, faChevronLeft, faHome, faQuestion } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faSearch, faBarcode, faChevronLeft, faHome, faEllipsisV)
+library.add(faBarcode, faChevronLeft, faHome, faQuestion)
 
 const reducer = combineReducers({
   foodproducts: foodproducts.reducer,
@@ -31,7 +31,7 @@ export const App = () => {
         <AppContainer>
           <Header />
           <Switch location={location} key={location.pathname}>
-            <Route path="/" exact>
+            <Route path="/home" exact>
               <Home />
             </Route>
             <Route path="/scanner" exact>

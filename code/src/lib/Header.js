@@ -25,7 +25,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <p>go back <FontAwesomeIcon icon="chevron-left" /></p>
-      <h6>Current page is {header}</h6>
+      <h6>{header}</h6>
     </HeaderContainer>
   )
 }
