@@ -5,6 +5,7 @@ import { foodproducts } from 'reducers/foodproducts'
 import { userinterface } from 'reducers/userinterface'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { Scanner } from './pages/Scanner'
+import { Home } from './pages/Home'
 
 const reducer = combineReducers({
   foodproducts: foodproducts.reducer,
@@ -22,8 +23,8 @@ export const App = () => {
         <header></header>
         <Switch location={location} key={location.pathname}>
           <Route path="/" exact>
-            This is the main page
-        </Route>
+            <Home />
+          </Route>
           <Route path="/scanner" exact>
             <Scanner />
           </Route>

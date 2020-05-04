@@ -19,7 +19,7 @@ export const fetchProduct = barcode => {
     fetch(`https://world.openfoodfacts.org/api/v0/product/${barcode}.json`)
       .then((res) => res.json())
       .then((json) => {
-        dispatch(foodproducts.actions.setProduct(json))
+        dispatch(foodproducts.actions.setFoodproduct(json))
         dispatch(userinterface.actions.setLoading(false))
       })
   }
