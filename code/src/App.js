@@ -6,8 +6,9 @@ import { userinterface } from 'reducers/userinterface'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { Scanner } from './pages/Scanner'
 import { Home } from './pages/Home'
-import { Navbar } from './components/Navbar'
-import { Header } from './components/Header'
+import { Help } from './pages/Help'
+import { Navbar } from './lib/Navbar'
+import { Header } from './lib/Header'
 import { AppContainer } from './lib/Containers'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSearch, faBarcode, faChevronLeft, faHome, faEllipsisV } from '@fortawesome/free-solid-svg-icons'
@@ -35,6 +36,9 @@ export const App = () => {
             </Route>
             <Route path="/scanner" exact>
               <Scanner />
+            </Route>
+            <Route path="/help" exact>
+              <Help />
             </Route>
           </Switch>
           <Navbar />
