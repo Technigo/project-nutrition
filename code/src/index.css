@@ -12,11 +12,6 @@ code {
     monospace;
 }
 
-.drawingBuffer {
-  width: 0;
-  height: 0;
-}
-
 video {
   max-width: 500px;
   max-height: 200px;
