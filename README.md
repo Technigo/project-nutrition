@@ -1,3 +1,5 @@
+#Project Nutrition :apple:
+
 In this project I have built a barcode scanner app used for scanning the barcodes of food products and retriving product name, information and if there are any allergens registrered on https://world.openfoodfacts.org/. 
 
 I built the app using  Open world facts api to fetch the product information. I also have used quagga to access the webcam to scan the barcodes of the products. The styling is made with CSS and flexbox. Fot the frontend I used Redux (Reducers and actions with selectors and dispatching actions).
