@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import { product } from "./reducers/product"
 import { ui } from "./reducers/ui"
 import { ProductInformation } from "components/ProductInformation"
-import { Header } from "components/Header"
+import { Title } from "components/Title"
 
 const Wrapper = styled.div`
   margin: auto;
@@ -30,7 +30,7 @@ export const App = () => {
   return (
     <Provider store={store}>
       <Wrapper>
-        <Header />
+        <Title />
         <ProductInformation />
       </Wrapper>
     </Provider>
