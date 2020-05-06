@@ -4,8 +4,9 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import { foodproducts } from 'reducers/foodproducts'
 import { userinterface } from 'reducers/userinterface'
 import { Switch, Route, useLocation } from 'react-router-dom'
-import { Scanner } from './pages/Scanner'
 import { Home } from './pages/Home'
+import { Scanner } from './pages/Scanner'
+import { ScannedResult } from './pages/ScannedResult'
 import { Help } from './pages/Help'
 import { Navbar } from './lib/Navbar'
 import { Header } from './lib/Header'
@@ -36,6 +37,9 @@ export const App = () => {
             </Route>
             <Route path="/scanner" exact>
               <Scanner />
+            </Route>
+            <Route path="/scannedresult" exact>
+              <ScannedResult />
             </Route>
             <Route path="/help" exact>
               <Help />

@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import { useDispatch } from 'react-redux'
 import { fetchProduct } from 'reducers/foodproducts'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const ScanBarcode = () => {
   const [showScanner, setShowScanner] = useState(false)
   const dispatch = useDispatch()
+  const scannedresult = useHistory()
 
   return (
     <>
       {!showScanner && (
         <button type='button' onClick={() => setShowScanner(true)}>
-          Show scanner  <FontAwesomeIcon icon="barcode" />
+          Show scanner
         </button>
       )}
 
       {showScanner && (
         <button type='button' onClick={() => setShowScanner(false)}>
-          Hide scanner <FontAwesomeIcon icon="barcode" />
+          Hide scanner
         </button>
       )}
 
@@ -29,6 +30,7 @@ export const ScanBarcode = () => {
             console.log('Got barcode', code)
             setShowScanner(false)
             dispatch(fetchProduct(code))
+            scannedresult.push('/scannedresult')
           }}
         />
       )}

@@ -56,7 +56,7 @@ export const Navbar = () => {
   return (
     <Nav>
       <ul>
-        <li><NavLink to="/home/" activeStyle={{ color: "red" }}><FontAwesomeIcon icon="home" /></NavLink></li>
+        <li><NavLink to="/home/" ><FontAwesomeIcon icon="home" /></NavLink></li>
         <li id="scanner"><NavLink to="/scanner/" activeStyle={{ color: "red" }}><FontAwesomeIcon icon="barcode" /></NavLink></li>
         <li><NavLink to="/help/" activeStyle={{ color: "red" }}><FontAwesomeIcon icon="question" /></NavLink></li>
       </ul>
