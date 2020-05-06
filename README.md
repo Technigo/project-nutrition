@@ -1,4 +1,4 @@
-#Project Nutrition :apple:
+##Project Nutrition :cucumber:
 
 In this project I have built a barcode scanner app used for scanning the barcodes of food products and retriving product name, information and if there are any allergens registrered on https://world.openfoodfacts.org/. 
 
