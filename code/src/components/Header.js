@@ -10,7 +10,7 @@ const StyledHeader = styled.div`
 `
 
 const Text = styled.h1`
-color: #fff;
+  color: #fff;
 `
 
 export const Header = () => {
