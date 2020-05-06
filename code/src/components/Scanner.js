@@ -45,9 +45,8 @@ export const Scanner = () => {
         <>
           <BarcodeScanner onDetected={(barcode) => {
             setShowScanner(false)
-            console.log(barcode)
             dispatch(fetchProduct(barcode))
-          }}></BarcodeScanner>
+          }} />
           <StyledButton buttonText="Go back" onClick={() => {
             setShowScanner(false)
           }} />
