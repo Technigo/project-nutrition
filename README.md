@@ -8,6 +8,11 @@ The app was built based on a Quagga component provided by Technigo. We have crea
 
 We pair-programmed using the VS Live Share extension, taking turns to code. If we were to continue working on the projects, we would like to incorporate React Router.
 
+## Learning objectives
+
+* How to make API calls around Redux using thunks
+* How to structure your redux store to suit your data
+
 ## Tech
 
 * JavaScript ES6
