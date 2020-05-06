@@ -8,18 +8,7 @@ import { ProductInfo } from "components/ProductInfo";
 import { Header } from "./components/Header";
 import styled from "styled-components/macro";
 import { GlobalStyle } from "lib/Global";
-// import { LoadingIndicator } from './components/LoadingIndicator'
-// import { BarcodeScanner } from 'components/BarcodeScanner'
-// import { ScanBarcode } from "./components/ScanBarcode";
-
-// const onDetected = (code) => {
-//   console.log(`Code: ${code}`);
-//   fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
-//     .then((data) => data.json())
-//     .then((json) => {
-//       console.log(json);
-//     });
-// };
+import { LoadingIndicator } from "./components/LoadingIndicator";
 
 // combine reducers:
 const reducer = combineReducers({
@@ -38,7 +27,7 @@ export const App = () => {
         <InnerContainer>
           <Header />
           <Input />
-          {/* <LoadingIndicator /> */}
+          <LoadingIndicator />
           {/* <ScanBarcode onDetected={onDetected} /> */}
           {/* <ScanBarcode /> */}
           <ProductInfo />
@@ -56,6 +45,9 @@ const Container = styled.section`
 `;
 
 const InnerContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 80%;
   max-width: 300px;
   background-color: #c3d3e0;

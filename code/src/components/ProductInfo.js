@@ -10,26 +10,18 @@ export const ProductInfo = () => {
 
   return (
     <div>
-      {item.product && <ProductName>{item.product.product_name}</ProductName>}
-      {item.product && <Brand>{item.product.brands}</Brand>}
+      {item.product && (
+        <>
+          <ProductName>{item.product.product_name}</ProductName>
+          <Brand>{item.product.brands}</Brand>
+        </>
+      )}
       <Container>
         {item.product && (
           <NutrimentsText>
-            Fat: {item.product.nutriments.fat_100g}
-          </NutrimentsText>
-        )}
-        {item.product && (
-          <NutrimentsText>
-            Calories: {item.product.nutriments.energy_100g}
-          </NutrimentsText>
-        )}
-        {item.product && (
-          <NutrimentsText>
-            Sugars: {item.product.nutriments.sugars_100g}
-          </NutrimentsText>
-        )}
-        {item.product && (
-          <NutrimentsText>
+            Fat: {item.product.nutriments.fat_100g}<br></br>
+            Calories: {item.product.nutriments.energy_100g}<br></br>
+            Sugars: {item.product.nutriments.sugars_100g}<br></br>
             Proteins: {item.product.nutriments.proteins_100g}
           </NutrimentsText>
         )}
@@ -76,6 +68,7 @@ const NutrimentsText = styled.p`
   font-weight: 500;
   margin: 5px;
   align-items: left;
+  flex-direction: column;
 `;
 
 const NutrimentsGrams = styled.p`

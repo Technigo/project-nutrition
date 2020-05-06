@@ -16,20 +16,17 @@ export const Input = () => {
   };
 
   return (
-    <div>
-      <Form onSubmit={handleOnSubmit}>
-        <InputField
-          placeholder="What is your barcode?"
-          type="text"
-          onChange={(event) => setBarcode(event.target.value)}
-          value={barcode}
-        ></InputField>
-        <BarcodeButton disabled={!barcode} type="submit" value="Add barcode">
-          Add barcode
-        </BarcodeButton>
-      </Form>
-      {/* <BarcodeScanner /> */}
-    </div>
+    <Form onSubmit={handleOnSubmit}>
+      <InputField
+        placeholder="What is your barcode?"
+        type="number"
+        onChange={(event) => setBarcode(event.target.value)}
+        value={barcode}
+      />
+      <BarcodeButton disabled={!barcode} type="submit" value="Add barcode">
+        Add barcode
+      </BarcodeButton>
+    </Form>
   );
 };
 
@@ -40,6 +37,11 @@ const Form = styled.form`
 `;
 
 const InputField = styled.input`
+  ::-webkit-outer-spin-button,
+  ::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
   border-radius: 6px;
   border: none;
   padding: 10px;

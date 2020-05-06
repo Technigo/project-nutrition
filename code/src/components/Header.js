@@ -13,7 +13,7 @@ export const Header = () => {
   );
 };
 
-const HeaderContainer = styled.section`
+const HeaderContainer = styled.header`
   display: flex;
   flex-direction: column;
   align-items: center;

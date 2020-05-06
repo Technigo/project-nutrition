@@ -22,8 +22,3 @@ export const GlobalStyle = createGlobalStyle`
       monospace;
 }
 `;
-
-/* background-color: #ffffff;
-background-image: linear-gradient(160deg, #ffffff 0%, #eac87b 100%);
-background-color: #85FFBD;
-background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%); */
