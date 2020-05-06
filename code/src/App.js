@@ -10,9 +10,10 @@ import { ScannedResult } from './pages/ScannedResult'
 import { Help } from './pages/Help'
 import { Navbar } from './lib/Navbar'
 import { Header } from './lib/Header'
-import { AppContainer } from './lib/Containers'
+import { AppContainer, ContentContainer } from './lib/Containers'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faBarcode, faChevronLeft, faHome, faQuestion } from '@fortawesome/free-solid-svg-icons'
+import GlobalFonts from './fonts/fonts'
 
 library.add(faBarcode, faChevronLeft, faHome, faQuestion)
 
@@ -29,22 +30,25 @@ export const App = () => {
   return (
     <>
       <Provider store={store}>
+        <GlobalFonts />
         <AppContainer>
           <Header />
-          <Switch location={location} key={location.pathname}>
-            <Route path="/home" exact>
-              <Home />
-            </Route>
-            <Route path="/scanner" exact>
-              <Scanner />
-            </Route>
-            <Route path="/scannedresult" exact>
-              <ScannedResult />
-            </Route>
-            <Route path="/help" exact>
-              <Help />
-            </Route>
-          </Switch>
+          <ContentContainer>
+            <Switch location={location} key={location.pathname}>
+              <Route path="/home" exact>
+                <Home />
+              </Route>
+              <Route path="/scanner" exact>
+                <Scanner />
+              </Route>
+              <Route path="/scannedresult" exact>
+                <ScannedResult />
+              </Route>
+              <Route path="/help" exact>
+                <Help />
+              </Route>
+            </Switch>
+          </ContentContainer>
           <Navbar />
         </AppContainer>
       </Provider>

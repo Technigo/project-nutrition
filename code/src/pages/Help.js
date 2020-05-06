@@ -8,8 +8,6 @@ export const Help = () => {
   dispatch(userinterface.actions.setHeader("Help"))
 
   return (
-    <NavLink to="/help/">
-      <h1>Information on how to use this app</h1>
-    </NavLink>
+    <h1>Information on how to use this app</h1>
   )
 }

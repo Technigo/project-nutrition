@@ -24,7 +24,7 @@ export const Nav = styled.nav`
     }
 
     a {
-      color: orange;
+      color: rgb(251, 185, 0);
     }
 
     svg {
@@ -35,8 +35,10 @@ export const Nav = styled.nav`
       color: white;
       position: absolute;
       bottom: 50%;
-      right: 50%;
-      background-color: orange;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: rgb(251, 185, 0);
       width: 56px;
       height: 56px;
       border-radius: 50%;

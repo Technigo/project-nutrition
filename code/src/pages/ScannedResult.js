@@ -1,15 +1,15 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { userinterface } from '../reducers/userinterface'
+import { useSelector } from 'react-redux'
+import { Error } from '../components/Error'
+import { ScannedFood } from '../components/ScannedFood'
 
 export const ScannedResult = () => {
-  const dispatch = useDispatch()
-  dispatch(userinterface.actions.setHeader("Add food"))
+  const scannedFood = useSelector((store) => store.foodproducts.foodproduct)
 
   return (
     <>
-      <h1>Here is the scanned food</h1>
+      {(scannedFood.status_verbose === "product found") ? <ScannedFood /> : <Error />}
       <NavLink to="/scanner/">Scan again</NavLink>
     </>
   )

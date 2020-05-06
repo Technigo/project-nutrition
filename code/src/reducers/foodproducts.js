@@ -4,7 +4,7 @@ import { userinterface } from './userinterface'
 export const foodproducts = createSlice({
   name: 'foodproducts',
   initialState: {
-    foodproduct: ['cake', 'banana']
+    foodproduct: []
   },
   reducers: {
     setFoodproduct: (state, action) => {
