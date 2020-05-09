@@ -1,13 +1,12 @@
 # Project Nutrition
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week Johanna and I did a pair-programming project for Technigo bootcamp and made a web app that scans the barcode of food products and tell if it's produced in Sweden.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Getting started with the project was the hardest part, since we had to figure out how the pre-coded qugga for the scanner would work with the rest of our code. But we are quite happy with the final result and that we also made a use of thunk and Lottie!
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://condescending-villani-5eeb9b.netlify.app/
+
