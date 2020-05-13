@@ -21,12 +21,13 @@ export const fetchProduct = (code) => {
 
   const fetchUrl = `https://world.openfoodfacts.org/api/v0/product/${code}.json`
   return (dispatch) => {
-    //dispatch(ui.actions.setLoading(true))
+    dispatch(ui.actions.setLoading(true))
     fetch(fetchUrl)
       .then((res) => res.json())
       .then((json) => {
         console.log(json)
         dispatch(productStore.actions.setProduct(json))
+        dispatch(ui.actions.setLoading(false))
       })
 
   }

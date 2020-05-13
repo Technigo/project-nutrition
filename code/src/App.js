@@ -8,6 +8,7 @@ import { Provider } from 'react-redux'
 import { ProductList } from './components/ProductList'
 
 
+
 // const onDetected = (code) => {
 //   console.log(`Code: ${code}`);
 //   fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)

@@ -21,12 +21,17 @@ export const ProductList = () => {
 
 
   return (
+    <>
+    {item.product && item.status === 1 && (
     <ProductContainer>
-      {item.product && (<PrductList><h1>Allergens:</h1><li>
+      {item.product && (<ProductList><h1>Allergens:</h1><li>
         {item.product.allergens_hierarchy.map((allergen) =>
-          (allergen.replace(/\w+:/, ' ').replace('-', ' ')))}</li></PrductList>)
+          (allergen.replace(/\w+:/, ' ').replace('-', ' ')))}</li></ProductList>)
       }
     </ProductContainer>
+    )}
+    {item.status === 0 && <h3>{item.status_verbose}.</h3>}
+    </>
   )
 }
 // productItems.product && (<div className=“productInfoContainer”><h1>Allergens:</h1><h2>
