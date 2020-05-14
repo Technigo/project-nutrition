@@ -3,9 +3,9 @@ import { useSelector } from 'react-redux'
 import styled from 'styled-components'
 
 const ProductContainer = styled.section`
-    max-width:400px;
-    margin-right:auto;
-    margin-left:auto;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
 `
 const PrductList = styled.ul`
     text-transform: uppercase;
@@ -25,8 +25,8 @@ export const ProductList = () => {
       {item.product && item.status === 1 && (
         <ProductContainer>
           {item.product && (<ProductList><h1>Allergens:</h1><li>
-            {item.product.allergens_hierarchy.map((allergen) =>
-              (allergen.replace(/\w+:/, ' ').replace('-', ' ')))}</li></ProductList>)
+            {item.product.allergens_hierarchy === [] ? item.product.allergens_hierarchy.map((allergen) =>
+              (allergen.replace(/\w+:/, ' ').replace('-', ' '))) : `No alleregens found`}</li></ProductList>)
           }
         </ProductContainer>
       )}

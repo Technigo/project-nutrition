@@ -5,23 +5,20 @@ import styled from 'styled-components'
 import 'index.css'
 
 const CameraContainer = styled.div`
-display: flex;
-flex-direction:column;
-justify-content:center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 `
 const Instruction = styled.p`
-    font-size:23px;
-    font-weigth:bold;
-    margin-top:-530px;
-    color:#004445;
+    font-size: 23px;
+    font-weigth: bold;
+    margin-top: -530px;
+    color: #004445;
     @media (max-width: 375px){
-      font-size:32px;
-      text-align:center;
+      font-size: 32px;
+      text-align: center;
     }
-`
-const InstructionTextContainer = styled.div`
-
 `
 
 export const BarcodeScanner = ({ className, onDetected }) => {

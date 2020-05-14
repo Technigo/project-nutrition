@@ -9,34 +9,34 @@ const ButtonText = styled.p`
     font-size:48px;
 `
 const Emojis = styled.span`
-    font-size:121px;
+    font-size: 121px;
     @media (max-width: 375px){
-      font-size:72px;
+      font-size: 72px;
     }
 `
 const ShowScanner = styled.button`
-    background:transparent;
+    background: transparent;
     border: none;
-    cursor:pointer;
-    outline:none;
+    cursor: pointer;
+    outline: none;
     
 `
 const ButtonContainer = styled.div`
-    margin-top:40%;
-    outline:none;
-    font-size:42px;
+    margin-top: 40%;
+    outline: none;
+    font-size: 42px;
     width: 600px;
 `
 
 const Container = styled.div`
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 `
 const Scanner = styled.div`
     max-width: 800px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
   `
 
 
