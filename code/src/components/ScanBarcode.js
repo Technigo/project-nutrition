@@ -16,6 +16,8 @@ export const ScanBarcode = () => {
     console.log(code)
   }
 
+  
+
   return (
     <>
     <Input onDetected={handleScan}/>
@@ -24,6 +26,7 @@ export const ScanBarcode = () => {
           Show scanner
         </button>
       )}
+    
 
       {showScanner && (
         <BarcodeScanner 

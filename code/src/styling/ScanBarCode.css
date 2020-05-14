@@ -9,7 +9,7 @@ button {
   position: absolute;
   color: white;
   font-size: 45px;
-  top: 35%;
+  top: 50%;
   left: 0;
   right: 0;
   width: 450px;
@@ -19,6 +19,10 @@ button {
   border-radius: 20px;
   box-shadow: 0 10px 40px #ff7c7c, 0 0 0 20px #ffffffeb;
   transform: scale(0.6);
+}
+
+.code-button {
+  top: 35%
 }
 
 
