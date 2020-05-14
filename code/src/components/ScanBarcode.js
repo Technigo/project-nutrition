@@ -28,12 +28,12 @@ const ButtonContainer = styled.div`
     width: 600px;
 `
 
-  const Container = styled.div`
+const Container = styled.div`
     display:flex;
     flex-direction:row;
     justify-content:center;
 `
-  const Scanner = styled.div`
+const Scanner = styled.div`
     max-width: 800px;
     margin-left:auto;
     margin-right:auto;
@@ -53,19 +53,19 @@ export const ScanBarcode = () => {
     <>
       {!showScanner && (
         <Container>
-        <ShowScanner type="button" onClick={() => setShowScanner(true)}>
-        <ButtonContainer><Emojis>click→📷</Emojis></ButtonContainer> 
-        </ShowScanner>
+          <ShowScanner type="button" onClick={() => setShowScanner(true)}>
+            <ButtonContainer><Emojis>click→📷</Emojis></ButtonContainer>
+          </ShowScanner>
         </Container>
       )}
       <Scanner>
-      {showScanner && (
-        <BarcodeScanner
-          className={'scanner'}
-          onDetected={handleScan} 
+        {showScanner && (
+          <BarcodeScanner
+            className={'scanner'}
+            onDetected={handleScan}
           />
 
-      )}
+        )}
       </Scanner>
     </>
   )

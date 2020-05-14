@@ -22,19 +22,17 @@ export const ProductList = () => {
 
   return (
     <>
-    {item.product && item.status === 1 && (
-    <ProductContainer>
-      {item.product && (<ProductList><h1>Allergens:</h1><li>
-        {item.product.allergens_hierarchy.map((allergen) =>
-          (allergen.replace(/\w+:/, ' ').replace('-', ' ')))}</li></ProductList>)
-      }
-    </ProductContainer>
-    )}
-    {item.status === 0 && <h3>{item.status_verbose}.</h3>}
+      {item.product && item.status === 1 && (
+        <ProductContainer>
+          {item.product && (<ProductList><h1>Allergens:</h1><li>
+            {item.product.allergens_hierarchy.map((allergen) =>
+              (allergen.replace(/\w+:/, ' ').replace('-', ' ')))}</li></ProductList>)
+          }
+        </ProductContainer>
+      )}
+      {item.status === 0 && <h3>{item.status_verbose}.</h3>}
     </>
   )
 }
-// productItems.product && (<div className=“productInfoContainer”><h1>Allergens:</h1><h2>
-//   {productItems.product.allergens_hierarchy === [] ? productItems.product.allergens_hierarchy.map((allergen) =>
-//   (allergen.replace(/\w+:/, ' ‘).replace(‘-’, ' ’))) : `No allergens found`}</h2></div>)
+
 
