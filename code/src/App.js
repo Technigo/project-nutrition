@@ -6,6 +6,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit"
 import { ScanBarcode } from "components/ScanBarcode";
 import { Provider } from 'react-redux'
 import { ProductList } from './components/ProductList'
+import { Loading } from './components/Loading'
 
 
 const reducer = combineReducers({
@@ -17,6 +18,7 @@ export const store = configureStore({ reducer })
 export const App = () => {
   return (
     <Provider store={store}>
+      <Loading />
       <ScanBarcode />
       <ProductList />
     </Provider>

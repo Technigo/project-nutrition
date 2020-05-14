@@ -11,14 +11,15 @@ const PrductList = styled.ul`
     text-transform: uppercase;
     list-style-type: none;
 `
+const NoResult = styled.div`
+    text-align: center;
+`
 
 export const ProductList = () => {
   const item = useSelector(state => state.productStore.products)
   console.log('item', item)
 
   if (!item) return null
-
-
 
   return (
     <>
@@ -30,7 +31,9 @@ export const ProductList = () => {
           }
         </ProductContainer>
       )}
-      {item.status === 0 && <h3>{item.status_verbose}.</h3>}
+      <NoResult>
+        {item.status === 0 && <h3>{item.status_verbose}.</h3>}
+      </NoResult>
     </>
   )
 }
