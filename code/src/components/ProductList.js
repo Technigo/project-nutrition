@@ -7,7 +7,7 @@ const ProductContainer = styled.section`
     margin-right: auto;
     margin-left: auto;
 `
-const PrductList = styled.ul`
+const Products = styled.ul`
     text-transform: uppercase;
     list-style-type: none;
 `
@@ -23,14 +23,16 @@ export const ProductList = () => {
 
   return (
     <>
-      {item.product && item.status === 1 && (
+    {item.product && item.status === 1 && (
+      
         <ProductContainer>
-          {item.product && (<ProductList><h1>Allergens:</h1><li>
-            {item.product.allergens_hierarchy === [] ? item.product.allergens_hierarchy.map((allergen) =>
-              (allergen.replace(/\w+:/, ' ').replace('-', ' '))) : `No alleregens found`}</li></ProductList>)
+          {item.product && (<Products><h1>Allergens:</h1><li>
+            {item.product.allergens_hierarchy.length > 0 ? item.product.allergens_hierarchy.map((allergen) =>
+              (allergen.replace(/\w+:/, ' ').replace('-', ' '))) : `No allergens found`}</li></Products>)
           }
         </ProductContainer>
       )}
+      
       <NoResult>
         {item.status === 0 && <h3>{item.status_verbose}.</h3>}
       </NoResult>
