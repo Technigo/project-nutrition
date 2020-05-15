@@ -30,17 +30,3 @@ export const foods = createSlice ({
     })
   }
 }
-/// ----Denna är extra utifall vi vill ha en loading funk--------
-
-
-
-// HÖR INTE HEMMA I EN REDUCER //
-// export const food = (code) => {
-//   console.log(`Code: ${code}`);
-//   fetch(`https://world.openfoodfacts.org/api/v0/product/${code}.json`)
-//     .then((data) => data.json())
-//     .then((json) => {
-//       console.log(json);
-//     });  
-// }
-// HÖR INTE HEMMA I EN REDUCER //

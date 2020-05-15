@@ -9,9 +9,7 @@ const dispatch = useDispatch()
 
 const handleChange = (event) => {
   event.preventDefault()
-  dispatch(fetchFoods(barcodeInput))
-  
-  
+  dispatch(fetchFoods(barcodeInput)) 
 }
 
   return ( 
