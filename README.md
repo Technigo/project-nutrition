@@ -15,12 +15,12 @@ We pair-programmed using the VS Live Share extension, taking turns to code. If w
 
 ## Tech
 
-* JavaScript ES6
-* React
-* React Redux
+* React.js
+* Redux
 * Redux Toolkit
-* Styled Components
 * JSX
+* JavaScript ES6
+* Styled Components
 * Npm package svg-loaders-react
 * Npm packages for FontAwesome
 
