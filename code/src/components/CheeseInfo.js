@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 export const CheeseInfo = () => {
   const scanned = useSelector((state) => state.products.product)
 
-  if (scanned.product.nutriscore_data.is_cheese) {
+  if (scanned.product.nutriscore_data && scanned.product.nutriscore_data.is_cheese) {
     return (
       scanned.product.nutriscore_data.is_cheese === 0 ? <h2>It's not cheese <span role="img" aria-label="sad emoji">😞</span></h2> : <h2>It's cheese! <span role="img" aria-label="cheese">🧀</span> </h2>)
   } else {

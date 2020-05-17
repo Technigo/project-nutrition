@@ -3,14 +3,6 @@ import styled from 'styled-components/macro'
 import { useDispatch } from 'react-redux'
 import { products } from 'reducers/products'
 
-export const ReturnButton = () => {
-  const dispatch = useDispatch()
-
-  return (
-    <Button onClick={() => dispatch(products.actions.return())}>Scan again</Button>
-  )
-}
-
 const Button = styled.button`
   padding: 12px;
   margin-top: 20px;
@@ -20,3 +12,11 @@ const Button = styled.button`
   font-family: 'Fredoka One', cursive;
   font-size: 18px;
 `
+
+export const ReturnButton = () => {
+  const dispatch = useDispatch()
+
+  return (
+    <Button onClick={() => dispatch(products.actions.return())}>Scan again</Button>
+  )
+}

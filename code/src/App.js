@@ -18,8 +18,8 @@ export const App = () => {
   return (
     <Provider store={store}>
       <MainContainer>
-        <LoadingIndicator />
         <h1>Is this Cheese?</h1>
+        <LoadingIndicator />
         <ProductContainer />
       </MainContainer>
     </Provider>

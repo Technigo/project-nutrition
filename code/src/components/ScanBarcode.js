@@ -4,30 +4,6 @@ import { fetchProduct } from '../reducers/products'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import styled from 'styled-components/macro'
 
-export const ScanBarcode = () => {
-  const [showScanner, setShowScanner] = useState(false)
-  const dispatch = useDispatch()
-
-  const handleScan = (code) => {
-    setShowScanner(false)
-    dispatch(fetchProduct(code))
-  }
-
-  return (
-    <>
-      {!showScanner && (
-        <ScanButton type='button' onClick={() => setShowScanner(true)}>
-          Scan your item
-        </ScanButton>
-      )}
-
-      {showScanner && (
-        <Camera onDetected={handleScan} />
-      )}
-    </>
-  )
-}
-
 const ScanButton = styled.button`
   padding: 12px;
   background-color: #fff;
@@ -52,3 +28,27 @@ const Camera = styled(BarcodeScanner)`
     height: 0;
   }
 `
+
+export const ScanBarcode = () => {
+  const [showScanner, setShowScanner] = useState(false)
+  const dispatch = useDispatch()
+
+  const handleScan = (code) => {
+    setShowScanner(false)
+    dispatch(fetchProduct(code))
+  }
+
+  return (
+    <>
+      {!showScanner && (
+        <ScanButton type='button' onClick={() => setShowScanner(true)}>
+          Scan your item
+        </ScanButton>
+      )}
+
+      {showScanner && (
+        <Camera onDetected={handleScan} />
+      )}
+    </>
+  )
+}

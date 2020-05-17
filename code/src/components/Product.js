@@ -5,6 +5,32 @@ import { useSelector } from 'react-redux'
 import { ReturnButton } from 'components/ReturnButton'
 import { ScanBarcode } from 'components/ScanBarcode'
 
+const ProductInfo = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    margin-top: 0;
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+`
+const ProductImage = styled.img`
+  max-height: 70%;
+  max-width: 70%;
+  border: 3px solid #000;
+  border-radius: 12px;
+`
+
 export const Product = ({ className }) => {
 
   const scanned = useSelector((state) => state.products.product)
@@ -37,32 +63,3 @@ export const Product = ({ className }) => {
     )
   }
 }
-
-const ProductInfo = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  h2 {
-    margin-top: 0;
-    font-size: 22px;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  h4{
-    font-size: 18px;
-    }
-    
-  }
-`
-const ProductImage = styled.img`
-  max-height: 70%;
-  max-width: 70%;
-  border: 3px solid #000;
-  border-radius: 12px;
-`
-
