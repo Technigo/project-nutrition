@@ -8,10 +8,10 @@ We built a component that uses [quagga](https://github.com/serratus/quaggaJS) to
 
 ## Technologies implemented 
 * HTML
-CSS
-JavaScript
-React JS
-Redux
+* CSS
+* JavaScript
+* React 
+* Redux
 
 ## 
 deployed site: project-nutrition.netlify.com
