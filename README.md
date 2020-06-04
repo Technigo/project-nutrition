@@ -7,7 +7,7 @@ I chocie to display nutriant infromation and package picures.
 We built a component that uses [quagga](https://github.com/serratus/quaggaJS) to access your webcam to use it to scan products, and your app should use Redux as a global state store.
 
 ## Technologies implemented 
-HTML
+* HTML
 CSS
 JavaScript
 React JS
