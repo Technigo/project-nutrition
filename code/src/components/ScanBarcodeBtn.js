@@ -2,34 +2,6 @@ import React, { useState } from 'react'
 import { BarcodeScanner } from 'components/BarcodeScanner'
 import styled from "styled-components"
 
-
-export const ScanBarcodeBtn = () => {
-  const [showScanner, setShowScanner] = useState(false)
-
-  return (
-    <>
-      {!showScanner && (
-        
-         
-        <Button type="button" onClick={() => setShowScanner(true)}>
-          Show scanner
-        </Button>
-       
-      )}
-
-      {showScanner && (
-        <>
-        <BarcodeScanner onDetected={(code) => {
-          console.log('Got barcode', code)
-          setShowScanner(false)
-        }} />
-       
-        </>
-      )}
-      
-    </>
-  )
-}
 const Button = styled.button`
 padding: 15px;
 font-size: 1rem;
@@ -41,3 +13,25 @@ margin: 50px;
     border: solid 2px orange
 }
 `
+
+export const ScanBarcodeBtn = () => {
+  const [showScanner, setShowScanner] = useState(false)
+  return (
+    <>
+      {!showScanner && (
+        <Button type="button" onClick={() => setShowScanner(true)}>
+          Show scanner
+        </Button>
+      )}
+      {showScanner && (
+        <>
+          <BarcodeScanner onDetected={(code) => {
+            console.log('Got barcode', code)
+            setShowScanner(false)
+          }} />
+        </>
+      )}
+    </>
+  )
+}
+

@@ -1,12 +1,10 @@
-/* Need to finish styling */
-
 import React from "react";
-import { products, loader} from "reducers/product"
+import { products } from "reducers/product"
+import { Loading, loader } from "reducers/Loading"
 import { Provider } from 'react-redux'
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import {GetProduct} from "components/GetProduct"
-import {ShowInfo} from "components/ShowInfo"
-
+import { GetProduct } from "components/GetProduct"
+import { ShowInfo } from "components/ShowInfo"
 
 
 const reducer = combineReducers({
@@ -14,19 +12,16 @@ const reducer = combineReducers({
   products: products.reducer
 })
 
-
 const store = configureStore({ reducer })
 
-
-
 export const App = () => {
-  
+
   return (
     <Provider store={store}>
-      <loader/>
-      <ShowInfo/>
-      <GetProduct/>
+      <Loading />
+      <ShowInfo />
+      <GetProduct />
     </Provider>
-  )}
+  )
+}
 
-/*   Not pushing? */

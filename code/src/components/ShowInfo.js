@@ -4,33 +4,6 @@ import { products } from "reducers/product"
 import styled from "styled-components/macro"
 
 
-export const ShowInfo = () => {
-  const productInfo = useSelector(state => state.products.product)
-  console.log("prodInfo",productInfo)
-  
-  return(
-    <>
-    
-    {productInfo.product && productInfo.status === 1 && (
-      <Main>
-       <Title> Choose to be healthy - Is   {productInfo.product.product_name} good for you?
-       </Title>
-       <Content>
-       <Image src = {productInfo.product.image_front_small_url}/>
-       <Text>
-       The whole thing weighs:{productInfo.product.product_quantity}g
-       <br></br>
-       100g contains: {productInfo.product.nutriments.sugars}g sugar &    
-       {  productInfo.product.nutriments.fat}g fat
-       </Text>
-       </Content>
-      </Main>
-      )}
-       {productInfo.status === 0 && <h1>OUPS! CANT FIND</h1>}
-      </>
-  )
-}
-
 const Main = styled.div`
 background: powderblue;
 height:100vh;
@@ -45,6 +18,7 @@ const Image = styled.img`
   height: auto;
   border: 1px solid red;
 `;
+
 const Content = styled.div`
 display:flex;
 background: ghostwhite;
@@ -73,3 +47,28 @@ font-weight:bold;
 color: red;
 text-align: center;
 `
+export const ShowInfo = () => {
+  const productInfo = useSelector(state => state.products.product)
+  console.log("prodInfo", productInfo)
+
+  return (
+    <>
+      {productInfo.product && productInfo.status === 1 && (
+        <Main>
+          <Title> Choose to be healthy - Is   {productInfo.product.product_name} good for you?
+       </Title>
+          <Content>
+            <Image src={productInfo.product.image_front_small_url} />
+            <Text>
+              The whole thing weighs:{productInfo.product.product_quantity}
+              <br></br>
+              100g contains: {productInfo.product.nutriments.sugars}g sugar &
+              {productInfo.product.nutriments.fat}g fat
+            </Text>
+          </Content>
+        </Main>
+      )}
+      {productInfo.status === 0 && <h1>OUPS! CANT FIND</h1>}
+    </>
+  )
+}
