@@ -7,5 +7,4 @@ Pair programming porject for Technigo Remote Bootcamp. Using the product barcode
 Starting with exploring the info in the API, deciding to build an "fridge"-like app, with various shelves for the products, and detailed product pages for each product. First creating the Redux store and the functionality needed, then moving over to styling.
 
 ## View it live
-
-https://jovial-edison-eb743b.netlify.app/
+https://nutrition-project-technigo.netlify.app/
