@@ -1,6 +1,6 @@
 # Project Nutrition
 
-A pair programming project were the task was to build an app using the camera on the computer/phone to scan barcodes and fecth information from an open food api. We built and app in React using Redux that shows if the scanned product contains any allergens.
+A pair programming project were the task was to build an app using the camera on the computer/phone to scan barcodes and fecth information from an open food api. We built the app in React along with Redux that shows if the scanned product contains any allergens.
 
 ## Tech we used
 React, Redux, Styled components, JSX, CSS
