@@ -25,6 +25,8 @@
     "react-hooks"
   ],
   "rules": {
+    "avoidEscape": true,
+    "allowTemplateLiterals": true
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [
