@@ -15,11 +15,11 @@ export const BarcodeScanner = ({ className, onDetected }) => {
         inputStream: {
           name: "Live",
           type: "LiveStream",
-          target: cameraDivRef.current,
+          target: cameraDivRef.current
         },
         decoder: {
-          readers: ["ean_reader"],
-        },
+          readers: ["ean_reader"]
+        }
       },
       (err) => {
         if (err) {
