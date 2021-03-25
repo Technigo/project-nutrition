@@ -14,7 +14,8 @@ export const App = () => {
   return (
     <div>
       <label>
-        {" "}Test codes here:{" "}
+        {" "}
+        Test codes here:{" "}
         <input type="text" onChange={(e) => onDetected(e.target.value)} />
       </label>
       <p>
