@@ -23,7 +23,7 @@ export const BarcodeScanner = ({ className, onDetected }) => {
       },
       (err) => {
         if (err) {
-          console.error("Failed to initialize reader", err);
+          // console.error("Failed to initialize reader", err);
           return;
         }
         Quagga.start();
